@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. clone or pull 專案後
+2. bundle
+3. rails db:migrate
 
-Things you may want to cover:
+---
 
-* Ruby version
+## Tool
 
-* System dependencies
+[**GitHub**](https://github.com/River-Ye/oh_my_wage/)
 
-* Configuration
+[**Quip**](https://riverye.quip.com/OcZAOAihsSC)
 
-* Database creation
+[**lucidchart (ERD)**](https://www.lucidchart.com/documents/edit/52440e0b-0748-4620-9b85-6fbf4642601b)
 
-* Database initialization
+[**Wireframe**](https://whimsical.com/KC8LhgAam7izwRrCDpDr6H#7YNFXnKbYxmJ649k3UQZH)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[**Trello (票)**](https://trello.com/oh_my_wage)
