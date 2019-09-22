@@ -10,6 +10,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'shared/frontend/navbar' %>
+    <%= render 'shared/frontend/flash' if notice %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
