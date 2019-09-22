@@ -1,0 +1,14 @@
+<h1>候選人列表</h1>
+
+<ul>
+  <% @user.each do |user| %>
+    <li>
+    <%= link_to user.name, user_path(user.id) %>
+    <%= link_to "編輯", edit_user_path(user.id) %>
+    <%= link_to "刪除", user_path(user.id), method: 'delete', data: {confirm: '確定嗎???'} %>
+    </li>
+  <% end %>
+
+</ul>
+
+<%= link_to "新增教師/學生資料", new_user_path, class: 'btn btn-primary btn-lg' %>

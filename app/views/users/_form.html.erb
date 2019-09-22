@@ -1,0 +1,32 @@
+<% if user.errors.any? %>
+  <ul>
+    <% user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(user) do |form| %>
+  <%= form.label :name, '姓名:' %>
+  <%= form.text_field :name %>
+
+  <%= form.label :number, '學號/教師編號:' %>
+  <%= form.text_field :number %>
+
+  <%= form.label :email, '信箱:' %>
+  <%= form.text_field :email %>
+
+  <%= form.label :role, '權限:' %>
+  <%= form.text_field :role %>
+
+  <%= form.label :subject, '科系:' %>
+  <%= form.text_area :subject %>
+
+  <%= form.label :phone, '手機:' %>
+  <%= form.text_area :phone %>
+
+  <%= form.label :gender, '性別:' %>
+  <%= form.text_area :gender %>
+
+  <%= form.submit %>
+<% end %>
