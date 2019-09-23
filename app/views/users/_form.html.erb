@@ -6,27 +6,15 @@
   </ul>
 <% end %>
 
-<%= form_for(user) do |form| %>
-  <%= form.label :name, '姓名:' %>
-  <%= form.text_field :name %>
+<%= simple_form_for(user) do |form| %>
+  <div class="box"></div>
+    <%= form.input :number, label: '學號' %>
+    <%= form.input :name, label: '姓名' %>
+    <%= form.input :email, label: '信箱' %>
+    <%= form.input :role, label: '權限' %>
+    <%= form.input :subject, label: '科系' %>
+    <%= form.input :phone, label: '手機' %>
+    <%= form.input :gender, label: '性別' %>
 
-  <%= form.label :number, '學號/教師編號:' %>
-  <%= form.text_field :number %>
-
-  <%= form.label :email, '信箱:' %>
-  <%= form.text_field :email %>
-
-  <%= form.label :role, '權限:' %>
-  <%= form.text_field :role %>
-
-  <%= form.label :subject, '科系:' %>
-  <%= form.text_area :subject %>
-
-  <%= form.label :phone, '手機:' %>
-  <%= form.text_area :phone %>
-
-  <%= form.label :gender, '性別:' %>
-  <%= form.text_area :gender %>
-
-  <%= form.submit %>
+  <%= form.button :submit, '修改', class: 'btn-success btn-xs' %>
 <% end %>

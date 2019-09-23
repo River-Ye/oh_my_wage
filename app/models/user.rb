@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :departments, through: :department_with_users
 
   # 學號/教師編號、信箱要是唯一值
-  validates :number, :email, uniqueness: true
+  # validates :number, :email, uniqueness: true
 end

@@ -2,34 +2,49 @@
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
-
+<h1>Hi, <%= @user.name %> 您好：</h1>
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
+    <%= f.input :number, label: '學號' %>
+    <%= f.input :role, label: '權限' %>
+    <%= f.input :subject, label: '科系' %>
+    <div class="row">
+      <div class="col-8">
+        <%= f.input :name, label: '姓名' %>
+      </div>
+      <div class="col-4">
+        <%= f.input :gender, label: '性別' %>
+      </div>
+      <div class="col-8">
+        <%= f.input :email, label: '信箱', required: true, autofocus: true %>
+      </div>
+      <div class="col-4">
+        <%= f.input :phone, label: '手機' %>
+      </div>        
+    </div>
+    
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-
-    <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
-                required: true,
-                input_html: { autocomplete: "current-password" } %>
+    <div class="row">
+      <div class="col">
+        <%= f.input :password,
+                    hint: "*如沒有要改密碼，可省略",
+                    required: false,
+                    label: '新密碼',
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="col">
+        <%= f.input :password_confirmation,
+                    required: false,
+                    label: '確認新密碼',
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+    </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: 'btn btn-success' %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
