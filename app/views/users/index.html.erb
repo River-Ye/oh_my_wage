@@ -1,14 +1,20 @@
 <h1>魔法部</h1>
-
-<ul>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @user.each do |user| %>
-    <li>
-    <%= link_to user.name, user_path(user.id) %>
-    <%= link_to "編輯", edit_user_path(user.id) %>
-    <%= link_to "刪除", user_path(user.id), method: 'delete', data: {confirm: '確定嗎???'} %>
-    </li>
+  <tr>
+    <td><%= link_to user.name, user_path(user.id) %></td>
+    <td><%= link_to "編輯", edit_user_path(user.id), class: 'btn btn-success' %></td>
+    <td><%= link_to "刪除", user_path(user.id), method: 'delete', class: 'btn btn-danger' %></td>
+  </tr>
   <% end %>
-
-</ul>
-
+  </tbody>
+</table>
 <%= link_to "新增教師/學生資料", new_user_path, class: 'btn btn-primary btn-lg' %>
