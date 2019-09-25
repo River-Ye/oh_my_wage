@@ -25,11 +25,6 @@ end
 puts "Done!"
  
    
-
-
-
-
-
 puts "Generating 5 stuffs..."
 5.times do |i|
   User.create(

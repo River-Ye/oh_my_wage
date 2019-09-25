@@ -19,7 +19,11 @@
 
   <div class="form-actions">
     <%= f.button :submit, "註冊", class: 'btn btn-success btn-xs' %>
+    <%= render "devise/shared/links" %>
   </div>
 <% end %>
+<br>
+    <%= link_to "返回首頁", root_path, class: 'btn btn-secondary' %>
 
-<%= render "devise/shared/links" %>
+
+
