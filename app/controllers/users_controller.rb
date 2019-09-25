@@ -27,9 +27,6 @@ class UsersController < ApplicationController
   
   end
 
-  def edit
-  end
-
   def update
     if @user.update(user_params)
       redirect_to root_path, notice: "更新成功!!"

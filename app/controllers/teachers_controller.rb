@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class TeachersController < ApplicationController
   before_action :check_login
   before_action :find_salary, only: [:show, :history]
 
@@ -9,6 +9,8 @@ class StudentsController < ApplicationController
   end
 
   def history
+    @student = User.where(subject: '葛來分多')
+    @issue = ReplyToIssue.all
   end
 
   def create
@@ -20,6 +22,12 @@ class StudentsController < ApplicationController
     end
   end
 
+  def edit
+    # byebug
+    @student = User.where(subject: current_user.subject)
+    # Department.where(name: current_user.subject)
+  end
+
   private
 
   def find_salary
@@ -27,10 +35,10 @@ class StudentsController < ApplicationController
   end
 
   def reply_to_issue_params
-    params.require(:reply_to_issue).permit(:title, :content)
+    params.require(:reply_to_issue).permit(:title, :content, salaries_attributes: [:id, :title, :content])
   end
 
   def check_login
-    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'student'
+    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'teacher'
   end
 end

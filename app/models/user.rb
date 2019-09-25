@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :reply_to_issues
   has_many :department_with_users
   has_many :departments, through: :department_with_users
+  accepts_nested_attributes_for :salaries
 
   # 學號/教師編號、信箱要是唯一值
   # validates :number, :email, uniqueness: true

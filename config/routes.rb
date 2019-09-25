@@ -3,9 +3,27 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources 'users'
-  
-  root 'users#index'
-  
-  resources 'students'
+
+  resources 'users' do
+  end
+
+  resource 'student', except: [:destroy, :edit, :update] do
+    resources 'problems', only: [:index, :new, :create]
+    collection do
+      get 'history'
+    end
+  end
+    
+  resource 'teacher' do
+    resources 'problems', only: [:index, :new, :create]
+    collection do
+      get 'history'
+    end
+  end
+  resources 'admin'
+
+  get '/about', to: 'home#about'
+  get '/contact', to: 'home#contact'
+  get '/qa', to: 'home#qa'
+  root 'home#index'
 end
