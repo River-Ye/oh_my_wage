@@ -1,22 +1,22 @@
 class Cart
     attr_reader :users
 
-    def initialize(users = [])
-        @users = users
+    def initialize(students = [])
+        @students = students
     end
 
     def add_item(user_id)
-        found_user = @users.find{ |i| i.user_id == user_id }
+        found_student = @students.find{ |i| i.student_id == student_id }
 
-        if found_user
-          found_user.increment(1)
+        if found_student
+          found_student.increment(1) 
         else
-          @users << Student.new(user_id)
+          @students << Student.new(user_id)
         end
-        # @users << student_id
+        # @students << user_id
       end
       
       def empty?
-          @users.empty?
+          @students.empty?
       end
 end
