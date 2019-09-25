@@ -12,7 +12,7 @@
   <% @user.each do |user| %>
   <tr>
     <td><%= link_to user.name, user_path(user.id) %></td>
-    <td><%= link_to user.role, user_path(user.id) %></td>
+    <td><%= user.role %></td>
     <td><%= link_to "編輯", edit_user_path(user.id), class: 'btn btn-success' %></td>
     <td><%= link_to "刪除", user_path(user.id), method: 'delete', class: 'btn btn-danger'%></td>
     <%# , data: {confirm: '確定嗎???'}  %>
