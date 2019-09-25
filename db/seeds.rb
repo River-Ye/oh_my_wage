@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-puts "Generating 5 students..."
+puts "Generating 5 users..."
 5.times do |i|
   User.create(
   number: Faker::Code.asin,
@@ -18,28 +18,10 @@ puts "Generating 5 students..."
             '赫夫帕夫（Hufflepuff）',
             '雷文克勞（Ravenclaw）',
             '史萊哲林（Slytherin）'].sample,
-  role: 'student',
+  role: ['student', 'stuff'].sample,
   email: Faker::Internet.email,
   gender: Faker::Gender.binary_type)
 end
 puts "Done!"
  
    
-puts "Generating 5 stuffs..."
-5.times do |i|
-  User.create(
-  number: Faker::Code.nric,
-  password: 'aaaaaa',
-  name: Faker::Movies::HarryPotter.character,
-  phone: ['09',8.times.map{rand(10)}].join,
-  subject: [ '魔法部（The Ministry of Magic）',
-             '黑魔法圖書館（Dark Magic Library）',
-             '斜角巷福利社（Diagon Alley Store）',
-             '活米村餐廳（Hogsmeade Village Cafeteria）',
-             '萬應室（Room of Requirement)'].sample,
-  email: Faker::Internet.email,
-  gender: Faker::Gender.binary_type,
-  role: 'stuff')
-end
-puts "Done!"
-
