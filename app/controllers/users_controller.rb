@@ -3,7 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @user = User.all
-  end
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf {render template: 'users/pdf',pdf:'pdf'}   
+      end
+    end
 
   def new
     @user = User.new
@@ -19,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
+  
   end
 
   def edit
