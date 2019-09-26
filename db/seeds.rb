@@ -44,4 +44,3 @@ puts "Generating 5 students..."
   role: 2)
 end
 puts "Done!"
->>>>>>> 8a895cc... Eidt readme、Add admin page、Edit model
