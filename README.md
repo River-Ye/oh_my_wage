@@ -2,8 +2,13 @@
 
 1. clone or pull 專案後
 2. bundle
-3. rails db:migrate
-4. rails db:seed
+3. rails db:drop
+4. rails db:create
+5. rails db:migrate
+6. rails db:seed
+7. rails c
+8. User.all
+9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
 
 ---
 

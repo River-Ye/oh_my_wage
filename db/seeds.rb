@@ -44,4 +44,7 @@ puts "Generating 5 students..."
   role: 2)
 end
 puts "Done!"
+<<<<<<< HEAD
 
+=======
+>>>>>>> ca59feb4d83be5abe8996828a5b8c027102d72e8
