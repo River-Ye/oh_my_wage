@@ -14,13 +14,14 @@ Rails.application.routes.draw do
     end
   end
     
-  resource 'teacher' do
+  resource 'staff' do
     resources 'problems', only: [:index, :new, :create]
     collection do
       get 'history'
     end
   end
-  resources 'admin'
+
+  resource 'admin'
 
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'

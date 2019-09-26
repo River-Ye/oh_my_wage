@@ -7,21 +7,41 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-puts "Generating 5 users..."
+
+puts "Generating admin"
+  User.create(
+  number: Faker::Code.nric,
+  password: '123123',
+  name: Faker::Movies::HarryPotter.character,
+  phone: ['09', 8.times.map{rand(10)}].join,
+  email: "admin@123.123",
+  gender: [0, 1].sample,
+  role: 0)
+puts "Done!"
+
+puts "Generating 5 stuffs..."
+5.times do |i|
+  User.create(
+  number: Faker::Code.nric,
+  password: '123123',
+  name: Faker::Movies::HarryPotter.character,
+  phone: ['09', 8.times.map{rand(10)}].join,
+  email: ['t', 5.times.map{ rand(10) }, "@123.123"].join,
+  gender: [0, 1].sample,
+  role: 1)
+end
+puts "Done!"
+
+puts "Generating 5 students..."
 5.times do |i|
   User.create(
   number: Faker::Code.asin,
-  password: 'aaaaaa',
+  password: '123123',
   name: Faker::Movies::HarryPotter.character,
-  phone: ['09',8.times.map{rand(10)}].join,
-  subject: ['葛來分多（Gryffindor）',
-            '赫夫帕夫（Hufflepuff）',
-            '雷文克勞（Ravenclaw）',
-            '史萊哲林（Slytherin）'].sample,
-  role: ['student', 'stuff'].sample,
-  email: Faker::Internet.email,
-  gender: Faker::Gender.binary_type)
+  phone: ['09', 8.times.map{rand(10)}].join,
+  email: ['s', 5.times.map{ rand(10) }, "@123.123"].join,
+  gender: [0, 1].sample,
+  role: 2)
 end
 puts "Done!"
- 
-   
+>>>>>>> 8a895cc... Eidt readme、Add admin page、Edit model

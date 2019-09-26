@@ -1,4 +1,4 @@
-class TeachersController < ApplicationController
+class StaffsController < ApplicationController
   before_action :check_login
   before_action :find_salary, only: [:show, :history]
 
@@ -39,6 +39,6 @@ class TeachersController < ApplicationController
   end
 
   def check_login
-    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'teacher'
+    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
   end
 end

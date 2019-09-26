@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_21_160126) do
+ActiveRecord::Schema.define(version: 2019_09_25_100814) do
 
   create_table "department_with_users", force: :cascade do |t|
     t.integer "user_id"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_09_21_160126) do
   end
 
   create_table "departments", force: :cascade do |t|
-    t.string "name"
+    t.integer "name", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,10 +56,9 @@ ActiveRecord::Schema.define(version: 2019_09_21_160126) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "number"
-    t.string "role"
+    t.integer "role", default: 2
     t.string "phone"
-    t.string "subject"
-    t.string "gender"
+    t.integer "gender", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
