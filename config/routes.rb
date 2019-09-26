@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources 'users' do
-  end
+
 
   resource 'student', except: [:destroy, :edit, :update] do
     resources 'problems', only: [:index, :new, :create]
@@ -21,7 +20,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resource 'admin'
+  resource 'admin' do
+    resources 'users' do
+    end
+  end
 
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'

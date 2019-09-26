@@ -4,38 +4,40 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :role,
-                label: '權限  ',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :number,
-                label: '學號',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :name,
-                label: '姓名',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :phone,
-                label: '手機',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :email,
-                label: 'E-mail',
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                label: '新建密碼',
-                required: true,
-                hint: ("密碼最少須 #{@minimum_password_length} 碼以上" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: '確認密碼',
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+    <div class="row">
+      <div class="col-8">
+       <%= f.input :number, label: '學號', required: true, autofocus: true %>
+      </div>
+      <div class="col-4">
+        <%= f.input :role, label: '權限', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
+      </div>
+      <div class="col-8">
+        <%= f.input :name, label: '姓名', required: true %>
+      </div>
+      <div class="col-4">
+        <%= f.input :gender, label: '性別', collection: { "男": "Male", "女": "Female" } %>
+      </div>
+      <div class="col-8">
+        <%= f.input :email, label: '信箱', required: true, placeholder: 'example@school.com' %>
+      </div>
+      <div class="col-4">
+        <%= f.input :phone, label: '手機', input_html: { maxlength: 10 }, placeholder: '0987654321' %>
+      </div>
+      <div class="col-8">
+        <%= f.input :password,
+                    label: '新建密碼',
+                    required: true,
+                    hint: ("密碼最少須 #{@minimum_password_length} 碼以上" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+      <div class="col-4">
+        <%= f.input :password_confirmation,
+                    label: '確認密碼',
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+      </div>
+    </div>
   </div>
-
   <div class="form-actions">
     <%= f.button :submit, "註冊", class: 'btn btn-success btn-lg' %>
     <%= render "devise/shared/links" %>
@@ -43,6 +45,3 @@
 <% end %>
 <br>
     <%= link_to "返回首頁", root_path, class: 'btn btn-secondary' %>
-
-
-

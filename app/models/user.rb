@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
   validates :name, :role, :number, :phone, presence: true
   validates :number, uniqueness: true
+  validates :phone, length: { is: 10 }
   
   enum role: { admin: 0, staff: 1, student: 2 }
   enum gender: { Male: 0, Female: 1 }
