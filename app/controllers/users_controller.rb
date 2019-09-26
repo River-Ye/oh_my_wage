@@ -7,8 +7,8 @@ class UsersController < ApplicationController
       format.html
       format.json
       format.pdf {render template: 'users/pdf',pdf:'pdf'}   
-      end
     end
+  end
 
   def new
     @user = User.new
@@ -24,6 +24,9 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
   end
 
   def update
