@@ -44,3 +44,10 @@ puts "Generating 5 students..."
   role: 2)
 end
 puts "Done!"
+
+puts "Generating Department name"
+(0..8).each do |i|
+  Department.create(
+    name: i
+  )
+end

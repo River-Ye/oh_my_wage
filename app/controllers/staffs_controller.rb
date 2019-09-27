@@ -23,9 +23,9 @@ class StaffsController < ApplicationController
   end
 
   def edit
-    # byebug
-    # @student = User.where(subject: current_user.subject)
-    @student = Department.where(name: current_user.departments.name)
+    departmnet_with_user = DepartmentWithUser.where(department_id: current_user.id)
+    user_id = departmnet_with_user.map { |student| student[:user_id] }
+    @students = User.where(id: user_id)
     # byebug
   end
 
