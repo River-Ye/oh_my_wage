@@ -10,7 +10,7 @@ FactoryBot.define do
     role { 0 }
   end
 
-  factory :staff do
+  factory :staff, class: User do
     name { Faker::Movies::HarryPotter.character }
     number { Faker::Code.nric }
     password {'123123'}
@@ -20,7 +20,7 @@ FactoryBot.define do
     role { 1 }
   end
   
-  factory :student do
+  factory :student, class: User do
     name { Faker::Movies::HarryPotter.character }
     number { Faker::Code.nric }
     password {'123123'}
