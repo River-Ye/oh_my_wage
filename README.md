@@ -20,6 +20,6 @@
 
 [**lucidchart (ERD)**](https://www.lucidchart.com/documents/edit/52440e0b-0748-4620-9b85-6fbf4642601b)
 
-[**Wireframe**](https://whimsical.com/KC8LhgAam7izwRrCDpDr6H#7YNFXnKbYxmJ649k3UQZH)
+[**Wireframe**](https://whimsical.com/JgPoSu5DBGz4kNfxC9S99L)
 
 [**Trello (票)**](https://trello.com/oh_my_wage)

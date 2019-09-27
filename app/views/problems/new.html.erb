@@ -1,0 +1,18 @@
+<h1>問題回報</h1>
+
+<% if @reply_to_issue.errors.any? %>
+  <ul>
+    <% @reply_to_issue.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= simple_form_for :reply_to_issue, url: student_problems_path do |form| %>
+  <%= form.input :title, label: '標題' %>
+  <%= form.input :content, label: '內容' %>
+
+  <%= form.button :submit, '送出', class: 'btn-success btn-lg' %>
+<% end %>
+
+<%= link_to "上一頁", root_path, class: 'btn btn-primary btn-xs' %>

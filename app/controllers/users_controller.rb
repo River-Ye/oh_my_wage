@@ -7,8 +7,8 @@ class UsersController < ApplicationController
       format.html
       format.json
       format.pdf {render template: 'users/pdf',pdf:'pdf'}   
-      end
     end
+  end
 
   def new
     @user = User.new
@@ -24,7 +24,6 @@ class UsersController < ApplicationController
   end
 
   def show
-  
   end
 
   def edit
@@ -49,6 +48,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :number, :email, :role, :subject, :phone, :gender)
+    params.require(:user).permit(:name, :number, :email, :role, :phone, :gender, :password)
   end
 end
