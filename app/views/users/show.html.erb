@@ -1,14 +1,15 @@
 <% if @user %>
   <ul>
-    <li>學號/教師編號：<%= @user.number %></li>
+    <li>角色：<%= @user.role %></li>
+    <li>編號：<%= @user.number %></li>
     <li>姓名：<%= @user.name %></li>
-    <li>信箱：<%= @user.email %></li>
-    <li>權限：<%= @user.role %></li>
+    <li>工作單位： (製作中)</li>
     <li>手機：<%= @user.phone %></li>
     <li>性別：<%= @user.gender %></li>
+    <li>信箱：<%= @user.email %></li>
   </ul>
 <% else %>
   <h1>沒有這個人</h1>
 <% end %>
 
-<%= link_to "返回首頁", root_path, class: 'btn btn-secondary' %>
+<%= link_to "上一頁", :back, class: 'btn btn-secondary' %>

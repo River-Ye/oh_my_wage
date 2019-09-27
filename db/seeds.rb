@@ -10,9 +10,6 @@ FactoryBot.create(:admin)
 FactoryBot.create(:staff)
 FactoryBot.create(:student)
 
-# FactoryBot.create(:staff)
-# FactoryBot.create(:student)
-
 # puts "Generating admin"
 #   User.create(
 #   number: Faker::Code.nric,

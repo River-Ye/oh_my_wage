@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  paginates_per 10
+
   has_many :salaries, dependent: :destroy
   has_many :reply_to_issues, dependent: :destroy
   has_many :department_with_users, dependent: :destroy
@@ -13,6 +15,7 @@ class User < ApplicationRecord
 
   validates :name, :role, :number, :phone, presence: true
   validates :number, uniqueness: true
+  validates :phone, length: { is: 10 }
   
   enum role: { admin: 0, staff: 1, student: 2 }
   enum gender: { Male: 0, Female: 1 }
