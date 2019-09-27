@@ -8,6 +8,7 @@
 
 FactoryBot.create(:admin)
 FactoryBot.create(:staff)
+<<<<<<< Updated upstream
 FactoryBot.create(:student)
 
 
@@ -47,3 +48,7 @@ FactoryBot.create(:student)
 #   role: 2)
 # end
 # puts "Done!"
+=======
+FactoryBot.create(:studnet)
+
+>>>>>>> Stashed changes
