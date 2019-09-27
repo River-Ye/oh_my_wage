@@ -10,10 +10,7 @@ FactoryBot.create(:admin)
 FactoryBot.create(:staff)
 FactoryBot.create(:student)
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 # puts "Generating admin"
 #   User.create(
 #   number: Faker::Code.nric,
