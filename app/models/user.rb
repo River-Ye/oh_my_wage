@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  paginates_per 10
+
   has_many :salaries, dependent: :destroy
   has_many :reply_to_issues, dependent: :destroy
   has_many :department_with_users, dependent: :destroy

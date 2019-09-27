@@ -2,7 +2,7 @@ class AdminsController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def show
-    @users = User.all
+    @users = User.order(role: :asc).page(params[:page])
   end
 
   def destroy

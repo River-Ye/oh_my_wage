@@ -9,7 +9,7 @@ class StaffsController < ApplicationController
   end
 
   def history
-    @student = User.where(subject: '葛來分多')
+    # @student = Department.where(name: )
     @issue = ReplyToIssue.all
   end
 
@@ -24,8 +24,9 @@ class StaffsController < ApplicationController
 
   def edit
     # byebug
-    @student = User.where(subject: current_user.subject)
-    # Department.where(name: current_user.subject)
+    # @student = User.where(subject: current_user.subject)
+    @student = Department.where(name: current_user.departments.name)
+    # byebug
   end
 
   private
