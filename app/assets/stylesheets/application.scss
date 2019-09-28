@@ -18,7 +18,7 @@
 
 // --------------- 以下為通用 class ---------------
 
-.hogwarts{
+.mybgimg{
     background-image: url(../images/64799.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -32,7 +32,7 @@
 }
 .zhtitle{
     width: 70%;
-    margin: 30px auto;
+    margin: 2em auto;
     text-align: center;
     font-size: 50px
 }
@@ -41,12 +41,21 @@
     text-shadow: 1px 0.6px 1px #333
 }
 .contentinfo{
-    width: 80%;
     margin: auto;
     padding: 25px;
     border-radius: 10px;
-    background-color: rgba(5, 15, 31, 0.8)
+    background-color: rgba(5, 15, 31, 0.8);
+    li{
+        font-size: 30px;
+        padding: 1em;
+    }
+    p{
+        text-indent: 2em;
+        // margin: 10px auto;
+        font-size: 20px
+    };
 }
+
 .center-block{
     text-align: center;
     margin: 20px auto
@@ -63,15 +72,12 @@ footer{
 }
 // --------------- 以下為各頁面 css 設定 ---------------
 
-.contactus{
-    p{
-        text-indent: 2em;
-        margin: 10px auto
-    }
-}
-.aboutus{
-    p{
-        text-indent: 2em;
-        margin: 10px auto
-    }
-}
+// .contactus{
+    
+// }
+// .aboutus{
+    
+// }
+// .qa{
+
+// }
