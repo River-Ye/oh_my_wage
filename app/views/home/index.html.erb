@@ -1,14 +1,27 @@
-<h1>霍格華滋學院</h1>
-<h2>Oh My Wage 工讀薪資系統</h2>
-<div class="row">
-  <div class="card col">
-    <div class="card-body">
-      <h3><%= link_to "學生 STUDENT", user_session_path, class: 'btn btn-info' %></h3>
-    </div>
-  </div>
-  <div class="card col">
-    <div class="card-body">
-      <h3><%= link_to "教職員 STAFF", user_session_path, class: 'btn btn-info' %></h3>
-    </div>
-  </div>
+<div class="text-center title">
+  <h2>Oh My Wage</h2> 
+  <h4>霍格華滋學院工讀薪資系統</h4>
 </div>
+
+  <div class="row">
+    <div class="text-center col col-sm-12 col-md-6 col-xl-6">
+      <div class="item">
+        <%= link_to user_session_path do %>
+          <div class="log">
+            <%= image_tag 'stu.png'%>
+              <p>學生 STUDENT</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="text-center col col-sm-12 col-md-6 col-xl-6 ">
+      <div class="item">
+        <%= link_to user_session_path do %>
+          <div class="log">
+            <%= image_tag 'staff.png'%>
+              <p>教職員 STAFF</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

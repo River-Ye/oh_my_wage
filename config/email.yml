@@ -1,0 +1,8 @@
+development:
+  address: smtp.mailgun.org
+  port: 587
+  domain: mailgun
+  authentication: plain
+  user_name: postmaster@sandbox4b34e6e05a444c0592e845659de1b5a2.mailgun.org
+  password: 7724233b6577ec773770f159597a589f-baa55c84-e485d2ed
+  enable_starttls_auto: true
