@@ -6,12 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# puts "Generating admin with factorybot..."
-#     FactoryBot.create(:admin)
-# puts "Done!"
+puts "Generating admin with factorybot..."
+    FactoryBot.create(:admin)
+puts "Done!"
 
 puts "Generating 10 stuffs with factorybot..."
 10.times do |i|    
     FactoryBot.create(:staff)
+end
+puts "Done!"
+
+puts "Generating 10 student with factorybot..."
+10.times do |i|    
+    FactoryBot.create(:student)
 end
 puts "Done!"

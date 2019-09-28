@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Got lost? (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
-    h1,h3{
-      text-align: center;
+    body{
+      font-family: Georgia;
+      background-image: url(./images/64799.jpg);
+      background-size: cover;
     }
-    img{
-      width: 80%;
 
-    };
+    img{
+      width: 50%;
+      hight: 50%;
+      margin: 30px auto;
+      display: block;
+    }
+    .arrowdown{
+      width: 10%;
+    }
+    p{
+      text-align: center;
+      color: whitesmoke;
+      font-size: 20px;
+      font-style: italic;
+    }
   </style>
 </head>
 
 <body class="">
   <!-- This file lives in public/404.html -->
   <div class="container">
-    <div class="">
-      <h1>Got lost?</h1>
-      <h3>I think you might need this stuff......</h3>
-    </div>
-    <img src="https://res.cloudinary.com/teepublic/image/private/s--gSqDP2B2--/t_Preview/b_rgb:eae0c7,c_limit,f_jpg,h_630,q_90,w_630/v1467458147/production/designs/568167_1.jpg" >
+    <img src="./images/wlost.png" class="gotlost">
+    <img src="./images/arrow-down.gif" alt="arrow down" class="arrowdown">
+    <p>Repeat the spell and click to unfold the map:</p>
+    <p>"I solemnly swear that I am up to no good."</p>
+    <a href="http://localhost:3000/"><img src="./images/12338.png"></a>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
