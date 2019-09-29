@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 puts "產生 1 筆 admin 權限帳號"
     FactoryBot.create(:admin)
 puts "Done!"
@@ -15,6 +16,7 @@ puts "產生 20 筆 staff 權限帳號"
     FactoryBot.create(:staff)
 end
 puts "Done!"
+
 
 puts "產生 80 筆 student 權限帳號"
 80.times do |i|    

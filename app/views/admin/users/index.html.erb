@@ -1,8 +1,8 @@
 <h1>Hi, <%= current_user.name %> 管理者您好</h1>
 
-<%= link_to "查詢", "#", class: 'btn btn-success btn-lg' %>
-<%= link_to "新增", new_admin_user_path, class: 'btn btn-primary btn-lg' %>
-<%= paginate @users, theme: 'twitter-bootstrap-4' %>
+  <%= link_to "查詢", "#", class: 'btn btn-success btn-lg' %>
+  <%= link_to "新增", new_admin_user_path, class: 'btn btn-primary btn-lg' %>
+  <%= paginate @users, theme: 'twitter-bootstrap-4' %>
 <table class="table table-hover table-sm">
   <thead>
     <tr>
