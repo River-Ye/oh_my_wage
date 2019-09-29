@@ -6,37 +6,37 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Generating admin with factorybot..."
+puts "產生 1 筆 admin 權限帳號"
     FactoryBot.create(:admin)
 puts "Done!"
 
-puts "Generating 20 staffs with factorybot..."
+puts "產生 20 筆 staff 權限帳號"
 20.times do |i|    
     FactoryBot.create(:staff)
 end
 puts "Done!"
 
-puts "Generating 80 student with factorybot..."
+puts "產生 80 筆 student 權限帳號"
 80.times do |i|    
     FactoryBot.create(:student)
 end
 puts "Done!"
 
-puts "Generating Department name..."
+puts "產生 9 個部門"
 0.upto(8) do |i|
   Department.create(name: i)
 end
 puts "Done!"
 
-puts "Generating 80 DepartmentWithUser name..."
+puts "產生 80 筆 User 與 Department 關聯資料"
 80.times do |i|
   DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(1..101))
 end
 puts "Done!"
 
-puts "Generating 150 Salary..."
+puts "產生 150 筆 Student 與 Salary 關聯"
 150.times do |i|
-  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..300))
+  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..500))
 end
 puts "Done!"
 
