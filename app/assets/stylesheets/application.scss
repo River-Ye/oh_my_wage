@@ -16,9 +16,43 @@
 
 @import "bootstrap";
 
-// --------------- 以下為通用 class ---------------
+// Back to top button
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.8;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: whitesmoke;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+ 
+// ---------- 以下為通用 class，直接套用即可 ----------
 
-.hogwarts{
+.mybgimg{
     background-image: url(../images/64799.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -27,6 +61,9 @@
 }
 
 .infotitle{
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
     display: block;
     margin: 50px auto 100px;
     width: 100%
@@ -45,13 +82,20 @@
 }
 
 .contentinfo{
-    width: 80%;
     margin: auto;
     padding: 25px;
     border-radius: 10px;
-    background-color: rgba(5, 15, 31, 0.8)
+    background-color: rgba(5, 15, 31, 0.8);
+    li{
+        font-size: 30px;
+        padding: 1em;
+    }
+    p{
+        text-indent: 2em;
+        // margin: 10px auto;
+        font-size: 20px
+    };
 }
-
 .center-block{
     text-align: center;
     margin: 20px auto
@@ -60,27 +104,17 @@
 .btn-dark{
     box-shadow: 2px 2px 6px #111;
 }
-
+  
 footer{
     padding: 10px;
     font-size: 12px;
     text-align: center;
-    background-color: rgba(5, 15, 31, 0.8);
-    color: #ccc
+    background-color: rgba(5, 15, 31, 0.8)
 }
 
-// --------------- 以下為各頁面 css 設定 ---------------
+// ---------- 以下為各頁面 css 設定 ----------
 
-.contactus{
-    p{
-        text-indent: 2em;
-        margin: 10px auto
-    }
-}
-
-.aboutus{
-    p{
-        text-indent: 2em;
-        margin: 10px auto
-    }
-}
+// .contactus{}
+// .aboutus{}
+// .qa{}
+  
