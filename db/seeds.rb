@@ -36,6 +36,8 @@ puts "Done!"
 
 puts "Generating 150 Salary..."
 150.times do |i|
-  Salary.create(user_id: rand(1..101), hr: rand(1..12), hourly_wage: rand(150..300))
+  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..300))
 end
 puts "Done!"
+
+puts "請先看 Readme or seeds.rb 看產生哪些資料"
