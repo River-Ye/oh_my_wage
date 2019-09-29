@@ -45,6 +45,7 @@ class Admin::UsersController < ApplicationController
   end
 
   private
+  
   def find_user
     @user = User.find_by(id: params[:id])
   end

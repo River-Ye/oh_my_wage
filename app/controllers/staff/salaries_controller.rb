@@ -24,21 +24,8 @@ class Staff::SalariesController < ApplicationController
   def show
   end
 
-  def new
-    @salary = Salary.new(user_id: params[:format].to_i)
-  end
-
   def edit
     @student.salaries.build if @student.salaries.empty?
-  end
-
-  def create
-    @salary = Salary.new(salary_params)
-    if @salary.save
-      redirect_to staff_salaries_path, notice: "建立成功!!"
-    else
-      render :new
-    end
   end
 
   def update
@@ -61,6 +48,7 @@ class Staff::SalariesController < ApplicationController
   private
   
   def find_student
+    # index 用到
     @student = User.find(params[:id])
   end
 
@@ -78,14 +66,8 @@ class Staff::SalariesController < ApplicationController
     end
   end
 
-  def salary_params
-    # new 新增薪水
-    params.require(:salary).permit(:user_id, :date, :hr, :hourly_wage)
-  end
-
   def salary_edit_params
     # edit 編輯薪水
-    params.require(:user).permit(:name, :email, :tel,
-      salaries_attributes: [:id, :user_id, :date, :hr, :hourly_wage, :_destroy])
+    params.require(:user).permit(salaries_attributes: [:id, :user_id, :date, :hr, :hourly_wage, :_destroy])
   end
 end

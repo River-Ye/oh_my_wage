@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  before_action :check_login
   # GET /resource/sign_up
   # def new
   #   super
@@ -50,4 +51,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def check_login
+    redirect_to root_path, notice: "最高管理者才有權限!!" unless user_signed_in?
+  end
 end

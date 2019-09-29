@@ -2,7 +2,6 @@ class Student::UserController < ApplicationController
   before_action :check_login
 
   def index
-    @salary = Salary.all
   end
 
   def history

@@ -1,14 +1,15 @@
 class ProblemsController < ApplicationController
+  before_action :check_login
+
   # 是否需要讓學生看到提問的歷史紀錄
   def index
     @problems = ReplyToIssue.order(role: :asc).page(params[:page])
-  end
-
-  def show
+    authorize @problems
   end
 
   def new
     @reply_to_issue = ReplyToIssue.new
+    authorize @reply_to_issue
   end
 
   def create
@@ -28,5 +29,9 @@ class ProblemsController < ApplicationController
   
   def reply_to_issue_params
     params.require(:reply_to_issue).permit(:title, :content)
+  end
+
+  def check_login
+    redirect_to root_path, notice: "請先登入!!" unless user_signed_in?
   end
 end

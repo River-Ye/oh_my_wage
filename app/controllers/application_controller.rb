@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
   include Pundit
+  # protect_from_forgery
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  rescue_from Pundit::NotAuthorizedError, with: :not_authorize
 
   private
 
@@ -16,5 +18,9 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:number, :name, :role, :phone, :gender])
     devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :number, :name, :role, :phone, :gender])
+  end
+
+  def not_authorize
+    redirect_to root_path, notice: "權限不足!!"
   end
 end
