@@ -2,16 +2,22 @@ class Staff::SalariesController < ApplicationController
   before_action :find_student, only: [:edit, :update, :destroy]
   before_action :find_student_salary, only: [:show, :update, :destroy]
   before_action :find_student_salary_all, only: [:show]
-  # before_action :find_salary, only: [:show, :edit, :update, :destroy, :new]
-  # before_action :find_user_new, only: [:new]
 
   def index
-    user_id = DepartmentWithUser.where(department_id: current_user.id).ids
-    @students = User.where(id: user_id).where(role: 2).order(name: :asc).page(params[:page])
-    respond_to do |format|
-      format.html
-      format.json
-      format.pdf { render template: 'users/pdf',pdf:'pdf' }
+    if DepartmentWithUser.find_by(user_id: current_user.id).nil?
+      redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
+    else
+      # 找出登入老師的所屬部門代號
+      department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+      # 找出該部門底下所有人
+      user_id = DepartmentWithUser.where(department_id: department_id).map{|x| x.user_id}
+      # 找出該部門下的學生
+      @students = User.where(id: user_id).where(role: 2).order(name: :asc).page(params[:page])
+      respond_to do |format|
+        format.html
+        format.json
+        format.pdf { render template: 'users/pdf',pdf:'pdf' }
+      end
     end
   end
 
@@ -44,8 +50,12 @@ class Staff::SalariesController < ApplicationController
   end
 
   def destroy
-    @salary.destroy
-    redirect_to root_path, notice: "刪除成功!!"
+    # 找出登入老師的所屬部門代號
+    department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+    # 找出該部門底下該學生
+    out = DepartmentWithUser.where(department_id: department_id).where(user_id: params[:id]).ids
+    DepartmentWithUser.delete(out)
+    redirect_to staff_salaries_path, notice: "已從#{Department.find(current_user.id).name}剔除!!"
   end
 
   private
@@ -66,8 +76,6 @@ class Staff::SalariesController < ApplicationController
     else
       @salary_all = Salary.where(user_id: @user.user_id)  
     end
-    
-    
   end
 
   def salary_params

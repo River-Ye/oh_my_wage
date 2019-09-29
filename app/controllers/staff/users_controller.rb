@@ -1,8 +1,9 @@
 class Staff::UsersController < ApplicationController
   before_action :check_login
-  before_action :find_salary, only: [:show, :history]
+  before_action :find_student, only: [:show, :history]
 
   def index
+    @students = User.where(role: 2).order(name: :asc).page(params[:page])
   end
 
   def show
@@ -12,8 +13,10 @@ class Staff::UsersController < ApplicationController
   end
 
   def history
-    # @student = Department.where(name: )
     @issue = ReplyToIssue.all
+  end
+
+  def home
   end
 
   def create
@@ -33,8 +36,8 @@ class Staff::UsersController < ApplicationController
 
   private
 
-  def find_salary
-    @salary = current_user.salaries
+  def find_student
+    @student = User.find(params[:id])
   end
 
   def reply_to_issue_params

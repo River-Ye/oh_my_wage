@@ -4,28 +4,25 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # ok
   namespace :admin do
     resources 'users'
     root 'users#index'
   end
   
-  # ok
   resources 'problems', only: [:index, :new, :create ,:show]
 
-  # ok
   namespace 'student' do
     get 'history', to: 'user#history'
     root 'user#index'
   end
     
   namespace 'staff' do
-    resources 'users', only: [:index, :new, :create]
+    resources 'users'
     resources 'salaries'
     get 'history', to: 'user#history'
-    root 'users#index'
+    get '/home', to: 'users#home'
+    root 'users#home'
   end
-
 
   get '/about', to: 'home#about'
   get '/contact', to: 'home#contact'

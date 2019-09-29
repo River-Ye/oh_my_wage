@@ -7,5 +7,6 @@
     <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-sm btn-danger' %>
   </div>
   <hr>
-  <%= form.button :submit, '儲存',class: 'btn btn-success' %>
+  <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
+  <%= form.button :submit, '儲存',class: 'btn btn-success btn-lg' %>
 <% end %>

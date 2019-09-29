@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(resource)
+    return stored_location_for(resource) || root_path if @user == nil
     return stored_location_for(resource) || admin_root_path if @user.role == "admin"
     return stored_location_for(resource) || staff_root_path if @user.role == "staff"
     return stored_location_for(resource) || student_root_path if @user.role == "student"

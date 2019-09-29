@@ -1,4 +1,31 @@
-<h1>Hi, <%= current_user.name %> 老師您好</h1>
-<%= link_to "工時登錄", staff_salaries_path, class: 'btn btn-primary btn-lg' %>
-<%= link_to "工讀名單", "#", class: 'btn btn-success btn-lg' %>
-<%= link_to "問題反應", new_problem_path, class: 'btn btn-danger btn-lg' %>
+<h1>學生總名單</h1>
+
+<%= link_to "新增", new_staff_user_path, class: 'btn btn-primary btn-sm' %>
+<%= link_to "回主選單", staff_root_path, class: 'btn btn-primary btn-xs' %>
+<%= link_to "查詢", "#", class: 'btn btn-success btn-sm' %>
+
+
+<%= paginate @students, theme: 'twitter-bootstrap-4' %>
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th>加入</th>
+      <th>姓名</th>
+      <th>學號</th>
+      <th>電話</th>
+      <th>信箱</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= link_to "加入", "#", class: 'btn btn-danger btn-sm' %></td>
+      <td><%= link_to student.name, staff_user_path(student.id) %></td>
+      <td><%= student.number %></td>
+      <td><%= student.phone %></td>
+      <td><%= student.email %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

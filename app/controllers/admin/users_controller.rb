@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  before_action :check_login
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -50,5 +51,9 @@ class Admin::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :number, :email, :role, :phone, :gender, :password)
+  end
+
+  def check_login
+    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'admin'
   end
 end
