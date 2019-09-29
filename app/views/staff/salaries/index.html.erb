@@ -17,7 +17,7 @@
       <td><%= link_to student.name, staff_salary_path(student.id) %></td>
       <td><%= link_to "新增", new_staff_salary_path(student.id), class: 'btn btn-primary btn-sm' %></td>
       <td><%= link_to "編輯", edit_staff_salary_path(student.id), class: 'btn btn-success btn-sm' %></td>
-      <td><%= link_to "刪除", staff_salary_path(student.id), method: 'delete', class: 'btn btn-danger btn-sm', data: { confirm: "確定要把 #{student.name} 從 #{Department.find(current_user.id).name} 剔除嗎?" } %></td>
+      <td><%= link_to "刪除", staff_salary_path(student.id), method: 'delete', class: 'btn btn-danger btn-sm', data: { confirm: "確定要把 #{student.name} 從 #{Department.find(@department_id).name} 剔除嗎?" } %></td>
     </tr>
   <% end %>
   </tbody>

@@ -8,9 +8,9 @@ class Staff::SalariesController < ApplicationController
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
       # 找出登入老師的所屬部門代號
-      department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+      @department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
       # 找出該部門底下所有人
-      user_id = DepartmentWithUser.where(department_id: department_id).map{|x| x.user_id}
+      user_id = DepartmentWithUser.where(department_id: @department_id).map{|x| x.user_id}
       # 找出該部門下的學生
       @students = User.where(id: user_id).where(role: 2).order(name: :asc).page(params[:page])
       respond_to do |format|
@@ -55,7 +55,7 @@ class Staff::SalariesController < ApplicationController
     # 找出該部門底下該學生
     out = DepartmentWithUser.where(department_id: department_id).where(user_id: params[:id]).ids
     DepartmentWithUser.delete(out)
-    redirect_to staff_salaries_path, notice: "已從#{Department.find(current_user.id).name}剔除!!"
+    redirect_to staff_salaries_path, notice: "已從 #{Department.find(department_id).name} 剔除!!"
   end
 
   private

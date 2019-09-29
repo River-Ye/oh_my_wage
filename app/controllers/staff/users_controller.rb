@@ -2,47 +2,34 @@ class Staff::UsersController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show, :history]
 
-  def index
-    @students = User.where(role: 2).order(name: :asc).page(params[:page])
+  def index 
+    # 找出登入老師的所屬部門代號
+    department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+    # 找出該部門底下所有人
+    department_user_id = DepartmentWithUser.where(department_id: department_id).map{ |x| x.user_id }
+    user_section = [*1..User.all.count] - department_user_id
+    # 顯示非該部門學生 id
+    @students = User.where(id: user_section).where(role: 2).order(name: :asc).page(params[:page])
   end
 
   def show
   end
 
-  def new
-  end
-
-  def history
-    @issue = ReplyToIssue.all
-  end
-
   def home
   end
 
-  def create
-    @reply_to_issue = ReplyToIssue.new(reply_to_issue_params)
-    if @reply_to_issue.save
-      redirect_to student_path(current_user), notice: "已收到問題囉"
+  def update
+    # 找出老師所屬單位
+    department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+    @departmentwithuser = DepartmentWithUser.new(user_id: User.find(params[:id]).id, department_id: department_id)
+    if @departmentwithuser.save
+      redirect_to staff_users_path, notice: "已新增至 #{Department.find(department_id).name} 該部門"
     else
-      render :problem
+      redirect_to staff_users_path, notice: "新增失敗，請與管理者聯絡!!"
     end
   end
 
-  def edit
-    departmnet_with_user = DepartmentWithUser.where(department_id: current_user.id)
-    user_id = departmnet_with_user.map { |student| student[:user_id] }
-    @students = User.where(id: user_id).where(role: 1)
-  end
-
   private
-
-  def find_student
-    @student = User.find(params[:id])
-  end
-
-  def reply_to_issue_params
-    params.require(:reply_to_issue).permit(:title, :content, salaries_attributes: [:id, :title, :content])
-  end
 
   def check_login
     redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
