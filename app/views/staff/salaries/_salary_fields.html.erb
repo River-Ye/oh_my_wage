@@ -1,0 +1,20 @@
+<div class="nested-fields">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">日期</th>
+        <th scope="col">工時</th>
+        <th scope="col">時薪</th>
+        <th scope="col">刪除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= f.input :date, label: false, placeholder: '日期' %></td>
+        <td><%= f.input :hr, label: false, placeholder: '工時' %></td>
+        <td><%= f.input :hourly_wage, label: false, placeholder: '時薪' %></td>
+        <td><%= link_to_remove_association "X", f, class: 'btn btn-sm btn-danger' %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

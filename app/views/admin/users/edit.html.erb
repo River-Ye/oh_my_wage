@@ -1,4 +1,3 @@
-<h1>這是Views/user/底下的檔案</h1>
 <h1>修改資料</h1>
 <%= simple_form_for(@user, url: admin_user_path) do |f| %>
   <div class="form-inputs">
@@ -25,7 +24,6 @@
   </div>
   <div class="form-actions">
     <%= f.button :submit, "Update", class: 'btn btn-success btn-lg' %>
+    <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
   </div>
 <% end %>
-
-<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>

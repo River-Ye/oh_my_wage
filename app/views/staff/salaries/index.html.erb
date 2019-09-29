@@ -1,0 +1,25 @@
+<h1>Wage Settlement</h1>
+
+<%= paginate @students, theme: 'twitter-bootstrap-4' %>
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th>編號</th>
+      <th>姓名</th>
+      <th>新增</th>
+      <th>編輯</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.number %></td>
+      <td><%= link_to student.name, staff_salary_path(student.id) %></td>
+      <td><%= link_to "新增", new_staff_salary_path(student.id), class: 'btn btn-primary btn-sm' %></td>
+      <td><%= link_to "編輯", edit_staff_salary_path(student.id), class: 'btn btn-success btn-sm' %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>

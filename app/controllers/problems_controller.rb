@@ -1,7 +1,7 @@
 class ProblemsController < ApplicationController
   # 是否需要讓學生看到提問的歷史紀錄
   def index
-    @problem = ReplyToIssue.all
+    @problems = ReplyToIssue.order(role: :asc).page(params[:page])
   end
 
   def show
@@ -21,6 +21,10 @@ class ProblemsController < ApplicationController
   end
 
   private
+
+  def find_reply_to_issue
+    @reply_to_issue = ReplyToIssue.find_by(id: params[:id])
+  end
   
   def reply_to_issue_params
     params.require(:reply_to_issue).permit(:title, :content)

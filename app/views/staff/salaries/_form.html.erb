@@ -1,0 +1,11 @@
+<h3><%= student.name %>的薪資</h3>
+<%= simple_form_for student, url: staff_salary_path do |form| %>
+  <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
+    <%= render 'salary_fields', f: salary_form %>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-sm btn-danger' %>
+  </div>
+  <hr>
+  <%= form.button :submit, '儲存',class: 'btn btn-success' %>
+<% end %>

@@ -13,7 +13,8 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
+        <td><%= student.number %></td>
+        <td><%= link_to student.name, edit_admin_user_path(student.id) %></td>
         <td><%= student.salaries.map { |x| x.hr }.sum %></td>
         <td><%= student.salaries.map { |x| x.hr * x.hourly_wage }.sum %></td>
       </tr>

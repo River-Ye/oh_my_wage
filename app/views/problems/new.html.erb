@@ -8,7 +8,7 @@
   </ul>
 <% end %>
 
-<%= simple_form_for :reply_to_issue, url: student_problems_path do |form| %>
+<%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
   <%= form.input :title, label: '標題' %>
   <%= form.input :content, label: '內容' %>
 

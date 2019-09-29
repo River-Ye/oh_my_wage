@@ -1,6 +1,9 @@
-class StaffsController < ApplicationController
+class Staff::UsersController < ApplicationController
   before_action :check_login
   before_action :find_salary, only: [:show, :history]
+
+  def index
+  end
 
   def show
   end
@@ -25,8 +28,7 @@ class StaffsController < ApplicationController
   def edit
     departmnet_with_user = DepartmentWithUser.where(department_id: current_user.id)
     user_id = departmnet_with_user.map { |student| student[:user_id] }
-    @students = User.where(id: user_id)
-    # byebug
+    @students = User.where(id: user_id).where(role: 1)
   end
 
   private

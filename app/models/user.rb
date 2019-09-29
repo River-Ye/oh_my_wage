@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :department_with_users, dependent: :destroy
   has_many :departments, through: :department_with_users, dependent: :destroy
 
-  accepts_nested_attributes_for :salaries
+  accepts_nested_attributes_for :salaries, reject_if: :all_blank, allow_destroy: true
 
   validates :name, :role, :number, :phone, presence: true
   validates :number, uniqueness: true
