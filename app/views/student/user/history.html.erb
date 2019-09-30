@@ -9,7 +9,7 @@
   <tbody>
     <% current_user.salaries.each do |salary| %>
     <tr>
-      <td><%= salary.date %></td>
+      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %> 時</td>
       <td><%= salary.hourly_wage %> 元</td>
       <td><%= salary.hourly_wage * salary.hr %> 元</td>
