@@ -30,15 +30,24 @@ puts "產生 9 個部門"
 end
 puts "Done!"
 
-puts "產生 80 筆 User 與 Department 關聯資料"
-80.times do |i|
-  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(1..101))
+puts "產生 20 筆 staff 與 Department 關聯資料"
+2.upto(21) do |i|
+  DepartmentWithUser.create(department_id: rand(1..9), user_id: i)
 end
 puts "Done!"
 
-puts "產生 150 筆 Student 與 Salary 關聯"
+puts "產生 80 筆 student 與 Department 關聯資料"
+80.times do |i|
+  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(22..101))
+end
+puts "Done!"
+
+puts "產生 150 筆 student 與 Salary 關聯"
 150.times do |i|
-  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..500))
+  Salary.create(user_id: rand(22..101),
+                date: rand(2.years).seconds.ago,
+                hr: rand(1..12),
+                hourly_wage: rand(150..500))
 end
 puts "Done!"
 
