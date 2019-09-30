@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_29_034341) do
+ActiveRecord::Schema.define(version: 2019_09_30_085750) do
 
   create_table "department_with_users", force: :cascade do |t|
     t.integer "user_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_09_29_034341) do
 
   create_table "salaries", force: :cascade do |t|
     t.integer "user_id"
-    t.time "date"
+    t.datetime "date"
     t.integer "hr", default: 0
     t.integer "hourly_wage", default: 0
     t.datetime "created_at", null: false

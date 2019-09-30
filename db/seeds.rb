@@ -44,7 +44,10 @@ puts "Done!"
 
 puts "產生 150 筆 student 與 Salary 關聯"
 150.times do |i|
-  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..500))
+  Salary.create(user_id: rand(22..101),
+                date: rand(2.years).seconds.ago,
+                hr: rand(1..12),
+                hourly_wage: rand(150..500))
 end
 puts "Done!"
 
