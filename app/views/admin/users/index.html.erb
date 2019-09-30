@@ -1,0 +1,33 @@
+<h1>Hi, <%= current_user.name %> 管理者您好</h1>
+
+  <%= link_to "查詢", "#", class: 'btn btn-success btn-lg' %>
+  <%= link_to "新增", new_admin_user_path, class: 'btn btn-primary btn-lg' %>
+  <%= paginate @users, theme: 'twitter-bootstrap-4' %>
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>編號</th>
+      <th>姓名</th>
+      <th>編輯</th>
+      <th>刪除</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.role %></td>
+    <td><%= user.number %></td>
+    <td><%= link_to user.name, admin_user_path(user.id) %></td>
+    <td><%= link_to "編輯", edit_admin_user_path(user.id), class: 'btn btn-success btn-sm' %></td>
+    <td><%= link_to "刪除",
+            admin_user_path(user.id),
+            method: 'delete',
+            class: 'btn btn-danger btn-sm',
+            data: {confirm: '確定嗎???'}
+          %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

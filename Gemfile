@@ -41,11 +41,12 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'bootstrap4-kaminari-views', '~> 1.0', '>= 1.0.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
-gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.0'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'faker', '~> 2.4'
 gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
 gem 'pundit', '~> 2.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

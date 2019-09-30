@@ -1,0 +1,26 @@
+<h1>個人薪資明細</h1>
+<h2>Wage Settlement</h2>
+<h4><%= @user.user.name %> 學生</h4>
+
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th>日期</th>
+      <th>工時</th>
+      <th>時薪</th>
+      <th>合計</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @salary_all.each do |salary| %>
+    <tr>
+      <td><%= salary.date %></td>
+      <td><%= salary.hr %></td>
+      <td><%= salary.hourly_wage %></td>
+      <td><%= salary.hr * salary.hourly_wage %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>

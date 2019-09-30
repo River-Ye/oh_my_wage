@@ -1,0 +1,20 @@
+<h1>歷史資料</h1>
+<table class='table'>
+  <thead>
+    <td>日期</td>
+    <td>工時</td>
+    <td>時薪</td>
+    <td>合計</td>
+  </thead>
+  <tbody>
+    <% current_user.salaries.each do |salary| %>
+    <tr>
+      <td><%= salary.date %></td>
+      <td><%= salary.hr %> 時</td>
+      <td><%= salary.hourly_wage %> 元</td>
+      <td><%= salary.hourly_wage * salary.hr %> 元</td>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>

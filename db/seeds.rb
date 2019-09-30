@@ -7,40 +7,39 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-puts "Generating admin"
-  User.create(
-  number: Faker::Code.nric,
-  password: '123123',
-  name: Faker::Movies::HarryPotter.character,
-  phone: ['09', 8.times.map{rand(10)}].join,
-  email: "admin@123.123",
-  gender: [0, 1].sample,
-  role: 0)
+puts "產生 1 筆 admin 權限帳號"
+    FactoryBot.create(:admin)
 puts "Done!"
 
-puts "Generating 5 stuffs..."
-5.times do |i|
-  User.create(
-  number: Faker::Code.nric,
-  password: '123123',
-  name: Faker::Movies::HarryPotter.character,
-  phone: ['09', 8.times.map{rand(10)}].join,
-  email: ['t', 5.times.map{ rand(10) }, "@123.123"].join,
-  gender: [0, 1].sample,
-  role: 1)
+puts "產生 20 筆 staff 權限帳號"
+20.times do |i|    
+    FactoryBot.create(:staff)
 end
 puts "Done!"
 
-puts "Generating 5 students..."
-5.times do |i|
-  User.create(
-  number: Faker::Code.asin,
-  password: '123123',
-  name: Faker::Movies::HarryPotter.character,
-  phone: ['09', 8.times.map{rand(10)}].join,
-  email: ['s', 5.times.map{ rand(10) }, "@123.123"].join,
-  gender: [0, 1].sample,
-  role: 2)
+
+puts "產生 80 筆 student 權限帳號"
+80.times do |i|    
+    FactoryBot.create(:student)
 end
 puts "Done!"
+
+puts "產生 9 個部門"
+0.upto(8) do |i|
+  Department.create(name: i)
+end
+puts "Done!"
+
+puts "產生 80 筆 User 與 Department 關聯資料"
+80.times do |i|
+  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(1..101))
+end
+puts "Done!"
+
+puts "產生 150 筆 Student 與 Salary 關聯"
+150.times do |i|
+  Salary.create(user_id: rand(22..101), hr: rand(1..12), hourly_wage: rand(150..500))
+end
+puts "Done!"
+
+puts "請先看 Readme or seeds.rb 看產生哪些資料"

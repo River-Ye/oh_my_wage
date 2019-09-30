@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <tr>
+    <td>學號</td>
+    <td><%= @student.number %></td>
+  </tr>
+  <tr>
+    <td>姓名</td>
+    <td><%= @student.name %></td>
+  </tr>
+    <tr>
+    <td>手機</td>
+    <td><%= @student.phone %></td>
+  </tr>
+  <tr>
+    <td>性別</td>
+    <td><%= @student.gender %></td>
+  </tr>
+  <tr>
+    <td>信箱</td>
+    <td><%= @student.email %></td>
+  </tr>
+</table>
+
+<%= link_to "上一頁", :back, class: 'btn btn-secondary' %>

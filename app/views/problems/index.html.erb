@@ -1,0 +1,22 @@
+<h1>問題總覽</h1>
+<%= paginate @problems, theme: 'twitter-bootstrap-4' %>
+<table class="table table-hover table-sm">
+  <thead>
+    <tr>
+      <th>標題</th>
+      <th>內容</th>
+      <th>角色</th>
+      <th>發問者</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @problems.each do |problem| %>
+      <tr>
+        <td><%= problem.title %></td>
+        <td><%= problem.content %></td>
+        <td><%= problem.user.role %></td>
+        <td><%= problem.user.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
