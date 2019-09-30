@@ -7,7 +7,7 @@
     <td>合計</td>
   </thead>
   <tbody>
-    <% current_user.salaries.each do |salary| %>
+    <% @student.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %> 時</td>

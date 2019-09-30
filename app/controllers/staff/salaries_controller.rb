@@ -72,7 +72,7 @@ class Staff::SalariesController < ApplicationController
     if @user.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
-      @salary_all = Salary.where(user_id: @user.user_id)  
+      @salary_all = Salary.where(user_id: @user.user_id).order(date: :desc)
     end
   end
 
