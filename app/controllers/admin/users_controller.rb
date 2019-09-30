@@ -11,6 +11,10 @@ class Admin::UsersController < ApplicationController
     end
   end
 
+  def search
+    @users = User.search(params[:search]).page(params[:page])
+  end
+
   def new
     @user = User.new
   end
