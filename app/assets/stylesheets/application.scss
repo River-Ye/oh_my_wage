@@ -86,6 +86,22 @@
     border: 1px solid salmon
 }
 
+table{
+    a, a:hover, a:visited{
+        color: whitesmoke
+    }
+    tr{
+        color: whitesmoke;
+    }
+    tr:hover{
+        background-color: rgba(5, 15, 31, 0.8);
+        color: orange;
+    }
+    th{
+        background-color: rgba(5, 15, 31, 0.8);
+    }
+}
+
 .mybgimg{
     background-image: url(../images/64799.jpg);
     background-size: cover;
