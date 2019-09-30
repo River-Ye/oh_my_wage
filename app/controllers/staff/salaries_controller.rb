@@ -1,4 +1,5 @@
 class Staff::SalariesController < ApplicationController
+  before_action :check_login
   before_action :find_student, only: [:edit, :update, :destroy]
   before_action :find_student_salary, only: [:show, :update, :destroy]
   before_action :find_student_salary_all, only: [:show]
@@ -21,6 +22,15 @@ class Staff::SalariesController < ApplicationController
       format.json
       format.pdf { render template: 'staff/salaries/pdf',pdf:'pdf' }
     end
+  end
+
+  def search
+    # 找出登入老師的所屬部門代號
+    @department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+    # 找出該部門底下所有人
+    user_id = DepartmentWithUser.where(department_id: @department_id).map{|x| x.user_id}
+    # 找出該部門下的學生
+    @students = User.where(id: user_id).where(role: 2).search(params[:search]).page(params[:page])
   end
 
   def show
@@ -79,12 +89,16 @@ class Staff::SalariesController < ApplicationController
     if @user.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
-      @salary_all = Salary.where(user_id: @user.user_id)  
+      @salary_all = Salary.where(user_id: @user.user_id).order(date: :desc)
     end
   end
 
   def salary_edit_params
     # edit 編輯薪水
     params.require(:user).permit(salaries_attributes: [:id, :user_id, :date, :hr, :hourly_wage, :_destroy])
+  end
+
+  def check_login
+    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
   end
 end

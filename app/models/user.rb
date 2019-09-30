@@ -19,4 +19,12 @@ class User < ApplicationRecord
   
   enum role: { admin: 0, staff: 1, student: 2 }
   enum gender: { Male: 0, Female: 1 }
+
+  def self.search(search)
+    if search
+      where(['name || email || number || role || phone || gender LIKE ?', "%#{search}%"])
+    else
+      all
+   end
+  end
 end

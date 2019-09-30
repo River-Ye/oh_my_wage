@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
 // Back to top button
 .toTop-arrow {
@@ -30,7 +30,7 @@
 	position:fixed;
 	right: 1rem;
 	bottom: 1rem;
-	display: none;
+	display: none
 }
 .toTop-arrow::before, .toTop-arrow::after {
 	width: 18px;
@@ -38,19 +38,52 @@
 	border-radius: 3px;
 	background: whitesmoke;
 	position: absolute;
-	content: "";
+	content: ""
 }
 .toTop-arrow::before {
 	transform: rotate(-45deg) translate(0, -50%);
-	left: 0.5rem;
+	left: 0.5rem
 }
 .toTop-arrow::after {
 	transform: rotate(45deg) translate(0, -50%);
-	right: 0.5rem;
+	right: 0.5rem
 }
-.toTop-arrow:focus {outline: none;}
+.toTop-arrow:focus {outline: none}
  
 // ---------- 以下為通用 class，直接套用即可 ----------
+
+.mymaintheme{
+    // background-color: rgba(5, 15, 31, 0.8);
+    color: whitesmoke;
+    font-family: 'Noto Sans TC', sans-serif
+}
+
+.verticalspace{
+    margin: 1em auto;
+}
+
+.card-deck{
+    width: 80%;
+    margin: auto;
+}
+
+.card-title{
+    text-align: center;
+    padding-top: 1em;
+    font-size: 30px;   
+}
+
+.my-btn{
+    width: 50%;
+    margin: 1em auto;
+}
+
+.my-center{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid salmon
+}
 
 .mybgimg{
     background-image: url(../images/64799.jpg);
@@ -60,25 +93,25 @@
     background-position: left top
 }
 
-.infotitle{
-    width: 60%;
-    margin: 2em auto;
-    text-align: center;
-    display: block;
-    margin: 50px auto 100px;
-    width: 100%
+.infotitle {
+  width: 60%;
+  margin: 2em auto;
+  text-align: center;
+  display: block;
+  margin: 50px auto 100px;
+  width: 100%;
 }
 
-.zhtitle{
-    width: 70%;
-    margin: 30px auto;
-    text-align: center;
-    font-size: 50px
+.zhtitle {
+  width: 70%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 50px;
 }
 
-.fontstyle{
-    color: whitesmoke;
-    text-shadow: 1px 0.6px 1px #333
+.fontstyle {
+  color: whitesmoke;
+  text-shadow: 1px 0.6px 1px #333;
 }
 
 .contentinfo{
@@ -89,27 +122,36 @@
     li{
         font-size: 30px;
         padding: 1em;
-    }
+    };
     p{
         text-indent: 2em;
-        // margin: 10px auto;
         font-size: 20px
     };
+    a, a:hover, a:visited{
+        color: whitesmoke
+    }    
 }
+
 .center-block{
     text-align: center;
     margin: 20px auto
+
 }
 
-.btn-dark{
-    box-shadow: 2px 2px 6px #111;
+.btn-dark {
+  box-shadow: 2px 2px 6px #111;
 }
   
 footer{
+    margin-top: 100px;
     padding: 10px;
     font-size: 12px;
     text-align: center;
-    background-color: rgba(5, 15, 31, 0.8)
+    background-color: rgba(5, 15, 31, 0.8);
+    a, a:hover, a:visited{
+        color: whitesmoke
+    }    
+
 }
 
 // ---------- 以下為各頁面 css 設定 ----------
@@ -117,4 +159,3 @@ footer{
 // .contactus{}
 // .aboutus{}
 // .qa{}
-  

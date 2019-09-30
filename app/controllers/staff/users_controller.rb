@@ -11,6 +11,10 @@ class Staff::UsersController < ApplicationController
     end
   end
 
+  def search
+    @students = User.where(id: user_section).where(role: 2).search(params[:search]).page(params[:page])
+  end
+
   def show
   end
   

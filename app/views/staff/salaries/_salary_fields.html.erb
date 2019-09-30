@@ -10,7 +10,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= f.input :date, label: false, placeholder: '日期' %></td>
+        <td><%= f.input :date, label: false, as: :date, html5: true %></td>
         <td><%= f.input :hr, label: false, placeholder: '工時' %></td>
         <td><%= f.input :hourly_wage, label: false, placeholder: '時薪' %></td>
         <td><%= link_to_remove_association "X", f, class: 'btn btn-sm btn-danger' %></td>
