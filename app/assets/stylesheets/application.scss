@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
@@ -110,25 +109,25 @@ table{
     background-position: left top
 }
 
-.infotitle{
-    width: 60%;
-    margin: 2em auto;
-    text-align: center;
-    display: block;
-    margin: 50px auto 100px;
-    width: 100%
+.infotitle {
+  width: 60%;
+  margin: 2em auto;
+  text-align: center;
+  display: block;
+  margin: 50px auto 100px;
+  width: 100%;
 }
 
-.zhtitle{
-    width: 70%;
-    margin: 30px auto;
-    text-align: center;
-    font-size: 50px
+.zhtitle {
+  width: 70%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 50px;
 }
 
-.fontstyle{
-    color: whitesmoke;
-    text-shadow: 1px 0.6px 1px #333
+.fontstyle {
+  color: whitesmoke;
+  text-shadow: 1px 0.6px 1px #333;
 }
 
 .contentinfo{
@@ -152,10 +151,11 @@ table{
 .center-block{
     text-align: center;
     margin: 20px auto
+
 }
 
-.btn-dark{
-    box-shadow: 2px 2px 6px #111;
+.btn-dark {
+  box-shadow: 2px 2px 6px #111;
 }
   
 footer{
@@ -167,6 +167,7 @@ footer{
     a, a:hover, a:visited{
         color: whitesmoke
     }    
+
 }
 
 // ---------- 以下為各頁面 css 設定 ----------
@@ -174,4 +175,3 @@ footer{
 // .contactus{}
 // .aboutus{}
 // .qa{}
-  

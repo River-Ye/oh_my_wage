@@ -1,4 +1,10 @@
 <h1>Wage Settlement</h1>
+
+<%= form_tag(search_staff_salaries_path, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
+<% end %>
+
 <%= paginate @students, theme: 'twitter-bootstrap-4' %>
 <table class="table table-hover table-sm">
   <thead>

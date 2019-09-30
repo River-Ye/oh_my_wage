@@ -14,7 +14,7 @@
   <tbody>
   <% @salary_all.each do |salary| %>
     <tr>
-      <td><%= salary.date %></td>
+      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %></td>
       <td><%= salary.hourly_wage %></td>
       <td><%= salary.hr * salary.hourly_wage %></td>
