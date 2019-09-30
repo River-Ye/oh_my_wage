@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resources 'users'
+    get '/search', to: 'users#search'
     root 'users#index'
   end
 
@@ -14,8 +15,18 @@ Rails.application.routes.draw do
   end
 
   namespace 'staff' do
-    resources 'users', only: [:index, :show, :update]
-    resources 'salaries', except: [:new, :create]
+    resources 'users', only: [:index, :show, :update] do
+      collection do
+        get :search
+      end
+    end
+
+    resources 'salaries', except: [:new, :create] do
+        collection do
+          get :search
+        end
+    end
+
     get 'history', to: 'user#history'
     get '/home', to: 'users#home'
     root 'users#home'
