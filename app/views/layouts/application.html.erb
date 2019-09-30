@@ -23,16 +23,33 @@
     });
     </script>
   </head>
-  <body>
+  <body class="mymaintheme mybgimg">
     <%= render 'shared/frontend/navbar' %>
     <%= render 'shared/frontend/flash' if notice %>
     <div class="container">
       <%= yield %>
     </div>
     <footer>
-      <p>TEL：(02) 1787-1687</p>
-      <p>Email：ohmywage@ohmywage.com</p>
+    <address>
+<<<<<<< Updated upstream
+      <a href="tel:+886223315247">
+        <p>TEL：(02) 2331-5247</p>
+      </a>
+      <a href="mailto:ohmywage@ohmywage.com">
+      <p>Email : ohmywage@ohmywage.com</p>
+      </a>
+      <a href="https://ubin.io/TyZN7E">
       <p>Address：5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
+      </a>
+=======
+      <p>TEL：(02) 2331-5247</p>
+      <p>Email : ohmywage@ohmywage.com</p>
+      <%# <a href="mailto:ohmywage@ohmywage.com">
+      <p>Email : ohmywage@ohmywage.com</p>
+      </a> %>
+      <p>Address：5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
+>>>>>>> Stashed changes
+      </address>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>

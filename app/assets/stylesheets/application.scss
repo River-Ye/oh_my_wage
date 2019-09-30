@@ -15,6 +15,7 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
 // Back to top button
 .toTop-arrow {
@@ -30,7 +31,7 @@
 	position:fixed;
 	right: 1rem;
 	bottom: 1rem;
-	display: none;
+	display: none
 }
 .toTop-arrow::before, .toTop-arrow::after {
 	width: 18px;
@@ -38,19 +39,52 @@
 	border-radius: 3px;
 	background: whitesmoke;
 	position: absolute;
-	content: "";
+	content: ""
 }
 .toTop-arrow::before {
 	transform: rotate(-45deg) translate(0, -50%);
-	left: 0.5rem;
+	left: 0.5rem
 }
 .toTop-arrow::after {
 	transform: rotate(45deg) translate(0, -50%);
-	right: 0.5rem;
+	right: 0.5rem
 }
-.toTop-arrow:focus {outline: none;}
+.toTop-arrow:focus {outline: none}
  
 // ---------- 以下為通用 class，直接套用即可 ----------
+
+.mymaintheme{
+    // background-color: rgba(5, 15, 31, 0.8);
+    color: whitesmoke;
+    font-family: 'Noto Sans TC', sans-serif
+}
+
+.verticalspace{
+    margin: 1em auto;
+}
+
+.card-deck{
+    width: 80%;
+    margin: auto;
+}
+
+.card-title{
+    text-align: center;
+    padding-top: 1em;
+    font-size: 30px;   
+}
+
+.btn-lg{
+    width: 50%;
+    margin: 1em auto;
+}
+
+.my-center{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid salmon
+}
 
 .mybgimg{
     background-image: url(../images/64799.jpg);
@@ -89,12 +123,16 @@
     li{
         font-size: 30px;
         padding: 1em;
-    }
+    };
     p{
         text-indent: 2em;
         font-size: 20px
     };
+    a, a:hover, a:visited{
+        color: whitesmoke
+    }    
 }
+
 .center-block{
     text-align: center;
     margin: 20px auto
@@ -105,10 +143,28 @@
 }
   
 footer{
+<<<<<<< Updated upstream
+    margin-top: 100px;
+=======
+    margin-top: 200px;
+>>>>>>> Stashed changes
     padding: 10px;
     font-size: 12px;
     text-align: center;
-    background-color: rgba(5, 15, 31, 0.8)
+    background-color: rgba(5, 15, 31, 0.8);
+<<<<<<< Updated upstream
+    a, a:hover, a:visited{
+        color: whitesmoke
+    }    
+=======
+    color: whitesmoke;
+    a{
+        color: whitesmoke;
+    }
+    a:hover, a:visited{
+        color: whitesmoke
+    }
+>>>>>>> Stashed changes
 }
 
 // ---------- 以下為各頁面 css 設定 ----------
