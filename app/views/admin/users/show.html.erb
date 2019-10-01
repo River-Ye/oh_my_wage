@@ -3,7 +3,13 @@
     <li>角色：<%= @user.role %></li>
     <li>編號：<%= @user.number %></li>
     <li>姓名：<%= @user.name %></li>
-    <li>工作單位： (製作中)</li>
+    <li>工作單位：
+      <% if @user.departments.map{|x| x.name}.empty? %>
+        沒有隸屬任何單位喔
+      <% else %>
+        <%= @user.departments.map{|x| x.name}.uniq.join("、") %>
+      <% end %>
+    </li>
     <li>手機：<%= @user.phone %></li>
     <li>性別：<%= @user.gender %></li>
     <li>信箱：<%= @user.email %></li>
