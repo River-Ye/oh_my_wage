@@ -5,7 +5,6 @@ class Staff::SalariesController < ApplicationController
   before_action :find_student_salary_all, only: [:show]
 
   def index
-    
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else

@@ -2,8 +2,7 @@ class Staff::UsersController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show]
 
-  def index 
-  
+  def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else

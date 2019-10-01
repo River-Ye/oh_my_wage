@@ -5,6 +5,8 @@ class Salary < ApplicationRecord
   validates :hr, numericality: { greater_than_or_equal_to: 1 }
   validates :hourly_wage, numericality: { greater_than_or_equal_to: 150 }
 
+  paginates_per 10
+
   def self.search(search)
     if search
       where(['date LIKE ?', "%#{search}%"])
