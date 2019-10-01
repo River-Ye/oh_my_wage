@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   paginates_per 10
 
-  has_many :salaries, dependent: :destroy
+  has_many :salaries, -> { order(date: :desc) }, dependent: :destroy
   has_many :reply_to_issues, dependent: :destroy
   has_many :department_with_users, dependent: :destroy
   has_many :departments, through: :department_with_users, dependent: :destroy

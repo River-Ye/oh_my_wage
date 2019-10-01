@@ -10,87 +10,91 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
  */
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 
 // Back to top button
 .toTop-arrow {
-	width: 2.5rem;
-	height: 2.5rem;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	border-radius: 33%;
-	opacity: 0.8;
-	background: #050f1f;
-	cursor: pointer;
-	position:fixed;
-	right: 1rem;
-	bottom: 1rem;
-	display: none
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 33%;
+  opacity: 0.8;
+  background: #050f1f;
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
 }
-.toTop-arrow::before, .toTop-arrow::after {
-	width: 18px;
-	height: 5px;
-	border-radius: 3px;
-	background: whitesmoke;
-	position: absolute;
-	content: ""
+.toTop-arrow::before,
+.toTop-arrow::after {
+  width: 18px;
+  height: 5px;
+  border-radius: 3px;
+  background: whitesmoke;
+  position: absolute;
+  content: "";
 }
 .toTop-arrow::before {
-	transform: rotate(-45deg) translate(0, -50%);
-	left: 0.5rem
+  transform: rotate(-45deg) translate(0, -50%);
+  left: 0.5rem;
 }
 .toTop-arrow::after {
-	transform: rotate(45deg) translate(0, -50%);
-	right: 0.5rem
+  transform: rotate(45deg) translate(0, -50%);
+  right: 0.5rem;
 }
-.toTop-arrow:focus {outline: none}
- 
+.toTop-arrow:focus {
+  outline: none;
+}
+
 // ---------- 以下為通用 class，直接套用即可 ----------
 
-.mymaintheme{
-    // background-color: rgba(5, 15, 31, 0.8);
-    color: whitesmoke;
-    font-family: 'Noto Sans TC', sans-serif
+.mymaintheme {
+  // background-color: rgba(5, 15, 31, 0.8);
+  color: whitesmoke;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-.verticalspace{
-    margin: 1em auto;
+.verticalspace {
+  margin: 1em auto;
 }
 
-.card-deck{
-    width: 80%;
-    margin: auto;
+.card-deck {
+  width: 80%;
+  margin: auto;
 }
 
-.card-title{
-    text-align: center;
-    padding-top: 1em;
-    font-size: 30px;   
+.card-title {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 30px;
 }
 
-.my-btn{
-    width: 50%;
-    margin: 1em auto;
+.my-btn {
+  width: 50%;
+  margin: 1em auto;
 }
 
-.my-center{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    border: 1px solid salmon
+.my-center {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid salmon;
 }
 
-.mybgimg{
-    background-image: url(../images/64799.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: left top
+.mybgimg {
+  background-image: url(../images/64799.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
 .infotitle {
@@ -114,44 +118,46 @@
   text-shadow: 1px 0.6px 1px #333;
 }
 
-.contentinfo{
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    background-color: rgba(5, 15, 31, 0.8);
-    li{
-        font-size: 30px;
-        padding: 1em;
-    };
-    p{
-        text-indent: 2em;
-        font-size: 20px
-    };
-    a, a:hover, a:visited{
-        color: whitesmoke
-    }    
+.contentinfo {
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgba(5, 15, 31, 0.8);
+  li {
+    font-size: 30px;
+    padding: 1em;
+  }
+  p {
+    text-indent: 2em;
+    font-size: 20px;
+  }
+  a,
+  a:hover,
+  a:visited {
+    color: whitesmoke;
+  }
 }
 
-.center-block{
-    text-align: center;
-    margin: 20px auto
-
+.center-block {
+  text-align: center;
+  margin: 20px auto;
 }
 
 .btn-dark {
   box-shadow: 2px 2px 6px #111;
 }
-  
-footer{
-    margin-top: 100px;
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
-    background-color: rgba(5, 15, 31, 0.8);
-    a, a:hover, a:visited{
-        color: whitesmoke
-    }    
 
+footer {
+  margin-top: 100px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  background-color: rgba(5, 15, 31, 0.8);
+  a,
+  a:hover,
+  a:visited {
+    color: whitesmoke;
+  }
 }
 
 // ---------- 以下為各頁面 css 設定 ----------

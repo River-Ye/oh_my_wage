@@ -3,16 +3,12 @@ class Admin::UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.order(role: :asc).page(params[:page])
+    @users = User.search(params[:search]).order(role: :asc).page(params[:page])
     respond_to do |format|
       format.html
       format.json
       format.pdf {render template: 'users/pdf',pdf:'pdf'}   
     end
-  end
-
-  def search
-    @users = User.search(params[:search]).page(params[:page])
   end
 
   def new

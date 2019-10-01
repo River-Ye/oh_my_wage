@@ -8,10 +8,13 @@ class Student::UserController < ApplicationController
   def history
   end
 
+  def search
+  end
+
   private
 
   def find_student_salaries
-    @student = current_user.salaries.order(date: :desc)
+    @student = current_user.salaries.search(params[:search]).order(date: :desc)
   end
 
   def check_login
