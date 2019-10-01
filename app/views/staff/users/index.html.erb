@@ -1,6 +1,6 @@
 <h1>學生名單</h1>
 
-<%= form_tag(search_staff_users_path, method: :get) do %>
+<%= form_tag(staff_users_path, method: :get) do %>
   <%= text_field_tag :search %>
   <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
 <% end %>

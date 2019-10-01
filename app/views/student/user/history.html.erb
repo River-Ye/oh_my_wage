@@ -1,4 +1,10 @@
 <h1>歷史資料</h1>
+
+<%= form_tag(student_history_path, method: :get) do %>
+  <%= text_field_tag :search, "", placeholder: '請輸入日期', class: "datepicker", "data-provide" => "datepicker" %>
+  <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
+<% end %>
+
 <table class='table'>
   <thead>
     <td>日期</td>
@@ -17,4 +23,16 @@
   </tbody>
 </table>
 
-<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
+<%= link_to "首頁", student_root_path, class: 'btn btn-primary btn-xs' %>
+
+<script type="text/javascript">
+  $(document).on('turbolinks:load', function(){
+    $('.datepicker').datepicker({
+      language:'zh-TW',
+      format: "yyyy-mm",
+      viewMode: 'months',
+      minViewMode: 'months',
+      autoclose: true
+    });    
+  });
+</script>

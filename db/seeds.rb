@@ -1,25 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
 puts "產生 1 筆 admin 權限帳號"
-    FactoryBot.create(:admin)
+  FactoryBot.create(:admin)
 puts "Done!"
 
 puts "產生 20 筆 staff 權限帳號"
-20.times do |i|    
+20.times do |i|
     FactoryBot.create(:staff)
 end
 puts "Done!"
 
 
 puts "產生 80 筆 student 權限帳號"
-80.times do |i|    
+80.times do |i|
     FactoryBot.create(:student)
 end
 puts "Done!"
@@ -42,12 +33,12 @@ puts "產生 80 筆 student 與 Department 關聯資料"
 end
 puts "Done!"
 
-puts "產生 150 筆 student 與 Salary 關聯"
-150.times do |i|
+puts "產生 160 筆 student 與 Salary 關聯"
+170.times do |i|
   Salary.create(user_id: rand(22..101),
                 date: rand(2.years).seconds.ago,
                 hr: rand(1..12),
-                hourly_wage: rand(150..500))
+                hourly_wage: [150, 155, 160, 180, 200].sample)
 end
 puts "Done!"
 
