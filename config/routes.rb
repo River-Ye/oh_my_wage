@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   namespace 'student' do
     get 'history', to: 'user#history'
-    get 'search', to: 'user#search'
     root 'user#index'
   end
 

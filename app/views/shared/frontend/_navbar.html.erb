@@ -25,9 +25,6 @@
           <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "登入", new_user_session_path, class: 'nav-link' %>
-        </li>
       <% end %>
     </ul>
   </div>

@@ -9,9 +9,6 @@ class Student::UserController < ApplicationController
   def history
   end
 
-  def search
-  end
-
   private
 
   def find_when_monthly_salary

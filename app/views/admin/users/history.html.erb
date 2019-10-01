@@ -1,6 +1,7 @@
 <h1>歷史資料</h1>
 <%= link_to "查詢", "#", class: 'btn btn-primary btn-lg' %>
 <%= link_to "列印", "#", class: 'btn btn-success btn-lg' %>
+
 <table class='table'>
   <thead>
     <td>日期</td>
@@ -11,10 +12,10 @@
   <tbody>
     <% @student.each do |student| %>
       <tr>
-        <td><%= student.salaries.map { |x| x.date } %></td>
+        <td><%= student.salaries.map { |salary| salary.date } %></td>
         <td><%= student.name %></td>
-        <td><%= student.salaries.map { |x| x.hr }.sum %></td>
-        <td><%= student.salaries.map { |x| x.hr * x.hourly_wage }.sum %></td>
+        <td><%= student.salaries.map { |salary| salary.hr }.sum %></td>
+        <td><%= student.salaries.map { |salary| salary.hr * salary.hourly_wage }.sum %></td>
       </tr>
     <% end %>
   </tbody>
