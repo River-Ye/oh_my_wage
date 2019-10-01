@@ -85,11 +85,11 @@
     border: 1px solid salmon
 }
 
-table{
+table, .table-hover{
     a, a:hover, a:visited{
         color: whitesmoke
     }
-    tr{
+    tr,tr:hover{
         color: whitesmoke;
     }
     tr:hover{
@@ -99,6 +99,10 @@ table{
     th{
         background-color: rgba(5, 15, 31, 0.8);
     }
+}
+
+table.th{
+    background-color: rgba(5, 15, 31, 0.8);
 }
 
 .mybgimg{
