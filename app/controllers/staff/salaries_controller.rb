@@ -1,8 +1,9 @@
 class Staff::SalariesController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:edit, :update, :destroy]
-  before_action :find_student_salary, only: [:show, :update, :destroy]
+  before_action :find_student_salary, only: [:show]
   before_action :find_student_salary_all, only: [:show]
+  before_action :find_when_monthly_salary, only: [:index]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
@@ -70,16 +71,22 @@ class Staff::SalariesController < ApplicationController
 
   def find_student_salary
     # show 用到
-    @user = Salary.find_by(user_id: params[:id])
+    @salary = Salary.find_by(user_id: params[:id])
   end
 
   def find_student_salary_all
     # show 用到
-    if @user.nil?
+    if @salary.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
-      @salary_all = Salary.where(user_id: @user.user_id).order(date: :desc)
+      @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc)
     end
+  end
+
+  def find_when_monthly_salary
+    @year = Time.now.year
+    @month = Time.now.month
+    @when_salary = current_user.salaries.where(['date LIKE ?', "%#{@year}-#{@month}%"]).order(date: :desc)
   end
 
   def salary_edit_params

@@ -11,6 +11,8 @@
     <tr>
       <th>學號</th>
       <th>姓名</th>
+      <th>當月工時總和</th>
+      <th>當月薪資總和</th>
       <th>編輯</th>
       <th>刪除</th>
     </tr>
@@ -20,6 +22,8 @@
     <tr>
       <td><%= student.number %></td>
       <td><%= link_to student.name, staff_salary_path(student.id) %></td>
+      <td><%= student.salaries.where('date LIKE ?', "%#{@year}-#{@month}%").map{ |salary| salary.hr }.sum %> 時</td>
+      <td><%= student.salaries.where('date LIKE ?', "%#{@year}-#{@month}%").map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
       <td><%= link_to "編輯", edit_staff_salary_path(student.id), class: 'btn btn-success btn-sm' %></td>
       <td><%= link_to "刪除", staff_salary_path(student.id), method: 'delete', class: 'btn btn-danger btn-sm', data: { confirm: "確定要把 #{student.name} 從 #{Department.find(@department_id).name} 剔除嗎?" } %></td>
     </tr>

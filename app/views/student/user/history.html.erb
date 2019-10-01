@@ -22,7 +22,9 @@
     </tr>
     <% end %>
     <tr>
-      <td colspan='3'>總計</td>
+      <td>總計</td>
+      <td><%= @student.map{ |salary| salary.hr }.sum %> 時</td>
+      <td></td>
       <td><%= @student.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
     </tr>
   </tbody>
