@@ -47,7 +47,7 @@ puts "產生 150 筆 student 與 Salary 關聯"
   Salary.create(user_id: rand(22..101),
                 date: rand(2.years).seconds.ago,
                 hr: rand(1..12),
-                hourly_wage: rand(150..500))
+                hourly_wage: [150, 155, 160, 180, 200].sample)
 end
 puts "Done!"
 
