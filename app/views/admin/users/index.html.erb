@@ -1,9 +1,9 @@
 <h1 class="verticalspace">Hi, 管理者 <%= current_user.name %> 您好</h1>
   <div class="row verticalspace">
-    <%= form_tag(admin_search_path, method: :get) do %>
-    <%= text_field_tag :search %>
-    <%= submit_tag "查詢", class: "btn btn-blue btn-md scale-hover white-hover"%>
-    <% end %>
+    <%# <%= form_tag(admin_search_path, method: :get) do % >
+    <%= text_field_tag :search % >
+    <%= submit_tag "查詢", class: "btn btn-blue btn-md scale-hover white-hover"% >
+    <% end % > %>
 
     <%= link_to "新增", new_admin_user_path, class: 'btn btn-green btn-md scale-hover white-hover' %>
   </div>
