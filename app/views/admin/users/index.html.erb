@@ -2,13 +2,13 @@
   <div class="row verticalspace">
     <%= form_tag(admin_search_path, method: :get) do %>
     <%= text_field_tag :search %>
-    <%= submit_tag "查詢", class: "btn btn-success btn-md"%>
+    <%= submit_tag "查詢", class: "btn btn-blue btn-md scale-hover white-hover"%>
     <% end %>
 
-    <%= link_to "新增", new_admin_user_path, class: 'btn btn-primary btn-md' %>
+    <%= link_to "新增", new_admin_user_path, class: 'btn btn-green btn-md scale-hover white-hover' %>
   </div>
 
-<table class="table table-sm my-table">
+<table class="table table-borderless table-sm my-table">
   <thead>
     <tr>
       <th>角色</th>
@@ -24,11 +24,11 @@
     <td><%= user.role %></td>
     <td><%= user.number %></td>
     <td><%= link_to user.name, admin_user_path(user.id) %></td>
-    <td><%= link_to "編輯", edit_admin_user_path(user.id), class: 'btn btn-success btn-sm' %></td>
+    <td><%= link_to "編輯", edit_admin_user_path(user.id), class: 'btn edit-btn btn-sm scale-hover' %></td>
     <td><%= link_to "刪除",
             admin_user_path(user.id),
             method: 'delete',
-            class: 'btn btn-danger btn-sm',
+            class: 'btn btn-red btn-sm scale-hover white-hover',
             data: {confirm: '確定嗎???'}
           %>
     </td>

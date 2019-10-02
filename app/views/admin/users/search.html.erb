@@ -1,5 +1,5 @@
-<%= paginate @users, theme: 'twitter-bootstrap-4' %>
-<table class="table table-hover table-sm">
+<h1 class="verticalspace">搜尋結果：</h1>
+<table class="table table-sm my-table">
   <thead>
     <tr>
       <th>角色</th>
@@ -27,4 +27,9 @@
   <% end %>
   </tbody>
 </table>
-<%= link_to "首頁", admin_root_path, class: 'btn btn-primary btn-xs' %>
+<div class="container">
+<div class="row">
+  <%= paginate @users, theme: 'twitter-bootstrap-4', class:"my-page" %>
+  <%= link_to "返回首頁", admin_root_path, class: 'btn btn-md btn-search scale-hover' %>
+  </div>
+</div>
