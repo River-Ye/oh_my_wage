@@ -10,11 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
  */
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 
 // Back to top button
 /* 56px */
@@ -53,14 +54,14 @@
  
 // ---------- 以下為通用 class，直接套用即可 ----------
 
-.mymaintheme{
-    // background-color: rgba(5, 15, 31, 0.8);
-    color: whitesmoke;
-    font-family: 'Noto Sans TC', sans-serif
+.mymaintheme {
+  // background-color: rgba(5, 15, 31, 0.8);
+  color: whitesmoke;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
-.verticalspace{
-    margin: 1em auto;
+.verticalspace {
+  margin: 1em auto;
 }
 
 .card-deck{
@@ -68,15 +69,15 @@
     margin: auto;
 }
 
-.card-title{
-    text-align: center;
-    padding-top: 1em;
-    font-size: 30px;   
+.card-title {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 30px;
 }
 
-.my-btn{
-    width: 50%;
-    margin: 1em auto;
+.my-btn {
+  width: 50%;
+  margin: 1em auto;
 }
 
 .before-login > .row > a{
@@ -206,12 +207,12 @@ ul.pagination{
     }
 }
 
-.mybgimg{
-    background-image: url(../images/64799.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: left top
+.mybgimg {
+  background-image: url(../images/64799.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
 .infotitle {
@@ -235,28 +236,29 @@ ul.pagination{
   text-shadow: 1px 0.6px 1px #333;
 }
 
-.contentinfo{
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    background-color: rgba(5, 15, 31, 0.8);
-    li{
-        font-size: 30px;
-        padding: 1em;
-    };
-    p{
-        text-indent: 2em;
-        font-size: 20px
-    };
-    a, a:hover, a:visited{
-        color: whitesmoke
-    }    
+.contentinfo {
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgba(5, 15, 31, 0.8);
+  li {
+    font-size: 30px;
+    padding: 1em;
+  }
+  p {
+    text-indent: 2em;
+    font-size: 20px;
+  }
+  a,
+  a:hover,
+  a:visited {
+    color: whitesmoke;
+  }
 }
 
-.center-block{
-    text-align: center;
-    margin: 20px auto
-
+.center-block {
+  text-align: center;
+  margin: 20px auto;
 }
 
 .btn-dark {
@@ -273,6 +275,17 @@ footer{
         color: whitesmoke
     }    
 
+footer {
+  margin-top: 100px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  background-color: rgba(5, 15, 31, 0.8);
+  a,
+  a:hover,
+  a:visited {
+    color: whitesmoke;
+  }
 }
 
 // ---------- 以下為各頁面 css 設定 ----------

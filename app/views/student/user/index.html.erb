@@ -1,9 +1,8 @@
 <h1 class="verticalspace">Hi, <%= current_user.name %> 歡迎回來</h1>
-
-<h2 class="verticalspace">本月時數與薪資試算</h2>
+<h2 class="verticalspace"><%= @month %> 月時數與薪資試算</h2>
 <ul>
-  <h2><li>總工時：<%= current_user.salaries.map{|x| x.hr }.sum %> 小時</li></h2>
-  <h2><li>合計：<%= current_user.salaries.map{|x| x.hr * x.hourly_wage }.sum %> 元</li></h2>
+  <h2><li>總工時：<%= @salary.map{|x| x.hr }.sum %> 小時</li></h2>
+  <h2><li>合計：<%= @salary.map{|x| x.hr * x.hourly_wage }.sum %> 元</li></h2>
 </ul>
 
 <%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-olive btn-lg' %>
