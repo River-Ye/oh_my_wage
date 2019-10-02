@@ -10,5 +10,5 @@ class WagemailMailer < ApplicationMailer
     @token = token 
     mail(:to => user.email, 
          :subject => 'Password Reset Notification') 
-end
+  end
 end

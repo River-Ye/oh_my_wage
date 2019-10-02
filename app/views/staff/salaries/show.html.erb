@@ -1,14 +1,13 @@
 <h1 class="verticalspace">個人薪資明細</h1>
 <h2>Wage Settlement</h2>
-<h4><%= @user.user.name %> 學生</h4>
-
+<h4><%= @salary.user.name %> 學生</h4>
 <table class="table table-hover table-sm">
   <thead>
     <tr>
       <th>日期</th>
       <th>工時</th>
       <th>時薪</th>
-      <th>合計</th>
+      <th>小計</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +19,12 @@
       <td><%= salary.hr * salary.hourly_wage %></td>
     </tr>
   <% end %>
+    <tr>
+      <td>總計</td>
+      <td><%= @salary_all.map{ |salary| salary.hr }.sum %> 時</td>
+      <td></td>
+      <td><%= @salary_all.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
+    </tr>
   </tbody>
 </table>
-
 <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>

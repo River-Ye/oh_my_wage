@@ -2,20 +2,17 @@ class Staff::UsersController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show]
 
-  def index 
+  def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = User.where(id: user_section).where(role: 2).order(name: :asc).page(params[:page])
+      @students = User.where(id: user_section).where(role: 2).search(params[:search]).order(name: :asc).page(params[:page])
     end
-  end
-
-  def search
-    @students = User.where(id: user_section).where(role: 2).search(params[:search]).page(params[:page])
   end
 
   def show
   end
+  
 
   def home
   end

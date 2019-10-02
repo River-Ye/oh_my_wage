@@ -2,11 +2,11 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 10.minutes
 
   paginates_per 10
 
-  has_many :salaries, dependent: :destroy
+  has_many :salaries, -> { order(date: :desc) }, dependent: :destroy
   has_many :reply_to_issues, dependent: :destroy
   has_many :department_with_users, dependent: :destroy
   has_many :departments, through: :department_with_users, dependent: :destroy

@@ -16,6 +16,5 @@ class ReplyToIssuePolicy
   end
 
   def update?
-    # user.student? or not candidate.published?
   end
 end

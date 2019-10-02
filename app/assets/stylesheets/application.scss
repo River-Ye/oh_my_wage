@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap-datepicker
  *= require_tree .
  *= require_self
  */
@@ -130,6 +131,20 @@
     .white-hover:hover{
         background-color: #115247 !important;
     }
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(51, 51, 51, 0.8);
+        border: 1px solid rgba(51, 51, 51, 0.8);
+        color: whitesmoke
+
+    }
+}
+
+.mybgimg {
+  background-image: url(../images/64799.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
  .container > .container > .row{
@@ -302,6 +317,29 @@
     padding: 15px;
     background-color: #fff;
     color: black;
+.contentinfo {
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgba(5, 15, 31, 0.8);
+  li {
+    font-size: 30px;
+    padding: 1em;
+  }
+  p {
+    text-indent: 2em;
+    font-size: 20px;
+  }
+  a,
+  a:hover,
+  a:visited {
+    color: whitesmoke;
+  }
+}
+
+.center-block {
+  text-align: center;
+  margin: 20px auto;
 }
 
 .footerblock{
@@ -310,9 +348,15 @@
 
 .footericon{
     font-size: 30px;
+  
+footer{
+    margin-top: 100px;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(5, 15, 31, 0.8);
+    a, a:visited{
+        color: whitesmoke
+    }
 }
 // ---------- 以下為各頁面 css 設定 ----------
-
-// .contactus{}
-// .aboutus{}
-// .qa{}
