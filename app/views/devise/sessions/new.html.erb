@@ -1,5 +1,8 @@
-<h2>登入</h2>
-
+<div class="container-fluid">
+<div class="row">
+<div class="loginleft col-md-4">
+</div>
+<div class="loginblock col-md-4 col-sm-12">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -13,8 +16,15 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "登入 LOG IN", class: 'btn btn-primary btn-lg' %>
+    <%= f.button :submit, "  登入  ", class: 'btn btn-primary btn-md btn-block' %>
   </div>
 <% end %>
-
+<br>
+<div class="renderpage">
 <%= render "devise/shared/links" %>
+</div>
+</div>
+<div class="loginright col-md-4">
+</div>
+</div>
+</div>

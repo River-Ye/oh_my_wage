@@ -14,189 +14,122 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap";
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
-
-// Back to top button
-.toTop-arrow {
-	width: 3.5rem;
-	height: 3.5rem;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	border-radius: 33%;
-	opacity: 0.6;
-	background: #000;
-	cursor: pointer;
-	position:fixed;
-	right: 1rem;
-	bottom: 1rem;
-	display: none;
-}
-.toTop-arrow::before, .toTop-arrow::after {
-	width: 31px;
-	height: 7px;
-	border-radius: 3px;
-	background: whitesmoke;
-	position: absolute;
-	content: "";
-}
-.toTop-arrow::before {
-	transform: rotate(-45deg) translate(0, -50%);
-	left: 0.4rem;
-}
-.toTop-arrow::after {
-	transform: rotate(45deg) translate(0, -50%);
-	right: 0.4rem;
-}
-.toTop-arrow:focus {outline: none;}
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
  
-// ---------- 以下為通用 class，直接套用即可 ----------
-
-.mymaintheme {
-  // background-color: rgba(5, 15, 31, 0.8);
-  color: whitesmoke;
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-.verticalspace {
-  margin: 1em auto;
-}
-
-.card-deck{
-    width: 50%;
-    margin: auto;
-}
-
-.card-title {
-  text-align: center;
-  padding-top: 1em;
-  font-size: 30px;
-}
-
-.my-btn {
-  width: 50%;
-  margin: 1em auto;
-}
-
-.before-login > .row > a{
-    width: 30%;
-}
-
-table.table tr {
-    border: 1px solid rgba(5, 15, 31, 0.8);
-}
-
-
-table > tbody > tr > td > .edit-btn{
-    background-color: #fa0;
-    border: none;
-    color: #333;
-}
-
-.scale-hover:hover{
-    transform : scale(1.1);
-    transition: 0.3s;
-}
-
-.white-hover:hover{
+ // Back to top button
+ /* 56px */
+ .toTop-arrow {
+     width: 3.5rem;
+     height: 3.5rem;
+     padding: 0;
+     margin: 0;
+     border: 0;
+     border-radius: 33%;
+     opacity: 0.6;
+     background: #000;
+     cursor: pointer;
+     position:fixed;
+     right: 1rem;
+     bottom: 1rem;
+     display: none;
+ }
+ .toTop-arrow::before, .toTop-arrow::after {
+     width: 31px;
+     height: 7px;
+     border-radius: 3px;
+     background: whitesmoke;
+     position: absolute;
+     content: "";
+ }
+ .toTop-arrow::before {
+     transform: rotate(-45deg) translate(0, -50%);
+     left: 0.4rem;
+ }
+ .toTop-arrow::after {
+     transform: rotate(45deg) translate(0, -50%);
+     right: 0.4rem;
+ }
+ .toTop-arrow:focus {outline: none;}
+  
+ // ---------- 以下為通用 class，直接套用即可 ----------
+ 
+ .mymaintheme{
+     // background-color: rgba(5, 15, 31, 0.8);
+     color: whitesmoke;
+     font-family: 'Noto Sans TC', sans-serif
+ }
+ 
+ .verticalspace{
+     margin: 1em auto;
+ }
+ 
+ .card-deck{
+     width: 50%;
+     margin: auto;
+ }
+ 
+ .card-title{
+     text-align: center;
+     padding-top: 1em;
+     font-size: 30px;   
+ }
+ 
+ .my-btn{
+     width: 50%;
+     margin: 1em auto;
+ }
+ 
+ .before-login > .row > a{
+     width: 30%;
+ }
+ 
+ table.table tr {
+     border: 1px solid rgba(5, 15, 31, 0.1)
+ }
+ 
+ 
+ table > tbody > tr > td > .edit-btn{
+     background-color: #fa0;
+     border: none;
+     color: #333;
+ }
+ 
+ .scale-hover:hover{
+     transform : scale(1.1);
+     transition: 0.3s;
+    }
+ .spin:hover{
+    transform: rotate(180deg);
+    transition: 1s;
+ }
+ .white-hover:hover{
+     color: whitesmoke;
+ }
+ 
+ table > tbody > tr > td > .btn-red,
+ .container > a.btn-red{
+     background-color: #8b0000;
+     border: #8b0000;
+     color: whitesmoke;
+ }
+ 
+ .btn-blue{
+     background-color: #176591;
+     color: whitesmoke;
+     border: 1px solid #176591;
+     margin-left: 5px;
+     height: 2.3em;
+ }
+ 
+ .btn-green{
+    background-color: #115247;
     color: whitesmoke;
-}
-
-table > tbody > tr > td > .btn-red,
-.container > a.btn-red{
-    background-color: darkred;
-    border: darkred;
-    color: whitesmoke;
-}
-
-input.btn-search{
-    background-color: #133977;
-    color: whitesmoke;
-    border: 1px solid #133977;
-    margin: auto 5px;
-    height: 2.3em;
-}
-.btn-blue{
-    background-color: #133977;
-    color: whitesmoke;
-    border: 1px solid #133977;
+    border: 1px solid #115247;
     margin-left: 5px;
     height: 2.3em;
-}
-
-.container > .container > .row{
-    justify-content: center;
-}
-.btn-olive{
-    background-color: darkolivegreen;
-    color: whitesmoke;
-    border: 1px solid darkolivegreen;
-    height: 2.3em;
-}
-
-.my-center{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
-table{
-    background-color: rgba(51, 51, 51,0.8);
-    a, a:visited{
-        color: whitesmoke
-    }
-    tr{
-        color: whitesmoke;
-        transition: 0.2s;
-    }
-    tr:hover , a:hover{
-        background-color: rgba(5, 15, 31, 0.8);
-        color: orange;
-    }
-    th{
-        background-color: #333;
-    }
-}
-
-#search{
-    height: 2.3em;
-    vertical-align: middle;
-    border-radius: 5px;
-    background-color: rgba(51, 51, 51, 0.8);
-    color: whitesmoke;
-    border: 2px solid #f5f5f5;
-}
-
-#search:focus{
-    outline: none;
-    border: 2px solid orange;
-    background-color: #333
-}
-
-ul.pagination{
-    margin-top: 30px;
-}
-
-.pagination{
-    justify-content: center;
-    color: whitesmoke;
-    li > a{
-        background-color: rgba(51, 51, 51, 0.8);
-        border: 1px solid rgba(51, 51, 51, 0.8);
-        color: whitesmoke;
-        transition: 0.3s
-    }
-    li > a:hover{
-        background-color: rgba(255, 170, 0, 0.8);
-        border: 1px solid rgba(51, 51, 51, 0.8);
-        transition: 0.3s;
-        color: #000;
-    }
-    li.page-item.active > a.page-link{
-        background-color: rgba(255, 170, 0, 0.8);
-        border: 1px solid rgba(51, 51, 51, 0.8);
-        color: #000;
+    .white-hover:hover{
+        background-color: #115247 !important;
     }
     li.page-item.disabled > a.page-link{
         background-color:  rgba(51, 51, 51, 0.8);
@@ -214,27 +147,176 @@ ul.pagination{
   background-position: left top;
 }
 
-.infotitle {
-  width: 60%;
-  margin: 2em auto;
-  text-align: center;
-  display: block;
-  margin: 50px auto 100px;
-  width: 100%;
+ .container > .container > .row{
+     justify-content: center;
+ }
+ 
+ small.form-text.text-muted{
+     color: whitesmoke !important;
+ }
+
+ .my-center{
+     width: 100%;
+     margin: auto;
+     text-align: center;
+ }
+ 
+ table{
+     background-color: rgba(18, 50, 69, 0.8);
+     a, a:visited{
+         color: whitesmoke
+     }
+     tr{
+         color: whitesmoke;
+         transition: 0.2s;
+     }
+     tr:hover{
+         background-color: rgba(5, 15, 31, 0.8);
+         color: orange;
+     }
+     th{
+         background-color: #123245;
+     }
+ }
+ 
+ #search{
+     height: 2.3em;
+     vertical-align: middle;
+     border-radius: 5px;
+     background-color: rgba(51, 51, 51, 0.8);
+     color: whitesmoke;
+     border: 2px solid #f5f5f5;
+ }
+ 
+ #search:focus{
+     outline: none;
+     border: 2px solid orange;
+     background-color: #333
+ }
+ 
+ ul.pagination{
+     margin-top: 30px;
+ }
+ 
+ .pagination{
+     justify-content: center;
+     color: whitesmoke;
+     li > a{
+         background-color: #123245;
+         border: 1px solid #123245;
+         color: whitesmoke;
+         transition: 0.3s
+     }
+     li > a:hover{
+         background-color: #915709;
+         border: 1px solid #123245;
+         transition: 0.3s;
+         color: whitesmoke;
+         scale: 1.2;
+     }
+     li.page-item.active > a.page-link{
+         background-color: #915709;
+         border: 1px solid #123245;
+         color: whitesmoke;
+     }
+     li.page-item.disabled > a.page-link{
+         background-color:  #123245;
+         border: 1px solid #123245;
+         color: whitesmoke
+ 
+     }
+ }
+ 
+ .mybgimg{
+     background-image: url(../images/64799.jpg);
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-position: left top
+ }
+ 
+ .infotitle {
+   width: 60%;
+   margin: 2em auto;
+   text-align: center;
+   display: block;
+   margin: 50px auto 100px;
+   width: 100%;
+ }
+ 
+ .zhtitle {
+   width: 70%;
+   margin: 30px auto;
+   text-align: center;
+   font-size: 50px;
+ }
+ 
+ .fontstyle {
+   color: whitesmoke;
+   text-shadow: 1px 0.6px 1px #333;
+ }
+ 
+ .contentinfo{
+     margin: auto;
+     padding: 25px;
+     border-radius: 10px;
+     background-color: rgba(5, 15, 31, 0.8);
+     li{
+         font-size: 30px;
+         padding: 1em;
+     };
+     p{
+         text-indent: 2em;
+         font-size: 20px
+     };
+     a, a:hover, a:visited{
+         color: whitesmoke
+     }    
+ }
+ 
+ .center-block{
+     text-align: center;
+     margin: 20px auto
+ 
+ }
+ 
+ .btn-dark {
+   box-shadow: 2px 2px 6px #111;
+ }
+   
+ footer{
+     text-align: left;
+     margin-top: 100px;
+     padding: 10px;
+     font-size: 12px;
+     text-align: center;
+     background-color: #123245;
+     a, a:visited{
+         color: whitesmoke
+     }    
+ 
+ }
+.footerspace{
+    margin-top: 100px;
 }
 
-.zhtitle {
-  width: 70%;
-  margin: 30px auto;
-  text-align: center;
-  font-size: 50px;
+.footerblock{
+    width: 400px;
 }
 
-.fontstyle {
-  color: whitesmoke;
-  text-shadow: 1px 0.6px 1px #333;
+.footericon{
+    font-size: 30px;
 }
 
+.navitem{
+    background-color: #521D1F;
+}
+
+.loginblock{
+    margin: 10% 0;
+    padding: 15px;
+    background-color: #fff;
+    color: black;
 .contentinfo {
   margin: auto;
   padding: 25px;
@@ -260,9 +342,12 @@ ul.pagination{
   margin: 20px auto;
 }
 
-.btn-dark {
-  box-shadow: 2px 2px 6px #111;
+.footerblock{
+    width: 400px;
 }
+
+.footericon{
+    font-size: 30px;
   
 footer{
     margin-top: 100px;
@@ -274,5 +359,4 @@ footer{
         color: whitesmoke
     }
 }
-
 // ---------- 以下為各頁面 css 設定 ----------

@@ -5,10 +5,8 @@
     <%= submit_tag "查詢", class: "btn btn-blue btn-md scale-hover white-hover"%>
     <% end %>
 
-<%= form_tag(admin_users_path, method: :get) do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-olive btn-md scale-hover white-hove"%>
-<% end %>
+    <%= link_to "新增", new_admin_user_path, class: 'btn btn-green btn-md scale-hover white-hover' %>
+  </div>
 
 <table class="table table-borderless table-sm my-table">
   <thead>
