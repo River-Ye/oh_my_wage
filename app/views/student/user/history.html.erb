@@ -1,4 +1,4 @@
-<h1>歷史資料</h1>
+<h1 class="verticalspace">歷史資料</h1>
 <table class='table'>
   <thead>
     <td>日期</td>
@@ -10,11 +10,14 @@
     <% @student.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 時</td>
+      <td><%= salary.hr %> 小時</td>
       <td><%= salary.hourly_wage %> 元</td>
       <td><%= salary.hourly_wage * salary.hr %> 元</td>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
+<div class="container">
+  <div class="row">
+    <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
+  </div>
+</div>
