@@ -2,18 +2,7 @@
   <h1 class="text-center verticalspace" >霍格華茲學院</h1>
   <h2 class="text-center verticalspace" >Oh My Wage 工讀薪資系統</h2>
   <h2 class="text-center verticalspace" >請登入：</h2>
-  <div class="card-deck">
-    <div class="card bg-dark my-card">
-      <div class="card-title">
-        <p>學生 Student</p>
-      </div>
-      <%= link_to "登入", user_session_path, class: 'btn btn-warning btn-lg my-btn' %>
-    </div>
-    <div class="card bg-dark my-card">
-      <div class="card-title">
-        <p>教職員 Staff</p>
-      </div>
-      <%= link_to "登入", user_session_path, class: 'btn btn-warning btn-lg my-btn' %>
-    </div>
-  </div> 
+  <div class="row">
+    <%= link_to "Login >>>", user_session_path, class: 'btn btn-warning btn-lg my-btn scale-hover' %>
+  </div>
 </div>

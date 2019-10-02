@@ -1,12 +1,11 @@
-<h1>Wage Settlement</h1>
+<h1 class="verticalspace">Wage Settlement</h1>
 
 <%= form_tag(search_staff_salaries_path, method: :get) do %>
   <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md white-hover verticalspace"%>
 <% end %>
 
-<%= paginate @students, theme: 'twitter-bootstrap-4' %>
-<table class="table table-hover table-sm">
+<table class="table table-sm">
   <thead>
     <tr>
       <th>編號</th>
@@ -26,11 +25,12 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><%= link_to "編輯", edit_staff_salary_path(student.id), class: 'btn btn-success btn-sm' %></td>
-      <td><%= link_to "剔除", staff_salary_path(student.id), method: 'delete', class: 'btn btn-danger btn-sm', data: { confirm: "確定要把 #{student.name} 從 #{Department.find(@department_id).name} 剔除嗎?" } %></td>
+      <td><%= link_to "編輯", edit_staff_salary_path(student.id), class: 'btn btn-sm white-hover scale-hover btn-green' %></td>
+      <td><%= link_to "剔除", staff_salary_path(student.id), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{Department.find(@department_id).name} 剔除嗎?" } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= link_to "首頁", staff_root_path, class: 'btn btn-primary btn-xs' %>
+<%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
+<%= link_to "首頁", staff_root_path, class: 'btn btn-blue btn-xs' %>

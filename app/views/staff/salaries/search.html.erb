@@ -1,4 +1,3 @@
-<%= paginate @students, theme: 'twitter-bootstrap-4' %>
 <table class="table table-hover table-sm">
   <thead>
     <tr>
@@ -19,5 +18,6 @@
   <% end %>
   </tbody>
 </table>
+<%= paginate @students, theme: 'twitter-bootstrap-4' %>
 
 <%= link_to "首頁", staff_salaries_path, class: 'btn btn-primary btn-xs' %>
