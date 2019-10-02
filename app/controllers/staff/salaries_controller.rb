@@ -84,9 +84,9 @@ class Staff::SalariesController < ApplicationController
   end
 
   def find_when_monthly_salary
-    @year = Time.now.year
-    @month = Time.now.month
-    @when_salary = current_user.salaries.where(['date LIKE ?', "%#{@year}-#{@month}%"]).order(date: :desc)
+    @beginning_of_month = Date.today.beginning_of_month
+    @end_of_month = @beginning_of_month.end_of_month
+    @when_salary = current_user.salaries.where(date: @beginning_of_month..@end_of_month).order(date: :desc)
   end
 
   def salary_edit_params
