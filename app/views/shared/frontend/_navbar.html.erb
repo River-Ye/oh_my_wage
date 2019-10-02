@@ -21,12 +21,9 @@
         <li class="nav-item">
           <%= link_to "個人資料", edit_user_registration_path, class: 'nav-link' %>
         </li>
-        <li class="nav-item">
-          <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "登入", new_user_session_path, class: 'nav-link' %>
+          <li class="nav-item">
+            <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+          </li>
         </li>
       <% end %>
     </ul>
