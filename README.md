@@ -2,7 +2,7 @@
 
 1. clone or fetch 專案後
 2. bundle
-3. rails db:drop
+3. rails db:drop (換 postgresql 後若 rails db:drop 會噴錯誤訊息，請到 psql 介面下手動刪除，方法如下方所寫)
 4. rails db:create
 5. rails db:migrate
 6. rails db:seed (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門關聯假資料 、 學生薪資\*300)
@@ -26,6 +26,7 @@ $ psql --version    # 查詢版本
 
 
 以下指令要在 $ psql 介面下才能操作
+刪除前，請先確認 rails s 已關閉 (避免資料還再存取，導致刪除失敗)
 # drop database 要刪除的資料庫名稱;    # 一定要加;
 
 ex:
