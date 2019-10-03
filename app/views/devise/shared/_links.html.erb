@@ -1,5 +1,5 @@
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "忘記密碼 FORGET PASSWORD", new_password_path(resource_name), class: 'btn btn-info btn-xs' %><br />
+  <%= link_to "忘記密碼", new_password_path(resource_name), class: 'btn btn-info btn-md btn-block' %><br />
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

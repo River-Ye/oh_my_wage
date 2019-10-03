@@ -1,12 +1,11 @@
-<h1>Wage Settlement</h1>
+<h1 class="verticalspace">Wage Settlement</h1>
 
 <%= form_tag(staff_salaries_path, method: :get) do %>
   <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-success btn-xs"%>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md white-hover verticalspace"%>
 <% end %>
 
-<%= paginate @students, theme: 'twitter-bootstrap-4' %>
-<table class="table table-hover table-sm">
+<table class="table table-sm">
   <thead>
     <tr>
       <th>學號</th>
@@ -31,5 +30,5 @@
   </tbody>
 </table>
 
-<%= link_to "首頁", staff_root_path, class: 'btn btn-primary btn-xs' %>
-<%= link_to "列印", "#", class: 'btn btn-success btn-xs' %>
+<%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
+<%= link_to "首頁", staff_root_path, class: 'btn btn-blue btn-xs' %>

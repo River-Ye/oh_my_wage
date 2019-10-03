@@ -1,14 +1,11 @@
-<h1>學生名單</h1>
+<h1 class="verticalspace">學生名單</h1>
 
 <%= form_tag(staff_users_path, method: :get) do %>
   <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-success btn-xs"%>
+  <%= submit_tag "查詢", class: "btn btn-green btn-md verticalspace"%>
 <% end %>
 
-<%= link_to "回主選單", staff_root_path, class: 'btn btn-primary btn-xs' %>
-
-<%= paginate @students, theme: 'twitter-bootstrap-4' %>
-<table class="table table-hover table-sm">
+<table class="table table-sm">
   <thead>
     <tr>
       <th>姓名</th>
@@ -25,8 +22,12 @@
       <td><%= student.number %></td>
       <td><%= student.phone %></td>
       <td><%= student.email %></td>
-      <td><%= link_to "加入", staff_user_path(student.id), method: 'PUT', class: 'btn btn-danger btn-sm' %></td>
+      <td><%= link_to "＋", staff_user_path(student.id), method: 'PUT', class: 'btn btn-red btn-sm white-hover scale-hover spin' %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
+<%= paginate @students, theme: 'twitter-bootstrap-4' %>
+
+<%= link_to "回主選單", staff_root_path, class: 'btn btn-primary btn-xs' %>

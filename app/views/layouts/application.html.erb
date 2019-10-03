@@ -29,18 +29,8 @@
     <div class="container">
       <%= yield %>
     </div>
-    <footer>
-    <address>
-      <a href="tel:+886223315247">
-        <p>TEL：(02) 2331-5247</p>
-      </a>
-      <a href="mailto:ohmywage@ohmywage.com">
-      <p>Email : ohmywage@ohmywage.com</p>
-      </a>
-      <a href="https://ubin.io/TyZN7E">
-      <p>Address：5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-      </a>
-      </address>
-    </footer>
+    <div class="footerspace"></div>
+    <%= render 'shared/frontend/footer' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
