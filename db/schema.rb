@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_085750) do
+ActiveRecord::Schema.define(version: 2019_09_26_033113) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "department_with_users", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "department_id"
+    t.bigint "user_id"
+    t.bigint "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["department_id"], name: "index_department_with_users_on_department_id"
@@ -28,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
   end
 
   create_table "reply_to_issues", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
@@ -37,10 +40,10 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
   end
 
   create_table "salaries", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "date"
-    t.integer "hr", default: 0
-    t.integer "hourly_wage", default: 0
+    t.integer "hr", default: 1
+    t.integer "hourly_wage", default: 150
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_salaries_on_user_id"
@@ -63,4 +66,8 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "department_with_users", "departments"
+  add_foreign_key "department_with_users", "users"
+  add_foreign_key "reply_to_issues", "users"
+  add_foreign_key "salaries", "users"
 end

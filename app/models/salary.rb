@@ -9,7 +9,15 @@ class Salary < ApplicationRecord
 
   def self.search(search)
     if search
-      where(['date LIKE ?', "%#{search}%"])
+      if search.empty?
+        all
+      else
+        year = search.split(/-/)[0].to_i
+        month =  search.split(/-/)[1].to_i
+        beginning_of_month = DateTime.new(year, month).beginning_of_month
+        end_of_month = beginning_of_month.end_of_month
+        where(date: beginning_of_month..end_of_month)
+      end
     else
       all
    end
