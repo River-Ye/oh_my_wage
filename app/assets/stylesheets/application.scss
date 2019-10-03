@@ -137,13 +137,23 @@
      margin-left: 5px;
      height: 2.3em;
  }
- 
+
+.form-actions{
+    justify-content: center !important;
+    align-content: center !important;
+    width: 100% !important;
+    margin: auto;
+}
+
  .btn-green{
     background-color: #115247;
     color: whitesmoke;
     border: 1px solid #115247;
     margin-left: 5px;
     height: 2.3em;
+    :hover{
+        color: whitesmoke !important;
+    }
     .white-hover:hover{
         background-color: #115247 !important;
     }
@@ -253,7 +263,6 @@
  }
  
  .infotitle {
-   width: 60%;
    margin: 2em auto;
    text-align: center;
    display: block;
@@ -334,13 +343,18 @@
 
 .loginblock.col-sm-12{
     width: 60%;
-    margin: 15% auto;
-    padding: 15px;
+    margin: 5em auto;
+    padding: 1em;
     background-color: whitesmoke;
     color: black;
     #user_email:focus, #user_password:focus{
         outline: none !important
     };
+}
+
+input.btn.btn-blue.btn-md.white-hover.my-btn,a.btn-green.btn-md.white-hover{
+    display: inline;
+    width: 100px;
 }
  
 .contentinfo {

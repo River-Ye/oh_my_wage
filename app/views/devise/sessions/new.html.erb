@@ -12,13 +12,11 @@
                   input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
-  <div class="row">
-    <div class="form-actions">
-      <%= f.button :submit, "  登入  ", class: 'btn btn-blue btn-md white-hover' %>
+    <div class="form-actions row">
+      <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' %>
       <% end %>
-    </div>
     <%= render "devise/shared/links" %>
-  </div>
+    </div>
     
   <br>
   <div class="renderpage">
