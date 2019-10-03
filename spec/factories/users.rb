@@ -5,7 +5,7 @@ FactoryBot.define do
     number { Faker::Code.nric }
     password {'123123'}
     phone { ['09', 8.times.map{rand(10)}].join }
-    email { "admin@123.123" }
+    email { "admin@ohmywage.com" }
     gender { [0, 1].sample }
     role { 0 }
   end
@@ -15,7 +15,7 @@ FactoryBot.define do
     number { Faker::Code.nric }
     password {'123123'}
     phone { ['09', 8.times.map{rand(10)}].join }
-    email { ['t', 4.times.map{rand(10)}, "@123.123"].join }
+    email { ['t', "#{number}", "@ohmywage.com"].join }
     gender { [0, 1].sample }
     role { 1 }
   end
@@ -25,7 +25,7 @@ FactoryBot.define do
     number { Faker::Code.nric }
     password {'123123'}
     phone { ['09', 8.times.map{rand(10)}].join }
-    email { ['s', 4.times.map{rand(10)}, "@123.123"].join }
+    email { ['t', "#{number}", "@ohmywage.com"].join }
     gender { [0, 1].sample }
     role { 2 }
   end
