@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   include Devise::Models::Trackable
   devise :database_authenticatable, :registerable, :trackable,
-         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 20.minutes
+         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 30.minutes
 
   paginates_per 10
 

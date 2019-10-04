@@ -8,8 +8,7 @@
 6. rails db:seed (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門關聯假資料 、 學生薪資\*300)
 7. rails c
 8. User.all
-9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
-
+9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生 
 ## Factorybot
 
     * 使用 rails c >> User.admin / User.staff / User.student 即可看到不同 role 的帳戶資料。

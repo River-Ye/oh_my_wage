@@ -19,20 +19,16 @@
     <ul class="navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item">
+          <p id="timecount"></p> 
+          <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></div>
+        </li>
+        <li class="nav-item">
           <%= link_to "個人資料", edit_user_registration_path, class: 'nav-link  text-light' %>
         </li>
-          <li class="nav-item">
-            <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
-          </li>
-          <li class="nav-item">
-            <p id="timecount"></p> 
-          </li>
+        <li class="nav-item">
+          <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
         </li>
       <% end %>
     </ul>
-    <% if user_signed_in? %>
- 
-     <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 20.minutes %>"></div>
-    <% end %>
   </div>
 </nav>
