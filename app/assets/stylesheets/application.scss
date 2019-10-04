@@ -55,8 +55,10 @@
  // ---------- 以下為通用 class，直接套用即可 ----------
  
  .mymaintheme{
-    // color: #333;
-     font-family: 'Noto Sans TC', sans-serif
+    color: #333;
+     font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px
+
  }
  
  .verticalspace{
@@ -333,13 +335,9 @@
 }
 .col-md-12{
     width: 100%;
-    border: 1px solid salmon !important;
-}
-.container > div.fixed-bottom{
+    vertical-align: middle;
     width: 100%;
     text-align: center;
-    border: 1px solid salmon !important;
-    padding: 50px;
     vertical-align: middle;
 }
 
@@ -403,14 +401,21 @@ input.btn.btn-blue.btn-md.white-hover.my-btn,a.btn-green.btn-md.white-hover{
 }
 footer{
     margin-top: 100px;
-    padding: 10px;
-    font-size: 12px;
+    padding: 25px;
+    font-size: 14px;
     text-align: center;
     background-color: rgb(18, 50, 69);
-    a, a:visited{
+    a, a:visited, a:hover{
         color: #FEFDFF
     }
     p{
         display: inline;
+        margin: 2em auto;
+        padding: 0 1em;
+    }
+    p.email{
+        border-left: 1px solid #FEFDFF;
+        border-right: 1px solid #FEFDFF;
+
     }
 }

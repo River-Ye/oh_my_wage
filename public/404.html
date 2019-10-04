@@ -8,7 +8,8 @@
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
     body{
-      background-color: FEFDFF;
+      background-color: #FEFDFF;
+      letter-spacing: 1px
     }
 
     img{
@@ -38,22 +39,23 @@
       padding: 25px;
       text-align: center;
       background-color: #123245;
-      color: #FEFDFF
+      color: #FEFDFF;
       vertical-align: middle;
-      }
+    }
+
     a{
       color: #FEFDFF
     }
 
     footer p{
-      font-size: 12px;
+      font-size: 14px;
       display: inline;
+      padding: 0 1em;
     }
 
     p.email{
       border-right: 1px solid #FEFDFF;
       border-left: 1px solid #FEFDFF;
-      padding: 0 1.5em;
     }
 
     .footerspace{
@@ -66,7 +68,6 @@
   <meta charset="UTF-8">  
   <div class="container">
     <img src="./images/rlost.png">
-    <img src="./images/arrow-down.gif" alt="arrow down" class="arrowdown">
     <p class="italicfont">Please repeat the spell</p>
     <p class="italicfont">and</p>
     <p class="italicfont">click the map.</p>
@@ -76,20 +77,26 @@
 
 <div class="footerspace"></div>
 
-  <footer class="fixed-bottom">
-    <div>
-      <div class="footerblock">
-        <i class="fas fa-phone-volume"></i>&nbsp;&nbsp;
+<footer class="fixed-bottom">
+    <div class="container d-flex justify-content-center flex-fill">
+      <div class="col-md-12">
         <a href="tel:+886223315247">
-          <p>(02) 2331-5247</p>
+          <p>
+            <i class="fas fa-phone-volume"></i>
+            (02) 2331-5247
+          </p>
         </a>
-        <i class="far fa-envelope"></i>&nbsp;&nbsp;
         <a href="mailto:admin@oh-my-wage.website">
-          <p class="email">admin@oh-my-wage.website</p>
+          <p class="email">
+            <i class="far fa-envelope"></i>
+            admin@oh-my-wage.website
+          </p>
         </a>
-        <i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;
         <a href="https://ubin.io/TyZN7E">
-          <p>台北市中正區衡陽路7號5樓</p>
+          <p>
+            <i class="fas fa-map-marked-alt"></i>
+            台北市中正區衡陽路7號5樓
+          </p>
         </a>
       </div>
     </div>
