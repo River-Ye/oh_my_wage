@@ -7,19 +7,10 @@ class Salary < ApplicationRecord
 
   paginates_per 10
 
-  def self.search(search)
-    if search
-      if search.empty?
-        all
-      else
-        year = search.split(/-/)[0].to_i
-        month =  search.split(/-/)[1].to_i
-        beginning_of_month = DateTime.new(year, month).beginning_of_month
-        end_of_month = beginning_of_month.end_of_month
-        where(date: beginning_of_month..end_of_month)
-      end
-    else
-      all
-   end
+  def self.search(month_date = nil)
+    return all if month_date.blank?
+    beginning_of_month = month_date.beginning_of_month.beginning_of_day
+    end_of_month = month_date.end_of_month.end_of_day
+    where(date: beginning_of_month..end_of_month)
   end
 end
