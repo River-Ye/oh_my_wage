@@ -3,9 +3,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  devise_scope :user do 
-    get "/" => "devise/sessions#new"
-  end
+  #devise_scope :user do 
+  #  get "/" => "devise/sessions#new"
+  #end
 
   namespace 'admin' do
     resources 'users'
@@ -30,5 +30,5 @@ Rails.application.routes.draw do
   get 'about', to: 'home#about'
   get 'contact', to: 'home#contact'
   get 'qa', to: 'home#qa'
-  root 'devise/sessions#new'
+  root 'home#index'
 end
