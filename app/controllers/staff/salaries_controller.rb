@@ -15,15 +15,16 @@ class Staff::SalariesController < ApplicationController
       user_id = DepartmentWithUser.where(department_id: @department_id).map{|x| x.user_id}
       # 找出該部門下的學生
       @students = User.where(id: user_id).where(role: 2).search(params[:search]).order(name: :asc).page(params[:page])
-      respond_to do |format|
-        format.html
-        format.json
-        format.pdf { render template: 'users/pdf',pdf:'pdf' }
-      end
+      
     end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf' }
+    end
   end
   
   def pdf

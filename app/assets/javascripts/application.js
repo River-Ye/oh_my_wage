@@ -18,4 +18,5 @@
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require cocoon
+//= require cable
 //= require_tree .

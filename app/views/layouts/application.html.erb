@@ -8,6 +8,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('icon.png') %>
     <button type="button" id="BackTop" class="toTop-arrow"></button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <script>
     $(function(){
       $('#BackTop').click(function(){ 
@@ -32,5 +36,30 @@
     <div class="footerspace"></div>
     <%= render 'shared/frontend/footer' %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+   
+   
+   <script type="text/javascript" >
+  
+   <div>
+       <span id="timer"><span> 
+    </div>
+    <script>
+      window.onload=function(){
+      var start=Date.now(),timer=document.getElementById('timer');
+      (function f(){
+      
+      var diff=Date.now()-start,ns=(((3e5-diff)/1000)>>0),m=(ns/60)>>0,s=ns-m*60;
+      timer.textContent="登出時間倒數"+m+':'+((''+s).length>1?'':'0')+s+'minutes';
+      if(diff>(3e5)){start=Date.now()}
+      setTimeout(f,1000);   
+      window.clearInterval(timeoutID);
+})();
+}
+    </script>
+
+     
+ 
+   </script>
   </body>
 </html>
