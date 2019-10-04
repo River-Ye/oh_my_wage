@@ -15,7 +15,7 @@ class ProblemsController < ApplicationController
   def create
     @reply_to_issue = current_user.reply_to_issues.new(reply_to_issue_params)
     if @reply_to_issue.save
-      redirect_to root_path, notice: "已收到問題囉"
+      redirect_to '/', notice: "已收到問題囉"
     else
       render :new
     end
@@ -32,6 +32,6 @@ class ProblemsController < ApplicationController
   end
 
   def check_login
-    redirect_to root_path, notice: "請先登入!!" unless user_signed_in?
+    redirect_to '/', notice: "請先登入!!" unless user_signed_in?
   end
 end

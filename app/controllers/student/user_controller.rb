@@ -30,6 +30,6 @@ class Student::UserController < ApplicationController
   end
 
   def check_login
-    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'student'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'student'
   end
 end

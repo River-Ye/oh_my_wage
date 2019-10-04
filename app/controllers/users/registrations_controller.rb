@@ -52,6 +52,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
   def check_login
-    redirect_to root_path, notice: "最高管理者才有權限!!" unless user_signed_in?
+    redirect_to '/', notice: "最高管理者才有權限!!" unless user_signed_in?
   end
 end
