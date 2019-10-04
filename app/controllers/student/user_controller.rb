@@ -18,7 +18,15 @@ class Student::UserController < ApplicationController
   end
 
   def find_student_salaries
-    @student = current_user.salaries.search(params[:search]).order(date: :desc).page(params[:page])
+    @student = current_user.salaries.search(search_month).order(date: :desc).page(params[:page])
+  end
+
+  def search_month
+    return if params[:search].blank?
+    t = params[:search]
+    year = t.split(/-/)[0].to_i
+    month =  t.split(/-/)[1].to_i
+    Date.new(year, month)
   end
 
   def check_login
