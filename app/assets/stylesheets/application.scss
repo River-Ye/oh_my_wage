@@ -340,11 +340,15 @@
 }
 
 .navitem{
-    background-color: #521D1F;
+    background-color: rgba(82, 29, 31, 0.8);
+}
+
+.navbar-brand{
+    opacity: 0.8;
 }
 
 .loginblock.col-sm-12{
-    width: 60%;
+    width: 50%;
     margin: 5em auto;
     padding: 1em;
     background-color: whitesmoke;
@@ -355,8 +359,9 @@
 }
 
 input.btn.btn-blue.btn-md.white-hover.my-btn,a.btn-green.btn-md.white-hover{
+    margin: 10px auto;
     display: inline;
-    width: 100px;
+    width: 200px;
 }
  
 .contentinfo {
