@@ -38,7 +38,7 @@
      width: 31px;
      height: 7px;
      border-radius: 3px;
-     background: whitesmoke;
+     background: #FEFDFF;
      position: absolute;
      content: "";
  }
@@ -55,9 +55,10 @@
  // ---------- 以下為通用 class，直接套用即可 ----------
  
  .mymaintheme{
-     // background-color: rgba(5, 15, 31, 0.8);
-     color: whitesmoke;
-     font-family: 'Noto Sans TC', sans-serif
+    color: #333;
+     font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px
+
  }
  
  .verticalspace{
@@ -80,12 +81,13 @@
      margin: 1em auto;
  }
  
- .before-login > .row > a{
-     width: 30%;
+ .arrow-down{
+     margin: 2em auto;
+
  }
- 
+
  table.table tr {
-     border: 1px solid rgba(5, 15, 31, 0.1)
+     border: 1px solid rgba(23, 101, 145, 0.1)
  }
  
  
@@ -99,209 +101,242 @@
      transform : scale(1.1);
      transition: 0.3s;
     }
- .spin:hover{
-    transform: rotate(180deg);
-    transition: 1s;
- }
  .white-hover:hover{
-     color: whitesmoke;
+     color: #FEFDFF;
  }
  
  table > tbody > tr > td > .btn-red,
  .container > a.btn-red{
      background-color: #8b0000;
      border: #8b0000;
-     color: whitesmoke;
+     color: #FEFDFF;
  }
  
- .btn-blue{
+.btn-red{
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
+    margin-left: 5px;
+    height: 2.3em;
+}
+
+.btn-org{
+    background-color: orange;
+    border: orange;
+    color: #333;
+    transition: 0.3s;
+        
+ }
+.btn-org:hover{
+    background-color: #176591;
+    border: #176591;
+    color: #FEFDFF;
+}
+
+.btn-blue{
      background-color: #176591;
-     color: whitesmoke;
+     color: #FEFDFF;
      border: 1px solid #176591;
      margin-left: 5px;
      height: 2.3em;
  }
- 
- .btn-green{
+
+.form-actions{
+    justify-content: center !important;
+    align-content: center !important;
+    width: 100% !important;
+    margin: auto;
+}
+
+.btn-green{
     background-color: #115247;
-    color: whitesmoke;
+    color: #FEFDFF;
     border: 1px solid #115247;
     margin-left: 5px;
     height: 2.3em;
+    :hover{
+        color: #FEFDFF !important;
+    }
     .white-hover:hover{
         background-color: #115247 !important;
     }
     li.page-item.disabled > a.page-link{
         background-color:  rgba(51, 51, 51, 0.8);
         border: 1px solid rgba(51, 51, 51, 0.8);
-        color: whitesmoke
+        color: #FEFDFF
 
     }
 }
 
+
 .mybgimg {
-  background-image: url(../images/64799.jpg);
+  background-color: #FEFDFF;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left top;
 }
 
- .container > .container > .row{
+.container > .container > .row{
      justify-content: center;
  }
  
- small.form-text.text-muted{
-     color: whitesmoke !important;
+small.form-text.text-muted{
+     color: #FEFDFF !important;
  }
 
- .my-center{
+.my-center{
      width: 100%;
      margin: auto;
      text-align: center;
  }
  
- table{
-     background-color: rgba(18, 50, 69, 0.8);
-     a, a:visited{
-         color: whitesmoke
-     }
-     tr{
-         color: whitesmoke;
-         transition: 0.2s;
-     }
-     tr:hover{
-         background-color: rgba(5, 15, 31, 0.8);
-         color: orange;
-     }
-     th{
-         background-color: #123245;
-     }
+table{
+     background-color: rgba(23, 101, 145, 0.8);
+    a, a:visited{
+        color: #FEFDFF
+    }
+    tr{
+        color: #FEFDFF;
+        transition: 0.3s;
+    }
+    tr:hover{
+         background-color: rgba(18, 50, 69, 0.8);
+    }
+    a:hover{
+        color: orange;
+        background-color: transparent;
+    }
+    th{
+        background-color: #176591;
+    }
  }
  
- #search{
-     height: 2.3em;
-     vertical-align: middle;
-     border-radius: 5px;
-     background-color: rgba(51, 51, 51, 0.8);
-     color: whitesmoke;
-     border: 2px solid #f5f5f5;
- }
+#search{
+    height: 2.3em;
+    padding: 0.5em;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: #176591;
+    color: #FEFDFF;
+    border: 2px solid #f5f5f5;
+}
  
- #search:focus{
-     outline: none;
-     border: 2px solid orange;
-     background-color: #333
- }
+#search:focus{
+    outline: none;
+    background-color: #123245;
+}
  
- ul.pagination{
-     margin-top: 30px;
- }
+ul.pagination{
+    margin-top: 30px;
+}
  
- .pagination{
-     justify-content: center;
-     color: whitesmoke;
-     li > a{
-         background-color: #123245;
-         border: 1px solid #123245;
-         color: whitesmoke;
-         transition: 0.3s
-     }
-     li > a:hover{
-         background-color: #915709;
-         border: 1px solid #123245;
-         transition: 0.3s;
-         color: whitesmoke;
-         scale: 1.2;
-     }
-     li.page-item.active > a.page-link{
-         background-color: #915709;
-         border: 1px solid #123245;
-         color: whitesmoke;
-     }
-     li.page-item.disabled > a.page-link{
-         background-color:  #123245;
-         border: 1px solid #123245;
-         color: whitesmoke
+.pagination{
+    justify-content: center;
+    color: #FEFDFF;
+    li > a{
+        background-color: rgba(23, 101, 145, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF;
+        transition: 0.3s
+    }
+    li > a:hover{
+        background-color: rgba(18, 50, 69, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        transition: 0.3s;
+        color: #FEFDFF;
+        scale: 1.2;
+    }
+    li.page-item.active > a.page-link{
+        background-color: #123245;
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF;
+    }
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(23, 101, 145, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF 
+    }
+}
  
-     }
- }
+.mybgimg{
+    //  background-image: url(../images/64799.jpg);
+    background-color: #FEFDFF;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: left top
+}
  
- .mybgimg{
-     background-image: url(../images/64799.jpg);
-     background-size: cover;
-     background-attachment: fixed;
-     background-repeat: no-repeat;
-     background-position: left top
- }
+.infotitle {
+  margin: auto 0em;
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
  
- .infotitle {
-   width: 60%;
-   margin: 2em auto;
-   text-align: center;
-   display: block;
-   margin: 50px auto 100px;
-   width: 100%;
- }
+.zhtitle {
+  width: 70%;
+  margin: 0 auto 1em;
+  text-align: center;
+  font-size: 50px;
+}
  
- .zhtitle {
-   width: 70%;
-   margin: 30px auto;
-   text-align: center;
-   font-size: 50px;
- }
- 
- .fontstyle {
-   color: whitesmoke;
+.fontstyle {
+   color: #FEFDFF;
    text-shadow: 1px 0.6px 1px #333;
- }
+}
  
- .contentinfo{
-     margin: auto;
-     padding: 25px;
-     border-radius: 10px;
-     background-color: rgba(5, 15, 31, 0.8);
-     li{
-         font-size: 30px;
-         padding: 1em;
-     };
-     p{
-         text-indent: 2em;
-         font-size: 20px
-     };
-     a, a:hover, a:visited{
-         color: whitesmoke
-     }    
- }
+.contentinfo{
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 25px;
+    border-radius: 10px;
+    color: #FEFDFF;
+    background-color: rgba(5, 15, 31, 0.8);
+    li{
+        font-size: 30px;
+        padding: 1em;
+    };
+    p{
+        text-indent: 2em;
+        font-size: 20px
+    };
+    a, a:hover, a:visited{
+        color: #FEFDFF
+    }    
+}
  
- .center-block{
-     text-align: center;
-     margin: 20px auto
+.center-block{
+    text-align: center;
+    margin: 20px auto
  
- }
- 
- .btn-dark {
+}
+
+.btn-dark {
    box-shadow: 2px 2px 6px #111;
- }
+   transition: 0.3s;
+}
+
+.btn-dark:hover{
+    background-color: #176591;
+    border: 1px solid #176591;
+}
    
- footer{
-     text-align: left;
-     margin-top: 100px;
-     padding: 10px;
-     font-size: 12px;
-     text-align: center;
-     background-color: #123245;
-     a, a:visited{
-         color: whitesmoke
-     }    
- 
- }
+.form-actions{
+    width: 50%;
+}
+
 .footerspace{
     margin-top: 100px;
 }
-
-.footerblock{
-    width: 400px;
+.col-md-12{
+    width: 100%;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .footericon{
@@ -309,42 +344,58 @@
 }
 
 .navitem{
-    background-color: #521D1F;
+    background-color: rgb(82, 29, 31);
 }
 
-.loginblock{
-    margin: 10% 0;
-    padding: 15px;
-    background-color: #fff;
-    color: black;
+p#timecount{
+   padding: 8px 0;
+   margin-bottom: 0;
+   color: #FEFDFF;
 }
-.contentinfo {
-  margin: auto;
-  padding: 25px;
-  border-radius: 10px;
-  background-color: rgba(5, 15, 31, 0.8);
-  li {
-    font-size: 30px;
+
+.loginblock.col-sm-12{
+    width: 50%;
+    margin: 5em auto;
     padding: 1em;
-  }
-  p {
-    text-indent: 2em;
-    font-size: 20px;
-  }
-  a,
-  a:hover,
-  a:visited {
-    color: whitesmoke;
-  }
+    background-color: #FEFDFF;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #123245;
+    color: black;
+    #user_email:focus, #user_password:focus{
+        outline: none !important
+    };
+}
+
+input.btn.btn-blue.btn-md.white-hover.my-btn,a.btn-green.btn-md.white-hover{
+    margin: 10px auto;
+    display: inline;
+    width: 200px;
+}
+ 
+.contentinfo {
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgba(5, 15, 31, 0.8);
+    li {
+        font-size: 30px;
+        padding: 1em;
+    }
+    p{
+        text-indent: 2em;
+        font-size: 20px;
+    }
+    a,
+    a:hover,
+    a:visited {
+        color: #FEFDFF;
+    }
 }
 
 .center-block {
-  text-align: center;
-  margin: 20px auto;
-}
-
-.footerblock{
-    width: 400px;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .footericon{
@@ -352,12 +403,22 @@
 }
 footer{
     margin-top: 100px;
-    padding: 10px;
-    font-size: 12px;
+    padding: 25px;
+    font-size: 14px;
     text-align: center;
-    background-color: rgba(5, 15, 31, 0.8);
-    a, a:visited{
-        color: whitesmoke
+    background-color: rgb(18, 50, 69);
+    a, a:visited, a:hover{
+        color: #FEFDFF
+    }
+    p{
+        display: inline;
+        margin: 2em auto;
+        padding-right:0.5em;
+        padding-left:1em;
+    }
+    p.email{
+        border-left: 1px solid #FEFDFF;
+        border-right: 1px solid #FEFDFF;
+
     }
 }
-// ---------- 以下為各頁面 css 設定 ----------

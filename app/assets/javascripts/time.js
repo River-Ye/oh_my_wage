@@ -3,13 +3,13 @@ window.onload = function() {
 };
 
 function startTimer () {
-  var logout_value = document.querySelector('#logout-timestamp')
+    var logout_value = document.querySelector('#logout-timestamp')
 
-  var deadline = new Date(logout_value.dataset.logoutTime).getTime();
+    var deadline = new Date(logout_value.dataset.logoutTime).getTime();
+ 
+    console.log('deadline', deadline);
 
-  console.log('deadline', deadline);
-
-  var x = setInterval(function() { 
+    var x = setInterval(function() { 
     var now = new Date().getTime();
     var t = deadline - now; 
     var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 

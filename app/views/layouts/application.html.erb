@@ -9,18 +9,18 @@
     <%= favicon_link_tag asset_path('icon.png') %>
     <button type="button" id="BackTop" class="toTop-arrow"></button>
     <script>
-    $(function(){
-      $('#BackTop').click(function(){ 
-        $('html,body').animate({scrollTop:0}, 800);
+      $(function(){
+        $('#BackTop').click(function(){ 
+          $('html,body').animate({scrollTop:0}, 800);
+        });
+        $(window).scroll(function() {
+          if ( $(this).scrollTop() > 300 ){
+            $('#BackTop').fadeIn(222);
+          } else {
+            $('#BackTop').stop().fadeOut(222);
+          }
+        }).scroll();
       });
-      $(window).scroll(function() {
-        if ( $(this).scrollTop() > 300 ){
-          $('#BackTop').fadeIn(222);
-        } else {
-          $('#BackTop').stop().fadeOut(222);
-        }
-      }).scroll();
-    });
     </script>
   </head>
   <body class="mymaintheme mybgimg">

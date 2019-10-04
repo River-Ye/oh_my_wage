@@ -1,12 +1,12 @@
 class Staff::UsersController < ApplicationController
   before_action :check_login
-  before_action :find_student, only: [:show]
+  before_action :find_student, only: [:show, :update]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = User.where(id: user_section).where(role: 2).search(params[:search]).order(name: :asc).page(params[:page])
+      @students = User.where(id: user_section).where(role: 2).search(params[:search]).order(number: :asc).page(params[:page])
     end
   end
 
@@ -18,7 +18,7 @@ class Staff::UsersController < ApplicationController
   end
 
   def update
-    @departmentwithuser = DepartmentWithUser.new(user_id: User.find(params[:id]).id, department_id: department_id)
+    @departmentwithuser = DepartmentWithUser.new(user_id: @student.id, department_id: department_id)
     if @departmentwithuser.save
       redirect_to staff_users_path, notice: "已新增至 #{Department.find(department_id).name} 該部門"
     else
@@ -29,7 +29,7 @@ class Staff::UsersController < ApplicationController
   private
 
   def find_student
-    @student = User.find(params[:id])
+    @student = User.friendly.find(params[:id])
   end
 
   def department_id
