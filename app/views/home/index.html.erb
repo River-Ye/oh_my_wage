@@ -1,8 +1,12 @@
 <div class="before-login">
-  <h1 class="text-center verticalspace" >霍格華茲學院</h1>
-  <h2 class="text-center verticalspace" >Oh My Wage 工讀薪資系統</h2>
-  <h2 class="text-center verticalspace" >請登入：</h2>
+  <h1 class="text-center verticalspace" >Oh My Wage</h1>
+  <h2 class="text-center verticalspace" >霍格華茲學院 － 工讀薪資系統</h2>
+  <h2 class="text-center verticalspace" >開始使用：</h2>
   <div class="row">
-    <%= link_to "Login >>>", user_session_path, class: 'btn btn-warning btn-lg my-btn scale-hover' %>
+  <img src="<%= image_path("arrow-down.gif") %>" 
+  class="arrow-down">
+  </div>
+  <div class="row">
+    <%= link_to "Login", user_session_path, class: 'btn btn-dred btn-lg my-btn scale-hover' %>
   </div>
 </div>

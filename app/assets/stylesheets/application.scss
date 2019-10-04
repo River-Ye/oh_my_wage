@@ -84,6 +84,11 @@
      width: 30%;
  }
  
+ .arrow-down{
+     margin: 2em auto;
+
+ }
+
  table.table tr {
      border: 1px solid rgba(5, 15, 31, 0.1)
  }
@@ -108,12 +113,23 @@
  }
  
  table > tbody > tr > td > .btn-red,
- .container > a.btn-red{
+ .container > a.btn-red.btn-red{
      background-color: #8b0000;
      border: #8b0000;
      color: whitesmoke;
  }
  
+ .btn-dred{
+    background-color: orange;
+    border: orange;
+    color: #333;
+    :hover{
+        background-color: #521D1F !important;
+        border: #521D1F;
+        transition: 0.5s
+    }
+ }
+
  .btn-blue{
      background-color: #176591;
      color: whitesmoke;
@@ -121,13 +137,23 @@
      margin-left: 5px;
      height: 2.3em;
  }
- 
+
+.form-actions{
+    justify-content: center !important;
+    align-content: center !important;
+    width: 100% !important;
+    margin: auto;
+}
+
  .btn-green{
     background-color: #115247;
     color: whitesmoke;
     border: 1px solid #115247;
     margin-left: 5px;
     height: 2.3em;
+    :hover{
+        color: whitesmoke !important;
+    }
     .white-hover:hover{
         background-color: #115247 !important;
     }
@@ -138,6 +164,7 @@
 
     }
 }
+
 
 .mybgimg {
   background-image: url(../images/64799.jpg);
@@ -170,9 +197,11 @@
          color: whitesmoke;
          transition: 0.2s;
      }
-     tr:hover{
+     tr:hover, a:hover{
          background-color: rgba(5, 15, 31, 0.8);
-         color: orange;
+     }
+     a:hover{
+        color: orange;
      }
      th{
          background-color: #123245;
@@ -236,7 +265,6 @@
  }
  
  .infotitle {
-   width: 60%;
    margin: 2em auto;
    text-align: center;
    display: block;
@@ -279,11 +307,14 @@
      margin: 20px auto
  
  }
- 
+
  .btn-dark {
    box-shadow: 2px 2px 6px #111;
  }
    
+ .form-actions{
+    width: 50%;
+}
  footer{
      text-align: left;
      margin-top: 100px;
@@ -309,15 +340,30 @@
 }
 
 .navitem{
-    background-color: #521D1F;
+    background-color: rgba(82, 29, 31, 0.8);
 }
 
-.loginblock{
-    margin: 10% 0;
-    padding: 15px;
-    background-color: #fff;
-    color: black;
+.navbar-brand{
+    opacity: 0.8;
 }
+
+.loginblock.col-sm-12{
+    width: 50%;
+    margin: 5em auto;
+    padding: 1em;
+    background-color: whitesmoke;
+    color: black;
+    #user_email:focus, #user_password:focus{
+        outline: none !important
+    };
+}
+
+input.btn.btn-blue.btn-md.white-hover.my-btn,a.btn-green.btn-md.white-hover{
+    margin: 10px auto;
+    display: inline;
+    width: 200px;
+}
+ 
 .contentinfo {
   margin: auto;
   padding: 25px;
@@ -345,6 +391,7 @@
 
 .footerblock{
     width: 400px;
+    text-align: left;
 }
 
 .footericon{
@@ -355,9 +402,8 @@ footer{
     padding: 10px;
     font-size: 12px;
     text-align: center;
-    background-color: rgba(5, 15, 31, 0.8);
+    background-color: rgba(18, 50, 69, 0.8);
     a, a:visited{
         color: whitesmoke
     }
 }
-// ---------- 以下為各頁面 css 設定 ----------
