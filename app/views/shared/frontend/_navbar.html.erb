@@ -6,9 +6,6 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      
-    </ul>
-    <ul class="navbar-nav">
       <li class="nav-item active">
         <%= link_to "關於我們", about_path, class: 'nav-link text-light' %>
       </li>
@@ -18,16 +15,19 @@
       <li class="nav-item active">
         <%= link_to "Q & A", qa_path, class: 'nav-link text-light' %>
       </li>
+    </ul>
+      
+    <ul class="navbar-nav">
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to "個人資料", edit_user_registration_path, class: 'nav-link  text-light' %>
         </li>
-          <li class="nav-item">
-            <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
-          </li>
-          <li class="nav-item">
-            <p id="timecount"></p> 
-          </li>
+        <li class="nav-item">
+          <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+        </li>
+        <li class="nav-item">
+          <p id="timecount"></p> 
+        </li>
         </li>
       <% end %>
     </ul>
