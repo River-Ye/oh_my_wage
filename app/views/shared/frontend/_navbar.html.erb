@@ -31,7 +31,8 @@
       <% end %>
     </ul>
     <% if user_signed_in? %>
-     <div id='logout-timestamp' data-logout-time="<%= current_user.last_sign_in_at + 10.minutes %>"></div>
+ 
+     <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 20.minutes %>"></div>
     <% end %>
   </div>
 </nav>
