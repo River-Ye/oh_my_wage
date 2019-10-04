@@ -6,28 +6,37 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      
       <li class="nav-item active">
         <%= link_to "關於我們", about_path, class: 'nav-link text-light' %>
       </li>
+      
       <li class="nav-item active">
         <%= link_to "聯絡我們", contact_path, class: 'nav-link text-light' %>
       </li>
+      
       <li class="nav-item active">
         <%= link_to "Q & A", qa_path, class: 'nav-link text-light' %>
       </li>
+      
     </ul>
       
     <ul class="navbar-nav">
       <% if user_signed_in? %>
+      
         <li class="nav-item">
           <p id="timecount"></p> 
+          <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></div>
         </li>
+      
         <li class="nav-item">
           <%= link_to "個人資料", edit_user_registration_path, class: 'nav-link  text-light' %>
         </li>
+      
         <li class="nav-item">
           <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
         </li>
+
       <% end %>
     </ul>
   </div>
