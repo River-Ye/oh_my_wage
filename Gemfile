@@ -49,6 +49,7 @@ gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
 gem 'pundit', '~> 2.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
 gem 'bootstrap-datepicker-rails', '~> 1.8', '>= 1.8.0.1'
+gem 'friendly_id', '~> 5.2.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -23,10 +23,10 @@
   <tr>
     <td><%= user.role %></td>
     <td><%= user.number %></td>
-    <td><%= link_to user.name, admin_user_path(user.id) %></td>
-    <td><%= link_to "編輯", edit_admin_user_path(user.id), class: 'btn edit-btn btn-sm scale-hover' %></td>
+    <td><%= link_to user.name, admin_user_path(user.slug) %></td>
+    <td><%= link_to "編輯", edit_admin_user_path(user.slug), class: 'btn edit-btn btn-sm scale-hover' %></td>
     <td><%= link_to "刪除",
-            admin_user_path(user.id),
+            admin_user_path(user.slug),
             method: 'delete',
             class: 'btn btn-red btn-sm scale-hover white-hover',
             data: {confirm: '確定嗎???'}
