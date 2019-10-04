@@ -26,20 +26,23 @@ class Staff::SalariesController < ApplicationController
       format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf' }
     end
   end
+
   
-  def pdf
-    render html: params(@salary)
-    if DepartmentWithUser.find_by(user_id: current_user.id).nil?
-      redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
-    else
-      # 找出登入老師的所屬部門代號
-      @department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
-      # 找出該部門底下所有人
-      user_id = DepartmentWithUser.where(department_id: @department_id).map{|x| x.user_id}
-      # 找出該部門下的學生
-      @students = User.where(id: user_id).where(role: 2).order(name: :asc).page(params[:page])
-    end
   end
+  
+  # def pdf
+  #   render html: params(@salary)
+  #   if DepartmentWithUser.find_by(user_id: current_user.id).nil?
+  #     redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
+  #   else
+  #     # 找出登入老師的所屬部門代號
+  #     @department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
+  #     # 找出該部門底下所有人
+  #     user_id = DepartmentWithUser.where(department_id: @department_id).map{|x| x.user_id}
+  #     # 找出該部門下的學生
+  #     @students = User.where(id: user_id).where(role: 2).order(name: :asc).page(params[:page])
+  #   end
+  # end
 
 
   def edit
