@@ -199,7 +199,9 @@
      }
      tr:hover, a:hover{
          background-color: rgba(5, 15, 31, 0.8);
-         color: orange;
+     }
+     a:hover{
+        color: orange;
      }
      th{
          background-color: #123245;
