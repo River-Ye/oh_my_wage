@@ -6,7 +6,7 @@ class Staff::UsersController < ApplicationController
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = User.where(id: user_section).where(role: 2).search(params[:search]).order(name: :asc).page(params[:page])
+      @students = User.where(id: user_section).where(role: 2).search(params[:search]).order(number: :asc).page(params[:page])
     end
   end
 

@@ -5,7 +5,7 @@ var x = setInterval(function() {
   var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
   var seconds = Math.floor((t % (1000 * 60)) / 1000); 
   
-  if (minutes <=3 ) { 
+  if (minutes >=3 ) { 
     document.getElementById("timecount").innerHTML = ""
     // $('#timecount').hide()
   }
