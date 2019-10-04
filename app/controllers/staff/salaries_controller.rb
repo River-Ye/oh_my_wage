@@ -1,6 +1,6 @@
 class Staff::SalariesController < ApplicationController
   before_action :check_login
-  before_action :find_student, only: [:edit, :update, :destroy]
+  before_action :find_student, only: [:show, :edit, :update, :destroy]
   before_action :find_student_salary, only: [:show]
   before_action :find_student_salary_all, only: [:show]
   before_action :find_when_monthly_salary, only: [:index]
@@ -66,12 +66,13 @@ class Staff::SalariesController < ApplicationController
   
   def find_student
     # index 用到
-    @student = User.find(params[:id])
+    @student = User.friendly.find(params[:id])
   end
 
   def find_student_salary
     # show 用到
-    @salary = Salary.find_by(user_id: params[:id])
+    @salary = Salary.find_by(user_id: @student)
+    # byebug
   end
 
   def find_student_salary_all
