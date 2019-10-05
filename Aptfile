@@ -1,4 +1,2 @@
-xvfb
-libfontconfig
 wkhtmltopdf
 fonts-wqy-zenhei
