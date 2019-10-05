@@ -7,7 +7,7 @@ class Staff::SalariesController < ApplicationController
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
-      redirect_to root_path, notice: "不隸屬任何部門喔，請向管理者反映!!"
+      redirect_to '/', notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
       # 找出登入老師的所屬部門代號
       @department_id = DepartmentWithUser.find_by(user_id: current_user.id)[:department_id]
@@ -83,6 +83,6 @@ class Staff::SalariesController < ApplicationController
   end
 
   def check_login
-    redirect_to root_path, notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
   end
 end
