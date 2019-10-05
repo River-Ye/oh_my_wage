@@ -28,4 +28,4 @@
   </tbody>
 </table>
 <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
-<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-success btn-xs',:form => {"data-type" => "pdf" }  %>
+<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-success btn-xs',:form => {"data-type" => "pdf" }, target: "_blank" %>

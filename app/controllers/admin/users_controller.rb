@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.search(params[:search]).order(role: :asc).order(number: :asc).page(params[:page])
+    @users = User.search(params[:search]).admin_order.page(params[:page])
     respond_to do |format|
       format.html
       format.json

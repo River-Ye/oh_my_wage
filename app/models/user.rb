@@ -2,8 +2,6 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :number, use: :slugged
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   include Devise::Models::Trackable
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 30.minutes
@@ -23,6 +21,9 @@ class User < ApplicationRecord
   
   enum role: { admin: 0, staff: 1, student: 2 }
   enum gender: { Male: 0, Female: 1 }
+
+  scope :admin_order, -> { order(role: :asc).order(number: :asc) }
+  scope :staff_order, -> { where(role: 2).order(number: :asc) }
 
   def self.search(search)
     if search
