@@ -25,18 +25,18 @@
      padding: 0;
      margin: 0;
      border: 0;
-     border-radius: 33%;
+     border-radius: 50%;
      opacity: 0.6;
      background: #000;
      cursor: pointer;
      position:fixed;
      right: 1rem;
-     bottom: 1rem;
+     bottom: 5rem;
      display: none;
  }
  .toTop-arrow::before, .toTop-arrow::after {
-     width: 31px;
-     height: 7px;
+     width: 29px;
+     height: 5px;
      border-radius: 3px;
      background: #FEFDFF;
      position: absolute;
@@ -61,56 +61,51 @@
 
  }
  
- .verticalspace{
+.verticalspace{
      margin: 1em auto;
  }
  
- .card-deck{
+.card-deck{
      width: 50%;
      margin: auto;
  }
  
- .card-title{
+.card-title{
      text-align: center;
      padding-top: 1em;
      font-size: 30px;   
  }
  
- .my-btn{
+.my-btn{
      width: 50%;
      margin: 1em auto;
  }
- 
- .arrow-down{
-     margin: 2em auto;
 
- }
-
- table.table tr {
-     border: 1px solid rgba(23, 101, 145, 0.1)
- }
+table.table tr {
+    border: 1px solid rgba(23, 101, 145, 0.1)
+}
  
  
- table > tbody > tr > td > .edit-btn{
-     background-color: #fa0;
-     border: none;
-     color: #333;
- }
+table > tbody > tr > td > .edit-btn{
+    background-color: #fa0;
+    border: none;
+    color: #333;
+}
  
- .scale-hover:hover{
-     transform : scale(1.1);
-     transition: 0.3s;
+.scale-hover:hover{
+    transform : scale(1.1);
+    transition: 0.3s;
     }
- .white-hover:hover{
-     color: #FEFDFF;
- }
+.white-hover:hover{
+    color: #FEFDFF;
+}
  
- table > tbody > tr > td > .btn-red,
- .container > a.btn-red{
-     background-color: #8b0000;
-     border: #8b0000;
-     color: #FEFDFF;
- }
+table > tbody > tr > td > .btn-red,
+.container > a.btn-red{
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
+}
  
 .btn-red{
     background-color: #8b0000;
@@ -142,10 +137,12 @@
  }
 
 .form-actions{
-    justify-content: center !important;
-    align-content: center !important;
+    text-align: center;
     width: 100% !important;
     margin: auto;
+    .btn-blue, .btn-red{
+        width: 40%;
+    }
 }
 
 .btn-green{
@@ -322,10 +319,6 @@ ul.pagination{
 .btn-dark:hover{
     background-color: #176591;
     border: 1px solid #176591;
-}
-   
-.form-actions{
-    width: 50%;
 }
 
 .footerspace{
