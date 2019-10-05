@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 group :production do
+  gem 'wkhtmltopdf-binary'
   gem 'wkhtmltopdf-heroku', '2.12.5.0'
 end
 gem 'wicked_pdf'
