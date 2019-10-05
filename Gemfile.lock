@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     actioncable (5.2.3)
       actionpack (= 5.2.3)
@@ -148,7 +147,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     msgpack (1.3.1)
     nio4r (2.5.1)
     nokogiri (1.10.4)
@@ -274,6 +273,7 @@ GEM
     wicked_pdf (1.4.0)
       activesupport
     wkhtmltopdf-binary (0.12.4)
+    wkhtmltopdf-heroku (2.12.5.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -315,6 +315,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   wicked_pdf
   wkhtmltopdf-binary
+  wkhtmltopdf-heroku (= 2.12.5.0)
 
 RUBY VERSION
    ruby 2.6.3p62
