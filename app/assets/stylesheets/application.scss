@@ -221,7 +221,25 @@ p#timecount{
 
 // --------------- staff profile ---------------
 
+.show{
+    margin-bottom: 1rem;
+        .profile{
+            text-align: left;
+    }
+    p.phead{
+        margin-bottom: 0.5em;
+    }
+    :nth-child(2){
+        padding-left: 1em;
+        line-height: 2.3em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
 
+.fix-bot{
+    margin-bottom: 1rem;
+}
 
 // --------------- card ---------------
 
