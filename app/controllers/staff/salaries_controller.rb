@@ -7,12 +7,13 @@ class Staff::SalariesController < ApplicationController
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to '/', notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = staff_department.users.staff_order.search(params[:search]).page(params[:page])
+      @students = staff_department.users.includes(:salaries).staff_order.search(params[:search]).page(params[:page])
     end
   end
 
   def show
     @salary = Salary.find_by(user_id: @student)
+    byebug
     if @salary.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
@@ -38,7 +39,7 @@ class Staff::SalariesController < ApplicationController
   end
 
   def destroy
-    out = DepartmentWithUser.where(department_id: staff_department).where(user_id: @student)
+    out = DepartmentWithUser.where(department_id: staff_department, user_id: @student)
     DepartmentWithUser.delete(out)
     redirect_to staff_salaries_path, notice: "#{@student.name} 已從 #{staff_department.name} 剔除!!"
   end
@@ -50,7 +51,7 @@ class Staff::SalariesController < ApplicationController
   end
 
   def find_when_monthly_salary
-    beginning_of_month = Date.today.beginning_of_month
+    beginning_of_month = Date.today.beginning_of_month.beginning_of_day
     end_of_month = beginning_of_month.end_of_month
     @between_month = beginning_of_month..end_of_month
   end

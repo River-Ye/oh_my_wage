@@ -13,4 +13,18 @@ class Salary < ApplicationRecord
     end_of_month = month_date.end_of_month.end_of_day
     where(date: beginning_of_month..end_of_month)
   end
+
+  def self.this_month_salaries_hr_sum
+    where(date: when_monthly).map{ |salary| salary.hr }.sum
+  end
+
+  def self.this_month_salaries_sum
+    where(date: when_monthly).map{ |salary| salary.hourly_wage * salary.hr }.sum
+  end
+
+  def self.when_monthly
+    beginning_of_month = Date.today.beginning_of_month.beginning_of_day
+    end_of_month = beginning_of_month.end_of_month
+    beginning_of_month..end_of_month
+  end
 end

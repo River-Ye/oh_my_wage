@@ -1,7 +1,6 @@
 class ProblemsController < ApplicationController
   before_action :check_login
 
-  # 是否需要讓學生看到提問的歷史紀錄
   def index
     @problems = ReplyToIssue.order(title: :asc).page(params[:page])
     authorize @problems
