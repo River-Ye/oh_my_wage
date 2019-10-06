@@ -20,16 +20,11 @@
   <% end %>
     <tr>
       <td>總計</td>
-      <td><%= @salary_all.map{ |salary| salary.hr }.sum %> 時</td>
+      <td><%= calculate_salary_hr %> 時</td>
       <td></td>
-      <td><%= @salary_all.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
+      <td><%= calculate_salary_sum %> 元</td>
     </tr>
   </tbody>
 </table>
-<<<<<<< HEAD
 <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
-<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-pdf btn-md',:form => {"data-type" => "pdf" }  %>
-=======
-<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
-<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-success btn-xs',:form => {"data-type" => "pdf" }, target: "_blank" %>
->>>>>>> develop
+<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-pdf btn-md',:form => {"data-type" => "pdf" }, target: "_blank" %>
