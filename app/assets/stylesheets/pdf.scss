@@ -16,7 +16,7 @@
   
   font-family: 'NotoSansTC-Regular';
   // src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
-  src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>')format(custom_fonts);
   
   font-family: 'NotoSansTC-Thin';
   // src: url('<%= asset_path("NotoSansTC-Thin.otf") %>');

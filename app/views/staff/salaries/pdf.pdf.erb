@@ -11,25 +11,24 @@
 </head>
 <div class="wrap_pdf">
   <div class="pdf_brand_left">
-    <p class="brand_cht">霍格華茲學院</p>
+    <%# <p class="brand_cht">霍格華茲學院</p> %>
     <p class="brand_eng">Hogwarts School of Witchcraft and Wizardry</p>
   </div>
   <div class="pdf_brand_right">
     (02) 23315247<br>
-    100台北市中正區衡陽路7號<br>
     No. 7, Hengyang Rd., Zhongzheng Dist.,<br>
     Taipei City 100, Taiwan<br>
   </div>
 </div>
-<p class="pdf_title_1">工讀薪資明細</p>
-<p class="pdf_title_2">學號：<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;姓名：<%= @salary.user.name %></p>
+<p class="pdf_title_1">Work salary details</p>
+<p class="pdf_title_2">Student:<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;姓名：<%= @salary.user.name %></p>
 <table class="table table-hover table-sm pdf-table">
   <thead>
     <tr>
-      <th style="width: 200px;">日期</th>
-      <th style="width: 200px;">工時</th>
-      <th style="width: 200px;">時薪</th>
-      <th style="width: 200px;">合計</th>
+      <th style="width: 200px;">Date</th>
+      <th style="width: 200px;">Hours</th>
+      <th style="width: 200px;">Hours Wage</th>
+      <th style="width: 200px;">Total</th>
     </tr>
   </thead>
   <tbody>
