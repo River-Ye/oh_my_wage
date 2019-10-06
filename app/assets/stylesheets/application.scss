@@ -229,7 +229,7 @@ p#timecount{
     p.phead{
         margin-bottom: 0.5em;
     }
-    :nth-child(2){
+    .pbody{
         padding-left: 1em;
         line-height: 2.3em;
         border: 1px solid #ccc;
@@ -419,6 +419,11 @@ text-shadow: 1px 0.6px 1px #333;
     }    
 }
 
+#map {
+    height: 300px;
+    width: 40%;
+  }
+
 // --------------- Back to top button 56px ---------------
 
 .toTop-arrow{
@@ -488,7 +493,3 @@ footer{
         border-right: 1px solid #FEFDFF;
     }
 }
-#map {
-    height: 300px;
-    width: 40%;
-  }
