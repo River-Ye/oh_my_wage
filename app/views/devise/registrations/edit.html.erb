@@ -9,7 +9,7 @@
         <% if user_signed_in? && current_user.role == 'admin' %>
           <%= f.input :number, label: '編號' %>
         <% else %>
-          <p>編號 <%= @user.number %></p>
+          <p>編號 <%= @user.number.upcase %></p>
         <% end %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">

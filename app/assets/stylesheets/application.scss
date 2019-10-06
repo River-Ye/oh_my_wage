@@ -1,74 +1,230 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require bootstrap-datepicker
- *= require_tree .
- *= require_self
- */
- @import "bootstrap";
- @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
- 
- // Back to top button
- /* 56px */
- .toTop-arrow {
-     width: 3.5rem;
-     height: 3.5rem;
-     padding: 0;
-     margin: 0;
-     border: 0;
-     border-radius: 50%;
-     opacity: 0.6;
-     background: #000;
-     cursor: pointer;
-     position:fixed;
-     right: 1rem;
-     bottom: 5rem;
-     display: none;
- }
- .toTop-arrow::before, .toTop-arrow::after {
-     width: 29px;
-     height: 5px;
-     border-radius: 3px;
-     background: #FEFDFF;
-     position: absolute;
-     content: "";
- }
- .toTop-arrow::before {
-     transform: rotate(-45deg) translate(0, -50%);
-     left: 0.4rem;
- }
- .toTop-arrow::after {
-     transform: rotate(45deg) translate(0, -50%);
-     right: 0.4rem;
- }
- .toTop-arrow:focus {outline: none;}
-  
- // ---------- 以下為通用 class，直接套用即可 ----------
- 
- .mymaintheme{
-    color: #333;
-     font-family: 'Noto Sans TC', sans-serif;
-    letter-spacing: 1px
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require bootstrap-datepicker
+*= require_tree .
+*= require_self
+*/
 
- }
- 
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+// --------------- flash notice message ---------------
+
+.alert{
+    margin-bottom: 0px;
+}
+
+.alert-warning{
+    color: #FEFDFF;
+    background-color: rgba(23, 101, 145, 0.5);
+    border: none;
+    border-radius: 0;
+}
+
+// --------------- 通用 class ---------------
+
+.mymaintheme{
+    color: #333;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.mybgimg{
+    background-color: #FEFDFF;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.my-center{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
 .verticalspace{
-    margin: 1em auto;
+    margin: 1em 0;
 }
 
 .verticalspace2{
-     margin: 2em auto;
- }
+    margin: 2em 0;
+}
+
+.scale-hover:hover{
+    transform : scale(1.1);
+}
+    
+.white-hover:hover{
+    color: #FEFDFF;
+}
+
+.center-block{
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+.col-md-12{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+// --------------- nav bar ---------------
+
+.navitem{
+    background-color: rgb(82, 29, 31);
+}
+
+.nav-link{
+    color: #FEFDFF !important;
+}
+
+p#timecount{
+    padding: 8px 0;
+    margin-bottom: 0;
+    color: #FEFDFF;
+}
+
+// --------------- btn ---------------
+
+.my-btn{
+    width: 50%;
+    margin: 1em auto;
+}
+
+.btn{
+    margin-right: 5px;
+}
+.btn-red{
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
+    height: 2.3em;
+}
+
+.btn-pdf{
+    background: -webkit-linear-gradient(#FF000D,#8A000A);
+    border: #8b0000;
+    color: #FEFDFF;
+    height: 2.3em;
+}
  
+.btn-org{
+    background-color: orange;
+    border: orange;
+    color: #333;
+    transition: 0.3s;
+    :hover{
+        background-color: #176591;
+        border: #176591;
+        color: #FEFDFF;
+    }
+}
+ 
+.btn-blue{
+    background-color: #176591;
+    color: #FEFDFF;
+    border: 1px solid #176591;
+    height: 2.3em;
+}
+ 
+.btn-green{
+    background-color: #115247;
+    color: #FEFDFF;
+    border: 1px solid #115247;
+    height: 2.3em;
+    :hover{
+        color: #FEFDFF !important;
+    }
+    .white-hover:hover{
+        background-color: #115247 !important;
+    }
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(51, 51, 51, 0.8);
+        border: 1px solid rgba(51, 51, 51, 0.8);
+        color: #FEFDFF
+
+    }
+}
+ 
+.btn-dark{
+    transition: 0.3s;
+    .btn-md{
+        margin-left: 1em !important
+    }
+    :hover{
+        background-color: #176591;
+        border: 1px solid #176591;
+    }
+}
+ 
+#search{
+    height: 2.3em;
+    padding: 0.5em;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: #176591;
+    color: #FEFDFF;
+    border: 2px solid #176591;
+}
+  
+#search:focus{
+    outline: none;
+    background-color: #123245;
+}
+
+// --------------- loginblock ---------------
+
+.loginblock.col-lg-6{
+    width: 100px;
+    margin: 5em auto;
+    padding: 1em;
+    text-align: left;
+    background-color: #FEFDFF;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #123245;
+    color: black;
+    #user_email:focus, #user_password:focus{
+        outline: none !important
+    }
+    .form-actions{
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        .btn-blue, .btn-red{
+            width: 40%;
+            margin: 5px 10px;
+        }
+    }    
+}
+
+// --------------- admin profile ---------------
+
+.form-group.select.required.user_role.form-group-valid,
+.form-group.string.required.user_number.form-group-valid{
+    text-align: left;
+}
+
+// --------------- staff profile ---------------
+
+
+
+// --------------- card ---------------
+
 .card{
     border: none;
     .hover-sec{
@@ -94,8 +250,10 @@
         background-color: rgba(186, 41, 55, 0.3);
     }
     h2.card-title{
-        padding-top: 0;
+        width: 100%;
+        padding-top: 1em;
         font-size: 40px;
+        text-align: center;
     }
     p.card-text{
         font-size: 25px;
@@ -107,126 +265,35 @@
     }
 }
 
-.card-title{
-    width: 100%;
-    text-align: center;
-    padding-top: 1em;
-    font-size: 30px;   
-}
- 
-.my-btn{
-     width: 50%;
-     margin: 1em auto;
- }
+// --------------- table ---------------
 
-.alert{
-    margin-bottom: 0px;
-}
-.alert-warning {
-    color: #FEFDFF;
-    background-color: rgba(23, 101, 145, 0.5);
-    border: none;
-    border-radius: 0;
-}
-table.table tr {
+table.table tr{
     border: 1px solid rgba(23, 101, 145, 0.1)
 }
- 
- 
+
 table > tbody > tr > td > .edit-btn{
     background-color: #fa0;
     border: none;
     color: #333;
 }
- 
-.scale-hover:hover{
-    transform : scale(1.1);
-    transition: 0.3s;
-    }
-.white-hover:hover{
-    color: #FEFDFF;
-}
- 
+
 table > tbody > tr > td > .btn-red,
 .container > a.btn-red{
     background-color: #8b0000;
     border: #8b0000;
     color: #FEFDFF;
 }
- 
-.btn-red{
-    background-color: #8b0000;
-    border: #8b0000;
-    color: #FEFDFF;
-    margin-left: 5px;
-    height: 2.3em;
-}
-
-.btn-org{
-    background-color: orange;
-    border: orange;
-    color: #333;
-    transition: 0.3s;
-        
- }
-.btn-org:hover{
-    background-color: #176591;
-    border: #176591;
-    color: #FEFDFF;
-}
-
-.btn-blue{
-     background-color: #176591;
-     color: #FEFDFF;
-     border: 1px solid #176591;
-     margin-left: 5px;
-     height: 2.3em;
- }
-
-.btn-green{
-    background-color: #115247;
-    color: #FEFDFF;
-    border: 1px solid #115247;
-    margin-left: 5px;
-    height: 2.3em;
-    :hover{
-        color: #FEFDFF !important;
-    }
-    .white-hover:hover{
-        background-color: #115247 !important;
-    }
-    li.page-item.disabled > a.page-link{
-        background-color:  rgba(51, 51, 51, 0.8);
-        border: 1px solid rgba(51, 51, 51, 0.8);
-        color: #FEFDFF
-
-    }
-}
-
-.mybgimg {
-  background-color: #FEFDFF;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
 
 .container > .container > .row{
-     justify-content: center;
- }
- 
-small.form-text.text-muted{
-     color: #999 !important;
- }
+    justify-content: center;
+}
 
-.my-center{
-     width: 100%;
-     margin: auto;
-     text-align: center;
- }
- 
+small.form-text.text-muted{
+    color: #999 !important;
+}
+
 table{
-     background-color: rgba(23, 101, 145, 0.8);
+    background-color: rgba(23, 101, 145, 0.8);
     a, a:visited{
         color: #FEFDFF
     }
@@ -235,8 +302,8 @@ table{
         transition: 0.3s;
     }
     tr:hover{
-         background-color: rgba(18, 50, 69, 0.8);
-         color: #FEFDFF;
+        background-color: rgba(18, 50, 69, 0.8);
+        color: #FEFDFF;
     }
     a:hover{
         color: orange;
@@ -245,35 +312,23 @@ table{
     th{
         background-color: #176591;
     }
- }
- 
- table.table.col-lg-6.col-md-12.col-sm-12{
+}
+
+table.table.col-lg-6.col-md-12.col-sm-12{
     th{
         text-align: right;
     }
     td{
         text-align: left;
     } 
- }
-#search{
-    height: 2.3em;
-    padding: 0.5em;
-    vertical-align: middle;
-    border-radius: 5px;
-    background-color: #176591;
-    color: #FEFDFF;
-    border: 2px solid #176591;
 }
- 
-#search:focus{
-    outline: none;
-    background-color: #123245;
-}
- 
+
+// --------------- pagination ---------------
+
 ul.pagination{
     margin-top: 30px;
 }
- 
+
 .pagination{
     justify-content: center;
     color: #FEFDFF;
@@ -304,26 +359,28 @@ ul.pagination{
     }
 }
 
-.infotitle {
-  margin: auto 0em;
-  text-align: center;
-  display: block;
-  margin: auto;
-  width: 100%;
+// --------------- infopage ---------------
+
+.infotitle{
+    margin: auto 0em;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 100%;
 }
- 
-.zhtitle {
-  width: 70%;
-  margin: 0 auto 1em;
-  text-align: center;
-  font-size: 50px;
+
+.zhtitle{
+    width: 70%;
+    margin: 0 auto 1em;
+    text-align: center;
+    font-size: 50px;
 }
- 
-.fontstyle {
-   color: #FEFDFF;
-   text-shadow: 1px 0.6px 1px #333;
+
+.fontstyle{
+color: #FEFDFF;
+text-shadow: 1px 0.6px 1px #333;
 }
- 
+
 .contentinfo{
     margin: auto;
     margin-bottom: 100px;
@@ -343,110 +400,56 @@ ul.pagination{
         color: #FEFDFF
     }    
 }
- 
-.center-block{
-    text-align: center;
-    margin: 20px auto
- 
+
+// --------------- Back to top button 56px ---------------
+
+.toTop-arrow{
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    opacity: 0.6;
+    background: #000;
+    cursor: pointer;
+    position:fixed;
+    right: 1rem;
+    bottom: 5rem;
+    display: none;
 }
 
-.btn-dark {
-   transition: 0.3s;
+.toTop-arrow::before, .toTop-arrow::after{
+    width: 29px;
+    height: 5px;
+    border-radius: 3px;
+    background: #FEFDFF;
+    position: absolute;
+    content: "";
 }
 
-.btn-dark:hover{
-    background-color: #176591;
-    border: 1px solid #176591;
+.toTop-arrow::before{
+    transform: rotate(-45deg) translate(0, -50%);
+    left: 0.4rem;
 }
+
+.toTop-arrow::after{
+    transform: rotate(45deg) translate(0, -50%);
+    right: 0.4rem;
+}
+
+.toTop-arrow:focus{outline: none;}
+
+// --------------- footer ---------------
 
 .footerspace{
     margin-top: 100px;
 }
-.col-md-12{
-    width: 100%;
-    vertical-align: middle;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-}
 
 .footericon{
     font-size: 30px;
 }
 
-.navitem{
-    background-color: rgb(82, 29, 31);
-}
-
-.nav-link{
-    color: #FEFDFF !important;
-}
-
-p#timecount{
-   padding: 8px 0;
-   margin-bottom: 0;
-   color: #FEFDFF;
-}
-.loginblock.col-lg-6{
-    width: 100px;
-    margin: 5em auto;
-    padding: 1em;
-    text-align: left;
-    background-color: #FEFDFF;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    box-shadow: 2px 2px 6px #123245;
-    color: black;
-    #user_email:focus, #user_password:focus{
-        outline: none !important
-    }
-    .form-actions{
-        text-align: center;
-        width: 100%;
-        margin: auto;
-        .btn-blue, .btn-red{
-            width: 40%;
-            margin: 5px 10px;
-        }
-    }    
-}
-
-.form-group.select.required.user_role.form-group-valid,
-.form-group.string.required.user_number.form-group-valid{
-    text-align: left;
-}
-a.btn.btn-dark.btn-md{
-    margin-left: 1em !important
-}
-
-.contentinfo {
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    background-color: rgba(5, 15, 31, 0.8);
-    li {
-        font-size: 30px;
-        padding: 1em;
-    }
-    p{
-        text-indent: 2em;
-        font-size: 20px;
-    }
-    a,
-    a:hover,
-    a:visited {
-        color: #FEFDFF;
-    }
-}
-
-.center-block {
-    text-align: center;
-    margin: 20px auto;
-}
-
-.footericon{
-    font-size: 30px;
-}
 footer{
     margin-top: 100px;
     padding: 25px;
@@ -465,6 +468,5 @@ footer{
     p.email{
         border-left: 1px solid #FEFDFF;
         border-right: 1px solid #FEFDFF;
-
     }
 }
