@@ -8,20 +8,21 @@
 }
 .pdf_brand_left{
   flex-grow: 1;
-  
+  font-family: 'Noto Serif', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
   font-size: 50pt;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 3px;
   .brand_eng{
-   
+    font-family: 'Noto Serif', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25pt;
     font-weight: 400;
     letter-spacing: 0px;
   }
 }
 .pdf_brand_right{
-  
+  font-family: 'Noto Serif', sans-serif;
   font-display: swap;
   text-align: left;
   font-size: 30pt;
@@ -29,7 +30,7 @@
   margin-bottom: 20px;
 }
 .pdf_title_1{
- 
+  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-display: swap;
   text-align: center;
   font-size: 80pt;
@@ -37,7 +38,7 @@
   letter-spacing: 3px;
 }
 .pdf_title_2{
-  
+  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-display: swap;
   text-align: left;
   font-size: 50pt;
@@ -47,7 +48,7 @@
 .pdf-table{
   width: 100%;
   font-size: 45pt;
- 
+  font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 400;
   line-height:110px;
   border: #272727;

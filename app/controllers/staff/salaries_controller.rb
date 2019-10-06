@@ -20,7 +20,7 @@ class Staff::SalariesController < ApplicationController
       respond_to do |format|
         format.html
         format.json
-        format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf' }
+        format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf',:encoding => "UTF-8" }
       end
     end
   end
