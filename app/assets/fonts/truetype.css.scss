@@ -26,7 +26,7 @@
 @font-face {
     font-family: 'NotoSansTC-Regular';
     // src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
-    src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>')format(custom_fonts);
+    src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>');
 }
 
 @font-face {
