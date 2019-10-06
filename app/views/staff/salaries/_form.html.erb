@@ -4,9 +4,9 @@
     <%= render 'salary_fields', f: salary_form %>
   <% end %>
   <div class="links">
-    <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-sm btn-danger' %>
+    <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
   <hr>
-  <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
-  <%= form.button :submit, '儲存',class: 'btn btn-success btn-lg' %>
+  <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+  <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
 <% end %>

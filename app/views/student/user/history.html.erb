@@ -2,7 +2,7 @@
 
 <%= form_tag(student_history_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請輸入日期', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md"%>
 <% end %>
 <%= paginate @student, theme: 'twitter-bootstrap-4' %>
 <table class='table'>
@@ -31,7 +31,7 @@
 </table>
 <div class="container">
   <div class="row">
-    <%= link_to "首頁", student_root_path, class: 'btn btn-primary btn-xs' %>
+    <%= link_to "回主選單", student_root_path, class: 'btn btn-dark btn-md' %>
   </div>
 </div>
 
