@@ -69,16 +69,50 @@
      margin: 2em auto;
  }
  
-.card-deck{
-     width: 50%;
-     margin: auto;
- }
- 
+.card{
+    border: none;
+    .hover-sec{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border-radius: 10px;
+        box-shadow: 3px 3px 9px #999;
+        // background-color: rgba(0, 63, 86, 0.1);
+        color: #333;
+        transition: 0.3s;
+    }
+    .hover-sec:hover{
+        box-shadow: 3px 3px 9px #123245;
+        color: #333;
+    }
+    .card-time:hover{
+        background-color: rgba(43, 133, 140, 0.3);
+    }
+    .card-list:hover{
+        background-color: rgba(23, 101, 145, 0.3);
+    }
+    .card-q:hover{
+        background-color: rgba(186, 41, 55, 0.3);
+    }
+    h2.card-title{
+        padding-top: 0;
+        font-size: 40px;
+    }
+    p.card-text{
+        font-size: 25px;
+    }
+    img.card-img-top{
+        width: 200px;
+        height: 200px;
+        margin: 1.5em auto 0;
+    }
+}
+
 .card-title{
-     text-align: center;
-     padding-top: 1em;
-     font-size: 30px;   
- }
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 30px;   
+}
  
 .my-btn{
      width: 50%;
@@ -169,7 +203,6 @@ table > tbody > tr > td > .btn-red,
     }
 }
 
-
 .mybgimg {
   background-color: #FEFDFF;
   background-size: cover;
@@ -183,7 +216,7 @@ table > tbody > tr > td > .btn-red,
  }
  
 small.form-text.text-muted{
-     color: #FEFDFF !important;
+     color: #999 !important;
  }
 
 .my-center{
@@ -214,6 +247,14 @@ table{
     }
  }
  
+ table.table.col-lg-6.col-md-12.col-sm-12{
+    th{
+        text-align: right;
+    }
+    td{
+        text-align: left;
+    } 
+ }
 #search{
     height: 2.3em;
     padding: 0.5em;
@@ -262,16 +303,7 @@ ul.pagination{
         color: #FEFDFF 
     }
 }
- 
-.mybgimg{
-    //  background-image: url(../images/64799.jpg);
-    background-color: #FEFDFF;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: left top
-}
- 
+
 .infotitle {
   margin: auto 0em;
   text-align: center;
@@ -319,7 +351,6 @@ ul.pagination{
 }
 
 .btn-dark {
-   box-shadow: 2px 2px 6px #111;
    transition: 0.3s;
 }
 
@@ -356,9 +387,6 @@ p#timecount{
    margin-bottom: 0;
    color: #FEFDFF;
 }
-@media(min-width: 992px){
-
-}
 .loginblock.col-lg-6{
     width: 100px;
     margin: 5em auto;
@@ -381,6 +409,14 @@ p#timecount{
             margin: 5px 10px;
         }
     }    
+}
+
+.form-group.select.required.user_role.form-group-valid,
+.form-group.string.required.user_number.form-group-valid{
+    text-align: left;
+}
+a.btn.btn-dark.btn-md{
+    margin-left: 1em !important
 }
 
 .contentinfo {
