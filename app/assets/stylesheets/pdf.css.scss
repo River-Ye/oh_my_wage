@@ -1,6 +1,26 @@
 @font-face {
   font-family: 'NotoSansTC-Light';
   src: url('<%= asset_data_base64("NotoSansTC-Black.otf") %>');
+  
+  font-family: 'NotoSansTC-Bold';
+  // src: url('<%= asset_path("NotoSansTC-Bold.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Bold.otf") %>');
+  
+  font-family: 'NotoSansTC-Light';
+  // src: url('<%= asset_path("NotoSansTC-Light.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Light.otf") %>');
+  
+  font-family: 'NotoSansTC-Medium';
+  // src: url('<%= asset_path("NotoSansTC-Medium.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Medium.otf") %>');
+  
+  font-family: 'NotoSansTC-Regular';
+  // src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>');
+  
+  font-family: 'NotoSansTC-Thin';
+  // src: url('<%= asset_path("NotoSansTC-Thin.otf") %>');
+  src: url('<%= asset_data_base64("NotoSansTC-Thin.otf") %>');
 }
 
 .custom_fonts{
