@@ -1,20 +1,29 @@
-@font-face {
-    font-family: "SourceSansPro-Regular";
-    src: url('<%= asset_path("SourceSansPro-Regular.otf") %>');
-}
-@font-face {
-    font-family: "SourceSansPro-Bold";
-    src: url('<%= asset_path("SourceSansPro-Bold.otf") %>');
-}
-@font-face {
-    font-family: "SourceSansPro-Light";
-    src: url('<%= asset_path("SourceSansPro-Light.otf") %>');
-}
-@font-face {
-    font-family: "SourceSansPro-ExtraLight";
-    src: url('<%= asset_path("SourceSansPro-ExtraLight.otf") %>');
-}
-@font-face {
-    font-family: "SourceSansPro-Semibold";
-    src: url('<%= asset_path("SourceSansPro-Semibold.otf") %>');
-}
+// @font-face {
+//     font-family: 'NotoSansTC-Black';
+//     src: url('<%= asset_path("NotoSansTC-Black.otf") %>');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansTC-Bold';
+//     src: url('<%= asset_path("NotoSansTC-Bold.otf") %>');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansTC-Light';
+//     src: url('<%= asset_path("NotoSansTC-Light.otf") %>');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansTC-Medium';
+//     src: url('<%= asset_path("NotoSansTC-Medium.otf") %>');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansTC-Regular';
+//     src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansTC-Thin';
+//     src: url('<%= asset_path("NotoSansTC-Thin.otf") %>');
+// }
