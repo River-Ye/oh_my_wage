@@ -13,7 +13,6 @@ class Staff::SalariesController < ApplicationController
 
   def show
     @salary = Salary.find_by(user_id: @student)
-    byebug
     if @salary.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
@@ -47,7 +46,11 @@ class Staff::SalariesController < ApplicationController
   private
   
   def find_student
-    @student = User.friendly.find(params[:id])
+    if staff_department.users.where(slug: params[:id]).empty?
+      redirect_to staff_salaries_path, notice: "沒有這個人喔!!"
+    else
+      @student = staff_department.users.friendly.find(params[:id])
+    end
   end
 
   def find_when_monthly_salary
