@@ -30,6 +30,6 @@ class User < ApplicationRecord
       where(['name || email || number || role || phone || gender LIKE ?', "%#{search}%"])
     else
       all
-   end
+    end
   end
 end

@@ -1,22 +1,23 @@
 <h2 class="verticalspace">修改個人資料</h2>
-
+<h3>Hi, <%= @user.name %> 您好：</h3>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
-<h3>Hi, <%= @user.name %> 您好：</h3>
   <div class="form-inputs">
     <div class="row">
       <div class="col-8">
         <% if user_signed_in? && current_user.role == 'admin' %>
           <%= f.input :number, label: '學號' %>
         <% else %>
-          <p>學號 <%= @user.number %></p>
+          <p>學號</p>
+          <p class='form-control'><%= @user.number  %></p>
         <% end %>
       </div>
       <div class="col-4">
         <% if user_signed_in? && current_user.role == 'admin' %>
           <%= f.input :role, label: '權限', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
         <% else %>
-          <p>權限 <%= @user.role %></p>
+          <p>權限</p>
+          <p class='form-control'><%= @user.role %></p>
         <% end %>
       </div>
       <div class="col-8">
@@ -26,7 +27,8 @@
         <% if user_signed_in? && current_user.role == 'admin' %>
           <%= f.input :gender, label: '性別', collection: { "男": "Male", "女": "Female" } %>
         <% else %>
-          <p>性別 <%= @user.gender %></p>
+          <p class='string'>性別</p>
+          <p class='form-control string'><%= @user.gender %></p>
         <% end %>
       </div>
       <div class="col-8">
@@ -58,7 +60,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update", class: 'btn btn-success btn-lg' %>
+    <%= f.button :submit, "更新", class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>
 

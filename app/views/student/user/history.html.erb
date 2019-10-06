@@ -4,7 +4,7 @@
   <%= text_field_tag :search, "", placeholder: '請輸入日期', class: "datepicker", "data-provide" => "datepicker" %>
   <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
 <% end %>
-<%= paginate @student, theme: 'twitter-bootstrap-4' %>
+<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
 <table class='table'>
   <thead>
     <td>日期</td>
@@ -13,7 +13,7 @@
     <td>小計</td>
   </thead>
   <tbody>
-    <% @student.each do |salary| %>
+    <% @salary.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %> 小時</td>
@@ -23,9 +23,9 @@
     <% end %>
     <tr>
       <td>總計</td>
-      <td><%= @student.map{ |salary| salary.hr }.sum %> 時</td>
+      <td><%= calculate_student_salary_hr %> 時</td>
       <td></td>
-      <td><%= @student.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
+      <td><%= calculate_studen_salary_sum %> 元</td>
     </tr>
   </tbody>
 </table>

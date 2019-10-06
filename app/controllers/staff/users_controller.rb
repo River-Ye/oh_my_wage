@@ -13,7 +13,6 @@ class Staff::UsersController < ApplicationController
   def show
   end
   
-
   def home
   end
 
