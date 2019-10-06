@@ -127,11 +127,6 @@ p#timecount{
     border: orange;
     color: #333;
     transition: 0.3s;
-    :hover{
-        background-color: #176591;
-        border: #176591;
-        color: #FEFDFF;
-    }
 }
  
 .btn-blue{
@@ -297,9 +292,9 @@ table > tbody > tr > td > .edit-btn{
 
 table > tbody > tr > td > .btn-red,
 .container > a.btn-red{
-    background-color: #8b0000;
-    border: #8b0000;
-    color: #FEFDFF;
+        background-color: #8b0000;
+        border: #8b0000;
+        color: #FEFDFF;
 }
 
 .container > .container > .row{
@@ -325,7 +320,6 @@ table{
     }
     a:hover{
         color: orange;
-        background-color: transparent;
     }
     th{
         background-color: #176591;
@@ -340,6 +334,24 @@ table.table.col-lg-6.col-md-12.col-sm-12{
         text-align: left;
     } 
 }
+
+// --------------- problem ---------------
+
+.card.col-lg-8.col-md-12.col-sm-12.center-block{
+    padding: 1em;
+    // border: 1px solid salmon;
+    border-radius: 5px;
+    box-shadow: 3px 3px 9px #333;
+    vertical-align: top;
+}
+
+.reply_to_issue_title,
+.reply_to_issue_content{
+    text-align: left;
+}
+//input#reply_to_issue_content.form-control.string.required{
+//     height: 15em;
+// }
 
 // --------------- pagination ---------------
 
