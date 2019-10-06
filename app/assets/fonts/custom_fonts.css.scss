@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'NotoSansTC-Black';
     // src: url('<%= asset_path("NotoSansTC-Black.otf") %>');
@@ -25,7 +26,7 @@
 @font-face {
     font-family: 'NotoSansTC-Regular';
     // src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
-    src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>');
+    src: url('<%= asset_data_base64("NotoSansTC-Regular.otf") %>')format(custom_fonts);
 }
 
 @font-face {
