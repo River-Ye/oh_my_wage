@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'NotoSansTC';
+  src: url('<%= asset_data_base64("NotoSansTC-Black.otf") %>');
+}
+
+.custom_fonts{
+  font-family: 'NotoSansTC';
+}
 .wrap_pdf{
   width: 100%;
   display: flex;
@@ -8,7 +16,7 @@
 }
 .pdf_brand_left{
   flex-grow: 1;
-  
+  font-family: 'NotoSansTC';
   text-align: left;
   font-size: 50pt;
   font-weight: 400;
@@ -22,7 +30,7 @@
   }
 }
 .pdf_brand_right{
- 
+  font-family: 'NotoSansTC';
   font-display: swap;
   text-align: left;
   font-size: 30pt;
@@ -30,7 +38,7 @@
   margin-bottom: 20px;
 }
 .pdf_title_1{
-  
+  font-family: 'NotoSansTC';
   font-display: swap;
   text-align: center;
   font-size: 80pt;
@@ -38,7 +46,7 @@
   letter-spacing: 3px;
 }
 .pdf_title_2{
-  
+  font-family: 'NotoSansTC';
   font-display: swap;
   text-align: left;
   font-size: 50pt;
@@ -48,7 +56,7 @@
 .pdf-table{
   width: 100%;
   font-size: 45pt;
-  
+  font-family: 'NotoSansTC';
   font-weight: 400;
   line-height:110px;
   border: #272727;
