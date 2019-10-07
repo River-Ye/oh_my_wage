@@ -79,7 +79,7 @@
   font-family: 'NotoSansTC-Regular';
   font-display: swap;
   text-align: left;
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -110,6 +110,8 @@
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
+  th{
+    font-size: 30pt; 
 }
   td,th{
   text-align: center;
@@ -126,7 +128,9 @@
   letter-spacing: 6px;
 }
 }
-
+.pdf-table{
+  font-size: 30pt;
+}
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;
 }
