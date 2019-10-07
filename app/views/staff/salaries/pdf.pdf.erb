@@ -6,7 +6,7 @@
     <%#= javascript_include_tag wicked_pdf_asset_base64("number_pages") %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="pdf.scss">
+    <%= wicked_pdf_stylesheet_link_tag 'pdf.scss' -%>
     <%# <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,500,600,700,800,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif:400,700&display=swap" rel="stylesheet"> %>
 </head>
 <div class="wrap_pdf">
@@ -16,19 +16,20 @@
   </div>
   <div class="pdf_brand_right">
     (02) 23315247<br>
+    100台北市中正區衡陽路7號<br>
     No. 7, Hengyang Rd., Zhongzheng Dist.,<br>
     Taipei City 100, Taiwan<br>
   </div>
 </div>
-<p class="pdf_title_1">Work salary details</p>
-<p class="pdf_title_2">Student ID:<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;Name:<%= @salary.user.name %></p>
+<p class="pdf_title_1">工讀薪資明細</p>
+<p class="pdf_title_2">學號：<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;姓名：<%= @salary.user.name %></p>
 <table class="table table-hover table-sm pdf-table">
   <thead>
     <tr>
-      <th style="width: 200px;">Date</th>
-      <th style="width: 200px;">Hours</th>
-      <th style="width: 200px;">Hours Wage</th>
-      <th style="width: 200px;">Total</th>
+      <th style="width: 200px;">日期</th>
+      <th style="width: 200px;">工時</th>
+      <th style="width: 200px;">時薪</th>
+      <th style="width: 200px;">合計</th>
     </tr>
   </thead>
   <tbody>
@@ -45,6 +46,7 @@
    
   </tbody>
 </table>
+
 
 
 
