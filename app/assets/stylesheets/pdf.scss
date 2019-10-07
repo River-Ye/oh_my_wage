@@ -1,101 +1,101 @@
-.wrap_pdf{
+@import "bootstrap";
+@font-face {
+  font-family: 'NotoSansTC-Light';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Light.otf'));
+
+  font-family: 'NotoSansTC-Bold';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Bold.otf'));
+
+  font-family: 'NotoSansTC-Light';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Light.otf'));
+
+
+  font-family: 'NotoSansTC-Medium';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Medium.otf'));
+  
+  font-family: 'NotoSansTC-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Regular.otf'));
+  
+  font-family: 'NotoSansTC-Thin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Thin.otf'));
+}
+
+body{
+  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pdf-school{
   width: 100%;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row wrap;
+  margin-bottom: 0.5em;
   padding: 5px;
   border-bottom: 2px solid #272727;
-<<<<<<< Updated upstream
-}
-.pdf_brand_left{
-  flex-grow: 1;
-  font-family: 'Noto Serif', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: left;
-  font-size: 50pt;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 3px;
-  .brand_eng{
-    font-family: 'Noto Serif', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25pt;
-    font-weight: 400;
-    letter-spacing: 0px;
-=======
-  .mr-auto.p-2{
-    margin-bottom: 1em;
-  }
   h3{
     line-height: 1.5em;
     font-size: 40px;
   }
-  h4{
-    font-size: 20px;
-  }
-  p{
+  h4, p{
     font-size: 25px;
->>>>>>> Stashed changes
   }
 }
-.pdf_brand_right{
-  font-family: 'Noto Serif', sans-serif;
-  font-display: swap;
-  text-align: left;
-  font-size: 30pt;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.pdf_title_1{
-  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-display: swap;
+
+h1.pdf-h1{
+  margin: 0.5em auto;
   text-align: center;
-<<<<<<< Updated upstream
-  font-size: 80pt;
-=======
   font-size: 40pt;
->>>>>>> Stashed changes
   font-weight: 700;
   letter-spacing: 3px;
 }
-.pdf_title_2{
-  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-display: swap;
+
+.pdf-stu-info{
+  line-height: 2em;
   text-align: left;
-  font-size: 50pt;
+  font-size: 30pt;
   font-weight: 300;
-  line-height: 20pt;
 }
+
 .pdf-table{
   width: 100%;
-  font-size: 45pt;
-  font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 400;
-  line-height:110px;
+  line-height: 2em;
   border: #272727;
+  text-align: center;
   tr{
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
-<<<<<<< Updated upstream
-}
-  td,th{
-  text-align: center;
-  
-}
-  td,th{
-  text-align: center;
-  
-}
-=======
-    height: 1.5em;
   }
->>>>>>> Stashed changes
   th{
-  background:#bebebe;
-  border: #bebebe;
-  color:black;
-  letter-spacing: 6px;
+    width: 200px;
+    font-size: 35px;
+    background:#bebebe;
+    border: #835959;
+    color:black;
+    letter-spacing: 6px;
+  }
+  td{
+    font-size: 30px;
+  }
 }
-}
+
+
 
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;

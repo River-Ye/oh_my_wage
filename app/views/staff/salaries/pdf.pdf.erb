@@ -9,40 +9,36 @@
     <link rel="stylesheet" href="pdf.scss">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,500,600,700,800,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif:400,700&display=swap" rel="stylesheet">
 </head>
-<<<<<<< Updated upstream
-<div class="wrap_pdf">
-  <div class="pdf_brand_left">
-    <p class="brand_cht">霍格華茲學院</p>
-    <p class="brand_eng">Hogwarts School of Witchcraft and Wizardry</p>
-=======
 
 <div class="d-flex pdf-school">
   <div class="mr-auto p-2">
     <h3>霍格華茲學院</h3>
-    <h4>Hogwarts School of Witchcraft and Wizardry</h3>
->>>>>>> Stashed changes
+    <h3 class="">Hogwarts School of Witchcraft and Wizardry</h3>
   </div>
-  <div class="pdf_brand_right">
-    (02) 23315247<br>
-    100台北市中正區衡陽路7號<br>
-    No. 7, Hengyang Rd., Zhongzheng Dist.,<br>
-    Taipei City 100, Taiwan<br>
+  <div class="p-2">
+    <p>(02) 23315247</p>
+    <p>100台北市中正區衡陽路7號</p>
+    <p>No. 7, Hengyang Rd., Zhongzheng Dist.,</p>
+    <p>Taipei City 100, Taiwan</p>
   </div>
 </div>
-<p class="pdf_title_1">工讀薪資明細</p>
-<p class="pdf_title_2">學號：<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;姓名：<%= @salary.user.name %></p>
-<table class="table table-hover table-sm pdf-table">
+
+<h1 class="pdf-h1">工讀薪資明細</h1>
+
+<p class="pdf-stu-info">學號：<%= @salary.user.number %></p>
+<p class="pdf-stu-info">姓名：<%= @salary.user.name %></p>
+
+<table class="table table-sm pdf-table">
   <thead>
     <tr>
-      <th style="width: 200px;">日期</th>
-      <th style="width: 200px;">工時</th>
-      <th style="width: 200px;">時薪</th>
-      <th style="width: 200px;">合計</th>
+      <th>日期</th>
+      <th>工時</th>
+      <th>時薪</th>
+      <th>合計</th>
     </tr>
   </thead>
+  
   <tbody>
-
-
   <% @salary_all.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d")%></td>
@@ -54,6 +50,3 @@
    
   </tbody>
 </table>
-
-
-
