@@ -52,6 +52,10 @@ body{
   }
   h3{
     line-height: 2em;
+    font-size: 30px;
+  }
+  p{
+    font-size: 25px;
   }
 }
 
@@ -64,6 +68,7 @@ h1.pdf-h1{
 }
 
 .pdf-stu-info{
+  line-height: 1.5em;
   text-align: left;
   font-size: 30pt;
   font-weight: 300;
@@ -83,14 +88,14 @@ h1.pdf-h1{
   }
   th{
     width: 200px;
-    font-size: 30px;
+    font-size: 35px;
     background:#bebebe;
     border: #835959;
     color:black;
     letter-spacing: 6px;
   }
   td{
-    font-size: 15px;
+    font-size: 30px;
   }
 }
 
