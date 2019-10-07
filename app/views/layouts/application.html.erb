@@ -5,8 +5,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GMAP_API_KEY'] %>"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag asset_path('icon.png') %>
+    <%= favicon_link_tag asset_path('logo_m_small.png') %>
     <button type="button" id="BackTop" class="toTop-arrow"></button>
     <script>
       $(function(){
@@ -23,6 +24,15 @@
       });
     </script>
     <meta name="google-site-verification" content="Pj08cGDDInGg6WnaKVu9fxvdwfItGbOWKTGKLNQ0RAo" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149428671-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-149428671-1');
+    </script>
   </head>
   <body class="mymaintheme mybgimg">
     <%= render 'shared/frontend/navbar' %>

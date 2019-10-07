@@ -2,7 +2,7 @@
 
 <%= form_tag(staff_users_path, method: :get) do %>
   <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-green btn-md verticalspace"%>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
 <% end %>
 
 <table class="table table-sm">
@@ -30,4 +30,4 @@
 
 <%= paginate @students, theme: 'twitter-bootstrap-4' %>
 
-<%= link_to "回主選單", staff_root_path, class: 'btn btn-blue btn-xs' %>
+<%= link_to "回主選單", staff_root_path, class: 'btn btn-dark btn-md' %>

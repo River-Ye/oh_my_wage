@@ -13,7 +13,7 @@
   <% @users.each do |user| %>
   <tr>
     <td><%= user.role %></td>
-    <td><%= user.number %></td>
+    <td><%= user.number.upcase %></td>
     <td><%= link_to user.name, admin_user_path(user.id) %></td>
     <td><%= link_to "編輯", edit_admin_user_path(user.id), class: 'btn btn-success btn-sm' %></td>
     <td><%= link_to "刪除",

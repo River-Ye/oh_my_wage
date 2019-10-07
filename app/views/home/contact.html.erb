@@ -8,13 +8,27 @@
             <p>(02) 2331-5247</p>
             </a>
         <li>Email：</li>
-            <a href="mailto:ohmywage@ohmywage.com">
-            <p>ohmywage@ohmywage.com</p>
+            <a href="mailto:admin@oh-my-wage.website">
+            <p>admin@oh-my-wage.website</p>
             </a>
         <li>Address：</li>
             <a href="https://ubin.io/TyZN7E">
             <p>5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
             </a>
+            <div id="map"></div>
+            <script>
+            $(document).on('turbolinks:load', function() {
+                var ohmywage = { lat: 25.042437, lng: 121.513723 };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17.2,
+                    center: ohmywage });
+
+                var marker = new google.maps.Marker({
+                    position: ohmywage,
+                    map: map
+                });
+            });
+            </script>
         <li>Traffic：</li>
         <p>
             首先搭乘「霍格華茲特快列車」，從倫敦的國王十字車站中隱藏的9¾月台乘車，火車將於夜幕降臨後一段時間抵達霍格華茲附近的車站。

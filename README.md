@@ -32,6 +32,11 @@ ex:
 # drop database oh_my_wage_development;
 # drop database oh_my_wage_test;
 ```
+## gmap heroku
+
+發佈到HEROKU 
+終端機打
+figaro heroku:set -e production
 
 ---
 

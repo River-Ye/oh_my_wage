@@ -18,7 +18,7 @@ class Student::UserController < ApplicationController
   end
 
   def find_student_salaries
-    @student = current_user.salaries.search(search_month).order(date: :desc).page(params[:page])
+    @salary = current_user.salaries.search(search_month).order(date: :desc).page(params[:page])
   end
 
   def search_month
