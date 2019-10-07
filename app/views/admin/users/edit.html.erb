@@ -2,23 +2,23 @@
 <%= simple_form_for(@user, url: admin_user_path) do |f| %>
   <div class="form-inputs">
     <div class="row">
-      <div class="col-8">
-       <%= f.input :number, label: '學號' %>
+      <div class="col-lg-8 col-md-12 col-sm-12">
+       <%= f.input :number, label: '學號：' %>
       </div>
-      <div class="col-4">
-        <%= f.input :role, label: '權限', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <%= f.input :role, label: '權限：', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
       </div>
-      <div class="col-8">
-        <%= f.input :name, label: '姓名' %>
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <%= f.input :name, label: '姓名：' %>
       </div>
-      <div class="col-4">
-        <%= f.input :gender, label: '性別', collection: { "男": "Male", "女": "Female" } %>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <%= f.input :gender, label: '性別：', collection: { "男": "Male", "女": "Female" } %>
       </div>
-      <div class="col-8">
-        <%= f.input :email, label: '信箱', required: true, placeholder: 'example@school.com' %>
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <%= f.input :email, label: '信箱：', required: true, placeholder: 'example@school.com' %>
       </div>
-      <div class="col-4">
-        <%= f.input :phone, label: '手機', input_html: { maxlength: 10 }, placeholder: '0987654321' %>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <%= f.input :phone, label: '手機：', input_html: { maxlength: 10 }, placeholder: '0987654321' %>
       </div>
     </div>
   </div>

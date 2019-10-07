@@ -1,16 +1,16 @@
 <h1 class="verticalspace">歷史資料</h1>
 
 <%= form_tag(student_history_path, method: :get) do %>
-  <%= text_field_tag :search, "", placeholder: '請輸入日期', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md"%>
+  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
 <% end %>
 <%= paginate @salary, theme: 'twitter-bootstrap-4' %>
 <table class='table'>
   <thead>
-    <td>日期</td>
-    <td>工時</td>
-    <td>時薪</td>
-    <td>小計</td>
+    <th>日期</th>
+    <th>工時</th>
+    <th>時薪</th>
+    <th>小計</th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>

@@ -24,7 +24,7 @@
       <td><%= student.salaries.this_month_salaries_hr_sum %> 時</td>
        <td><%= student.salaries.this_month_salaries_sum %> 元</td>
       <td><%= link_to "編輯", edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' %></td>
-      <td><%= link_to "刪除", staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm', data: { confirm: "確定要把 #{student.name} 從 #{@department.name} 剔除嗎?" } %></td>
+      <td><%= link_to "刪除", staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name} 剔除嗎?" } %></td>
     </tr>
   <% end %>
   </tbody>
