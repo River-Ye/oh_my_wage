@@ -86,6 +86,11 @@
 
 .nav-link{
     color: #FEFDFF !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #F5CD0B !important;
 }
 
 p#timecount{
@@ -242,6 +247,9 @@ p#timecount{
 }
 
 @media screen and (max-width:995px){
+    #carouselExampleSlidesOnly{
+        display: none;
+    }
     .container-fluid{
         position: static;
         text-align: center;
@@ -292,7 +300,7 @@ p#timecount{
     margin-bottom: 1rem;
 }
 
-// ---------- card ----------
+// ---------- select month ----------
 
 .datepicker::-webkit-input-placeholder {
     color:#ccc;
@@ -433,7 +441,7 @@ ul.pagination{
         background-color: rgba(18, 50, 69, 0.8);
         border: 1px solid rgba(23, 101, 145, 0.8);
         transition: 0.3s;
-        color: orange;
+        color: #F5CD0B;
     }
     li.page-item.active > a.page-link{
         background-color: #123245;
