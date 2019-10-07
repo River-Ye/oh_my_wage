@@ -9,13 +9,19 @@
 <div class="container">
   <h1 class="verticalspace">問題回報</h1>
 
-  <%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
-    <%= form.input :title, label: '標題' %>
-    <%= form.input :content, label: '內容' %>
-    <div class="row">
+  <div class="card col-lg-8 col-md-12 col-sm-12 center-block">
+    <%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
+    <div class="card-title">
+      <%= form.input :title, label: '標題：' %>
+    </div>
+    <div class="card-text">
+      <%= form.input :content, label: '內容：' %>
     <%= form.button :submit, '送出', class: 'btn-blue btn-md' %>
-  <% end %>
+    <% end %>
+    </div>
+  </div>
 
+  <div class="row">
     <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
   </div>
 </div>
