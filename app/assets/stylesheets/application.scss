@@ -189,8 +189,8 @@ p#timecount{
 }
 .loginblock.col-lg-4{
     width: 60%;
-    margin-top: 6em;
-    left: 6em;
+    margin-top: 7.5em;
+    left: 7em;
     padding: 1em;
     text-align: left;
     z-index: 1;
@@ -214,9 +214,9 @@ p#timecount{
 }
 
 #carouselExampleSlidesOnly{
-    width: 60% !important;
-    margin-top: 3.5em;
-    right: 6em;
+    width: 60%;
+    margin-top: 4em;
+    right: 7em;
     z-index: 0;
     img.d-block.w-100{
         background-color: cover;
@@ -226,37 +226,26 @@ p#timecount{
 @media screen and (max-width:995px){
     .container-fluid{
         position: static;
-        border: 1px solid salmon;
         text-align: center;
+
         .loginblock.col-lg-4{
-            margin: 5.7em auto;
+            position: relative;
+            margin-top: 5.7em;
+            left: auto;
             padding: 1em;
             text-align: left;
             background-color: #FEFDFF;
             border: 1px solid whitesmoke;
             border-radius: 10px;
             box-shadow: 3px 3px 12px #333;
-            color: black;
+            color: #333;
             #user_email:focus, #user_password:focus{
                 outline: none !important
             }
-            .form-actions{
-                text-align: center;
-                width: 100%;
-                margin: auto;
-                .btn-blue, .btn-red{
-                    width: 40%;
-                    margin: 5px 10px;
-            }
         }    
     }
-}
+}   
 
-    #carouselExampleSlidesOnly{
-        display: none;
-    }
-    
-}
 // ---------- admin profile & edit ----------
 
 .form-group{
