@@ -99,9 +99,7 @@
   font-weight: 300;
   line-height: 20pt;
 }
-.pdf_title_3{
-  font-size: 30pt;
-}
+
 .pdf-table{
   width: 100%;
   font-size: 20pt;
@@ -115,14 +113,15 @@
     letter-spacing: 1px;
     
 }
-  td,th{
-  text-align: center;
-  
+
+.pdf_title_3{
+  font-size: 30pt;
 }
   td,th{
   text-align: center;
   
 }
+
   th{
   background:#bebebe;
   border: #bebebe;
