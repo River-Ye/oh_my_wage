@@ -4,6 +4,8 @@
 //= require action_cable
 //= require_self
 //= require_tree ./channels
+//= require chartkick
+//= require Chart.bundle
 
 (function() {
   this.App || (this.App = {});
