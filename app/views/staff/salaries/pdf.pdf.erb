@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <%= stylesheet_link_tag wicked_pdf_asset_base64("pdf") %>
-    <%= wicked_pdf_javascript_include_tag "number_pages" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="pdf.scss">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,500,600,700,800,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif:400,700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 </head>
-
-<div class="d-flex pdf-address">
-  <div class="mr-auto p-2">
-    <h3>霍格華茲學院</h3>
-    <h3 class="">Hogwarts School of Witchcraft and Wizardry</h3>
+<div class="wrap_pdf">
+  <div class="pdf_brand_left">
+    <p class="brand_cht">霍格華茲學院</p>
+    <p class="brand_eng">Hogwarts School of Witchcraft and Wizardry</p>
   </div>
-  <div class="p-2">
-    <p>(02) 23315247</p>
-    <p>100台北市中正區衡陽路7號</p>
-    <p>No. 7, Hengyang Rd., Zhongzheng Dist.,</p>
-    <p>Taipei City 100, Taiwan</p>
+  <div class="pdf_brand_right">
+    (02) 23315247<br>
+    100台北市中正區衡陽路7號<br>
+    No. 7, Hengyang Rd., Zhongzheng Dist.,<br>
+    Taipei City 100, Taiwan<br>
   </div>
 </div>
-
-<h1 class="pdf-h1">工讀薪資明細</h1>
-<p class="pdf-stu-info">學號：<%= @salary.user.number %>
-<p class="pdf-stu-info">姓名：<%= @salary.user.name %></p>
-
-<table class="table table-sm pdf-table">
+<p class="pdf_title_1">工讀薪資明細</p>
+<p class="pdf_title_2">學號：<%= @salary.user.number %>&nbsp;&nbsp;&nbsp;&nbsp;姓名：<%= @salary.user.name %></p>
+<table class="table table-hover table-sm pdf-table">
   <thead>
     <tr>
-      <th>日期</th>
-      <th>工時</th>
-      <th>時薪</th>
-      <th>合計</th>
+      <th style="width: 200px;">日期</th>
+      <th style="width: 200px;">工時</th>
+      <th style="width: 200px;">時薪</th>
+      <th style="width: 200px;">合計</th>
     </tr>
   </thead>
-  
   <tbody>
+
+
   <% @salary_all.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d")%></td>
@@ -49,10 +43,3 @@
    
   </tbody>
 </table>
-
-
-<div class="d-flex">
-  <div class="mr-auto p-2">Flex item</div>
-  <div class="p-2">Flex item</div>
-  <div class="p-2">Flex item</div>
-</div>

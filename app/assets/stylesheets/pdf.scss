@@ -1,4 +1,4 @@
-// @import "bootstrap";
+@import "bootstrap";
 @font-face {
   font-family: 'NotoSansTC-Light';
   font-style: normal;
@@ -39,25 +39,51 @@
   src: url(assets_path('NotoSansTC-Thin.otf'));
 }
 
-body{
+.custom_fonts{
   font-family: 'NotoSansTC-Regular';
 }
-
-.pdf-address{
+.wrap_pdf{
   width: 100%;
-  margin-bottom: 20px;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
   padding: 5px;
   border-bottom: 2px solid #272727;
 }
-
-h1.pdf-h1{
+.pdf_brand_left{
+  flex-grow: 1;
+  font-family: 'NotoSansTC-Regular';
+  text-align: left;
+  font-size: 30pt;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 3px;
+  .brand_eng{
+    
+    font-size: 20pt;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+}
+.pdf_brand_right{
+  font-family: 'NotoSansTC-Regular';
+  font-display: swap;
+  text-align: left;
+  font-size: 20pt;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.pdf_title_1{
+  font-family: 'NotoSansTC-Regular';
+  font-display: swap;
   text-align: center;
   font-size: 60pt;
   font-weight: 700;
   letter-spacing: 3px;
 }
-
-p.pdf-stu-info{
+.pdf_title_2{
+  font-family: 'NotoSansTC-Regular';
+  font-display: swap;
   text-align: left;
   font-size: 30pt;
   font-weight: 300;
@@ -67,30 +93,35 @@ p.pdf-stu-info{
 .pdf-table{
   width: 100%;
   font-size: 20pt;
+  font-family: 'NotoSansTC-Regular';
   font-weight: 400;
   line-height:110px;
   border: #272727;
-  text-align: center;
   tr{
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
-  }
-  th{
-    width: 200px;
-    font-size: 30px;
-    background:#bebebe;
-    border: #835959;
-    color:black;
-    letter-spacing: 6px;
-  }
-  td{
-    font-size: 20px;
-  }
+    
 }
 
+.pdf_title_3{
+  font-size: 30pt;
+}
+  td,th{
+  text-align: center;
+  
+}
 
-
+  th{
+  background:#bebebe;
+  border: #bebebe;
+  color:black;
+  letter-spacing: 6px;
+}
+}
+.pdf-table{
+  font-size: 30pt;
+}
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;
 }
