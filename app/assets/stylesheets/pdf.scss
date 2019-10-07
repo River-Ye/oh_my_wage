@@ -5,6 +5,7 @@
   flex-flow: row wrap;
   padding: 5px;
   border-bottom: 2px solid #272727;
+<<<<<<< Updated upstream
 }
 .pdf_brand_left{
   flex-grow: 1;
@@ -19,6 +20,20 @@
     font-size: 25pt;
     font-weight: 400;
     letter-spacing: 0px;
+=======
+  .mr-auto.p-2{
+    margin-bottom: 1em;
+  }
+  h3{
+    line-height: 1.5em;
+    font-size: 40px;
+  }
+  h4{
+    font-size: 20px;
+  }
+  p{
+    font-size: 25px;
+>>>>>>> Stashed changes
   }
 }
 .pdf_brand_right{
@@ -33,7 +48,11 @@
   font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-display: swap;
   text-align: center;
+<<<<<<< Updated upstream
   font-size: 80pt;
+=======
+  font-size: 40pt;
+>>>>>>> Stashed changes
   font-weight: 700;
   letter-spacing: 3px;
 }
@@ -56,6 +75,7 @@
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
+<<<<<<< Updated upstream
 }
   td,th{
   text-align: center;
@@ -65,6 +85,10 @@
   text-align: center;
   
 }
+=======
+    height: 1.5em;
+  }
+>>>>>>> Stashed changes
   th{
   background:#bebebe;
   border: #bebebe;

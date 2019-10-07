@@ -124,15 +124,15 @@ p#timecount{
 }
 
 .btn-pdf{
-    background:#8A000A;
-    border: #8A000A;
-    color: #FEFDFF;
+    background:#8A000A !important;
+    border: #8A000A !important;
+    color: #FEFDFF !important;
     height: 2.3em;
 }
 
 .btn-pdf:hover{
-    background: #d6000a;
-    border: #d6000a;
+    background: #d6000a !important;
+    border: #d6000a !important;
 }
  
 .btn-org{
@@ -185,8 +185,8 @@ p#timecount{
 }
 
 .btn-dark:hover{
-    background-color: #666;
-    border: 1px solid #666;
+    background-color: #666 !important;
+    border: 1px solid #666 !important;
 }
  
 #search{
