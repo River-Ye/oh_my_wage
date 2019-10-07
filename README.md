@@ -8,7 +8,8 @@
 6. rails db:seed (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門關聯假資料 、 學生薪資\*300)
 7. rails c
 8. User.all
-9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生 
+9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
+
 ## Factorybot
 
     * 使用 rails c >> User.admin / User.staff / User.student 即可看到不同 role 的帳戶資料。
@@ -32,15 +33,37 @@ ex:
 # drop database oh_my_wage_development;
 # drop database oh_my_wage_test;
 ```
+
 ## gmap heroku
 
-發佈到HEROKU 
-終端機打
-figaro heroku:set -e production
+發佈到 HEROKU
+終端機輸入`figaro heroku:set -e production`
+
+## HEROKU
+
+```sql
+查詢資料庫
+$ heroku addons
+
+查詢版本
+$ heroku run rake db:version
+
+即時看 Log 訊息
+$ heroku logs -t
+
+刪除 Heroku 專案上既有資料庫步驟：
+1. HEROKU 網站 → Dashboard → Resources → 點選「Add-ons」下方右邊的「Delete Add-on」
+接著，依序於終端機輸入以下指令：
+$ heroku addons:create heroku-postgresql:hobby-dev
+$ heroku run rails db:migrate
+$ heroku run rails db:seed
+```
 
 ---
 
 ## Tool
+
+[**Oh My Wage**](https://oh-my-wage.website/)
 
 [**GitHub**](https://github.com/River-Ye/oh_my_wage/)
 
