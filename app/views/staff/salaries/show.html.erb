@@ -15,7 +15,7 @@
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %></td>
       <td><%= salary.hourly_wage %></td>
-      <td><%= salary.hr * salary.hourly_wage %></td>
+      <td><%= money(salary) %></td>
     </tr>
   <% end %>
     <tr>
