@@ -3,44 +3,50 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Light.otf);
-
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Light.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Light.otf') %>");
 
   font-family: 'NotoSansTC-Bold';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   // src: url('<%= asset_path("NotoSansTC-Bold.otf") %>');
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Bold.otf);
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Bold.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Bold.otf') %>");
+
 
   font-family: 'NotoSansTC-Light';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   // src: url('<%= asset_path("NotoSansTC-Light.otf") %>');
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Light.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Light.otf') %>");
 
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Light.otf);
 
   font-family: 'NotoSansTC-Medium';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   // src: url('<%= asset_path("NotoSansTC-Medium.otf") %>');
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Medium.otf);
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Medium.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Medium.otf') %>");
   
   font-family: 'NotoSansTC-Regular';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   // src: url('<%= asset_path("NotoSansTC-Regular.otf") %>');
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Regular.otf);
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Regular.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Regular.otf') %>");
   
   font-family: 'NotoSansTC-Thin';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   // src: url('<%= asset_path("NotoSansTC-Thin.otf") %>');
-  src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Thin.otf);
+  // src: url(https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap/fonts/NotoSansTC-Thin.otf);
+  src: url("<%= Rails.root.join('app','assets','fonts','NotoSansTC-Thin.otf') %>");
 }
 
 .custom_fonts{
