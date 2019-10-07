@@ -10,8 +10,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-   src: url(assets_path('NotoSansTC-Bold.otf'));
-
+  src: url(assets_path('NotoSansTC-Bold.otf'));
 
   font-family: 'NotoSansTC-Light';
   font-style: normal;
@@ -39,51 +38,32 @@
   src: url(assets_path('NotoSansTC-Thin.otf'));
 }
 
-.custom_fonts{
+body{
   font-family: 'NotoSansTC-Regular';
 }
-.wrap_pdf{
+
+.pdf-school{
   width: 100%;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row wrap;
+  margin-bottom: 20px;
   padding: 5px;
   border-bottom: 2px solid #272727;
-}
-.pdf_brand_left{
-  flex-grow: 1;
-  font-family: 'NotoSansTC-Regular';
-  text-align: left;
-  font-size: 30pt;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 3px;
-  .brand_eng{
-    
-    font-size: 20pt;
-    font-weight: 400;
-    letter-spacing: 0px;
+  .mr-auto.p-2{
+    margin-bottom: 1em;
+  }
+  h3{
+    line-height: 2em;
   }
 }
-.pdf_brand_right{
-  font-family: 'NotoSansTC-Regular';
-  font-display: swap;
-  text-align: left;
-  font-size: 20pt;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.pdf_title_1{
-  font-family: 'NotoSansTC-Regular';
-  font-display: swap;
+
+h1.pdf-h1{
+  margin: 1em auto;
   text-align: center;
   font-size: 60pt;
   font-weight: 700;
   letter-spacing: 3px;
 }
-.pdf_title_2{
-  font-family: 'NotoSansTC-Regular';
-  font-display: swap;
+
+p.pdf-stu-info{
   text-align: left;
   font-size: 30pt;
   font-weight: 300;
@@ -92,36 +72,30 @@
 
 .pdf-table{
   width: 100%;
-  font-size: 20pt;
-  font-family: 'NotoSansTC-Regular';
   font-weight: 400;
   line-height:110px;
   border: #272727;
+  text-align: center;
   tr{
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
-    
-}
-
-.pdf_title_3{
-  font-size: 30pt;
-}
-  td,th{
-  text-align: center;
-  
-}
-
+  }
   th{
-  background:#bebebe;
-  border: #bebebe;
-  color:black;
-  letter-spacing: 6px;
+    width: 200px;
+    font-size: 30px;
+    background:#bebebe;
+    border: #835959;
+    color:black;
+    letter-spacing: 6px;
+  }
+  td{
+    font-size: 15px;
+  }
 }
-}
-.pdf-table{
-  font-size: 30pt;
-}
+
+
+
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;
 }
