@@ -18,7 +18,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-// --------------- flash notice message ---------------
+// ---------- flash notice message ----------
 
 .alert{
     margin-bottom: 0px;
@@ -31,7 +31,7 @@
     border-radius: 0;
 }
 
-// --------------- 通用 class ---------------
+// ---------- 通用 class ----------
 
 .mymaintheme{
     color: #333;
@@ -82,7 +82,7 @@
     vertical-align: middle;
 }
 
-// --------------- nav bar ---------------
+// ---------- nav bar ----------
 
 .navitem{
     background-color: rgb(82, 29, 31);
@@ -98,7 +98,7 @@ p#timecount{
     color: #FEFDFF;
 }
 
-// --------------- btn ---------------
+// ---------- btn ----------
 
 .my-btn{
     width: 50%;
@@ -108,6 +108,7 @@ p#timecount{
 .btn{
     margin-right: 5px;
 }
+
 .btn-red{
     background-color: #8b0000;
     border: #8b0000;
@@ -140,7 +141,6 @@ p#timecount{
     background-color: #115247;
     color: #FEFDFF;
     border: 1px solid #115247;
-    height: 2.3em;
     :hover{
         color: #FEFDFF !important;
     }
@@ -181,17 +181,23 @@ p#timecount{
     background-color: #123245;
 }
 
-// --------------- loginblock ---------------
+// ---------- login ----------
 
-.loginblock.col-lg-6{
-    width: 100px;
-    margin: 5em auto;
+.container-fluid{
+    position: absolute;
+    left: 0;
+}
+.loginblock.col-lg-4{
+    width: 60%;
+    margin-top: 6em;
+    left: 6em;
     padding: 1em;
     text-align: left;
+    z-index: 1;
     background-color: #FEFDFF;
     border: 1px solid whitesmoke;
     border-radius: 10px;
-    box-shadow: 2px 2px 6px #123245;
+    box-shadow: 3px 3px 12px #333;
     color: black;
     #user_email:focus, #user_password:focus{
         outline: none !important
@@ -207,14 +213,57 @@ p#timecount{
     }    
 }
 
-// --------------- admin profile ---------------
+#carouselExampleSlidesOnly{
+    width: 60% !important;
+    margin-top: 3.5em;
+    right: 6em;
+    z-index: 0;
+    img.d-block.w-100{
+        background-color: cover;
+    }
+}
 
-.form-group.select.required.user_role.form-group-valid,
-.form-group.string.required.user_number.form-group-valid{
+@media screen and (max-width:995px){
+    .container-fluid{
+        position: static;
+        border: 1px solid salmon;
+        text-align: center;
+        .loginblock.col-lg-4{
+            margin: 5.7em auto;
+            padding: 1em;
+            text-align: left;
+            background-color: #FEFDFF;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            box-shadow: 3px 3px 12px #333;
+            color: black;
+            #user_email:focus, #user_password:focus{
+                outline: none !important
+            }
+            .form-actions{
+                text-align: center;
+                width: 100%;
+                margin: auto;
+                .btn-blue, .btn-red{
+                    width: 40%;
+                    margin: 5px 10px;
+            }
+        }    
+    }
+}
+
+    #carouselExampleSlidesOnly{
+        display: none;
+    }
+    
+}
+// ---------- admin profile & edit ----------
+
+.form-group{
     text-align: left;
 }
 
-// --------------- staff profile ---------------
+// ---------- staff profile ----------
 
 .show{
     margin-bottom: 1rem;
@@ -236,7 +285,17 @@ p#timecount{
     margin-bottom: 1rem;
 }
 
-// --------------- card ---------------
+// ---------- card ----------
+
+.datepicker::-webkit-input-placeholder {
+    color:#ccc;
+}
+
+span.month.focused{
+    background-color: #123245 !important;
+}
+
+// ---------- card ----------
 
 .card{
     border: none;
@@ -278,7 +337,7 @@ p#timecount{
     }
 }
 
-// --------------- table ---------------
+// ---------- table ----------
 
 table.table tr{
     border: 1px solid rgba(23, 101, 145, 0.1)
@@ -307,7 +366,7 @@ small.form-text.text-muted{
 
 table{
     background-color: rgba(23, 101, 145, 0.8);
-    a, a:visited{
+    a{
         color: #FEFDFF
     }
     tr{
@@ -335,7 +394,7 @@ table.table.col-lg-6.col-md-12.col-sm-12{
     } 
 }
 
-// --------------- problem ---------------
+// ---------- problem ----------
 
 .card.col-lg-8.col-md-12.col-sm-12.center-block{
     padding: 1em;
@@ -353,7 +412,7 @@ table.table.col-lg-6.col-md-12.col-sm-12{
 //     height: 15em;
 // }
 
-// --------------- pagination ---------------
+// ---------- pagination ----------
 
 ul.pagination{
     margin-top: 30px;
@@ -389,7 +448,7 @@ ul.pagination{
     }
 }
 
-// --------------- infopage ---------------
+// ---------- infopage ----------
 
 .infotitle{
     margin: auto 0em;
@@ -436,7 +495,7 @@ text-shadow: 1px 0.6px 1px #333;
     width: 40%;
   }
 
-// --------------- Back to top button 56px ---------------
+// ---------- Back to top button 56px ----------
 
 .toTop-arrow{
     width: 3.5rem;
@@ -475,10 +534,10 @@ text-shadow: 1px 0.6px 1px #333;
 
 .toTop-arrow:focus{outline: none;}
 
-// --------------- footer ---------------
+// ---------- footer ----------
 
 .footerspace{
-    margin-top: 100px;
+    margin-top: 71px;
 }
 
 .footericon{
