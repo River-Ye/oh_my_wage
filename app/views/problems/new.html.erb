@@ -1,5 +1,3 @@
-<h1>問題回報</h1>
-
 <% if @reply_to_issue.errors.any? %>
   <ul>
     <% @reply_to_issue.errors.full_messages.each do |message| %>
@@ -8,11 +6,22 @@
   </ul>
 <% end %>
 
-<%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
-  <%= form.input :title, label: '標題' %>
-  <%= form.input :content, label: '內容' %>
+<div class="container">
+  <h1 class="verticalspace">問題回報</h1>
 
-  <%= form.button :submit, '送出', class: 'btn-success btn-lg' %>
-<% end %>
+  <div class="card col-lg-8 col-md-12 col-sm-12 center-block">
+    <%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
+    <div class="card-title">
+      <%= form.input :title, label: '標題：' %>
+    </div>
+    <div class="card-text">
+      <%= form.input :content, label: '內容：' %>
+    <%= form.button :submit, '送出', class: 'btn-blue btn-md' %>
+    <% end %>
+    </div>
+  </div>
 
-<%= link_to "上一頁", root_path, class: 'btn btn-primary btn-xs' %>
+  <div class="row">
+    <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+  </div>
+</div>

@@ -1,10 +1,14 @@
-<h1>Hi, <%= current_user.name %> 歡迎回來</h1>
-
-<h2>本月時數與薪資試算</h2>
-<ul>
-  <h2><li>總工時：<%= current_user.salaries.map{|x| x.hr }.sum %> 小時</li></h2>
-  <h2><li>合計：<%= current_user.salaries.map{|x| x.hr * x.hourly_wage }.sum %> 元</li></h2>
-</ul>
-
-<%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-success btn-lg' %>
-<%= link_to "問題反應", new_problem_path, class: 'btn btn-danger btn-lg' %>
+<h1 class="verticalspace">Hi, <%= current_user.name %> 歡迎回來</h1>
+<h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
+<table class="table col-lg-6 col-md-9 col-sm-12">
+  <tr>
+    <th>總工時</th>
+    <td><%= calculate_student_salary_hr %> 小時</td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td><%= calculate_studen_salary_sum %> 元</td>
+  </tr>
+</table>
+<%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-blue btn-md white-hover' %>
+<%= link_to "問題反應", new_problem_path, class: 'btn btn-red btn-md white-hover' %>

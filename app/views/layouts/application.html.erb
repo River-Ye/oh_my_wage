@@ -5,35 +5,42 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GMAP_API_KEY'] %>"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag asset_path('icon.png') %>
+    <%= favicon_link_tag asset_path('logo_m_small.png') %>
     <button type="button" id="BackTop" class="toTop-arrow"></button>
     <script>
-    $(function(){
-      $('#BackTop').click(function(){ 
-        $('html,body').animate({scrollTop:0}, 800);
+      $(function(){
+        $('#BackTop').click(function(){ 
+          $('html,body').animate({scrollTop:0}, 800);
+        });
+        $(window).scroll(function() {
+          if ( $(this).scrollTop() > 300 ){
+            $('#BackTop').fadeIn(222);
+          } else {
+            $('#BackTop').stop().fadeOut(222);
+          }
+        }).scroll();
       });
-      $(window).scroll(function() {
-        if ( $(this).scrollTop() > 300 ){
-          $('#BackTop').fadeIn(222);
-        } else {
-          $('#BackTop').stop().fadeOut(222);
-        }
-      }).scroll();
-    });
+    </script>
+    <meta name="google-site-verification" content="Pj08cGDDInGg6WnaKVu9fxvdwfItGbOWKTGKLNQ0RAo" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149428671-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-149428671-1');
     </script>
   </head>
-  <body>
+  <body class="mymaintheme mybgimg">
     <%= render 'shared/frontend/navbar' %>
     <%= render 'shared/frontend/flash' if notice %>
     <div class="container">
       <%= yield %>
     </div>
-    <footer>
-      <p>TEL：(02) 1787-1687</p>
-      <p>Email：ohmywage@ohmywage.com</p>
-      <p>Address：5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div class="footerspace"></div>
+    <%= render 'shared/frontend/footer' %>
   </body>
 </html>

@@ -3,9 +3,18 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  devise_scope :user do
+    authenticated :user do
+      root 'home#index', as: :authenticated_root
+    end
+  
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+
   namespace 'admin' do
     resources 'users'
-    get '/search', to: 'users#search'
     root 'users#index'
   end
 
@@ -15,27 +24,16 @@ Rails.application.routes.draw do
   end
 
   namespace 'staff' do
-    resources 'users', only: [:index, :show, :update] do
-      collection do
-        get :search
-      end
-    end
-
-    resources 'salaries', except: [:new, :create] do
-        collection do
-          get :search
-        end
-    end
-
+    resources 'users', only: [:index, :show, :update]
+    resources 'salaries', except: [:new, :create]
     get 'history', to: 'user#history'
-    get '/home', to: 'users#home'
+    get 'home', to: 'users#home'
     root 'users#home'
   end
 
   resources 'problems', only: [:index, :new, :create]
 
-  get '/about', to: 'home#about'
-  get '/contact', to: 'home#contact'
-  get '/qa', to: 'home#qa'
-  root 'home#index'
+  get 'about', to: 'home#about'
+  get 'contact', to: 'home#contact'
+  get 'qa', to: 'home#qa'
 end

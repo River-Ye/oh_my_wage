@@ -1,17 +1,105 @@
-tr{
+@import "bootstrap";
+@font-face {
+  font-family: 'NotoSansTC-Light';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Light.otf'));
+
+  font-family: 'NotoSansTC-Bold';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Bold.otf'));
+
+  font-family: 'NotoSansTC-Light';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Light.otf'));
+
+
+  font-family: 'NotoSansTC-Medium';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Medium.otf'));
+  
+  font-family: 'NotoSansTC-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Regular.otf'));
+  
+  font-family: 'NotoSansTC-Thin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets_path('NotoSansTC-Thin.otf'));
+}
+
+body{
+  font-family: 'NotoSansTC-Regular';
+}
+
+.pdf-school{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-bottom: 2px solid #272727;
+  .mr-auto.p-2{
+    margin-bottom: 1em;
+  }
+  h3{
+    line-height: 1.5em;
+    font-size: 40px;
+  }
+  p{
+    font-size: 25px;
+  }
+}
+
+h1.pdf-h1{
+  margin: 0.5em auto;
+  text-align: center;
+  font-size: 60pt;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.pdf-stu-info{
+  line-height: 2em;
+  text-align: left;
+  font-size: 30pt;
+  font-weight: 300;
+  line-height: 20pt;
+}
+
+.pdf-table{
+  width: 100%;
+  font-weight: 400;
+  line-height:110px;
+  border: #272727;
+  text-align: center;
+  tr{
     border-bottom: solid;
     border-width: 3px;
-    border: black;
+    letter-spacing: 1px;
+  }
+  th{
+    width: 200px;
+    font-size: 35px;
+    background:#bebebe;
+    border: #835959;
+    color:black;
+    letter-spacing: 6px;
+  }
+  td{
+    font-size: 30px;
+  }
+}
 
-}
-td,th{
-  text-align: left;
-}
-th{
-  background: #000;
-  color: white;
 
-}
 
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;

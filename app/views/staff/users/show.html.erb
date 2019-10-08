@@ -1,24 +1,24 @@
-<table class="table table-bordered">
+<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
   <tr>
-    <td>學號</td>
+    <th>學號</th>
     <td><%= @student.number %></td>
   </tr>
   <tr>
-    <td>姓名</td>
+    <th>姓名</th>
     <td><%= @student.name %></td>
   </tr>
     <tr>
-    <td>手機</td>
+    <th>手機</th>
     <td><%= @student.phone %></td>
   </tr>
   <tr>
-    <td>性別</td>
+    <th>性別</th>
     <td><%= @student.gender %></td>
   </tr>
   <tr>
-    <td>信箱</td>
+    <th>信箱</th>
     <td><%= @student.email %></td>
   </tr>
 </table>
 
-<%= link_to "上一頁", :back, class: 'btn btn-secondary' %>
+<%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>

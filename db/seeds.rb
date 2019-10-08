@@ -1,53 +1,45 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-puts "產生 1 筆 admin 權限帳號"
-    FactoryBot.create(:admin)
+puts "Generating 150 items admin account, please wait"
+150.times do |i|
+  FactoryBot.create(:admin)
+end
 puts "Done!"
 
-puts "產生 20 筆 staff 權限帳號"
-20.times do |i|    
+puts "Generating 150 items staff account, please wait"
+150.times do |i|
     FactoryBot.create(:staff)
 end
 puts "Done!"
 
-
-puts "產生 80 筆 student 權限帳號"
-80.times do |i|    
+puts "Generating 150 items student account, please wait"
+150.times do |i|
     FactoryBot.create(:student)
 end
 puts "Done!"
 
-puts "產生 9 個部門"
+puts "Generating 9 items Department name"
 0.upto(8) do |i|
   Department.create(name: i)
 end
 puts "Done!"
 
-puts "產生 20 筆 staff 與 Department 關聯資料"
-2.upto(21) do |i|
+puts "Generating 150 items staff and Department ORM"
+151.upto(300) do |i|
   DepartmentWithUser.create(department_id: rand(1..9), user_id: i)
 end
 puts "Done!"
 
-puts "產生 80 筆 student 與 Department 關聯資料"
-80.times do |i|
-  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(22..101))
+puts "Generating 200 items student and Department ORM"
+200.times do |i|
+  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(301..450))
 end
 puts "Done!"
 
-puts "產生 150 筆 student 與 Salary 關聯"
-150.times do |i|
-  Salary.create(user_id: rand(22..101),
-                date: rand(2.years).seconds.ago,
+puts "Generating 600 items student and Salary ORM"
+600.times do |i|
+  Salary.create(user_id: rand(301..450),
+                date: rand(1.years).seconds.ago,
                 hr: rand(1..12),
-                hourly_wage: rand(150..500))
+                hourly_wage: [150, 155, 160, 165, 170, 175, 180, 200].sample)
 end
 puts "Done!"
 

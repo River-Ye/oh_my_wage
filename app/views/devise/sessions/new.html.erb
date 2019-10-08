@@ -1,20 +1,38 @@
-<h2>登入</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div id="carouselExampleSlidesOnly" class="carousel slide position-absolute" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag('campus1.png', class:'d-block w-100',  alt:"First slide") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('campus2.png', class:'d-block w-100',  alt:"Second slide") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('campus3.png', class:'d-block w-100',  alt:"Third slide") %>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "登入 LOG IN", class: 'btn btn-primary btn-lg' %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="loginblock col-lg-4 col-md-12 col-sm-12 position-relative">
+    <%= image_tag('logo_sign_in.png',  size: '200x160', class:'rounded mx-auto d-block') %>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+      <div class="form-actions">
+          <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' %>
+          <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>

@@ -1,121 +1,637 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require bootstrap-datepicker
+*= require_tree .
+*= require_self
+*/
+
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-// Back to top button
-.toTop-arrow {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 33%;
-  opacity: 0.8;
-  background: #050f1f;
-  cursor: pointer;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  display: none;
-}
-.toTop-arrow::before,
-.toTop-arrow::after {
-  width: 18px;
-  height: 5px;
-  border-radius: 3px;
-  background: whitesmoke;
-  position: absolute;
-  content: "";
-}
-.toTop-arrow::before {
-  transform: rotate(-45deg) translate(0, -50%);
-  left: 0.5rem;
-}
-.toTop-arrow::after {
-  transform: rotate(45deg) translate(0, -50%);
-  right: 0.5rem;
-}
-.toTop-arrow:focus {
-  outline: none;
+// ---------- flash notice message ----------
+
+.alert{
+    margin-bottom: 0px;
 }
 
-// ---------- 以下為通用 class，直接套用即可 ----------
-
-.mybgimg {
-  background-image: url(../images/64799.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: left top;
+.alert-warning{
+    color: #FEFDFF;
+    background-color: rgba(23, 101, 145, 0.5);
+    border: none;
+    border-radius: 0;
 }
 
-.infotitle {
-  width: 60%;
-  margin: 2em auto;
-  text-align: center;
-  display: block;
-  margin: 50px auto 100px;
-  width: 100%;
+// ---------- 通用 class ----------
+
+.mymaintheme{
+    color: #333;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px;
+
 }
 
-.zhtitle {
-  width: 70%;
-  margin: 30px auto;
-  text-align: center;
-  font-size: 50px;
+.mybgimg{
+    background-color: #FEFDFF;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
-.fontstyle {
-  color: whitesmoke;
-  text-shadow: 1px 0.6px 1px #333;
+.my-center{
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
-.contentinfo {
-  margin: auto;
-  padding: 25px;
-  border-radius: 10px;
-  background-color: rgba(5, 15, 31, 0.8);
-  li {
-    font-size: 30px;
+.verticalspace{
+    margin: 1em 0;
+}
+
+.verticalspace2{
+    margin: 2em 0;
+}
+
+.white-hover:hover{
+    color: #FEFDFF;
+}
+
+.center-block{
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+.col-md-12{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+// ---------- nav bar ----------
+
+.navitem{
+    background-color: rgb(82, 29, 31);
+}
+
+.nav-link{
+    color: #FEFDFF !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #F5CD0B !important;
+}
+
+p#timecount{
+    padding: 8px 0;
+    margin-bottom: 0;
+    color: #FEFDFF;
+}
+
+// ---------- btn ----------
+
+.my-btn{
+    width: 50%;
+    margin: 1em auto;
+}
+
+.btn{
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.btn-red{
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
+    height: 2.3em;
+}
+
+.btn-red:hover{
+    background-color: #BA2937;
+    border-color: #BA2937;
+}
+
+.btn-pdf{
+    background:#8A000A;
+    border: #8A000A;
+    color: #FEFDFF;
+    height: 2.3em;
+}
+
+.btn-pdf:hover{
+    background: #d6000a;
+    border: #d6000a;
+}
+ 
+.btn-org{
+    background-color: #EFA413;
+    border-color: #EFA413;
+    color: #333;
+    transition: 0.3s;
+}
+
+.btn-org:hover{
+    background-color: #F5CD0B;
+    border-color: #F5CD0B;
+}
+ 
+.btn-blue{
+    background-color: #176591;
+    color: #FEFDFF;
+    border: 1px solid #176591;
+    height: 2.3em;
+}
+.btn-blue:hover{
+    background-color: #80C6F2;
+    border-color: #80C6F2;
+    color: #333;
+}
+ 
+.btn-green{
+    background-color: #246D73;
+    color: #FEFDFF;
+    border: 1px solid #246D73;
+
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(51, 51, 51, 0.8);
+        border: 1px solid rgba(51, 51, 51, 0.8);
+        color: #FEFDFF
+    }
+}
+
+.btn-green:hover{
+    background-color: #74CDB6;
+    border-color: #74CDB6;
+    color: #333;
+}
+ 
+.btn-dark{
+    transition: 0.3s;
+    .btn-md{
+        margin-left: 1em !important
+    }
+}
+
+.btn-dark:hover{
+    background-color: #666;
+    border: 1px solid #666;
+}
+ 
+#search{
+    height: 2.3em;
+    padding: 0.5em;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: #176591;
+    color: #FEFDFF;
+    border: 2px solid #176591;
+}
+  
+#search:focus{
+    outline: none;
+    background-color: #123245;
+}
+
+// ---------- login ----------
+
+.container-fluid{
+    position: absolute;
+    left: 0;
+}
+.loginblock.col-lg-4{
+    width: 60%;
+    margin-top: 7.5em;
+    left: 7em;
     padding: 1em;
-  }
-  p {
-    text-indent: 2em;
-    // margin: 10px auto;
-    font-size: 20px;
-  }
-}
-.center-block {
-  text-align: center;
-  margin: 20px auto;
-}
-
-.btn-dark {
-  box-shadow: 2px 2px 6px #111;
-}
-
-footer {
-  padding: 10px;
-  font-size: 12px;
-  text-align: center;
-  background-color: rgba(5, 15, 31, 0.8);
+    text-align: left;
+    z-index: 1;
+    background-color: #FEFDFF;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px #333;
+    color: black;
+    #user_email:focus, #user_password:focus{
+        outline: none !important
+    }
+    .form-actions{
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        .btn-blue, .btn-red{
+            width: 40%;
+            margin: 5px 10px;
+        }
+    }    
 }
 
-// ---------- 以下為各頁面 css 設定 ----------
+#carouselExampleSlidesOnly{
+    width: 60%;
+    margin-top: 4em;
+    right: 7em;
+    z-index: 0;
+    img.d-block.w-100{
+        background-color: cover;
+    }
+}
 
-// .contactus{}
-// .aboutus{}
-// .qa{}
+@media screen and (max-width:995px){
+    #carouselExampleSlidesOnly{
+        display: none;
+    }
+    .container-fluid{
+        position: static;
+        text-align: center;
+
+        .loginblock.col-lg-4{
+            position: relative;
+            margin-top: 5.7em;
+            left: auto;
+            padding: 1em;
+            text-align: left;
+            background-color: #FEFDFF;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            box-shadow: 3px 3px 12px #333;
+            color: #333;
+            #user_email:focus, #user_password:focus{
+                outline: none !important
+            }
+        }    
+    }
+}   
+
+// ---------- admin profile & edit ----------
+
+.form-group{
+    text-align: left;
+}
+
+// ---------- staff profile ----------
+
+.show{
+    margin-bottom: 1rem;
+        .profile{
+            text-align: left;
+    }
+    p.phead{
+        margin-bottom: 0.5em;
+    }
+    .pbody{
+        padding-left: 1em;
+        line-height: 2.3em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+}
+
+.fix-bot{
+    margin-bottom: 1rem;
+}
+
+// ---------- select month ----------
+
+.datepicker::-webkit-input-placeholder {
+    color:#ccc;
+}
+
+span.month.focused{
+    background-color: #123245 !important;
+}
+
+// ---------- card ----------
+
+.card{
+    border: none;
+    .hover-sec{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border-radius: 10px;
+        box-shadow: 3px 3px 9px #999;
+        // background-color: rgba(0, 63, 86, 0.1);
+        color: #333;
+        transition: 0.3s;
+    }
+    .hover-sec:hover{
+        box-shadow: 3px 3px 9px #123245;
+        color: #333;
+    }
+    .card-time:hover{
+        background-color: rgba(43, 133, 140, 0.3);
+    }
+    .card-list:hover{
+        background-color: rgba(23, 101, 145, 0.3);
+    }
+    .card-q:hover{
+        background-color: rgba(186, 41, 55, 0.3);
+    }
+    h2.card-title{
+        width: 100%;
+        padding-top: 1em;
+        font-size: 40px;
+        text-align: center;
+    }
+    p.card-text{
+        font-size: 25px;
+    }
+    img.card-img-top{
+        width: 200px;
+        height: 200px;
+        margin: 1.5em auto 0;
+    }
+}
+
+// ---------- table ----------
+
+table.table tr{
+    border: 1px solid rgba(23, 101, 145, 0.1)
+}
+
+table > tbody > tr > td > .btn-red,
+.container > a.btn-red{
+        background-color: #8b0000;
+        border: #8b0000;
+        color: #FEFDFF;
+}
+
+.container > .container > .row{
+    justify-content: center;
+}
+
+small.form-text.text-muted{
+    color: #999 !important;
+}
+
+table{
+    background-color: rgba(23, 101, 145, 0.8);
+    a{
+        color: #FEFDFF;
+    }
+    tr{
+        color: #FEFDFF;
+        transition: 0.3s;
+    }
+    tr:hover{
+        background-color: rgba(18, 50, 69, 0.8);
+        color: #FEFDFF;
+    }
+    a:hover{
+        color: #F4B610;
+        transition: 0.3s;
+    }
+    th{
+        background-color: #176591;
+    }
+}
+
+table.table.col-lg-6.col-md-12.col-sm-12{
+    th{
+        text-align: right;
+    }
+    td{
+        text-align: left;
+    } 
+}
+
+// ---------- problem ----------
+
+.card.col-lg-8.col-md-12.col-sm-12.center-block{
+    padding: 1em;
+    // border: 1px solid salmon;
+    border-radius: 5px;
+    box-shadow: 3px 3px 9px #333;
+    vertical-align: top;
+}
+
+.reply_to_issue_title,
+.reply_to_issue_content{
+    text-align: left;
+}
+//input#reply_to_issue_content.form-control.string.required{
+//     height: 15em;
+// }
+
+// ---------- pagination ----------
+
+ul.pagination{
+    margin: 30px auto;
+}
+
+.pagination{
+    justify-content: center;
+    color: #FEFDFF;
+    li > a{
+        background-color: rgba(23, 101, 145, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF;
+        transition: 0.3s
+    }
+    li > a:hover{
+        background-color: rgba(18, 50, 69, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        transition: 0.3s;
+        color: #F5CD0B;
+    }
+    li.page-item.active > a.page-link{
+        background-color: #123245;
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF;
+        :focus{
+        outline: none !important
+        }
+    }
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(23, 101, 145, 0.8);
+        border: 1px solid rgba(23, 101, 145, 0.8);
+        color: #FEFDFF 
+    }
+}
+
+// ---------- infopage ----------
+
+.infotitle{
+    margin: auto 0em;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.zhtitle{
+    width: 70%;
+    margin: 0 auto 1em;
+    text-align: center;
+    font-size: 50px;
+}
+
+.fontstyle{
+color: #FEFDFF;
+text-shadow: 1px 0.6px 1px #333;
+}
+
+.contentinfo{
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 25px;
+    border-radius: 10px;
+    color: #FEFDFF;
+    background-color: rgba(5, 15, 31, 0.8);
+    li{
+        font-size: 30px;
+        padding: 1em;
+    };
+    p{
+        text-indent: 2em;
+        font-size: 20px
+    };
+    a, a:hover, a:visited{
+        color: #FEFDFF
+    }    
+}
+
+#map{
+    height: 300px;
+    width: 40%;
+}
+
+.about.d-flex.col-12{
+    text-align: center;
+    margin: 3em auto;
+    h2{
+        font-size: 60px;
+        margin: 1em auto 0.5em;
+    }
+    p{
+        font-size: 25px;
+    }
+}
+
+.stu::after{
+    content:'';
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid #2B858C;
+    display: block;
+    /* border-left: 40px solid green; */
+    /* border-bottom: 40px solid salmon; */
+    border-right: 40px solid transparent;
+    position: relative;
+    margin: -2px 0px 0px 1px;
+    left: 0px
+}
+
+.sta::after{
+    content:'';
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid #1A7EA5;
+    display: block;
+    /* border-left: 40px solid green; */
+    /* border-bottom: 40px solid salmon; */
+    border-left: 40px solid transparent;
+    position: relative;
+    margin: -2px 0px 0px 755px;
+}
+
+.stu-say{
+    text-align: left;
+    background-color: #2B858C;
+    border: 1px solid #003F56;
+    border-radius: 10px 10px 10px 0px;
+    padding-top: 20px;
+    p:first-child{
+        margin-top: 15px;
+    }
+}
+
+.staff-say{
+    text-align: right;
+    background-color: #1A7EA5;
+    border: 1px solid #1F4272;
+    border-radius: 10px 10px 00px 10px;
+    padding-top: 20px;
+    p:first-child{
+        margin-top: 15px;
+    }
+}
+
+// ---------- Back to top button 56px ----------
+
+.toTop-arrow{
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    opacity: 0.6;
+    background: #000;
+    cursor: pointer;
+    position:fixed;
+    right: 1rem;
+    bottom: 5rem;
+    display: none;
+}
+
+.toTop-arrow::before, .toTop-arrow::after{
+    width: 29px;
+    height: 5px;
+    border-radius: 3px;
+    background: #FEFDFF;
+    position: absolute;
+    content: "";
+}
+
+.toTop-arrow::before{
+    transform: rotate(-45deg) translate(0, -50%);
+    left: 0.4rem;
+}
+
+.toTop-arrow::after{
+    transform: rotate(45deg) translate(0, -50%);
+    right: 0.4rem;
+}
+
+.toTop-arrow:focus{outline: none;}
+
+// ---------- footer ----------
+
+.footerspace{
+    margin-top: 71px;
+}
+
+.footericon{
+    font-size: 30px;
+}
+
+footer{
+    margin-top: 100px;
+    padding: 25px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(18, 50, 69);
+    a, a:visited, a:hover{
+        color: #FEFDFF
+    }
+    p{
+        display: inline;
+        margin: 2em auto;
+        padding-right:0.5em;
+        padding-left:1em;
+    }
+    p.email{
+        border-left: 1px solid #FEFDFF;
+        border-right: 1px solid #FEFDFF;
+    }
+}

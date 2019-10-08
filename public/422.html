@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Request rejected. (422)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
 
     body{
-      background-image: url(./images/64799.jpg);
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position:left top;
+      background-color: #FEFDFF;
+      letter-spacing: 1px
     }
 
     img{
@@ -20,14 +18,10 @@
       display: block;
     }
 
-    .arrowdown{
-      width: 10%;
-    }
-
     .italicfont{
       font-family: Georgia;
       text-align: center;
-      color: whitesmoke;
+      color: #333;
       font-style: italic;
       margin-bottom: 2em;
     }
@@ -41,24 +35,49 @@
     }
 
     footer{
-    padding: 25px 10px;
-    text-align: center;
-    background-color: rgba(5, 15, 31, 0.7);
-    color: whitesmoke
+      font-family: 'Noto Sans TC', serif;
+      padding: 25px;
+      text-align: center;
+      background-color: #123245;
+      color: #FEFDFF;
+      vertical-align: middle;
+      
+    }
+
+    a{
+      color: #FEFDFF
+    }
+
+    .map{
+      margin-bottom: 150px;
     }
 
     footer p{
-    font-size: 12px;
-    font-style: normal;
-  }
-    
+      font-size: 14px;
+      display: inline;
+      padding: 0 1em;
+    }
+
+    p.email{
+      border-right: 1px solid #FEFDFF;
+      border-left: 1px solid #FEFDFF;
+    }
+
+    .footerspace{
+        margin-top: 100px;
+    }
+
+    .contact{
+      display: inline;
+      white-space: nowrap;
+    }
     </style>
 </head>
 
 <body class="">
   <div class="container">
-    <img src="./images/rejected.png">
-  <h1 class="italicfont>The change you wanted was rejected.</h1>
+    <img src="./images/rejected.png" class="col-10 col-12">
+  <p class="italicfont">The change you wanted was rejected.</p>
   <p class="italicfont">
     Maybe you tried to change something you didn't have access to.
   </p>
@@ -68,21 +87,44 @@
   <p class="italicfont">
     Direct to homepage, you need :
   </p>
-  <img src="./images/arrow-down.gif" alt="arrow down" class="arrowdown">
     <p class="italicfont">Please repeat the spell</p>
     <p class="italicfont">and</p>
     <p class="italicfont">click the map.</p>
     <p class="italicfont">"I solemnly swear that I am up to good."</p>
-    <a href="./"><img src="./images/12338.png"></a>
+    <a href="./"><img src="./images/12338.png" class="map"></a>
   </div>
 
-
-
-  <footer>
-    <p>TEL : (02) 1787-1687</p>
-    <p>Email : ohmywage@ohmywage.com</p>
-    <p>Address : 5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-  </footer>
+  <footer class="fixed-bottom">
+      <div class="container d-flex justify-content-center flex-fill">
+        <div class="col-12">
+          <div class="contact">
+            <a href="tel:+886223315247">
+              <p>
+                <i class="fas fa-phone-volume"></i>
+                (02) 2331-5247
+              </p>
+            </a>
+          </div>
+          <div class="contact">
+            <a href="mailto:admin@oh-my-wage.website">
+              <p class="email">
+                <i class="far fa-envelope"></i>
+                admin@oh-my-wage.website
+              </p>
+            </a>
+          </div>
+          <div class="contact">
+            <a href="https://ubin.io/TyZN7E">
+              <p>
+                <i class="fas fa-map-marked-alt"></i>
+                台北市中正區衡陽路7號5樓
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

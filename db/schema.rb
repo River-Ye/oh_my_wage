@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_085750) do
+ActiveRecord::Schema.define(version: 2019_10_04_075432) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "department_with_users", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "department_id"
+    t.bigint "user_id"
+    t.bigint "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["department_id"], name: "index_department_with_users_on_department_id"
@@ -27,8 +30,19 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
   create_table "reply_to_issues", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
@@ -37,10 +51,10 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
   end
 
   create_table "salaries", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "date"
-    t.integer "hr", default: 0
-    t.integer "hourly_wage", default: 0
+    t.integer "hr", default: 1
+    t.integer "hourly_wage", default: 150
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_salaries_on_user_id"
@@ -59,8 +73,19 @@ ActiveRecord::Schema.define(version: 2019_09_30_085750) do
     t.integer "role", default: 2
     t.string "phone"
     t.integer "gender", default: 0
+    t.string "slug"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
+  add_foreign_key "department_with_users", "departments"
+  add_foreign_key "department_with_users", "users"
+  add_foreign_key "reply_to_issues", "users"
+  add_foreign_key "salaries", "users"
 end

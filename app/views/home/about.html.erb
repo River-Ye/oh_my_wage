@@ -2,11 +2,38 @@
 <img src="<%= asset_path('aboutus.png') %>", class="infotitle">
 <h1 class="zhtitle">關於我們</h1>
 <div class="contentinfo">
-    <p>
-        只要是成功入學霍格華茲學院的學生皆會開通此網站的帳戶，以便有工讀需求時各處室方便登記工時，也讓學生能夠隨時查看自己工讀時數的詳細情形。
-    </p>
-</div>
+    <div class="d-flex flex-row row col-12 about">
+        <div class="stu">
+            <div class="stu-say p-2">
+                <p>「唉～這個⽉⼯讀薪資何時下來呢？」</p>
+                <p>「餐廳那邊有確實登錄好我今天工讀時數嗎？」</p>
+                <p>BY 學生 哈利Ｘ特</p>
+            </div>
+        </div>
+    </div>
+        
+    <div class="d-flex flex-row-reverse col-12 about staff">
+        <div class="sta">
+            <div class="staff-say p-2">
+                <p>「工作忙翻了！電腦⼜遠！即時登錄⼯讀學⽣時數好麻煩啊！」</p>
+                <p>「新工讀學⽣⼀個⼀個 key 好累啊！」</p>
+                <p>BY 教職員 石Ｘ卜</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row col-12 about justify-content-center">
+        <h2>不用再煩惱了！</h2>
+    </div>
+    <div class="d-flex flex-row col-12 about justify-content-center">
+        <div>
+            <p>Oh My Wage 團隊的霍格華茲學院工讀薪資系統，</p>
+            <p>給您「即時、方便 、簡單」的科技體驗，享受資訊往來就在彈指之間！</p>
+        </div>
+    </div>
+
+    </div>
 <div class="center-block">
-    <%= link_to "回到首頁", :back, class: 'btn btn-dark btn-lg' %>
+    <%= link_to "回到首頁", '/', class: 'btn btn-dark btn-lg' %>
 </div>
 </body>

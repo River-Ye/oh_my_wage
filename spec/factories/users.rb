@@ -2,30 +2,30 @@ FactoryBot.define do
 
   factory :admin, class: User do
     name { Faker::Movies::HarryPotter.character }
-    number { Faker::Code.nric }
+    sequence(:number, '001') { |n| "a000#{n}" }
     password {'123123'}
-    phone { ['09', 8.times.map{rand(10)}].join }
-    email { "admin@123.123" }
+    phone { ['09006', 5.times.map{rand(10)}].join }
+    sequence(:email, '001') { |n| "admin#{n}@oh-my-wage" }
     gender { [0, 1].sample }
     role { 0 }
   end
 
   factory :staff, class: User do
     name { Faker::Movies::HarryPotter.character }
-    number { Faker::Code.nric }
+    sequence(:number, '001') { |n| "t000#{n}" }
     password {'123123'}
-    phone { ['09', 8.times.map{rand(10)}].join }
-    email { ['t', 5.times.map{rand(10)}, "@123.123"].join }
+    phone { ['09010', 5.times.map{rand(10)}].join }
+    sequence(:email, '001') { |n| "t#{n}@oh-my-wage" }
     gender { [0, 1].sample }
     role { 1 }
   end
   
   factory :student, class: User do
     name { Faker::Movies::HarryPotter.character }
-    number { Faker::Code.nric }
+    sequence(:number, '001') { |n| "s000#{n}" }
     password {'123123'}
-    phone { ['09', 8.times.map{rand(10)}].join }
-    email { ['s', 5.times.map{rand(10)}, "@123.123"].join }
+    phone { ['09005', 5.times.map{rand(10)}].join }
+    sequence(:email, '001') { |n| "s#{n}@oh-my-wage" }
     gender { [0, 1].sample }
     role { 2 }
   end
