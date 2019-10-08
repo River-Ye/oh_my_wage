@@ -176,7 +176,24 @@ p#timecount{
     border-color: #74CDB6;
     color: #333;
 }
- 
+
+.btn-add{
+    background-color: #F4B610;
+    color: #333;
+    border: 1px solid #F4B610;
+
+    li.page-item.disabled > a.page-link{
+        background-color:  rgba(51, 51, 51, 0.8);
+        border: 1px solid rgba(51, 51, 51, 0.8);
+        color: #FEFDFF
+    }
+}
+
+.btn-add:hover{
+    background-color: #74CDB6;
+    border-color: #74CDB6;
+}
+
 .btn-dark{
     transition: 0.3s;
     .btn-md{
