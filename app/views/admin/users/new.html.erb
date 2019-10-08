@@ -21,11 +21,11 @@
         <%= f.input :phone, label: '手機', input_html: { maxlength: 10 }, placeholder: '0987654321' %>
       </div>
       <div class="col-4">
-        <%= f.input :password, input_html: {value: '123123'} %>
+        <%= f.input :password, input_html: { value: '123123' } %>
       </div>
     </div>
 
-    <%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
-    <%= f.button :submit, '新增', class: 'btn-success btn-lg' %>
+    <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+    <%= f.button :submit, '新增', class: 'btn-green btn-md' %>
   </div>
 <% end %>

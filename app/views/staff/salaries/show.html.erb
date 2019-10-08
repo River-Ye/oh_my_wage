@@ -1,7 +1,11 @@
 <h1 class="verticalspace">個人薪資明細</h1>
+
+<meta charset='utf-8' />
+<%= wicked_pdf_stylesheet_link_tag "pdf" %>
 <h2>Wage Settlement</h2>
-<h4><%= @salary.user.name %> 學生</h4>
-<table class="table table-hover table-sm">
+
+<h4><%= @salary.user.name %> 同學</h4>
+<table class="table table-sm">
   <thead>
     <tr>
       <th>日期</th>
@@ -16,16 +20,19 @@
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
       <td><%= salary.hr %></td>
       <td><%= salary.hourly_wage %></td>
-      <td><%= salary.hr * salary.hourly_wage %></td>
+      <td><%= money(salary) %></td>
     </tr>
   <% end %>
     <tr>
       <td>總計</td>
-      <td><%= @salary_all.map{ |salary| salary.hr }.sum %> 時</td>
+      <td><%= calculate_salary_hr %> 時</td>
       <td></td>
-      <td><%= @salary_all.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
+      <td><%= calculate_salary_sum %> 元</td>
     </tr>
   </tbody>
 </table>
-<%= link_to "上一頁", :back, class: 'btn btn-primary btn-xs' %>
-<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-success btn-xs',:form => {"data-type" => "pdf" }  %>
+
+
+<%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" %>
+

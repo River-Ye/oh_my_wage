@@ -13,4 +13,14 @@ class Salary < ApplicationRecord
     end_of_month = month_date.end_of_month.end_of_day
     where(date: beginning_of_month..end_of_month)
   end
+
+  def self.this_month
+    where(date: when_monthly)
+  end
+
+  def self.when_monthly
+    beginning_of_month = Date.today.beginning_of_month.beginning_of_day
+    end_of_month = beginning_of_month.end_of_month
+    beginning_of_month..end_of_month
+  end
 end

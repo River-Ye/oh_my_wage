@@ -1,37 +1,37 @@
 <h1 class="verticalspace">歷史資料</h1>
 
 <%= form_tag(student_history_path, method: :get) do %>
-  <%= text_field_tag :search, "", placeholder: '請輸入日期', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-success btn-lg"%>
+  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
 <% end %>
-<%= paginate @student, theme: 'twitter-bootstrap-4' %>
+<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
 <table class='table'>
   <thead>
-    <td>日期</td>
-    <td>工時</td>
-    <td>時薪</td>
-    <td>小計</td>
+    <th>日期</th>
+    <th>工時</th>
+    <th>時薪</th>
+    <th>小計</th>
   </thead>
   <tbody>
-    <% @student.each do |salary| %>
+    <% @salary.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 小時</td>
+      <td><%= salary.hr %> 時</td>
       <td><%= salary.hourly_wage %> 元</td>
-      <td><%= salary.hourly_wage * salary.hr %> 元</td>
+      <td><%= money(salary) %> 元</td>
     </tr>
     <% end %>
     <tr>
       <td>總計</td>
-      <td><%= @student.map{ |salary| salary.hr }.sum %> 時</td>
+      <td><%= calculate_student_salary_hr %> 時</td>
       <td></td>
-      <td><%= @student.map{ |salary| salary.hourly_wage * salary.hr }.sum %> 元</td>
+      <td><%= calculate_studen_salary_sum %> 元</td>
     </tr>
   </tbody>
 </table>
 <div class="container">
   <div class="row">
-    <%= link_to "首頁", student_root_path, class: 'btn btn-primary btn-xs' %>
+    <%= link_to "回主選單", student_root_path, class: 'btn btn-dark btn-md' %>
   </div>
 </div>
 

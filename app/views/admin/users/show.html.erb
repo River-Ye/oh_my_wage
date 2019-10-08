@@ -1,23 +1,41 @@
 <% if @user %>
-  <ul>
-    <li>角色：<%= @user.role %></li>
-    <li>編號：<%= @user.number %></li>
-    <li>姓名：<%= @user.name %></li>
-    <li>工作單位：
-      <% if @user.departments.map{|x| x.name}.empty? && @user.admin? %>
-        管理部
-      <% elsif @user.departments.map{|x| x.name}.empty? %>
-        沒有隸屬任何單位
-      <% else %>
-        <%= @user.departments.map{|x| x.name}.uniq.join("、") %>
-      <% end %>
-    </li>
-    <li>手機：<%= @user.phone %></li>
-    <li>性別：<%= @user.gender %></li>
-    <li>信箱：<%= @user.email %></li>
-  </ul>
+<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
+  <tbody>
+    <tr>
+      <th>權限</th>
+      <td><%= @user.role %></td>
+    </tr>
+    <tr>
+      <th>編號</th>
+      <td><%= @user.number %></td>
+    </tr>
+    <tr>
+      <th>姓名</th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <th>工作單位</th>
+      <td>
+        <%= user_department %>
+      </td>
+    </tr>
+    <tr>
+      <th>手機</th>
+      <td><%= @user.phone %></td>
+    </tr>
+    <tr>
+      <th>性別</th>
+      <td><%= @user.gender %></td>
+    </tr>
+    <tr>
+      <th>信箱</th>
+      <td><%= @user.email %></td>
+    </tr>
+  </tbody>
+</table>
 <% else %>
   <h1>沒有這個人</h1>
 <% end %>
-
-<%= link_to "上一頁", :back, class: 'btn btn-secondary' %>
+<div class="center-block">
+  <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+</div>

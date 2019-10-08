@@ -41,10 +41,15 @@
       background-color: #123245;
       color: #FEFDFF;
       vertical-align: middle;
+      
     }
 
     a{
       color: #FEFDFF
+    }
+
+    .map{
+      margin-bottom: 150px;
     }
 
     footer p{
@@ -61,13 +66,18 @@
     .footerspace{
         margin-top: 100px;
     }
+
+    .contact{
+      display: inline;
+      white-space: nowrap;
+    }
     </style>
 </head>
 
 <body class="">
   <div class="container">
-    <img src="./images/rejected.png">
-  <h2 class="italicfont">The change you wanted was rejected.</h2>
+    <img src="./images/rejected.png" class="col-10 col-12">
+  <p class="italicfont">The change you wanted was rejected.</p>
   <p class="italicfont">
     Maybe you tried to change something you didn't have access to.
   </p>
@@ -81,30 +91,36 @@
     <p class="italicfont">and</p>
     <p class="italicfont">click the map.</p>
     <p class="italicfont">"I solemnly swear that I am up to good."</p>
-    <a href="./"><img src="./images/12338.png"></a>
+    <a href="./"><img src="./images/12338.png" class="map"></a>
   </div>
 
   <footer class="fixed-bottom">
-    <div class="container d-flex justify-content-center flex-fill">
-      <div class="col-md-12">
-        <a href="tel:+886223315247">
-          <p>
-            <i class="fas fa-phone-volume"></i>
-            (02) 2331-5247
-          </p>
-        </a>
-        <a href="mailto:admin@oh-my-wage.website">
-          <p class="email">
-            <i class="far fa-envelope"></i>
-            admin@oh-my-wage.website
-          </p>
-        </a>
-        <a href="https://ubin.io/TyZN7E">
-          <p>
-            <i class="fas fa-map-marked-alt"></i>
-            台北市中正區衡陽路7號5樓
-          </p>
-        </a>
+      <div class="container d-flex justify-content-center flex-fill">
+        <div class="col-12">
+          <div class="contact">
+            <a href="tel:+886223315247">
+              <p>
+                <i class="fas fa-phone-volume"></i>
+                (02) 2331-5247
+              </p>
+            </a>
+          </div>
+          <div class="contact">
+            <a href="mailto:admin@oh-my-wage.website">
+              <p class="email">
+                <i class="far fa-envelope"></i>
+                admin@oh-my-wage.website
+              </p>
+            </a>
+          </div>
+          <div class="contact">
+            <a href="https://ubin.io/TyZN7E">
+              <p>
+                <i class="fas fa-map-marked-alt"></i>
+                台北市中正區衡陽路7號5樓
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
