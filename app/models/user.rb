@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :salaries, -> { order(date: :desc) }, dependent: :destroy
   has_many :reply_to_issues, dependent: :destroy
   has_many :department_with_users, dependent: :destroy
-  has_many :departments, through: :department_with_users, dependent: :destroy
+  has_many :departments, through: :department_with_users
 
   accepts_nested_attributes_for :salaries, reject_if: :all_blank, allow_destroy: true
 
