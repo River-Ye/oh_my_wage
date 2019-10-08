@@ -323,8 +323,31 @@ p#timecount{
     color:#ccc;
 }
 
+.table-condensed{
+    background-color: #74B1BF;
+    th{
+        background-color: #3D606E;
+    }
+    th.datepicker-switch:hover,
+    th.next:hover,
+    th.prev:hover{
+        background-color: #183441;
+    }
+    tr:hover,td:hover{
+        background-color: #74B1BF;
+    }
+}
+
 span.month.focused{
-    background-color: #123245 !important;
+    background-color: #183441 !important;
+}
+
+span.month.focused.active{
+    background-color: #183441 !important;
+}
+
+span.month:hover{
+    background-color: #183441 !important;
 }
 
 // ---------- card ----------
@@ -523,6 +546,7 @@ text-shadow: 1px 0.6px 1px #333;
 }
 
 .about.d-flex.col-12{
+    width: 100%;
     text-align: center;
     margin: 3em auto;
     h2{
@@ -534,17 +558,19 @@ text-shadow: 1px 0.6px 1px #333;
     }
 }
 
+.stu, .sta{
+    position: relative;
+}
+
 .stu::after{
     content:'';
     width: 0px;
     height: 0px;
     border-top: 30px solid #2B858C;
     display: block;
-    /* border-left: 40px solid green; */
-    /* border-bottom: 40px solid salmon; */
     border-right: 40px solid transparent;
     position: relative;
-    margin: -2px 0px 0px 1px;
+    margin: -2px 0px 0px 50px;
     left: 0px
 }
 
@@ -554,18 +580,23 @@ text-shadow: 1px 0.6px 1px #333;
     height: 0px;
     border-top: 30px solid #1A7EA5;
     display: block;
-    /* border-left: 40px solid green; */
-    /* border-bottom: 40px solid salmon; */
+    right: 0;
     border-left: 40px solid transparent;
     position: relative;
-    margin: -2px 0px 0px 755px;
+    margin: -2px 0px 0px 650px;
+}
+
+@media screen and (max-width:1279px){
+    .sta::after{
+        margin: -2px 0px 0px 500px;
+    }
 }
 
 .stu-say{
     text-align: left;
     background-color: #2B858C;
     border: 1px solid #003F56;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 10px;
     padding-top: 20px;
     p:first-child{
         margin-top: 15px;
@@ -576,7 +607,7 @@ text-shadow: 1px 0.6px 1px #333;
     text-align: right;
     background-color: #1A7EA5;
     border: 1px solid #1F4272;
-    border-radius: 10px 10px 00px 10px;
+    border-radius: 10px;
     padding-top: 20px;
     p:first-child{
         margin-top: 15px;
