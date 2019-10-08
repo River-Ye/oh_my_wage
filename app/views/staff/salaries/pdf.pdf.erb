@@ -30,20 +30,20 @@
 <table class="table table-sm pdf-table">
   <thead>
     <tr>
-      <th>日期</th>
-      <th>工時</th>
-      <th>時薪</th>
-      <th>合計</th>
+      <th>學號</th>
+      <th>姓名</th>
+      <th>當月工時總和</th>
+      <th>當月薪資總和</th>
     </tr>
   </thead>
   
   <tbody>
-  <% @salary_all.each do |salary| %>
+   <% @students.each do |student| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d")%></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= salary.hr * salary.hourly_wage %></td>
+      <td><%= student.number %></td>
+      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
+      <td><%= student.salaries.this_month_salaries_hr_sum %> 時</td>
+      <td><%= student.salaries.this_month_salaries_sum %> 元</td>
     </tr>
   <% end %>
    
