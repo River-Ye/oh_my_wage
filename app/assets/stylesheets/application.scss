@@ -68,8 +68,7 @@
 
 .center-block{
     text-align: center;
-    margin: 20px auto;
-
+    margin: auto;
 }
 
 .col-md-12{
@@ -91,6 +90,20 @@
 
 .nav-link:hover{
     color: #F5CD0B !important;
+}
+
+.navbar-collapse.collapse.show{
+    vertical-align: middle;
+}
+
+@media screen and (max-width:995px){
+    .nav-link.text-light{
+        font-size: 25px;
+        padding-left: 0.5em;
+    }
+    .list-top{
+        margin-top: 1em;
+    }
 }
 
 p#timecount{
@@ -229,8 +242,8 @@ p#timecount{
 }
 .loginblock.col-lg-4{
     width: 60%;
-    margin-top: 7.5em;
-    left: 7em;
+    margin-top: 5.7em;
+    left: 5em;
     padding: 1em;
     text-align: left;
     z-index: 1;
@@ -245,7 +258,7 @@ p#timecount{
     .form-actions{
         text-align: center;
         width: 100%;
-        margin: auto;
+        // margin: auto;
         .btn-blue, .btn-red{
             width: 40%;
             margin: 5px 10px;
@@ -254,12 +267,23 @@ p#timecount{
 }
 
 #carouselExampleSlidesOnly{
-    width: 60%;
-    margin-top: 4em;
-    right: 7em;
+    width: 1152px;
+    right: 0;
     z-index: 0;
+    margin-top: -1px;
     img.d-block.w-100{
         background-color: cover;
+    }
+}
+
+@media screen and (max-width:1027px){
+
+    #carouselExampleSlidesOnly{
+        margin-top: 4em;
+        width: 800px;
+    }
+    .loginblock.col-lg-4{
+        margin-top: 4em;
     }
 }
 
@@ -272,7 +296,7 @@ p#timecount{
         text-align: center;
 
         .loginblock.col-lg-4{
-            position: relative;
+            position: static;
             margin-top: 5.7em;
             left: auto;
             padding: 1em;
@@ -501,7 +525,7 @@ ul.pagination{
 // ---------- infopage ----------
 
 .infotitle{
-    margin: auto 0em;
+    margin: 1em 0em;
     text-align: center;
     display: block;
     margin: auto;
@@ -510,7 +534,7 @@ ul.pagination{
 
 .zhtitle{
     width: 70%;
-    margin: 0 auto 1em;
+    margin: 0 auto 0.5em;
     text-align: center;
     font-size: 50px;
 }
@@ -522,7 +546,7 @@ text-shadow: 1px 0.6px 1px #333;
 
 .contentinfo{
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 25px;
     border-radius: 10px;
     color: #FEFDFF;
@@ -532,7 +556,6 @@ text-shadow: 1px 0.6px 1px #333;
         padding: 1em;
     };
     p{
-        text-indent: 2em;
         font-size: 20px
     };
     a, a:hover, a:visited{
@@ -554,7 +577,7 @@ text-shadow: 1px 0.6px 1px #333;
         margin: 1em auto 0.5em;
     }
     p{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -569,7 +592,7 @@ text-shadow: 1px 0.6px 1px #333;
     border-top: 30px solid #2B858C;
     display: block;
     border-right: 40px solid transparent;
-    position: relative;
+    position: absolute;
     margin: -2px 0px 0px 50px;
     left: 0px
 }
@@ -582,14 +605,9 @@ text-shadow: 1px 0.6px 1px #333;
     display: block;
     right: 0;
     border-left: 40px solid transparent;
-    position: relative;
-    margin: -2px 0px 0px 650px;
-}
-
-@media screen and (max-width:1279px){
-    .sta::after{
-        margin: -2px 0px 0px 500px;
-    }
+    position: absolute;
+    margin-top: -2px;
+    margin-right: 50px;
 }
 
 .stu-say{
@@ -665,7 +683,7 @@ text-shadow: 1px 0.6px 1px #333;
 
 footer{
     margin-top: 100px;
-    padding: 25px;
+    padding: 25px 20px 20px 20px;
     font-size: 14px;
     text-align: center;
     background-color: rgb(18, 50, 69);
@@ -674,9 +692,10 @@ footer{
     }
     p{
         display: inline;
-        margin: 2em auto;
-        padding-right:0.5em;
-        padding-left:1em;
+        margin: 1em auto;
+        padding-right: 0.5em;
+        padding-left: 1em;
+        white-space: nowrap;
     }
     p.email{
         border-left: 1px solid #FEFDFF;
