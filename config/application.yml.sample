@@ -7,17 +7,19 @@
 # stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
 #
 GMAP_API_KEY: Google API KEY #必填
+# app/views/layouts/application.html.erb
 
 development:
- MAILGUN_USERNAME: MAILGUN USERNAME #必填
- MAILGUN_PASSWORD: MAILGUN_PASSWORD #必填
- 
+  MAILGUN_USERNAME: MAILGUN_帳號 #必填
+  MAILGUN_PASSWORD: MAILGUN_密碼 #必填
+  # 路徑 config/environmets/development.rb
+
 production:
- WEB_PATH: oh-my-wage.website
- MAILGUN_USERNAME: MAILGUN_USERNAME #必填
- MAILGUN_PASSWORD: MAILGUN_PASSWORD #必填
-
-
+  WEB_PATH: oh-my-wage.website
+  MAILGUN_USERNAME: MAILGUN_帳號 #必填
+  MAILGUN_PASSWORD: MAILGUN_密碼 #必填
+  # 路徑 config/environmets/production.rb
+  
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU

@@ -1,14 +1,16 @@
 # README
 
-1. clone or fetch 專案後
-2. bundle
-3. rails db:drop (換 postgresql 後若 rails db:drop 會噴錯誤訊息，請到 psql 介面下手動刪除，方法如下方所寫)
-4. rails db:create
-5. rails db:migrate
-6. rails db:seed (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門關聯假資料 、 學生薪資\*300)
-7. rails c
-8. User.all
-9. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
+1. bundle
+2. rails db:drop
+   (換 postgresql 後若 rails db:drop 會噴錯誤訊息，請到 psql 介面 下手動刪除，方法如下方所寫)
+3. rails db:create
+4. rails db:migrate
+5. rails db:seed
+   (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門 關聯假資料 、 學生薪資\*300)
+6. rails c
+7. User.all
+8. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
+9. 參考下方 HEROKU 設定
 
 ## Factorybot
 
@@ -34,14 +36,7 @@ ex:
 # drop database oh_my_wage_test;
 ```
 
-## gmap heroku
- 
-將本地端的「application.yml.sample」 裡面google金鑰資料填寫後，副檔名改成 .yml 即可
-終端機打
-figaro heroku:set -e production
-
-
-## HEROKU
+## HEROKU 資料庫操作
 
 ```sql
 查詢資料庫
@@ -61,9 +56,21 @@ $ heroku run rails db:migrate
 $ heroku run rails db:seed
 ```
 
+---
 
-## 忘記密碼
-將本地端的「application.yml.sample」 裡面mailgun帳密填寫後，副檔名改成 .yml 即可
+## HEROKU 設定
+
+### Google Map
+
+將本地端的「application.yml.sample」裡面 Google 金鑰資料填寫後，檔名改成「application.yml」即可
+終端機輸入
+
+### 忘記密碼
+
+將本地端的「application.yml.sample」裡面 mailgun 帳密填寫後，檔名改成「application.yml」即可
+
+部署 HEROKU 後，終端機輸入：
+`figaro heroku:set -e production`
 
 ---
 
