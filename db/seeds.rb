@@ -10,13 +10,13 @@ puts "Generating 150 items staff account, please wait"
 end
 puts "Done!"
 
-puts "Generating 300 items student account, please wait"
-300.times do |i|
+puts "Generating 150 items student account, please wait"
+150.times do |i|
     FactoryBot.create(:student)
 end
 puts "Done!"
 
-puts "Generating 300 items Department name"
+puts "Generating 9 items Department name"
 0.upto(8) do |i|
   Department.create(name: i)
 end
@@ -28,18 +28,18 @@ puts "Generating 150 items staff and Department ORM"
 end
 puts "Done!"
 
-puts "Generating 300 items student and Department ORM"
-300.times do |i|
-  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(301..600))
+puts "Generating 200 items student and Department ORM"
+200.times do |i|
+  DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(301..450))
 end
 puts "Done!"
 
 puts "Generating 600 items student and Salary ORM"
 600.times do |i|
-  Salary.create(user_id: rand(301..600),
+  Salary.create(user_id: rand(301..450),
                 date: rand(1.years).seconds.ago,
                 hr: rand(1..12),
-                hourly_wage: [150, 155, 160, 165, 170, 180, 200].sample)
+                hourly_wage: [150, 155, 160, 165, 170, 175, 180, 200].sample)
 end
 puts "Done!"
 
