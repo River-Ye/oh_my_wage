@@ -1,6 +1,6 @@
 class Department < ApplicationRecord
-  has_many :department_with_users, dependent: :destroy
-  has_many :users, through: :department_with_users, dependent: :destroy
+  has_many :department_with_users
+  has_many :users, through: :department_with_users
 
   enum name: { "魔法部": 0,
                "黑魔法圖書館": 1,

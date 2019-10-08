@@ -7,7 +7,16 @@ class Staff::SalariesController < ApplicationController
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to '/', notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = staff_department.users.includes(:salaries).staff_order.search(params[:search]).page(params[:page])
+      # 原本寫法
+      @students = staff_department.users.includes(:salaries).student_order.search(params[:search]).page(params[:page])
+
+      # KT 寫法
+      # @students = User.includes(:departments).without_department(staff_department).student_order.search(params[:search]).page(params[:page])
+      # byebug
+      # student_ids = @students.map(&:id)
+      # @salaries_this_month = Salary.this_month.where(user_id: student_ids).group(:user_id).pluck(:user_id, 'SUM(hr)', 'SUM(hourly_wage * hr)').reduce({}) do |rs, salary|
+      #   rs.merge!(salary[0].to_i => { hr: salary[1], wage: salary[2] })
+      # end 
     end
   end
 
