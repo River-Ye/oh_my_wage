@@ -33,10 +33,13 @@ ex:
 # drop database oh_my_wage_test;
 ```
 ## gmap heroku
-
-發佈到HEROKU 
+ 
+將本地端的「application.yml.sample」 裡面google金鑰資料填寫後，副檔名改成 .yml 即可
 終端機打
 figaro heroku:set -e production
+
+## 忘記密碼
+將本地端的「application.yml.sample」 裡面mailgun帳密填寫後，副檔名改成 .yml 即可
 
 ---
 
