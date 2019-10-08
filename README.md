@@ -35,9 +35,11 @@ ex:
 ```
 
 ## gmap heroku
+ 
+將本地端的「application.yml.sample」 裡面google金鑰資料填寫後，副檔名改成 .yml 即可
+終端機打
+figaro heroku:set -e production
 
-發佈到 HEROKU
-終端機輸入`figaro heroku:set -e production`
 
 ## HEROKU
 
@@ -58,6 +60,10 @@ $ heroku addons:create heroku-postgresql:hobby-dev
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 ```
+
+
+## 忘記密碼
+將本地端的「application.yml.sample」 裡面mailgun帳密填寫後，副檔名改成 .yml 即可
 
 ---
 
