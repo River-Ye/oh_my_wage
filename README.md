@@ -60,17 +60,32 @@ $ heroku run rails db:seed
 
 ## HEROKU 設定
 
-### Google Map
-
-將本地端的「application.yml.sample」裡面 Google 金鑰資料填寫後，檔名改成「application.yml」即可
-終端機輸入
-
 ### 忘記密碼
 
-將本地端的「application.yml.sample」裡面 mailgun 帳密填寫後，檔名改成「application.yml」即可
+將本地端的「application.yml.sample」 輸入 mailgun 提供的 Username、Default password 填寫後，檔名改成「application.yml」即可
+
+- 可用 [mailgun](https://www.mailgun.com/) 服務，將「application.yml」中的「MAILGUN_USERNAME」、「MAILGUN_PASSWORD」欄位輸入 mailgun → Sending → Domains → 點選 Name 底下的序號 → SMTP → Username、Default password (密碼要特別留意別複製到 Manage SMTP credentials )
+- mailgun 操作界面截圖如下：
+  ![](https://i.imgur.com/icOLtzG.png)
+
+### Google Map
+
+將本地端的「application.yml.sample」輸入 Google API KEY 後，檔名改成「application.yml」即可
+
+- 申請方式
+
+1. 至 [Google Cloud Platform](https://console.cloud.google.com) 申請 Google API → 右上方「控制台」 → 選取專案 → 新增專案 → 輸入「專案名稱」，可忽略機構 → 建立 → 左邊 Nav bar 點選「API 和服務」 → 資訊主頁 → 搜尋「Maps JavaScript API」 → 啟用「Maps JavaScript API」 → 左邊 Nav bar 的「API 和服務」中的「憑證」 → 建立憑證 → API 金鑰 → 複製 API 金鑰至「application.yml」檔案中的「Google_API KEY」。
+1. 接著點選左邊 Nav bar 點選「帳單」 → 連結至帳單帳戶 → 建立帳單帳戶 → 輸入信用卡號等資料 → 大功告成
+
+**注意：沒輸入信用卡號等，服務並不會真的啟用喔。**
 
 部署 HEROKU 後，終端機輸入：
-`figaro heroku:set -e production`
+
+```ruby=
+figaro heroku:set -e production
+```
+
+![](https://i.imgur.com/9WGxbDG.png)
 
 ---
 
