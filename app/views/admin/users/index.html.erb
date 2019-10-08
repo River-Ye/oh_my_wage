@@ -25,22 +25,12 @@
       <td><%= user.number %></td>
       <td><%= link_to user.name, admin_user_path(user.slug) %></td>
       <td><%= link_to "編輯", edit_admin_user_path(user.slug), class: 'btn btn-org btn-sm' %></td>
-<<<<<<< Updated upstream
       <td><%= link_to "刪除",
               admin_user_path(user.slug),
               method: 'delete',
               class: 'btn btn-red btn-sm scale-hover white-hover',
               data: {confirm: "確定要把「#{user.name}」的資料刪除嗎???"}
             %>
-=======
-      <td>
-        <%= link_to "刪除",
-            admin_user_path(user.slug),
-            method: 'delete',
-            class: 'btn btn-red btn-sm scale-hover white-hover',
-            data: {confirm: "確定要把「#{user.name}」的資料刪除嗎???"}
-          %>
->>>>>>> Stashed changes
       </td>
     </tr>
   <% end %>

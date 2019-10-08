@@ -6,7 +6,7 @@ class Staff::UsersController < ApplicationController
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to '/', notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
-      @students = User.where(id: user_section).staff_order.search(params[:search]).page(params[:page])
+      @students = User.where(id: user_section).student_order.search(params[:search]).page(params[:page])
     end
   end
 
@@ -28,10 +28,10 @@ class Staff::UsersController < ApplicationController
   private
 
   def find_student
-    if User.staff_order.friendly.where(slug: params[:id]).empty?
+    if User.student_order.friendly.where(slug: params[:id]).empty?
       redirect_to staff_users_path, notice: "沒有這個人喔!!"
     else
-      @student = User.staff_order.friendly.find(params[:id])
+      @student = User.student_order.friendly.find(params[:id])
     end
   end
 

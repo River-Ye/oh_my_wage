@@ -23,9 +23,13 @@ class User < ApplicationRecord
   enum gender: { Male: 0, Female: 1 }
 
   scope :admin_order, -> { order(role: :asc).order(number: :asc) }
-  scope :staff_order, -> { where(role: 2).order(number: :asc) }
+  scope :student_order, -> { where(role: 2).order(number: :asc) }
+
+  # KT 寫法
+  # scope :without_department, -> (dep) { joins(:departments).where.not('departments.name = ?', dep) }
 
   def self.search(search)
+    return all if search.blank?
     if search
       where(['name || email || number || role || phone || gender LIKE ?', "%#{search}%"])
     else

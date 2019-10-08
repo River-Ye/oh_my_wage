@@ -15,6 +15,12 @@ module ApplicationHelper
   def calculate_studen_salary_sum
     # studetnt/index
     # studetnt/history
-    @salary.map{ |salary| salary.hr }.sum
+    @salary.map{ |salary| salary.hr * salary.hourly_wage }.sum
+  end
+
+  def money(salary)
+    # staff/salaries/show
+    # student/user/history
+    salary.hr * salary.hourly_wage
   end
 end
