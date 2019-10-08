@@ -97,9 +97,11 @@
 }
 
 @media screen and (max-width:995px){
-    .nav-link.text-light{
+    .nav-item{
+        padding-left: 1em;
+    }
+    .nav-link, .nav-link.text-light, p#timecount{
         font-size: 25px;
-        padding-left: 0.5em;
     }
     .list-top{
         margin-top: 1em;
@@ -243,6 +245,7 @@ p#timecount{
 .loginblock.col-lg-4{
     width: 60%;
     margin-top: 5.7em;
+    margin-bottom: 10em;
     left: 5em;
     padding: 1em;
     text-align: left;
@@ -263,7 +266,10 @@ p#timecount{
             width: 40%;
             margin: 5px 10px;
         }
-    }    
+    }
+    img.rounded.mx-auto.d-block{
+        width: 50%;
+    } 
 }
 
 #carouselExampleSlidesOnly{
@@ -280,7 +286,7 @@ p#timecount{
 
     #carouselExampleSlidesOnly{
         margin-top: 4em;
-        width: 800px;
+        width: 735px;
     }
     .loginblock.col-lg-4{
         margin-top: 4em;
@@ -416,6 +422,10 @@ span.month:hover{
     }
 }
 
+@media screen and (max-width:995px){
+
+}
+
 // ---------- table ----------
 
 table.table tr{
@@ -525,11 +535,10 @@ ul.pagination{
 // ---------- infopage ----------
 
 .infotitle{
-    margin: 1em 0em;
+    margin: 1em auto 0;
     text-align: center;
     display: block;
-    margin: auto;
-    width: 100%;
+    width: 60%;
 }
 
 .zhtitle{
@@ -565,7 +574,12 @@ text-shadow: 1px 0.6px 1px #333;
 
 #map{
     height: 300px;
-    width: 40%;
+    width: 96%;
+    margin-top: 50px;
+    margin-right: 100px;
+    border: 5px solid #176591;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px #000;
 }
 
 .about.d-flex.col-12{
@@ -635,8 +649,8 @@ text-shadow: 1px 0.6px 1px #333;
 // ---------- Back to top button 56px ----------
 
 .toTop-arrow{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     padding: 0;
     margin: 0;
     border: 0;
@@ -645,13 +659,14 @@ text-shadow: 1px 0.6px 1px #333;
     background: #000;
     cursor: pointer;
     position:fixed;
-    right: 1rem;
-    bottom: 5rem;
+    right: 0.5rem;
+    bottom: 6rem;
     display: none;
+    z-index: 3;
 }
 
 .toTop-arrow::before, .toTop-arrow::after{
-    width: 29px;
+    width: 24.7px;
     height: 5px;
     border-radius: 3px;
     background: #FEFDFF;
