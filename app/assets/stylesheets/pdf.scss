@@ -47,7 +47,7 @@ body{
   width: 100%;
   margin-bottom: 10px;
   padding: 5px;
-  border-bottom: 2px solid #272727;
+  // border-bottom: 2px solid #272727;
   .mr-auto.p-2{
     margin-bottom: 1em;
   }
@@ -59,13 +59,18 @@ body{
     font-size: 20px;
   }
 }
-
+.pdf-img{
+  width: 300px;
+  height: 300px;
+}
 h1.pdf-h1{
   margin: 0.5em auto;
+  padding-top: 1em;
   text-align: center;
   font-size: 40pt;
   font-weight: 700;
   letter-spacing: 3px;
+  border-top: 2px solid #000;
 }
 
 .pdf-table{
@@ -92,7 +97,39 @@ h1.pdf-h1{
   }
 }
 
+.logo-img{
+  width: 392px;
+  height: 294px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
 
+h1.sign-h1{
+  margin: 0.5em auto;
+  padding-top: 1em;
+  text-align: center;
+  font-size: 40pt;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sign-table{
+  vertical-align: middle;
+  margin: 5em auto;
+  text-align: center;
+  border: 1px solid #272727;
+  .sign-area{
+    line-height: 5em;
+  }
+  th, td{
+    border: 1px solid #272727;
+  }
+  td > p{
+    color: transparent;
+  }
+}
 
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;

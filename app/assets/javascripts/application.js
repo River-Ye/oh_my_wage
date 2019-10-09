@@ -18,4 +18,6 @@
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require cocoon
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .

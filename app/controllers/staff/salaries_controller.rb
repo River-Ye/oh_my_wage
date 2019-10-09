@@ -56,10 +56,14 @@ class Staff::SalariesController < ApplicationController
       format.pdf{ 
         render template:'staff/salaries/pdf',
         pdf:'pdf',
-        orientation: 'Landscape',
+        # orientation: 'Landscape',
         :encoding => "UTF-8" }
     end
 
+  end
+
+  def chart
+    @students = staff_department.users.includes(:salaries).student_order.search(params[:search])   
   end
 
   private
