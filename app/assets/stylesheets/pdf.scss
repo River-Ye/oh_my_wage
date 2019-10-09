@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 @font-face {
   font-family: 'NotoSansTC-Light';
   font-style: normal;
@@ -39,42 +40,43 @@
 }
 
 body{
-  font-family: 'Noto Sans TC', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'NotoSansTC-Regular';
 }
 
 .pdf-school{
   width: 100%;
-  margin-bottom: 0.5em;
+  margin-bottom: 10px;
   padding: 5px;
-  border-bottom: 2px solid #272727;
+  // border-bottom: 2px solid #272727;
+  .mr-auto.p-2{
+    margin-bottom: 1em;
+  }
   h3{
     line-height: 1.5em;
-    font-size: 40px;
+    font-size: 30px;
   }
-  h4, p{
-    font-size: 25px;
+  p{
+    font-size: 20px;
   }
 }
-
+.pdf-img{
+  width: 300px;
+  height: 300px;
+}
 h1.pdf-h1{
   margin: 0.5em auto;
+  padding-top: 1em;
   text-align: center;
   font-size: 40pt;
   font-weight: 700;
   letter-spacing: 3px;
-}
-
-.pdf-stu-info{
-  line-height: 2em;
-  text-align: left;
-  font-size: 30pt;
-  font-weight: 300;
+  border-top: 2px solid #000;
 }
 
 .pdf-table{
   width: 100%;
   font-weight: 400;
-  line-height: 2em;
+  line-height:110px;
   border: #272727;
   text-align: center;
   tr{
@@ -95,7 +97,39 @@ h1.pdf-h1{
   }
 }
 
+.logo-img{
+  width: 392px;
+  height: 294px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
 
+h1.sign-h1{
+  margin: 0.5em auto;
+  padding-top: 1em;
+  text-align: center;
+  font-size: 40pt;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sign-table{
+  vertical-align: middle;
+  margin: 5em auto;
+  text-align: center;
+  border: 1px solid #272727;
+  .sign-area{
+    line-height: 5em;
+  }
+  th, td{
+    border: 1px solid #272727;
+  }
+  td > p{
+    color: transparent;
+  }
+}
 
 table,tr,td,th,tbody,thead,tfoot{
     page-break-inside: avoid !important;

@@ -10,12 +10,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,500,600,700,800,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif:400,700&display=swap" rel="stylesheet">
 </head>
 
-<div class="d-flex pdf-school">
-  <div class="mr-auto p-2">
+<div class="pdf-school">
+  <div class="logo-img float-right">
+    <%= wicked_pdf_image_tag 'logo.png' %>
+</div>
+
+<div class="pdf-school">  
+  <div class="">
     <h3>霍格華茲學院</h3>
     <h3 class="">Hogwarts School of Witchcraft and Wizardry</h3>
   </div>
-  <div class="p-2">
+  <div class="">
     <p>(02) 23315247</p>
     <p>100台北市中正區衡陽路7號</p>
     <p>No. 7, Hengyang Rd., Zhongzheng Dist.,</p>
@@ -34,7 +39,7 @@
       <th>日期</th>
       <th>工時</th>
       <th>時薪</th>
-      <th>合計</th>
+      <th>試算</th>
     </tr>
   </thead>
   
@@ -50,3 +55,24 @@
    
   </tbody>
 </table>
+
+<h1 class="sign-h1">簽核</h1>
+
+<table class="sign-table table table-sm pdf-table" >
+  <thead>
+    <tr>
+      <th><p>該處室負責人員</p></th>
+      <th><p>該處室主管</p></th>
+      <th><p>會計事務處</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="sign-area">
+      <td><p>簽核處</p></td>
+      <td><p>簽核處</p></td>
+      <td><p>簽核處</p></td>
+    </tr>
+  </tbody>
+</table>
+
+

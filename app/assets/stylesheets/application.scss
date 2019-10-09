@@ -126,6 +126,13 @@ p#timecount{
     transition: 0.3s;
 }
 
+
+.btn:focus, .btn-dark:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    $btn-focus-box-shadow: none !important;
+}
+
 .btn-red{
     background-color: #8b0000;
     border: #8b0000;
@@ -559,20 +566,6 @@ text-shadow: 1px 0.6px 1px #333;
 }
 
 .contentinfo{
-    .worker{
-        width: 95%;
-        margin: 1em auto;
-        border-radius: 10px;
-        box-shadow:0px 18px 20px -20px #000;
-        p{
-            margin: 1em;
-        }
-    }
-    img.workerimg{
-        width: 100px;
-        height: 100px;
-        margin: 1em;
-    }
     margin: auto;
     margin-bottom: 50px;
     padding: 25px;
@@ -588,7 +581,31 @@ text-shadow: 1px 0.6px 1px #333;
     };
     a, a:hover, a:visited{
         color: #FEFDFF
-    }    
+    }
+    .worker{
+        width: 95%;
+        margin: 1em auto;
+        border-radius: 10px;
+        box-shadow:0px 18px 20px -20px #000;
+        p{
+            margin: 1em;
+        }
+    }
+    img.workerimg{
+        width: 100px;
+        height: 100px;
+        margin: 1em;
+        background-color: #A0C3D8;
+        border-radius: 50%;
+    }
+    .worker-int{
+        border: 1px solid salmon;
+        img{
+            width: 200px;
+            height: 200px;
+            margin: auto 3em;
+        }
+    }
 }
 
 #map{
