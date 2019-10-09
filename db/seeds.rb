@@ -1,40 +1,40 @@
-puts "Generating 150 items admin account, please wait"
+puts "產生 150 個「管理者」帳號, 請稍等..."
 150.times do |i|
   FactoryBot.create(:admin)
 end
 puts "Done!"
 
-puts "Generating 150 items staff account, please wait"
+puts "產生 150 個「職員」帳號, 請稍等..."
 150.times do |i|
     FactoryBot.create(:staff)
 end
 puts "Done!"
 
-puts "Generating 150 items student account, please wait"
+puts "產生 150 個「學生」帳號, 請稍等..."
 150.times do |i|
     FactoryBot.create(:student)
 end
 puts "Done!"
 
-puts "Generating 9 items Department name"
+puts "產生 9 個部門名稱"
 0.upto(8) do |i|
   Department.create(name: i)
 end
 puts "Done!"
 
-puts "Generating 150 items staff and Department ORM"
+puts "產生 150 筆「職員」與「部門」關聯"
 151.upto(300) do |i|
   DepartmentWithUser.create(department_id: rand(1..9), user_id: i)
 end
 puts "Done!"
 
-puts "Generating 200 items student and Department ORM"
+puts "產生 200 筆「學生」與「部門」關聯"
 200.times do |i|
   DepartmentWithUser.create(department_id: rand(1..9), user_id: rand(301..450))
 end
 puts "Done!"
 
-puts "Generating 600 items student and Salary ORM"
+puts "產生 600 筆「學生」薪資紀錄"
 600.times do |i|
   Salary.create(user_id: rand(301..450),
                 date: rand(1.years).seconds.ago,

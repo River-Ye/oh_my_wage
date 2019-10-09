@@ -19,8 +19,8 @@ class User < ApplicationRecord
   validates :number, uniqueness: true
   validates :phone, length: { is: 10 }
   
-  enum role: { admin: 0, staff: 1, student: 2 }
-  enum gender: { Male: 0, Female: 1 }
+  enum role: { '管理者': 0, '職員': 1, '學生': 2 }
+  enum gender: { '男': 0, '女': 1 }
 
   scope :admin_order, -> { order(role: :asc).order(number: :asc) }
   scope :student_order, -> { where(role: 2).order(number: :asc) }

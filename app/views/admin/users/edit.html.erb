@@ -6,13 +6,13 @@
        <%= f.input :number, label: '學號：' %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
-        <%= f.input :role, label: '權限：', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
+        <%= f.input :role, label: '權限：', collection: { "管理者": "管理者", "職員": "職員", "學生": "學生" } %>
       </div>
       <div class="col-lg-8 col-md-12 col-sm-12">
         <%= f.input :name, label: '姓名：' %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
-        <%= f.input :gender, label: '性別：', collection: { "男": "Male", "女": "Female" } %>
+        <%= f.input :gender, label: '性別：', collection: { "男": "男", "女": "女" } %>
       </div>
       <div class="col-lg-8 col-md-12 col-sm-12">
         <%= f.input :email, label: '信箱：', required: true, placeholder: 'example@school.com' %>
