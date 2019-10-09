@@ -25,7 +25,11 @@ Rails.application.routes.draw do
 
   namespace 'staff' do
     resources 'users', only: [:index, :show, :update]
-    resources 'salaries', except: [:new, :create]
+    resources 'salaries', except: [:new, :create] do
+      collection  do
+        get :pdf
+      end  
+    end   
     get 'history', to: 'user#history'
     get 'home', to: 'users#home'
     root 'users#home'

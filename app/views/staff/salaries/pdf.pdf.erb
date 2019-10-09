@@ -24,8 +24,6 @@
 
 <h1 class="pdf-h1">工讀薪資明細</h1>
 
-<p class="pdf-stu-info">學號：<%= @salary.user.number %></p>
-<p class="pdf-stu-info">姓名：<%= @salary.user.name %></p>
 
 <table class="table table-sm pdf-table">
   <thead>
@@ -36,18 +34,11 @@
       <th>當月薪資總和</th>
     </tr>
   </thead>
-  
-  <tbody>
-   <% @students.each do |student| %>
+    <% @students.each do |student| %>
     <tr>
       <td><%= student.number %></td>
-      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
-      <td><%= student.salaries.this_month_salaries_hr_sum %> 時</td>
-      <td><%= student.salaries.this_month_salaries_sum %> 元</td>
+      <td><%= student.name %></td>
+      <td><%= salary_hr(student) %> 時</td>
+      <td><%= salary_sum(student) %> 元</td>
     </tr>
   <% end %>
-   
-  </tbody>
-</table>
-
-

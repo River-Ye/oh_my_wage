@@ -1,7 +1,7 @@
 class Staff::SalariesController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show, :edit, :update, :destroy]
-  before_action :find_when_monthly_salary, only: [:index]
+  before_action :find_when_monthly_salary, only: [:index,:pdf]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
@@ -9,7 +9,7 @@ class Staff::SalariesController < ApplicationController
     else
       # 原本寫法
       @students = staff_department.users.includes(:salaries).student_order.search(params[:search]).page(params[:page])
-
+    
       # KT 寫法
       # @students = User.includes(:departments).without_department(staff_department).student_order.search(params[:search]).page(params[:page])
       # byebug
@@ -26,11 +26,7 @@ class Staff::SalariesController < ApplicationController
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
       @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc)
-      respond_to do |format|
-        format.html
-        format.json
-        format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf',:encoding => "UTF-8" }
-      end
+      
     end
   end
   
@@ -50,6 +46,16 @@ class Staff::SalariesController < ApplicationController
     out = DepartmentWithUser.where(department_id: staff_department, user_id: @student)
     DepartmentWithUser.delete(out)
     redirect_to staff_salaries_path, notice: "#{@student.name} 已從 #{staff_department.name} 剔除!!"
+  end
+
+  def pdf
+    @students = staff_department.users.includes(:salaries).student_order.search(params[:search])
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf',:encoding => "UTF-8" }
+    end
+
   end
 
   private
