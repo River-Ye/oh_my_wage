@@ -24,7 +24,6 @@
 
 <h1 class="pdf-h1">工讀薪資明細</h1>
 
-
 <table class="table table-sm pdf-table">
   <thead>
     <tr>
@@ -34,6 +33,7 @@
       <th>當月薪資總和</th>
     </tr>
   </thead>
+   <tbody>
     <% @students.each do |student| %>
     <tr>
       <td><%= student.number %></td>
@@ -41,4 +41,6 @@
       <td><%= salary_hr(student) %> 時</td>
       <td><%= salary_sum(student) %> 元</td>
     </tr>
-  <% end %>
+    <% end %>
+    </tbody>
+</table>
