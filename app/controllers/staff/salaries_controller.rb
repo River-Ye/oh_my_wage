@@ -62,10 +62,6 @@ class Staff::SalariesController < ApplicationController
 
   end
 
-  def chart
-    @students = staff_department.users.includes(:salaries).student_order.search(params[:search])   
-  end
-
   private
   
   def find_student

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   namespace 'student' do
     get 'history', to: 'user#history'
     root 'user#index'
+    get 'chart', to: 'user#chart'
   end
 
   namespace 'staff' do
