@@ -55,6 +55,6 @@ class Admin::UsersController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'admin'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == '管理者'
   end
 end

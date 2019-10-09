@@ -44,6 +44,6 @@ class Staff::UsersController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == '職員'
   end
 end
