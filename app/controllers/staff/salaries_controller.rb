@@ -53,7 +53,11 @@ class Staff::SalariesController < ApplicationController
     respond_to do |format|
       format.html
       format.json
-      format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf',:encoding => "UTF-8" }
+      format.pdf{ 
+        render template:'staff/salaries/pdf',
+        pdf:'pdf',
+        orientation: 'Landscape',
+        :encoding => "UTF-8" }
     end
 
   end
