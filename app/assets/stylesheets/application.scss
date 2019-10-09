@@ -22,9 +22,13 @@
 
 .alert{
     margin-bottom: 0px;
+    color: #FEFDFF;
+    background-color: rgba(23, 101, 145, 0.5);
+    border: none;
+    border-radius: 0;
 }
 
-.alert-warning{
+.alert-#{alert_class}{
     color: #FEFDFF;
     background-color: rgba(23, 101, 145, 0.5);
     border: none;
