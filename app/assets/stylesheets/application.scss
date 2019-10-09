@@ -128,6 +128,7 @@ p#timecount{
 .btn{
     margin-right: 5px;
     transition: 0.3s;
+    height: 2.3em;
 }
 
 
@@ -141,7 +142,6 @@ p#timecount{
     background-color: #8b0000;
     border: #8b0000;
     color: #FEFDFF;
-    height: 2.3em;
 }
 
 .btn-red:hover{
@@ -150,10 +150,16 @@ p#timecount{
 }
 
 .btn-pdf{
+<<<<<<< Updated upstream
     background:#8A000A !important;
     border: #8A000A !important;
     color: #FEFDFF !important;
     height: 2.3em;
+=======
+    background:#8A000A;
+    border: #8A000A;
+    color: #FEFDFF;
+>>>>>>> Stashed changes
 }
 
 .btn-pdf:hover{
@@ -177,7 +183,6 @@ p#timecount{
     background-color: #176591;
     color: #FEFDFF;
     border: 1px solid #176591;
-    height: 2.3em;
 }
 .btn-blue:hover{
     background-color: #80C6F2;
@@ -202,6 +207,7 @@ p#timecount{
     border-color: #74CDB6;
     color: #333;
 }
+<<<<<<< Updated upstream
 
 .btn-add{
     background-color: #F4B610;
@@ -221,15 +227,26 @@ p#timecount{
 }
 
 .btn-dark{
+=======
+ 
+.btn-gray{
+    background-color: #333;
+    border: 1px solid #333;
+    color: #FEFDFF;
+>>>>>>> Stashed changes
     transition: 0.3s;
-    .btn-md{
-        margin-left: 1em !important
-    }
 }
 
+<<<<<<< Updated upstream
 .btn-dark:hover{
     background-color: #666 !important;
     border: 1px solid #666 !important;
+=======
+.btn-gray:hover{
+    background-color: #666;
+    border: 1px solid #666;
+    color: #FEFDFF;
+>>>>>>> Stashed changes
 }
  
 #search{

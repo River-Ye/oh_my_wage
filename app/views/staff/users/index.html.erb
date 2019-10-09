@@ -30,6 +30,12 @@
   </tbody>
 </table>
 
+<<<<<<< Updated upstream
 <%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
 <%= link_to "回主選單", staff_root_path, class: 'btn btn-dark btn-md' %>
 <%= link_to "pdf", pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" %>
+=======
+<%= paginate @students, theme: 'twitter-bootstrap-4' %>
+
+<%= link_to "回主選單", staff_root_path, class: 'btn btn-gray btn-md' %>
+>>>>>>> Stashed changes

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <h1 class="pdf-h1">工讀生薪資表</h1>
+<%# <%= line_chart User.group_by_day(:created_at).count % > %>
+
+<table class="table table-sm pdf-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+    </tr>
+  </thead>
+   <tbody>
+    <% @students.each do |student| %>
+    <tr>
+      <td><%= student.number %></td>
+      <td><%= student.name %></td>
+      <td><%= salary_hr(student) %> 時</td>
+      <td><%= salary_sum(student) %> 元</td>
+    </tr>
+    <% end %>
+    </tbody>   
+</table>
+</body>
+</html>
