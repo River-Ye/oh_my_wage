@@ -150,16 +150,9 @@ p#timecount{
 }
 
 .btn-pdf{
-<<<<<<< Updated upstream
-    background:#8A000A !important;
-    border: #8A000A !important;
-    color: #FEFDFF !important;
-    height: 2.3em;
-=======
     background:#8A000A;
     border: #8A000A;
     color: #FEFDFF;
->>>>>>> Stashed changes
 }
 
 .btn-pdf:hover{
@@ -207,46 +200,18 @@ p#timecount{
     border-color: #74CDB6;
     color: #333;
 }
-<<<<<<< Updated upstream
-
-.btn-add{
-    background-color: #F4B610;
-    color: #333;
-    border: 1px solid #F4B610;
-
-    li.page-item.disabled > a.page-link{
-        background-color:  rgba(51, 51, 51, 0.8);
-        border: 1px solid rgba(51, 51, 51, 0.8);
-        color: #FEFDFF
-    }
-}
-
-.btn-add:hover{
-    background-color: #74CDB6;
-    border-color: #74CDB6;
-}
-
-.btn-dark{
-=======
  
 .btn-gray{
     background-color: #333;
     border: 1px solid #333;
     color: #FEFDFF;
->>>>>>> Stashed changes
     transition: 0.3s;
 }
 
-<<<<<<< Updated upstream
-.btn-dark:hover{
-    background-color: #666 !important;
-    border: 1px solid #666 !important;
-=======
 .btn-gray:hover{
     background-color: #666;
     border: 1px solid #666;
     color: #FEFDFF;
->>>>>>> Stashed changes
 }
  
 #search{
