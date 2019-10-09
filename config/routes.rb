@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     resources 'salaries', except: [:new, :create] do
       collection  do
         get :pdf
+        get :chart
       end  
     end   
     get 'history', to: 'user#history'

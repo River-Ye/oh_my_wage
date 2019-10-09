@@ -16,9 +16,9 @@
     <% @salary.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 小時</td>
+      <td><%= salary.hr %> 時</td>
       <td><%= salary.hourly_wage %> 元</td>
-      <td><%= salary.hourly_wage * salary.hr %> 元</td>
+      <td><%= money(salary) %> 元</td>
     </tr>
     <% end %>
     <tr>

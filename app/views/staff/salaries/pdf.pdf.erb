@@ -29,31 +29,46 @@
 
 <h1 class="pdf-h1">工讀薪資明細</h1>
 
-<p class="pdf-stu-info">學號：<%= @salary.user.number %></p>
-<p class="pdf-stu-info">姓名：<%= @salary.user.name %></p>
-
 <table class="table table-sm pdf-table">
   <thead>
     <tr>
-      <th>日期</th>
-      <th>工時</th>
-      <th>時薪</th>
-      <th>試算</th>
+      <th>學號</th>
+      <th>姓名</th>
+      <th>當月工時總和</th>
+      <th>當月薪資總和</th>
     </tr>
   </thead>
-  
-  <tbody>
-  <% @salary_all.each do |salary| %>
+   <tbody>
+    <% @students.each do |student| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d")%></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= salary.hr * salary.hourly_wage %></td>
+      <td><%= student.number %></td>
+      <td><%= student.name %></td>
+      <td><%= salary_hr(student) %> 時</td>
+      <td><%= salary_sum(student) %> 元</td>
     </tr>
-  <% end %>
-   
+    <% end %>
+    </tbody>   
+</table>
+
+<h1 class="sign-h1">簽核</h1>
+
+<table class="sign-table table table-sm pdf-table" >
+  <thead>
+    <tr>
+      <th><p><%=@department.name%></p></th>
+      <th><p>該處室主管</p></th>
+      <th><p>會計事務處</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="sign-area">
+      <td><p>簽核處</p></td>
+      <td><p>簽核處</p></td>
+      <td><p>簽核處</p></td>
+    </tr>
   </tbody>
 </table>
+<<<<<<< HEAD
 
 <h1 class="sign-h1">簽核</h1>
 
@@ -75,3 +90,5 @@
 </table>
 
 
+=======
+>>>>>>> develop

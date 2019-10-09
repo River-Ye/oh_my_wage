@@ -47,7 +47,6 @@ body{
   width: 100%;
   margin-bottom: 10px;
   padding: 5px;
-  // border-bottom: 2px solid #272727;
   .mr-auto.p-2{
     margin-bottom: 1em;
   }
@@ -76,14 +75,14 @@ h1.pdf-h1{
 .pdf-table{
   width: 100%;
   font-weight: 400;
-  line-height:110px;
   border: #272727;
   text-align: center;
   tr{
     border-bottom: solid;
     border-width: 3px;
     letter-spacing: 1px;
-  }
+    line-height: 2em;
+}
   th{
     width: 200px;
     font-size: 35px;
@@ -125,6 +124,12 @@ h1.sign-h1{
   }
   th, td{
     border: 1px solid #272727;
+  }
+  th > p{
+  font-size: 35px;
+  }
+  td{
+  font-size: 30px;
   }
   td > p{
     color: transparent;
