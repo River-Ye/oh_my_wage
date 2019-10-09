@@ -45,7 +45,7 @@ body{
 
 .pdf-school{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 5px;
   border-bottom: 2px solid #272727;
   .mr-auto.p-2{
@@ -53,27 +53,19 @@ body{
   }
   h3{
     line-height: 1.5em;
-    font-size: 40px;
+    font-size: 30px;
   }
   p{
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
 h1.pdf-h1{
   margin: 0.5em auto;
   text-align: center;
-  font-size: 60pt;
+  font-size: 40pt;
   font-weight: 700;
   letter-spacing: 3px;
-}
-
-.pdf-stu-info{
-  line-height: 2em;
-  text-align: left;
-  font-size: 30pt;
-  font-weight: 300;
-  line-height: 20pt;
 }
 
 .pdf-table{
