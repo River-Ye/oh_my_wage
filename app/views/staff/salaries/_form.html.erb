@@ -1,4 +1,7 @@
-<h3><%= student.name %>的工時</h3>
+<h3 class="verticalspace" >姓名：<%= student.name %>
+</h3>
+<h3 class="verticalspace" >學號：<%= student.number %>
+</h3>
 <%= simple_form_for student, url: staff_salary_path do |form| %>
   <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
     <%= render 'salary_fields', f: salary_form %>
@@ -7,6 +10,6 @@
     <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
   <hr>
-  <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+  <%= link_to "上一頁", :back, class: 'btn btn-gray btn-md' %>
   <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
 <% end %>
