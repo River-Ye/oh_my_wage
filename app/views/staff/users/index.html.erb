@@ -1,8 +1,8 @@
-<h1 class="verticalspace">Wage Settlement</h1>
+<h1 class="verticalspace">學生名單</h1>
 
-<%= form_tag(staff_salaries_path, method: :get) do %>
+<%= form_tag(staff_users_path, method: :get) do %>
   <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md white-hover verticalspace"%>
+  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
 <% end %>
 
 <table class="table table-sm">
@@ -10,32 +10,24 @@
     <tr>
       <th>學號</th>
       <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
-      <th>編輯</th>
-      <th>刪除</th>
+      <th>電話</th>
+      <th>信箱</th>
+      <th>加入</th>
     </tr>
   </thead>
   <tbody>
   <% @students.each do |student| %>
     <tr>
       <td><%= student.number %></td>
-      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
-      <td><%= salary_hr(student) %> 時</td>
-      <td><%= salary_sum(student) %> 元</td>
-      <td><%= link_to "編輯", edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' %></td>
-      <td><%= link_to "刪除", staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name} 剔除嗎?" } %></td>
+      <td><%= link_to student.name, staff_user_path(student.slug) %></td>
+      <td><%= student.phone %></td>
+      <td><%= student.email %></td>
+      <td><%= link_to "＋", staff_user_path(student.slug), method: 'PUT', class: 'btn btn-red btn-sm white-hover spin' %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<<<<<<< Updated upstream
-<%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
-<%= link_to "回主選單", staff_root_path, class: 'btn btn-dark btn-md' %>
-<%= link_to "pdf", pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" %>
-=======
 <%= paginate @students, theme: 'twitter-bootstrap-4' %>
 
 <%= link_to "回主選單", staff_root_path, class: 'btn btn-gray btn-md' %>
->>>>>>> Stashed changes

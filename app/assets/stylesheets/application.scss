@@ -132,7 +132,7 @@ p#timecount{
 }
 
 
-.btn:focus, .btn-dark:focus{
+.btn:focus, .btn-gray:focus{
     outline: none !important;
     box-shadow: none !important;
     $btn-focus-box-shadow: none !important;
@@ -202,15 +202,15 @@ p#timecount{
 }
  
 .btn-gray{
-    background-color: #333;
-    border: 1px solid #333;
-    color: #FEFDFF;
+    background-color: #333 !important;
+    border: 1px solid #333 !important;
+    color: #FEFDFF !important;
     transition: 0.3s;
 }
 
 .btn-gray:hover{
-    background-color: #666;
-    border: 1px solid #666;
+    background-color: #666 !important;
+    border: 1px solid #666 !important;
     color: #FEFDFF;
 }
  
@@ -586,11 +586,21 @@ text-shadow: 1px 0.6px 1px #333;
     }
     .worker-int{
         border: 1px solid salmon;
+
         img{
             width: 200px;
             height: 200px;
             margin: auto 3em;
         }
+    }
+    .worker-left, .worker-right{
+        margin: 1em;
+    }
+    .worker-left{
+        text-align: left;
+    }
+    .worker-right{
+        text-align: right;
     }
 }
 
