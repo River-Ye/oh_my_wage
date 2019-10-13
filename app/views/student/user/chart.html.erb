@@ -1,23 +1,31 @@
-<h1 class="verticalspace">Hi, <%= current_user.name %> 您的歷史薪資</h1>
-<h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
+<h1 class="verticalspace">薪資紀錄圖</h1>
 
 <%= form_tag(student_chart_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
   <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
+  <%= link_to "回主選單", student_root_path, class: 'btn btn-gray btn-md' %>
 <% end %>
 
-<table class="table col-lg-6 col-md-9 col-sm-12">
-  <tr>
-    <th>總工時</th>
-    <td><%= calculate_student_salary_hr %> 小時</td>
-  </tr>
-  <tr>
-    <th>試算</th>
-    <td><%= calculate_studen_salary_sum %> 元</td>
-  </tr>
+
+<table class="table col-lg-6 col-md-9 col-lg-12">
+  <% @salary.each do |salary| %>
+    <tr>
+      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td><%= salary.hr %> 時</td>
+      <td><%= salary.hourly_wage %> 元</td>
+      <td><%= money(salary) %> 元</td>
+    </tr>
+    <% end %>
+    <tr>
+      <td>總計</td>
+      <td><%= calculate_student_salary_hr %> 時</td>
+      <td></td>
+      <td><%= calculate_studen_salary_sum %> 元</td>
+    </tr>
 </table>
 
-<%= line_chart Salary.where('user_id = ?', current_user.id).group_by_month(:date).count %>
+
+<%= line_chart Salary.where('user_id = ?', current_user.id).group_by_month(:date)%>
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function(){
