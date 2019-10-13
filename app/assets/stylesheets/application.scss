@@ -543,6 +543,11 @@ ul.pagination{
     }
 }
 
+@media screen and (max-width: 995px){
+    ul.pagication{
+        font-size: 13px;
+    }
+}
 // ---------- infopage ----------
 
 .infotitle{
@@ -778,7 +783,7 @@ text-shadow: 1px 0.6px 1px #333;
 // ---------- footer ----------
 
 .footerspace{
-    margin-top: 71px;
+    margin-top: 150px;
 }
 
 .footericon{
@@ -786,7 +791,6 @@ text-shadow: 1px 0.6px 1px #333;
 }
 
 footer{
-    margin-top: 100px;
     padding: 25px 20px 20px 20px;
     font-size: 14px;
     text-align: center;
@@ -804,5 +808,14 @@ footer{
     p.email{
         border-left: 1px solid #FEFDFF;
         border-right: 1px solid #FEFDFF;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 512px){
+    footer{
+        p.email{
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+        }
     }
 }

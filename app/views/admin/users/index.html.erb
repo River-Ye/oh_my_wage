@@ -1,4 +1,6 @@
 <h1 class=" row verticalspace">管理者 <%= current_user.name %> 您好</h1>
+
+<h2 class=" row verticalspace">使用者名單</h2>
   <div class="row verticalspace">
     <%= form_tag(admin_users_path, method: :get) do %>
     <%= text_field_tag :search %>
@@ -8,7 +10,7 @@
     <%= link_to "新增", new_admin_user_path, class: 'btn btn-green btn-md white-hover verticalspace' %>
   </div>
 
-<table class="table table-borderless table-sm my-table" id="table">
+<table class="table table-sm my-table" id="table">
   <thead>
     <tr>
       <th>角色</th>
@@ -38,3 +40,5 @@
 </table>
 
 <%= paginate @users, theme: 'twitter-bootstrap-4'%>
+
+<%= link_to "問題回報總覽", problems_path, class: 'btn btn-red white-hover'%>
