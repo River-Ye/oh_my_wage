@@ -1,5 +1,4 @@
 <h1 class="verticalspace">薪資紀錄圖</h1>
-
 <%= form_tag(student_chart_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
   <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
