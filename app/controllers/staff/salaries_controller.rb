@@ -1,7 +1,7 @@
 class Staff::SalariesController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show, :edit, :update, :destroy]
-  before_action :find_when_monthly_salary, only: [:index,:pdf]
+  before_action :find_when_monthly_salary, only: [:index, :pdf]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
@@ -9,10 +9,8 @@ class Staff::SalariesController < ApplicationController
     else
       # 原本寫法
       @students = staff_department.users.includes(:salaries).student_order.search(params[:search]).page(params[:page])
-    
       # KT 寫法
       # @students = User.includes(:departments).without_department(staff_department).student_order.search(params[:search]).page(params[:page])
-      # byebug
       # student_ids = @students.map(&:id)
       # @salaries_this_month = Salary.this_month.where(user_id: student_ids).group(:user_id).pluck(:user_id, 'SUM(hr)', 'SUM(hourly_wage * hr)').reduce({}) do |rs, salary|
       #   rs.merge!(salary[0].to_i => { hr: salary[1], wage: salary[2] })
@@ -26,7 +24,6 @@ class Staff::SalariesController < ApplicationController
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
       @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc)
-      
     end
   end
   
@@ -59,11 +56,6 @@ class Staff::SalariesController < ApplicationController
         orientation: 'Landscape',
         :encoding => "UTF-8" }
     end
-
-  end
-
-  def chart
-    @students = staff_department.users.includes(:salaries).student_order.search(params[:search])   
   end
 
   private
@@ -91,6 +83,6 @@ class Staff::SalariesController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == '職員'
   end
 end

@@ -17,7 +17,7 @@
     </tr>
   </thead>
   <tbody>
-  <% @students.each do |student| %>
+  <% @students.uniq.each do |student| %>
     <tr>
       <td><%= student.number %></td>
       <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
@@ -32,5 +32,4 @@
 
 <%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
 <%= link_to "回主選單", staff_root_path, class: 'btn btn-gray btn-md' %>
-<%= link_to "Chart", chart_staff_salaries_path, class: 'btn btn-blue btn-md' %>
 <%= link_to "PDF", pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" %>
