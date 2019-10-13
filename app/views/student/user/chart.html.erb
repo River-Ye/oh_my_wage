@@ -17,7 +17,7 @@
   </tr>
 </table>
 
-<%= line_chart Salary.where('user_id = ?', current_user.id).group_by_month(:date) %>
+<%= line_chart Salary.where('user_id = ?', current_user.id).group_by_month(:date).hr %>
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function(){
