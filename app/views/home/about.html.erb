@@ -41,49 +41,64 @@
         <h2>成員</h2>
     </div>
 
-    <div class="d-flex justify-content-between worker-int">
-        <%= image_tag('river.png', class:'workerimg p-2 ') %>
-        <%= image_tag('axel.png', class:'workerimg p-2 ') %>
-    </div>
-    <div class="worker-int d-flex justify-content-between">
-        <div class="p-2 worker-left">
-            <p>
-                你必須很努力，才能看起來毫不費力。
-            </p>
-            <p>
-                看似輕鬆的背後，有著看不盡的付出。
-            </p>
+    <div class="d-flex justify-content-center worker-int flex-column">
+        <div class="p-2 d-flex worker-int">
+            <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <%= image_tag('river.png', class:'workerimg') %>
+            </div>
+            <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
+                <p>
+                    你必須很努力，才能看起來毫不費力。
+                </p>
+                <p>
+                    看似輕鬆的背後，有著看不盡的付出。
+                </p>
+            </div>
         </div>
-        <div class="p-2 worker-right">
-            <p>
-                從不同的觀點思考，
-            </p>
-            <p>
-                用好奇心探索世界！
-            </p>
+        <div class="p-2 d-flex worker-int">
+            <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <%= image_tag('axel.png', class:'workerimg') %>
+            </div>
+            <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
+                <p>
+                    從不同的觀點思考，
+                </p>
+                <p>
+                    用好奇心探索世界！
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="d-flex justify-content-between worker-int">
-        <%= image_tag('joan.png', class:'workerimg p-2 ') %>
-        <%= image_tag('patrick.png', class:'workerimg p-2 ') %>
-    </div>
-    <div class="worker-int d-flex justify-content-between">
-        <div class="p-2 worker-left">
-            <p>
-                你不一定要變得很厲害，才能開始；
-            </p>
-            <p>
-                你要開始，才能變得很厲害！
-            </p>
+    <div class="d-flex justify-content-center flex-column">
+        <div class="p-2 d-flex worker-int">
+            <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <%= image_tag('joan.png', class:'workerimg') %>
+            </div>
+            <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
+                <p>
+                    你不一定要變得很厲害，
+                </p>
+                <p>
+                    才能開始；
+                </p>
+                <p>
+                    你要開始，才能變得很厲害！
+                </p>
+            </div>
         </div>
-        <div class="p-2 worker-right">
-            <p>
-                渴求知識，喜歡探索，
-            </p>
-            <P>
-                享受思考後發現新世界的興奮。
-            </P>
+        <div class="p-2 d-flex worker-int">
+            <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <%= image_tag('patrick.png', class:'workerimg') %>
+            </div>
+            <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
+                <p>
+                    渴求知識，喜歡探索，
+                </p>
+                <P>
+                    享受思考後發現新世界的興奮。
+                </P>
+            </div>
         </div>
     </div>
 </div>

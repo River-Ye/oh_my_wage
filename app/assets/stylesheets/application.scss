@@ -580,27 +580,64 @@ text-shadow: 1px 0.6px 1px #333;
     img.workerimg{
         width: 100px;
         height: 100px;
-        margin: 1em;
-        background-color: #A0C3D8;
+        margin: 1em auto;
+        background-color: #0F3659;
+        box-shadow: 3px 3px 9px #000;
         border-radius: 50%;
     }
     .worker-int{
-        border: 1px solid salmon;
-
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
         img{
             width: 200px;
             height: 200px;
-            margin: auto 3em;
+            margin: auto 1em;
+        }
+        p{
+            margin: 1em auto;
+            text-align: left;
+            padding-left: 1em;
         }
     }
-    .worker-left, .worker-right{
-        margin: 1em;
+    .worker-say{
+        position: relative;
+        border: 1px solid #5082A1;
+        background-color: #5082A1;
+        border-radius: 10px;
+        margin: 1em auto;
+        box-shadow:0px 18px 20px -20px #000;
     }
-    .worker-left{
-        text-align: left;
+    .worker-say::before{
+        content:'';
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid #5082A1;
+        display: block;
+        margin: 10px 0px 0px -30px;
+        left: 0px
     }
-    .worker-right{
-        text-align: right;
+
+    @media screen and (max-width:995px){
+        .worker-int{
+            flex-direction: column;
+        }
+        .worker-say::before{
+            border-right: 30px solid transparent;
+        }
+        .worker-say::after{
+            content:'';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-top: 30px solid transparent;
+            border-right: 30px solid #5082A1;
+            display: block;
+            margin: -30px 0px 0px 0px;
+            top: 0px
+        }
     }
 }
 
@@ -621,6 +658,7 @@ text-shadow: 1px 0.6px 1px #333;
     h2{
         font-size: 60px;
         margin: 1em auto 0.5em;
+        color: #FFFFCA;
     }
     p{
         font-size: 20px;
@@ -665,6 +703,9 @@ text-shadow: 1px 0.6px 1px #333;
     p:first-child{
         margin-top: 15px;
     }
+    p{
+        margin-left: 1em;
+    }
 }
 
 .staff-say{
@@ -675,6 +716,9 @@ text-shadow: 1px 0.6px 1px #333;
     padding-top: 20px;
     p:first-child{
         margin-top: 15px;
+    }
+    p{
+        margin-right: 1em;
     }
 }
 
