@@ -14,7 +14,6 @@
       </div>
       <div class="form-actions">
           <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' %>
-          <% end %>
         <%= render "devise/shared/links" %>
       </div>
   </div>
@@ -32,8 +31,15 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-          <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' %>
+          <%# <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' % > %>
+            <%= button_tag type: 'submit', class: "btn btn-blue btn-md my-button", id: "register-button" do %>
+            <p>
+              <i class="fas fa-sign-in-alt"></i>
+              登入
+            </p>
+            <% end %>
           <% end %>
+        <% end %>
         <%= render "devise/shared/links" %>
       </div>
     </div>

@@ -369,7 +369,7 @@ span#timecount{
     color:#ccc;
 }
 .datepicker::after{
-
+    border-bottom-color: #3D606E;
 }
 
 .table-condensed{
@@ -377,19 +377,29 @@ span#timecount{
     th{
         background-color: #3D606E;
         border-radius: 0;
+        border: 2px solid transparent;
+    }
+    tr, td{
+        border: 2px solid transparent;
     }
     th.datepicker-switch:hover,
     th.next:hover,
     th.prev:hover{
         background-color: #183441;
+        
     }
     tr:hover,td:hover{
         background-color: #74B1BF;
+        color: #333;
+    }
+    span:hover{
+        color: #FEFDFF;
     }
 }
 
 span.month.focused{
     background-color: #183441 !important;
+    color: #FEFDFF;
 }
 
 span.month.focused.active{

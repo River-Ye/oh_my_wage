@@ -37,7 +37,11 @@
   <% @students.uniq.each do |student| %>
     <tr>
       <td><%= student.number %></td>
-      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
+      <td><%= link_to staff_salary_path(student.slug) do %>
+        <%= student.name %>
+        <i class="fas fa-arrow-alt-circle-right"></i>
+      <% end %>
+      </td>
       <td><%= salary_hr(student) %> 時</td>
       <td><%= salary_sum(student) %> 元</td>
       <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' do %>

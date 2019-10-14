@@ -35,7 +35,11 @@
     <tr>
       <td><%= user.role %></td>
       <td><%= user.number %></td>
-      <td><%= link_to user.name, admin_user_path(user.slug) %></td>
+      <td><%= link_to admin_user_path(user.slug) do %>
+        <%= user.name %>
+        <i class="fas fa-arrow-alt-circle-right"></i>
+      <% end %>
+      </td>
       <td>
         <%= link_to edit_admin_user_path(user.slug), class: 'btn btn-org btn-sm' do %>
             <i class="fas fa-pencil-alt"></i>

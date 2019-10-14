@@ -11,7 +11,17 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "送出 SEND", class: 'btn btn-green btn-md ' %>
-    <%= link_to "返回", user_session_path, class: 'btn btn-blue btn-md white-hover' %>
+    <%= button_tag type: 'submit', class: "btn btn-blue btn-md my-button", id: "register-button" do %>
+      <p>
+        <i class="fas fa-paper-plane"></i>
+        送出
+      </p>
+    <% end %>
+    <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-backward"></i>
+        上一頁
+      </p>
+    <% end %>
   </div>
 <% end %>
