@@ -1,6 +1,6 @@
-<h1 class=" row verticalspace">管理者 <%= current_user.name %> 您好</h1>
+<h1 class="row verticalspace">管理者 <%= current_user.name %> 您好</h1>
 
-<h2 class=" row verticalspace">使用者名單</h2>
+<h2 class="row verticalspace">使用者名單</h2>
   <div class="d-flex justify-content-between">
     <div class="p-2">
       <%= form_tag(admin_users_path, method: :get) do %>
@@ -13,19 +13,11 @@
         <% end %>
       <% end %>
     </div>
-    <div class="p-2 flex-grow-1">
-      <%= link_to new_admin_user_path, class: 'btn btn-green btn-md white-hover verticalspace'  do %>
+    <div class="p-2">
+      <%= link_to new_admin_user_path, class: 'btn btn-green btn-md white-hover verticalspace mr-0'  do %>
         <p>
           <i class="fas fa-user-plus"></i>
-          新增
-        </p>
-      <% end %>
-    </div>
-    <div class="p-2">
-      <%= link_to problems_path, class: 'btn btn-red white-hover verticalspace' do %>
-        <p>
-          問題回報總覽
-          <i class="fas fa-chalkboard-teacher"></i>
+          新增使用者
         </p>
       <% end %>
     </div>

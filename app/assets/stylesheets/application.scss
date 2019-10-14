@@ -111,6 +111,10 @@ span#timecount{
 
 // ---------- btn ----------
 
+.p-2{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .my-btn{
     width: 50%;
     margin: 1em auto;
@@ -183,7 +187,7 @@ span#timecount{
     li.page-item.disabled > a.page-link{
         background-color:  rgba(51, 51, 51, 0.8);
         border: 1px solid rgba(51, 51, 51, 0.8);
-        color: #FEFDFF
+        color: #FEFDFF;
     }
 }
 
@@ -259,7 +263,6 @@ span#timecount{
     .form-actions{
         text-align: center;
         width: 100%;
-        // margin: auto;
         .btn-blue, .btn-red{
             width: 40%;
             margin: 5px 10px;
@@ -271,7 +274,7 @@ span#timecount{
 }
 
 #carouselExampleSlidesOnly{
-    width: 1152px;
+    width: 100%;
     right: 0;
     z-index: 0;
     margin-top: -1px;
@@ -336,8 +339,10 @@ span#timecount{
     .pbody{
         padding-left: 1em;
         line-height: 2.3em;
-        border: 1px solid #ccc;
+        background-color: #ddd;
+        border: 1px solid #ddd !important;
         border-radius: 4px;
+        color: #666;
     }
 }
 
@@ -350,11 +355,15 @@ span#timecount{
 .datepicker::-webkit-input-placeholder {
     color:#ccc;
 }
+.datepicker::after{
+
+}
 
 .table-condensed{
     background-color: #74B1BF;
     th{
         background-color: #3D606E;
+        border-radius: 0;
     }
     th.datepicker-switch:hover,
     th.next:hover,
@@ -371,11 +380,18 @@ span.month.focused{
 }
 
 span.month.focused.active{
-    background-color: #183441 !important;
+    background-image: linear-gradient(#183441, #183441);
+}
+span.month.focused.active:hover{
+    background-image: linear-gradient(#183441, #183441);
 }
 
 span.month:hover{
     background-color: #183441 !important;
+}
+
+.dropdown-menu{
+    background-image: linear-gradient(0deg, #74B1BF, #3D606E);
 }
 
 // ---------- card ----------
@@ -426,10 +442,6 @@ span.month:hover{
 
 // ---------- table ----------
 
-table.table tr{
-    border: 1px solid rgba(23, 101, 145, 0.1)
-}
-
 table > tbody > tr > td > .btn-red,
 .container > a.btn-red{
         background-color: #8b0000;
@@ -446,34 +458,40 @@ small.form-text.text-muted{
 }
 
 table{
-    background-color: rgba(23, 101, 145, 0.8);
+    background-color: rgba(18, 50, 69, 0.1);
+    color: #333 !important;
     a{
-        color: #FEFDFF;
+        color: #333;
     }
     tr{
-        color: #FEFDFF;
         transition: 0.3s;
+        border: 2px solid #FEFDFF !important;
     }
     tr:hover{
-        background-color: rgba(18, 50, 69, 0.8);
+        background-color: #123245;
         color: #FEFDFF;
-    }
-    a:hover{
-        color: #F4B610;
-        transition: 0.3s;
+        a{
+            color: #FEFDFF;
+        }
+        a:hover{
+            color: #F4B610;
+            transition: 0.3s;
+        }
+        .btn-org, .btn-org > a{
+            color: #333 !important;
+        }
     }
     th{
-        background-color: #176591;
+        background-color: #521D1F;
+        color: #FEFDFF;
     }
 }
 
-table.table.col-lg-6.col-md-12.col-sm-12{
-    th{
-        text-align: right;
-    }
-    td{
+table.table.col-lg-12.col-md-12.col-sm-12{
+    th,td{
         text-align: left;
-    } 
+        // border: 1px solid #ccc;
+    }
 }
 
 // ---------- problem ----------
@@ -492,7 +510,7 @@ table.table.col-lg-6.col-md-12.col-sm-12{
 }
 
 input.form-control.string.required{
-    border: 1px solid #ccc;
+    border: 1px solid #6c757d;
     background-color: #FEFDFF;
 }
 
@@ -503,13 +521,14 @@ textarea#reply_to_issue_content.form-control.text.required{
 // ---------- pagination ----------
 
 .pagination{
+    margin-right: 5px;
     justify-content: center;
     color: #FEFDFF;
     li > a{
         background-color: rgba(23, 101, 145, 0.8);
         border: 1px solid rgba(23, 101, 145, 0.8);
         color: #FEFDFF;
-        transition: 0.3s
+        transition: 0.3s;
     }
     li > a:hover{
         background-color: rgba(18, 50, 69, 0.8);

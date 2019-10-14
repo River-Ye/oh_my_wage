@@ -3,13 +3,28 @@
 <table class="table col-lg-6 col-md-9 col-sm-12">
   <tr>
     <th>總工時</th>
-    <td><%= calculate_student_salary_hr %> 小時</td>
+    <th>試算</th>
   </tr>
   <tr>
-    <th>試算</th>
+    <td><%= calculate_student_salary_hr %> 小時</td>
     <td><%= calculate_studen_salary_sum %> 元</td>
   </tr>
 </table>
-<%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-blue btn-md white-hover' %>
-<%= link_to "問題反應", new_problem_path, class: 'btn btn-red btn-md white-hover' %>
-<%= link_to "圖表", student_chart_path, class: 'btn btn-green btn-md white-hover' %>
+<%= link_to student_history_path, class: 'btn btn-blue btn-md white-hover' do %>
+  <p>
+    <i class="fas fa-history"></i>
+    歷史查詢
+  </p>
+<% end %>
+<%= link_to new_problem_path, class: 'btn btn-red btn-md white-hover' do %>
+  <p>
+    問題反應
+    <i class="fas fa-hands-helping"></i>
+  </p>
+<% end %>
+<%= link_to student_chart_path, class: 'btn btn-green btn-md white-hover' do %>
+  <p>
+    圖表
+    <i class="fas fa-chart-area"></i>
+  </p>
+<% end %>

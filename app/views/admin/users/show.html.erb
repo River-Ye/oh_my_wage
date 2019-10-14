@@ -1,34 +1,22 @@
 <% if @user %>
-<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
+<table class="table col-lg-12 col-md-12 col-sm-12 verticalspace2">
   <tbody>
     <tr>
       <th>權限</th>
-      <td><%= @user.role %></td>
-    </tr>
-    <tr>
       <th>編號</th>
-      <td><%= @user.number %></td>
-    </tr>
-    <tr>
       <th>姓名</th>
-      <td><%= @user.name %></td>
-    </tr>
-    <tr>
       <th>工作單位</th>
-      <td>
-        <%= user_department %>
-      </td>
-    </tr>
-    <tr>
       <th>手機</th>
-      <td><%= @user.phone %></td>
-    </tr>
-    <tr>
       <th>性別</th>
-      <td><%= @user.gender %></td>
+      <th>信箱</th>
     </tr>
     <tr>
-      <th>信箱</th>
+      <td><%= @user.role %></td>
+      <td><%= @user.number %></td>
+      <td><%= @user.name %></td>
+      <td><%= user_department %></td>
+      <td><%= @user.phone %></td>
+      <td><%= @user.gender %></td>
       <td><%= @user.email %></td>
     </tr>
   </tbody>
