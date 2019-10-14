@@ -31,7 +31,12 @@
 </table>
 <div class="container">
   <div class="row">
-    <%= link_to "回主選單", student_root_path, class: 'btn btn-gray btn-md' %>
+    <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-fast-backward"></i>
+        回主選單
+      </p>
+    <% end %>
   </div>
 </div>
 

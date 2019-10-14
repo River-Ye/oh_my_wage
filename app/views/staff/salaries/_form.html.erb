@@ -10,6 +10,11 @@
     <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
   <hr>
-  <%= link_to "上一頁", :back, class: 'btn btn-gray btn-md' %>
+  <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+    <p>
+      <i class="fas fa-backward"></i>
+      上一頁
+    </p>
+  <% end %>
   <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
 <% end %>
