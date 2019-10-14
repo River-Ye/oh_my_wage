@@ -21,7 +21,7 @@ function startTimer () {
 
     if (seconds < 0) { 
       clearInterval(x); 
-      document.getElementById("timecount").innerHTML = "時間到"; 
+      document.getElementById("timecount").innerHTML = "時間到";
     } 
   
 }, 1000);
