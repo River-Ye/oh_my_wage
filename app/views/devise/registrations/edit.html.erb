@@ -29,7 +29,7 @@
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 show">
         <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :gender, label: '性別：', collection: { "男": "Male", "女": "Female" } %>
+          <%= f.input :gender, label: '性別：', collection: { "男": "男", "女": "女" } %>
         <% else %>
           <div class="profile">
             <p class="phead">性別：</p>
