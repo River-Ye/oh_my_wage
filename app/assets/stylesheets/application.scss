@@ -18,6 +18,10 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
+body{
+    height: 100%;
+    padding: 90px 0% 100px;
+}
 // ---------- flash notice message ----------
 
 .alert{
@@ -116,7 +120,7 @@ span#timecount{
     padding-right: 0 !important;
 }
 .my-btn{
-    width: 50%;
+    width: 100%;
     margin: 1em auto;
 }
 
@@ -126,7 +130,18 @@ span#timecount{
     height: 2.3em;
 }
 
-
+.fgpw{
+    color: #8b0000;
+    text-align: end;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.fgpw2{
+    color: #8b0000;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
 .btn:focus, .btn-gray:focus{
     outline: none !important;
     box-shadow: none !important;
@@ -337,6 +352,15 @@ span#timecount{
 
 .form-group{
     text-align: left;
+}
+// ---------- forget password ----------
+.pwletter{
+    width: 100%;
+    margin: 10% auto;
+    h4{
+        color: #333;
+        text-align: center;
+    }
 }
 
 // ---------- staff profile ----------
@@ -830,21 +854,18 @@ textarea#reply_to_issue_content.form-control.text.required{
 }
 // ---------- footer ----------
 
-.footerspace{
-    margin-top: 71px;
-}
-
 .footericon{
     font-size: 30px;
 }
 
 footer{
-    padding: 25px 20px 20px 20px;
-    font-size: 14px;
-    text-align: center;
+    margin-top: 100px;
+    padding: 1% 0%;
+    font-size: 1.7vmin;
     background-color: rgb(18, 50, 69);
     a, a:visited, a:hover{
-        color: #FEFDFF
+        text-decoration: none;
+        color: #FEFDFF;
     }
     p{
         display: inline;
@@ -853,17 +874,57 @@ footer{
         padding-left: 1em;
         white-space: nowrap;
     }
-    p.email{
-        border-left: 1px solid #FEFDFF;
-        border-right: 1px solid #FEFDFF;
+}
+.tel{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+@media (max-width: 992px) {
+    li.dropdown{
+        text-align: end;
+    }
+    .emailfooter{
+        margin-left: 15px;
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 512px){
-    footer{
-        p.email{
-            border-right: 1px solid transparent;
-            border-left: 1px solid transparent;
-        }
+
+@media (min-width: 993px) {
+    li.dropdown{
+        text-align: start;
+        margin-left: 0px;
     }
+}
+
+ul { 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.dropdown-menu {
+    font-size: 13px;
+}
+
+ul.dropdown-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+ ul.dropdown-menu a {
+    background-color: #fff;
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.dropdown-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: rgb(18, 50, 69);
+    color: #fff;
+}
+ul.dropdown-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: rgb(18, 50, 69);
+    color: #fff;
 }

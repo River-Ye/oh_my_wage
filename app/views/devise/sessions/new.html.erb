@@ -13,8 +13,11 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-          <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' %>
-        <%= render "devise/shared/links" %>
+          <%= f.button :submit, t(".sign_in"), class: 'btn btn-blue btn-md white-hover my-btne' %>
+          <% end %>
+      </div>
+      <div class="fgpw2">
+      <%= render "devise/shared/links" %>
       </div>
   </div>
    <div class="loginblock col-lg-4 col-md-12 col-sm-12 col-xs-12 d-none d-md-block position-relative">
@@ -31,16 +34,11 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-          <%# <%= f.button :submit, "登入", class: 'btn btn-blue btn-md white-hover my-btn' % > %>
-            <%= button_tag type: 'submit', class: "btn btn-blue btn-md my-button", id: "register-button" do %>
-            <p>
-              <i class="fas fa-sign-in-alt"></i>
-              登入
-            </p>
-            <% end %>
+          <%= f.button :submit, t(".sign_in"), class: 'btn btn-blue btn-md white-hover my-btn' %>
           <% end %>
-        <% end %>
-        <%= render "devise/shared/links" %>
+      </div>
+      <div class="fgpw">
+      <%= render "devise/shared/links" %>
       </div>
     </div>
     <div id="carouselExampleSlidesOnly" class="carousel slide position-absolute d-none d-lg-block" data-ride="carousel">
@@ -56,8 +54,6 @@
         </div>
       </div>
     </div>
-
-   
   </div>
 </div>
 
