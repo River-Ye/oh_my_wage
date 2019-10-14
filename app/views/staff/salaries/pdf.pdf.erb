@@ -39,7 +39,7 @@
     </tr>
   </thead>
    <tbody>
-    <% @students.each do |student| %>
+    <% @students.uniq.each do |student| %>
     <tr>
       <td><%= student.number %></td>
       <td><%= student.name %></td>
