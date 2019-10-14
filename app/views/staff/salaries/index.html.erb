@@ -22,6 +22,8 @@
   
 <% end %>
 
+<%= link_to "加入學生",staff_users_path, class:"btn btn-org btn-sm" %>
+
 <table class="table table-sm">
   <thead>
     <tr>
@@ -68,7 +70,7 @@
     <% end %>
   </div>
   <div class="p-2">
-    <%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
+    <%= paginate @students %>
   </div>
   <div class="p-2">
     <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" do %>
