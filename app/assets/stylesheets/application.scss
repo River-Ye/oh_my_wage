@@ -89,8 +89,8 @@
     transition: 0.3s;
 }
 
-.nav-link:hover{
-    color: #F5CD0B !important;
+.nav-link:hover, .nav-link.text-light:hover{
+    color: #F4CD0B !important;
 }
 
 .navbar-collapse.collapse.show{
@@ -146,14 +146,15 @@ span#timecount{
 }
 
 .btn-pdf{
-    background:#8A000A;
-    border: #8A000A;
-    color: #FEFDFF;
+    background:#FEFDFF;
+    border-color: #8A000A;
+    color: #8A000A;
 }
 
 .btn-pdf:hover{
     background: #d6000a !important;
-    border: #d6000a !important;
+    border-color: #d6000a !important;
+    color: #FEFDFF;
 }
  
 .btn-org{
@@ -175,7 +176,7 @@ span#timecount{
 }
 .btn-blue:hover{
     background-color: #80C6F2;
-    border-color: #80C6F2;
+    border-color: #123245;
     color: #333;
 }
  
@@ -196,7 +197,19 @@ span#timecount{
     border-color: #74CDB6;
     color: #333;
 }
- 
+
+.btn-brown{
+    background-color: #402319;
+    border-color: #402319;
+    color: #FEFDFF;
+}
+
+.btn-brown:hover{
+    background-color: #BF9A8D;
+    border-color: #BF9A8D;
+    color: #333;
+}
+
 .btn-gray{
     background-color: #333 !important;
     border: 1px solid #333 !important;
@@ -215,14 +228,14 @@ span#timecount{
     padding: 0.5em;
     vertical-align: middle;
     border-radius: 5px;
-    background-color: #176591;
-    color: #FEFDFF;
-    border: 2px solid #176591;
+    background-color: rgba(18, 50, 69, 0.1);
+    color: #333;
+    border: 2px solid rgba(18, 50, 69, 0.8);
 }
   
 #search:focus{
     outline: none;
-    background-color: #123245;
+    background-color: rgba(18, 50, 69, 0.1);
 }
 
 // ---------- login ----------
@@ -411,18 +424,25 @@ span.month:hover{
         box-shadow: 3px 3px 9px #123245;
         color: #333;
     }
+    .card-time{
+        background-color: rgba(88, 140, 140, 0.6);
+        border: 3px solid transparent;
+    }
     .card-time:hover{
         background-color: rgba(43, 133, 140, 0.3);
+        border: 3px solid #588c8c;
     }
-    .card-list:hover{
-        background-color: rgba(23, 101, 145, 0.3);
+    .card-q{
+        background-color: rgba(186, 41, 55, 0.6);
+        border: 3px solid transparent;
     }
     .card-q:hover{
         background-color: rgba(186, 41, 55, 0.3);
+        border: 3px solid rgba(186, 41, 55, 0.6);
     }
     h2.card-title{
         width: 100%;
-        padding-top: 1em;
+        padding-top: 0.5em;
         font-size: 40px;
         text-align: center;
     }
@@ -436,8 +456,9 @@ span.month:hover{
     }
 }
 
-@media screen and (max-width:995px){
-
+.fas.fa-stopwatch, .far.fa-question-circle{
+    font-size: 250px;
+    margin: 0.1em auto;
 }
 
 // ---------- table ----------
@@ -482,6 +503,7 @@ table{
         }
     }
     th{
+        line-height: 3em;
         background-color: #521D1F;
         color: #FEFDFF;
     }

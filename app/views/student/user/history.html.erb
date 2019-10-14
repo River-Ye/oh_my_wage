@@ -3,10 +3,7 @@
 <%= form_tag(student_history_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
   <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
-    <p>
-      <i class="fas fa-search"></i>
-      查詢
-    </p>
+    <i class="fas fa-search"></i>
   <% end %>
 <% end %>
 <table class='table'>
