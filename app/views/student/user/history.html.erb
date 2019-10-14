@@ -29,14 +29,15 @@
     </tr>
   </tbody>
 </table>
+
+<%# <%= line_chart Salary.where(user_id: current_user).group_by_day(:created_at).map{|x|x.hr}.uniq%> 
+<%= area_chart Salary.where(user_id: current_user).group_by_month(:date).count%>
+
 <div class="container">
   <div class="row">
     <%= link_to "回主選單", student_root_path, class: 'btn btn-gray btn-md' %>
   </div>
 </div>
-
-<%# <%= line_chart Salary.where(user_id: current_user).group_by_day(:created_at).map{|x|x.hr}.uniq%> 
-<%= area_chart Salary.where(user_id: current_user).group_by_month(:date).count%>
 
 
 <script type="text/javascript">
