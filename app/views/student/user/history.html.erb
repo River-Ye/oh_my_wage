@@ -2,9 +2,10 @@
 
 <%= form_tag(student_history_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
+  <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
+    <i class="fas fa-search"></i>
+  <% end %>
 <% end %>
-<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
 <table class='table'>
   <thead>
     <th>日期</th>
@@ -31,6 +32,7 @@
 </table>
 <div class="container">
   <div class="row">
+    <%= paginate @salary, theme: 'twitter-bootstrap-4' %>
     <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
       <p>
         <i class="fas fa-fast-backward"></i>
