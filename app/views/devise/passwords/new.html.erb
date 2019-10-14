@@ -1,17 +1,18 @@
-<h2>忘記密碼</h2>
+<div class="pwletter col-sm-12 col-md-10 col-lg-8">
+  <h4><%= t(".send_me_reset_password_instructions") %></h4>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: {     method: :post }) do |f| %>
+      <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+      <div class="form-inputs pwletter3">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email", placeholder: 'example@oh-my-wage.website' }  %>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :email ,label: 'E-mail',
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email", placeholder: 'example@oh-my-wage.website' } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "送出 SEND", class: 'btn btn-green btn-md ' %>
-    <%= link_to "返回", user_session_path, class: 'btn btn-blue btn-md white-hover' %>
-  </div>
-<% end %>
+      <div class="form-actions">
+        <%= link_to t("back"), user_session_path, class: 'btn btn-blue btn-md white-hover' %>
+        <%= f.button :submit, t("send"), class: 'btn btn-green btn-md' %>
+      </div>
+    <% end %>
+</div>
