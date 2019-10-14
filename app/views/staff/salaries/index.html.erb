@@ -1,13 +1,25 @@
 <h1 class="verticalspace">工時登錄</h1>
 
 <%= form_tag(staff_salaries_path, method: :get) do %>
-  <%= text_field_tag :search %>
-  <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
-    <p>
-      <i class="fas fa-search"></i>
-      查詢
-    </p>
-  <% end %>
+  <div class="d-flex justify-content-between">
+    <div class="p-2">
+      <%= text_field_tag :search %>
+      <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
+        <p>
+          <i class="fas fa-search"></i>
+        </p>
+    <% end %>
+    </div>
+    <div class="p-2">
+      <%= link_to staff_users_path, class:"btn btn-green" do %>
+        <p>
+          <i class="fas fa-user-plus"></i>
+          新增工讀生
+        </p>
+      <% end %>
+    </div>
+  </div>
+  
 <% end %>
 
 <%= link_to "加入學生",staff_users_path, class:"btn btn-org btn-sm" %>
@@ -27,14 +39,22 @@
   <% @students.uniq.each do |student| %>
     <tr>
       <td><%= student.number %></td>
-      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
+      <td><%= link_to staff_salary_path(student.slug) do %>
+        <%= student.name %>
+        <i class="fas fa-arrow-alt-circle-right"></i>
+      <% end %>
+      </td>
       <td><%= salary_hr(student) %> 時</td>
       <td><%= salary_sum(student) %> 元</td>
       <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' do %>
           <i class="fas fa-pencil-alt"></i>
+      <% end %>
+      </td>
+      <td>
+        <%= link_to staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name}的工讀名單 剔除嗎?" } do %>
+          <i class="fas fa-user-alt-slash"></i>
         <% end %>
       </td>
-      <td><%= link_to "Ｘ", staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name} 剔除嗎?" } %></td>
     </tr>
   <% end %>
   </tbody>
@@ -55,8 +75,8 @@
   <div class="p-2">
     <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" do %>
       <p>
-        匯出PDF
         <i class="far fa-file-pdf"></i>
+        匯出PDF
       </p>
     <% end %>
   </div>

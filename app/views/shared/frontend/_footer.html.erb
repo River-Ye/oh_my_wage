@@ -1,25 +1,39 @@
 <script src="https://kit.fontawesome.com/e80784ce5e.js" crossorigin="anonymous"></script>
 <footer class="fixed-bottom">
-  <div class="container d-flex justify-content-center flex-fill">
-    <div class="col-md-12">
-      <a href="tel:+886223315247">
-        <p>
-          <i class="fas fa-phone-volume"></i>
-          (02) 2331-5247
-        </p>
-      </a>
-      <a href="mailto:admin@oh-my-wage.website">
-        <p class="email">
-          <i class="far fa-envelope"></i>
-          admin@oh-my-wage.website
-        </p>
-      </a>
-      <a href="https://ubin.io/TyZN7E">
-        <p>
-          <i class="fas fa-map-marked-alt"></i>
-          台北市中正區衡陽路7號5樓
-        </p>
-      </a>
+  <div class="container">
+    <div class="row justify-content-between">
+    
+      <div class="contactfooter col-8 col-md-8 col-lg-6">
+        <div class="row footersub">
+          <div class="tel">
+            <a href="tel:+886223315247">
+              <i class="fas fa-phone-volume"></i>
+              +886-2-2331-5247
+            </a>
+            </div>
+            <div class="emailfooter">
+            <a href="mailto:admin@oh-my-wage.website">
+              <i class="far fa-envelope"></i>
+              admin@oh-my-wage.website
+           </a>
+          </div>
+        </div>
+        <div class="address">
+          <a href="https://ubin.io/TyZN7E">
+            <i class="fas fa-map-marked-alt"></i>
+            <%= t('address') %>
+          </a>
+        </div>
+      </div>
+       
+      <li class="dropdown col-4 col-md-3 col-lg-2">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-globe"></i> <%= t('language') %></a>
+        <ul class="dropdown-menu">       
+          <li><%= link_to "繁體中文", :controller => controller_name, :action => action_name,        :locale => "zh-TW" %></li>
+          <li><%= link_to "English", :controller => controller_name, :action => action_name,       :locale => "en" %></li>
+          <li><%= link_to "日本語", :controller => controller_name, :action => action_name,      :locale       => "ja" %></li>
+        </ul>
+      </li>
     </div>
   </div>
 </footer>
