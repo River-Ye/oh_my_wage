@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  address: "No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan"
+  about: "About"
+  contact: "Contact"
+  faqs: "FAQs"
+  fgpw: "Forgot Your Password?"
+  send: "Send"
+  back: "Back"
