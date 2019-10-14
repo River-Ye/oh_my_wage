@@ -15,13 +15,26 @@
       <%= form.input :title, label: '標題：' %>
     </div>
     <div class="card-text">
-      <%= form.input :content, label: '內容：' %>
-    <%= form.button :submit, '送出', class: 'btn-blue btn-md' %>
+      <%= form.input :content, label: '內容：', as: :text %>
+      <div class="d-flex justify-content-center">
+        <div class="p-2">
+          <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+            <p>
+              <i class="fas fa-backward"></i>
+              上一頁
+            </p>
+          <% end %>
+        </div>
+        <div class="p-2">
+          <%= button_tag type: 'submit', class: "btn btn-blue my-button", id: "register-button" do %>
+          <p>
+            送出
+            <i class="fas fa-paper-plane"></i>
+          </p>
+        <% end %>
+        </div>
+      </div>
     <% end %>
     </div>
-  </div>
-
-  <div class="row">
-    <%= link_to "上一頁", :back, class: 'btn btn-gray btn-md verticalspace' %>
   </div>
 </div>

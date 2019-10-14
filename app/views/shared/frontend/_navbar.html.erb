@@ -4,29 +4,44 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item p-2 active">
         <%= link_to t("about"), about_path, class: 'nav-link text-light list-top' %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item p-2 active">
         <%= link_to t("contact"), contact_path, class: 'nav-link text-light' %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item p-2 active">
         <%= link_to t("faqs"), qa_path, class: 'nav-link text-light' %>
+
       </li>
     </ul>
       
-    <ul class="navbar-nav">
+    <ul class="navbar-nav d-flex align-items-center">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <p id="timecount"></p> 
-          <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></div>
+        <li class="nav-item p-2">
+          <%= link_to edit_user_registration_path, class: 'nav-link  text-light' do %>
+            <span>
+              <i class="fas fa-user-edit"></i>
+              個人資料
+            </span>
+          <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to "My Page", edit_user_registration_path, class: 'nav-link  text-light' %>
+
+        <li class="nav-item p-2">
+          <%= link_to destroy_user_session_path, class: 'nav-link', method: 'delete' do %>
+            <span>
+              登出
+              <i class="fas fa-sign-out-alt"></i>
+            </span>
+          <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Log Out", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+        <li class="nav-item p-2">
+          <i class="fas fa-hourglass-half"></i>
+          <span id="timecount">
+            <span id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></span>
+          </span>
         </li>
       <% end %>
     </ul>

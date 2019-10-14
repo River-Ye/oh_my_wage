@@ -8,6 +8,12 @@ class Student::UserController < ApplicationController
 
   def history
   end
+  
+  def chart
+    beginning_of_month = Date.today.beginning_of_month
+    end_of_month = beginning_of_month.end_of_month
+    @salary = current_user.salaries.where(date: beginning_of_month..end_of_month).order(date: :desc)
+  end
 
   private
 

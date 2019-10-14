@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   namespace 'student' do
     get 'history', to: 'user#history'
     root 'user#index'
+    get 'chart', to: 'user#chart'
   end
 
   namespace 'staff' do
@@ -28,7 +29,6 @@ Rails.application.routes.draw do
     resources 'salaries', except: [:new, :create] do
       collection  do
         get :pdf
-        get :chart
       end  
     end   
     get 'history', to: 'user#history'
