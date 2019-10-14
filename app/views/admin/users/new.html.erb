@@ -25,7 +25,17 @@
       </div>
     </div>
 
-    <%= link_to "上一頁", :back, class: 'btn btn-gray btn-md' %>
-    <%= f.button :submit, '新增', class: 'btn-green btn-md' %>
+    <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-backward"></i>
+        上一頁
+      </p>
+    <% end %>
+    <%= button_tag type: 'submit', class: 'btn btn-green btn-md' do %>
+      <p>
+        <i class="fas fa-user-plus"></i>
+        新增
+      </p>
+    <% end %>
   </div>
 <% end %>

@@ -23,7 +23,17 @@
     </div>
   </div>
   <div class="form-actions">
-    <%= f.button :submit, "更新", class: 'btn btn-green btn-md' %>
-    <%= link_to "上一頁", :back, class: 'btn btn-gray btn-md' %>
+    <%= button_tag type: 'submit', class: 'btn btn-green btn-md' do %>
+      <p>
+        <i class="far fa-save"></i>
+        更新
+      </p>
+    <% end %>
+    <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-backward"></i>
+        上一頁
+      </p>
+    <% end %>
   </div>
 <% end %>

@@ -22,4 +22,9 @@
 
 <%= paginate @problems, theme: 'twitter-bootstrap-4' %>
 
-<%= link_to "上一頁", :back, class: 'btn btn-gray btn-md' %>
+<%= link_to :back, class: 'btn btn-gray btn-md' do %>
+  <p>
+    <i class="fas fa-backward"></i>
+    上一頁
+  </p>
+<% end %>
