@@ -4,7 +4,7 @@
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
   <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
 <% end %>
-<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
+<%= paginate @salary %>
 <table class='table'>
   <thead>
     <th>日期</th>
