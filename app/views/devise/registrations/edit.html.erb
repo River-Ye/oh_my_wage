@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <div class="row">
       <div class="col-lg-8 col-md-12 col-sm-12 show">
-        <% if user_signed_in? && current_user.role == 'admin' %>
+        <% if user_signed_in? && current_user.role == '管理者' %>
           <%= f.input :number, label: '編號：' %>
         <% else %>
           <div class="profile">
@@ -15,8 +15,8 @@
         <% end %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 show">
-        <% if user_signed_in? && current_user.role == 'admin' %>
-          <%= f.input :role, label: '權限：', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
+        <% if user_signed_in? && current_user.role == '管理者' %>
+          <%= f.input :role, label: '權限：', collection: { "管理者": "管理者", "員工": "staff", "學生": "student" } %>
         <% else %>
           <div class="profile">
             <p class="phead">權限：</p>
@@ -28,7 +28,7 @@
         <%= f.input :name, label: '姓名：' %>
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 show">
-        <% if user_signed_in? && current_user.role == 'admin' %>
+        <% if user_signed_in? && current_user.role == '管理者' %>
           <%= f.input :gender, label: '性別：', collection: { "男": "Male", "女": "Female" } %>
         <% else %>
           <div class="profile">

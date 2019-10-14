@@ -22,7 +22,7 @@
       <td><%= link_to student.name, staff_user_path(student.slug) %></td>
       <td><%= student.phone %></td>
       <td><%= student.email %></td>
-      <td><%= link_to "＋", staff_user_path(student.slug), method: 'PUT', class: 'btn btn-red btn-sm white-hover spin' %></td>
+      <td><%= link_to "＋", staff_user_path(student.slug), method: 'PUT', data: { confirm: "確定要把 #{student.name} 加入 #{@department.name} 嗎?" }, class: 'btn btn-red btn-sm white-hover spin' %></td>
     </tr>
   <% end %>
   </tbody>
@@ -30,10 +30,10 @@
 
 <div class="d-flex justify-content-center">
   <div class="p-2">
-    <%= link_to staff_root_path, class: 'btn btn-gray btn-md' do %>
+    <%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
       <p>
         <i class="fas fa-fast-backward"></i>
-        回主選單
+        回工時登錄
       </p>
     <% end %>
   </div>

@@ -1,15 +1,31 @@
 <h1 class="verticalspace">Hi, <%= current_user.name %> 歡迎回來</h1>
 <h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
-<table class="table col-lg-6 col-md-9 col-sm-12">
-  <tr>
-    <th>總工時</th>
-    <td><%= calculate_student_salary_hr %> 小時</td>
-  </tr>
-  <tr>
+
+<table class='table col-lg-6 col-md-9 col-sm-12'>
+  <thead>
+    <th>日期</th>
+    <th>工時</th>
+    <th>時薪</th>
     <th>試算</th>
-    <td><%= calculate_studen_salary_sum %> 元</td>
-  </tr>
+  </thead>
+  <tbody>
+    <% @salary.each do |salary| %>
+    <tr>
+      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td><%= salary.hr %> 時</td>
+      <td><%= salary.hourly_wage %> 元</td>
+      <td><%= money(salary) %> 元</td>
+    </tr>
+    <% end %>
+    <tr>
+      <td>總計</td>
+      <td><%= calculate_student_salary_hr %> 時</td>
+      <td></td>
+      <td><%= calculate_studen_salary_sum %> 元</td>
+    </tr>
+  </tbody>
 </table>
+
 <%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-blue btn-md white-hover' %>
 <%= link_to "問題反應", new_problem_path, class: 'btn btn-red btn-md white-hover' %>
 <%= link_to "圖表", student_chart_path, class: 'btn btn-green btn-md white-hover' %>
