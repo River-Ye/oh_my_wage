@@ -45,18 +45,14 @@ body{
 
 .pdf-school{
   width: 100%;
-  margin-bottom: 5px;
   padding: 3px;
-  .mr-auto.p-2{
-    margin-bottom: 0.5em;
-  }
   h3{
     line-height: 1em;
     font-size: 20px;
   }
   p{
     font-size: 15px;
-    line-height: 1em;
+    line-height: 1em !important;
   }
 }
 .pdf-img{
@@ -118,6 +114,7 @@ h1.sign-h1{
 .sign-table{
   vertical-align: middle;
   margin: 5em auto;
+  padding: 0.1em;
   text-align: center;
   border: 1px solid #272727;
   .sign-area{
@@ -130,7 +127,7 @@ h1.sign-h1{
   font-size: 30px;
   }
   td{
-  font-size: 25px;
+  font-size: 30px;
   }
   td > p{
     color: transparent;
