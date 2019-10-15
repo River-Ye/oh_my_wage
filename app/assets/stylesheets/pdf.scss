@@ -43,11 +43,6 @@ body{
   font-family: 'NotoSansTC-Regular';
 }
 
-.pdf-wage{
-  font-size: 30px;
-  text-align: center;
-  background-color: white;
-}
 .pdf-school{
   width: 100%;
   padding: 3px;
@@ -96,6 +91,12 @@ body{
   }
   td{
     font-size: 25px;
+  }
+
+  .pdf-wage{
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
   }
 }
 
