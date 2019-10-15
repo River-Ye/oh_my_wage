@@ -20,8 +20,9 @@
 
 body{
     height: 100%;
-    padding: 90px 0% 100px;
+    padding: 75px 0% 100px;
 }
+
 // ---------- flash notice message ----------
 
 .alert{
@@ -136,12 +137,18 @@ span#timecount{
     font-size: 12px;
     margin-top: 20px;
 }
-.fgpw2{
+
+.fgpw:hover{
     color: #8b0000;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
 }
+
+.fgpw2{
+color: #8b0000;
+text-align: center;
+font-size: 12px;
+margin-top: 20px;
+}
+
 .btn:focus, .btn-gray:focus{
     outline: none !important;
     box-shadow: none !important;
@@ -353,6 +360,16 @@ span#timecount{
 .form-group{
     text-align: left;
 }
+
+.form-group.tel.required.user_phone{
+    width: 100%;
+}
+
+.form-group.tel.required.user_phone.form-group-valid,
+.form-control.is-valid.string.tel.required{
+    margin-left: 0;
+}
+
 // ---------- forget password ----------
 .pwletter{
     width: 100%;
@@ -540,6 +557,15 @@ table{
         line-height: 3em;
         background-color: #521D1F;
         color: #FEFDFF;
+    }
+    thead > tr{
+        border-top-color: transparent !important;
+        border-right: 1px solid #521D1F !important;
+        border-left: 2px solid #521D1F !important;
+    }
+    tbody > tr{
+    border-right: 1px solid rgba(18, 50, 69, 0.01) !important;
+    border-left: 2px solid rgba(18, 50, 69, 0.01) !important;
     }
 }
 
