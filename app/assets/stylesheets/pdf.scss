@@ -117,20 +117,16 @@ h1.sign-h1{
   padding: 0.1em;
   text-align: center;
   border: 1px solid #272727;
-  .sign-area{
-    line-height: 10em;
-  }
   th, td{
     border: 1px solid #272727;
   }
   th > p{
-  font-size: 30px;
-  }
-  td{
-  font-size: 40px;
+    font-size: 30px;
   }
   td > p{
     color: transparent;
+    font-size: 40px;
+    line-height: 5em;
   }
 }
 
