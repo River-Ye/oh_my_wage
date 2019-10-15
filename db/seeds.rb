@@ -34,12 +34,12 @@ puts "產生 200 筆「學生」與「部門」關聯"
 end
 puts "Done!"
 
-puts "產生 600 筆「學生」薪資紀錄"
-600.times do |i|
+puts "產生 10000 筆「學生」薪資紀錄"
+10000.times do |i|
   Salary.create(user_id: rand(301..450),
                 date: rand(1.years).seconds.ago,
-                hr: rand(1..12),
-                hourly_wage: [150, 155, 160, 165, 170, 175, 180, 200].sample)
+                hr: rand(4..8),
+                hourly_wage: 150)
 end
 puts "Done!"
 
