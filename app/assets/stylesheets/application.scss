@@ -119,6 +119,7 @@ span#timecount{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .my-btn{
     width: 100%;
     margin: 1em auto;
@@ -239,7 +240,11 @@ span#timecount{
 }
  
 #search{
+    float: left;
+    margin-top: 0.5em;
+    margin-right: 5px;
     height: 2.3em;
+    margin-bottom: 0;
     padding: 0.5em;
     vertical-align: middle;
     border-radius: 5px;
@@ -251,6 +256,21 @@ span#timecount{
 #search:focus{
     outline: none;
     background-color: rgba(18, 50, 69, 0.1);
+}
+
+@media screen and (max-width: 767px){
+
+    #search{
+        width: calc(85% - 5px);
+    }
+    .btn.btn-blue.btn-md.white-hover.verticalspace{
+        width: 15%;
+        margin-right: 0;
+    }
+    .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0{
+        float: left !important;
+        width: 100%;
+    }
 }
 
 // ---------- login ----------
@@ -353,6 +373,13 @@ span#timecount{
 .form-group{
     text-align: left;
 }
+
+// ---------- admin profile & edit ----------
+
+.btn.btn-green.btn-md.white-hover.verticalspace.mr-0{
+
+}
+
 // ---------- forget password ----------
 .pwletter{
     width: 100%;
@@ -398,13 +425,22 @@ span#timecount{
 
 .table-condensed{
     background-color: #74B1BF;
+    border: 2px solid transparent !important;
     th{
         background-color: #3D606E;
         border-radius: 0;
-        border: 2px solid transparent;
+        border-color: #3D606E !important;
     }
+
+    thead > tr{
+        border: 1px solid #3D606E !important;
+    }
+
     tr, td{
         border: 2px solid transparent;
+    }
+    th.datepicker-switch{
+        border-left-color: #3D606E;
     }
     th.datepicker-switch:hover,
     th.next:hover,
@@ -518,9 +554,9 @@ table{
     a{
         color: #333;
     }
-    tr{
+    tbody > tr{
         transition: 0.3s;
-        border: 2px solid #FEFDFF !important;
+        border-bottom: 2px solid #FEFDFF !important;
     }
     tr:hover{
         background-color: #123245;
@@ -546,7 +582,6 @@ table{
 table.table.col-lg-12.col-md-12.col-sm-12{
     th,td{
         text-align: left;
-        // border: 1px solid #ccc;
     }
 }
 
