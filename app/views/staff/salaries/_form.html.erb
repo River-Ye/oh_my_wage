@@ -1,11 +1,29 @@
-<h3 class="verticalspace" >姓名：<%= student.name %>
+<h3 class="verticalspace" >
+<span>
+  學號：<%= student.number %>
+</span>
+<span>
+  姓名：<%= student.name %>
+</span>
 </h3>
-<h3 class="verticalspace" >學號：<%= student.number %>
-</h3>
-<%= simple_form_for student, url: staff_salary_path do |form| %>
-  <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
-    <%= render 'salary_fields', f: salary_form %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">日期</th>
+      <th scope="col">工時</th>
+      <th scope="col">時薪</th>
+      <th scope="col">刪除</th>
+    </tr>
+  </thead>
+  <%= simple_form_for student, url: staff_salary_path do |form| %>
+    <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
+    <tbody>
+      <tr>
+        <%= render 'salary_fields', f: salary_form %>
+      </tr>
+    </tbody>
   <% end %>
+  </table>
   <div class="links">
     <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
