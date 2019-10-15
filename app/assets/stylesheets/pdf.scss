@@ -45,17 +45,17 @@ body{
 
 .pdf-school{
   width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
   .mr-auto.p-2{
     margin-bottom: 1em;
   }
   h3{
-    line-height: 1.5em;
-    font-size: 30px;
+    line-height: 1em;
+    font-size: 20px;
   }
   p{
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 .pdf-img{
@@ -66,9 +66,9 @@ h1.pdf-h1{
   margin: 0.5em auto;
   padding-top: 1em;
   text-align: center;
-  font-size: 40pt;
+  font-size: 30pt;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   border-top: 2px solid #000;
 }
 
@@ -109,9 +109,9 @@ h1.sign-h1{
   margin: 0.5em auto;
   padding-top: 1em;
   text-align: center;
-  font-size: 40pt;
+  font-size: 30pt;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .sign-table{
@@ -126,10 +126,10 @@ h1.sign-h1{
     border: 1px solid #272727;
   }
   th > p{
-  font-size: 35px;
+  font-size: 30px;
   }
   td{
-  font-size: 30px;
+  font-size: 25px;
   }
   td > p{
     color: transparent;
