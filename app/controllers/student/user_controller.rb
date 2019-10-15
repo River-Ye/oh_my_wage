@@ -7,13 +7,13 @@ class Student::UserController < ApplicationController
   end
 
   def history
+    if search_month.blank?
+      @salary_chart_by_day = Salary.search(search_month).where(user_id: current_user).group_by_month(:date).sum(:hr)
+    else
+      @salary_chart_by_day = Salary.search(search_month).where(user_id: current_user).group_by_day(:date).sum(:hr)
+    end
   end
-  
-  def chart
-    beginning_of_month = Date.today.beginning_of_month
-    end_of_month = beginning_of_month.end_of_month
-    @salary = current_user.salaries.where(date: beginning_of_month..end_of_month).order(date: :desc)
-  end
+ 
 
   private
 
