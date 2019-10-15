@@ -18,9 +18,23 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-body{
-    height: 100%;
-    padding: 90px 0% 100px;
+@media (max-width: 767px) {
+    body{
+        height: 100%;
+        padding: 18.5% 0% 60px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    body{
+        height: 100%;
+        padding: 9.5% 0% 50px;
+    }
+}
+@media (min-width: 980px) {
+    body{
+        height: 100%;
+        padding: 70px 0% 5%;
+    }
 }
 // ---------- flash notice message ----------
 
@@ -860,8 +874,9 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 footer{
     margin-top: 100px;
-    padding: 1% 0%;
-    font-size: 1.7vmin;
+    padding: 1% 0% 2%;
+    font-size: 13px;
+    height: 8.3%;
     background-color: rgb(18, 50, 69);
     a, a:visited, a:hover{
         text-decoration: none;
@@ -881,7 +896,9 @@ footer{
 }
 @media (max-width: 992px) {
     li.dropdown{
-        text-align: end;
+        text-align: start;
+        padding-top: 0;
+        padding-bottom: 2px;
     }
     .emailfooter{
         margin-left: 15px;
