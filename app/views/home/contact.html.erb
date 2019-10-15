@@ -20,12 +20,12 @@
                     <p>
                         看似輕鬆的背後，有著看不盡的付出。」
                     </p>
-                    <a href="mailto:river@riverye.com">
-                        <p class="email">
+                    <p class="email">
+                        <a href="mailto:river@riverye.com">
                             <i class="far fa-envelope"></i>
                             river@riverye.com
-                        </p>
-                    </a>
+                        </a>
+                    </p>
                 </div>
             </div>
             <div class="p-2 d-flex worker-int">
@@ -43,12 +43,12 @@
                     <p>
                         用好奇心探索世界！」
                     </p>
-                    <a href="mailto:axelchen0520@gmail.com">
-                        <p class="email">
-                            <i class="far fa-envelope"></i>
-                            axelchen0520@gmail.com
-                        </p>
-                    </a>
+                    <p class="email">
+                        <a href="mailto:axelchen0520@gmail.com">
+                        <i class="far fa-envelope"></i>
+                        axelchen0520@gmail.com
+                        </a>
+                    </p>                    
                 </div>
             </div>
         </div>
@@ -72,12 +72,12 @@
                     <p>
                         你要開始，才能變得很厲害！」
                     </p>
-                    <a href="mailto:joanliao0525@joanliao.space">
-                        <p class="email">
-                            <i class="far fa-envelope"></i>
-                            joanliao0525@joanliao.space
-                        </p>
-                    </a>
+                    <p class="email">
+                        <a href="mailto:joanliao0525@joanliao.space">
+                        <i class="far fa-envelope"></i>
+                        joanliao0525@joanliao.space
+                        </a>
+                    </p>
                 </div>
             </div>
             <div class="p-2 d-flex worker-int">
@@ -95,27 +95,32 @@
                     <P>
                         享受思考後發現新世界的興奮。」
                     </P>
-                    <a href="mailto:kazupat0906@gmail.com">
-                        <p class="email">
+                    <p class="email">
+                        <a href="mailto:kazupat0906@gmail.com">
                             <i class="far fa-envelope"></i>
                             kazupat0906@gmail.com
-                        </p>
-                    </a>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
         <li>TEL：</li>
-            <a href="tel:+886223315247">
-            <p>(02) 2331-5247</p>
-            </a>
+            <p>
+                <a href="tel:+886223315247">
+                (02) 2331-5247</a>
+            </p>
         <li>Email：</li>
-            <a href="mailto:admin@oh-my-wage.website">
-            <p>admin@oh-my-wage.website</p>
-            </a>
+            <p>
+                <a href="mailto:admin@oh-my-wage.website">
+                admin@oh-my-wage.website
+                </a>
+            </p>
         <li>Address：</li>
-            <a href="https://ubin.io/TyZN7E">
-            <p>5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-            </a>
+            <p>
+                <a href="https://ubin.io/TyZN7E">
+                5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)
+                </a>
+            </p>
             <div id="map" class="center-block col-lg-12 col-md-12 col-sm-12"></div>
             <script>
             $(document).on('turbolinks:load', function() {
@@ -133,6 +138,11 @@
     </ul>
 </div>
 <div class="center-block">
-<%= link_to "回到首頁", '/', class: 'btn btn-gray btn-lg' %>
+    <%= link_to '/', class: 'btn btn-gray btn-lg' do %>
+        <p>
+            <i class="fas fa-home"></i>
+            回到首頁
+        </p>
+    <% end %>
 </div>
 </body>
