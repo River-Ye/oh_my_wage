@@ -104,7 +104,7 @@ h1.pdf-h1{
 
 h1.sign-h1{
   margin: 0.5em auto;
-  padding-top: 1em;
+  padding-top: 0.5em;
   text-align: center;
   font-size: 30pt;
   font-weight: 700;
@@ -118,7 +118,7 @@ h1.sign-h1{
   text-align: center;
   border: 1px solid #272727;
   .sign-area{
-    line-height: 5em;
+    line-height: 10em;
   }
   th, td{
     border: 1px solid #272727;
@@ -127,7 +127,7 @@ h1.sign-h1{
   font-size: 30px;
   }
   td{
-  font-size: 30px;
+  font-size: 40px;
   }
   td > p{
     color: transparent;
