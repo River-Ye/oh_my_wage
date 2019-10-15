@@ -7,7 +7,6 @@
   <% end %>
 <% end %>
 
-<%= paginate @salary %>
 
 <table class='table'>
   <thead>
@@ -34,7 +33,7 @@
   </tbody>
 </table>
 
-<%= area_chart @salary_chart_by_day %>
+<%= area_chart @salary_chart_by_day, ytitle: 'hr' %>
 
 <div class="container">
   <div class="row">
