@@ -74,6 +74,7 @@ h1.pdf-h1{
   font-weight: 400;
   border: #272727;
   text-align: center;
+  margin-bottom: 0;
   tr{
     border-bottom: solid;
     border-width: 3px;
@@ -113,7 +114,6 @@ h1.sign-h1{
 
 .sign-table{
   vertical-align: middle;
-  margin: 5em auto;
   padding: 0.1em;
   text-align: center;
   border: 1px solid #272727;
