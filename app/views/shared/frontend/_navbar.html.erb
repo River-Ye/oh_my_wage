@@ -33,7 +33,7 @@
           <%= link_to edit_user_registration_path, class: 'nav-link  text-light' do %>
             <span>
               <i class="fas fa-user-edit"></i>
-              個人資料
+              <%= t('my_page') %>
             </span>
           <% end %>
         </li>
@@ -42,7 +42,7 @@
           <%= link_to destroy_user_session_path, class: 'nav-link', method: 'delete' do %>
             <span>
               <i class="fas fa-sign-out-alt"></i>
-              登出
+              <%= t('log_out') %>     
             </span>
           <% end %>
         </li>
