@@ -19,10 +19,7 @@
       <% end %>
     </div>
   </div>
-  
 <% end %>
-
-<%= link_to "加入學生",staff_users_path, class:"btn btn-org btn-sm" %>
 
 <table class="table table-sm">
   <thead>
@@ -41,7 +38,6 @@
       <td><%= student.number %></td>
       <td><%= link_to staff_salary_path(student.slug) do %>
         <%= student.name %>
-        <i class="fas fa-arrow-alt-circle-right"></i>
       <% end %>
       </td>
       <td><%= salary_hr(student) %> 時</td>
