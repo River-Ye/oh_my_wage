@@ -65,7 +65,7 @@ body{
   margin: 0.5em auto;
   padding-top: 0.5em;
   text-align: center;
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 700;
   letter-spacing: 3px;
   position: relative;
@@ -114,7 +114,7 @@ body{
   margin: 0.5em auto;
   padding-top: 0.5em;
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 2px;
   position: relative;
@@ -136,6 +136,15 @@ body{
     color: transparent;
     font-size: 100px;
   }
+}
+
+.sign-area{
+  vertical-align: middle;
+  padding: 0.1em;
+  text-align: center;
+  border: 1px solid #272727;
+  position: relative;
+  font-size: 50px;
 }
 
 table,tr,td,th,tbody,thead,tfoot{
