@@ -44,32 +44,35 @@ body{
 }
 
 .pdf-school{
+  top: 10px;
   width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-  .mr-auto.p-2{
-    margin-bottom: 1em;
-  }
+  padding: 3px;
   h3{
-    line-height: 1.5em;
-    font-size: 30px;
+    line-height: 2em;
+    font-size: 25px;
   }
   p{
     font-size: 20px;
+    line-height: 1em !important;
   }
 }
 .pdf-img{
-  width: 300px;
-  height: 300px;
+  width: 370px;
+  height: 370px;
 }
-h1.pdf-h1{
-  margin: 0.5em auto;
-  padding-top: 1em;
+
+.pdf-h1{
+  margin: 0.5em auto 1em;
+  padding-top: 0.5em;
   text-align: center;
-  font-size: 40pt;
+  font-size: 55px;
   font-weight: 700;
   letter-spacing: 3px;
-  border-top: 2px solid #000;
+  position: relative;
+}
+
+.pdf-wage{
+  position: relative;
 }
 
 .pdf-table{
@@ -77,6 +80,8 @@ h1.pdf-h1{
   font-weight: 400;
   border: #272727;
   text-align: center;
+  margin-bottom: 0;
+  position: relative;
   tr{
     border-bottom: solid;
     border-width: 3px;
@@ -89,51 +94,57 @@ h1.pdf-h1{
     background:#bebebe;
     border: #835959;
     color:black;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
   td{
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
 .logo-img{
-  width: 392px;
-  height: 294px;
+  width: 200px;
+  height: 200px;
   img{
     width: 100%;
     height: 100%;
   }
 }
 
-h1.sign-h1{
+.sign-h1{
   margin: 0.5em auto;
-  padding-top: 1em;
+  padding-top: 0.5em;
   text-align: center;
-  font-size: 40pt;
+  font-size: 55px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  position: relative;
 }
 
 .sign-table{
   vertical-align: middle;
-  margin: 5em auto;
+  padding: 0.1em;
   text-align: center;
   border: 1px solid #272727;
-  .sign-area{
-    line-height: 5em;
-  }
+  position: relative;
   th, td{
     border: 1px solid #272727;
   }
   th > p{
-  font-size: 35px;
-  }
-  td{
-  font-size: 30px;
+    font-size: 40px;
   }
   td > p{
     color: transparent;
+    font-size: 100px;
   }
+}
+
+.sign-area{
+  vertical-align: middle;
+  padding: 0.1em;
+  text-align: center;
+  border: 1px solid #272727;
+  position: relative;
+  font-size: 30px;
 }
 
 table,tr,td,th,tbody,thead,tfoot{
