@@ -7,13 +7,22 @@
 
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item p-2 active">
-        <%= link_to t("about"), about_path, class: 'nav-link text-light list-top' %>
+        <%= link_to about_path, class: 'nav-link text-light list-top' do %>
+          <i class="fas fa-info-circle"></i>
+          <%= t("about") %>
+        <% end %>
       </li>
       <li class="nav-item p-2 active">
-        <%= link_to t("contact"), contact_path, class: 'nav-link text-light' %>
+        <%= link_to contact_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-link"></i>
+          <%= t("contact") %>
+        <% end %>
       </li>
       <li class="nav-item p-2 active">
-        <%= link_to t("faqs"), qa_path, class: 'nav-link text-light' %>
+        <%= link_to qa_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-question-circle"></i>
+          <%= t("faqs") %>
+        <% end %>
 
       </li>
     </ul>
@@ -24,7 +33,7 @@
           <%= link_to edit_user_registration_path, class: 'nav-link  text-light' do %>
             <span>
               <i class="fas fa-user-edit"></i>
-              個人資料
+              <%= t('my_page') %>
             </span>
           <% end %>
         </li>
@@ -33,7 +42,7 @@
           <%= link_to destroy_user_session_path, class: 'nav-link', method: 'delete' do %>
             <span>
               <i class="fas fa-sign-out-alt"></i>
-              登出
+              <%= t('log_out') %>     
             </span>
           <% end %>
         </li>

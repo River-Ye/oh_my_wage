@@ -18,10 +18,31 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-body{
-    height: 100%;
-    padding: 90px 0% 100px;
+@media (max-width: 767px) {
+    body{
+        height: 100%;
+        padding: 18.5% 0% 60px;
+    }
 }
+@media (min-width: 768px) and (max-width: 979px) {
+    body{
+        height: 100%;
+        padding: 9.5% 0% 50px;
+    }
+}
+@media (min-width: 980px) {
+    body{
+        height: 100%;
+        padding: 70px 0% 5%;
+    }
+}
+@media (min-width: 980px) {
+    body{
+        height: 100%;
+        padding: 70px 0% 5%;
+    }
+}
+
 // ---------- flash notice message ----------
 
 .alert{
@@ -72,7 +93,7 @@ body{
     margin: auto;
 }
 
-.col-md-12{
+.col-md-12, .col-md-9{
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -119,6 +140,7 @@ span#timecount{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .my-btn{
     width: 100%;
     margin: 1em auto;
@@ -136,12 +158,18 @@ span#timecount{
     font-size: 12px;
     margin-top: 20px;
 }
-.fgpw2{
+
+.fgpw:hover{
     color: #8b0000;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
 }
+
+.fgpw2{
+color: #8b0000;
+text-align: center;
+font-size: 12px;
+margin-top: 20px;
+}
+
 .btn:focus, .btn-gray:focus{
     outline: none !important;
     box-shadow: none !important;
@@ -237,10 +265,20 @@ span#timecount{
     border: 1px solid #666 !important;
     color: #FEFDFF;
 }
- 
+
+.btn.btn-md.btn-red.white-hover.remove_fields.existing{
+    margin-right: 0;
+    
+}
+
 #search{
+    margin: 8px auto;
+    width: calc(85% - 5px);
+    float: left;
     height: 2.3em;
+    margin-bottom: 0;
     padding: 0.5em;
+    margin-right: 5px;
     vertical-align: middle;
     border-radius: 5px;
     background-color: rgba(18, 50, 69, 0.1);
@@ -253,12 +291,79 @@ span#timecount{
     background-color: rgba(18, 50, 69, 0.1);
 }
 
+.btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
+    margin-right: 0;
+    width: 15%;
+}
+
+.btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
+.btn.btn-green.add-stu.float-right.mr-0{
+    margin: 8px auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 767px){
+    #search{
+        width: calc(85% - 5px);
+    }
+    
+    .btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
+        width: 15%;
+    }
+
+    .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
+    .btn.btn-green.add-stu.float-right.mr-0{
+        margin-top: 8px;
+        width: 100%;
+    }
+}
 // ---------- login ----------
 
-.container-fluid{
-    position: absolute;
-    left: 0;
+.overlay{
+    position:fixed;
+    background: image-url("login-bg.png");
+    opacity: 0.3;
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
+
+@-webkit-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+}
+  
+@-moz-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-o-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-ms-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
 .loginblocksm.col-12{
     margin-top: 3em;
     padding: 1em;
@@ -272,11 +377,9 @@ span#timecount{
         }
     }
 }
-.loginblock.col-lg-4{
-    width: 60%;
-    margin-top: 3em;
-    margin-bottom: 10em;
-    left: 3em;
+.loginblock.col-lg-5{
+    margin: auto;
+    width: 100%;
     padding: 1em;
     text-align: left;
     z-index: 1;
@@ -301,31 +404,13 @@ span#timecount{
     } 
 }
 
-#carouselExampleSlidesOnly{
-    width: 100%;
-    right: 0;
-    z-index: 0;
-    margin-top: -1px;
-    img.d-block.w-100{
-        background-color: cover;
-    }
-}
-
 @media screen and (max-width:1027px){
-
-    #carouselExampleSlidesOnly{
-        margin-top: 3em;
-        width: 735px;
-    }
     .loginblock.col-lg-4{
         margin-top: 4em;
     }
 }
 
 @media screen and (max-width:995px){
-    #carouselExampleSlidesOnly{
-        display: none;
-    }
     .container-fluid{
         position: static;
         text-align: center;
@@ -353,6 +438,16 @@ span#timecount{
 .form-group{
     text-align: left;
 }
+
+.form-group.tel.required.user_phone{
+    width: 100%;
+}
+
+.form-group.tel.required.user_phone.form-group-valid,
+.form-control.is-valid.string.tel.required{
+    margin-left: 0;
+}
+
 // ---------- forget password ----------
 .pwletter{
     width: 100%;
@@ -398,13 +493,22 @@ span#timecount{
 
 .table-condensed{
     background-color: #74B1BF;
+    border: 2px solid transparent !important;
     th{
         background-color: #3D606E;
         border-radius: 0;
-        border: 2px solid transparent;
+        border-color: #3D606E !important;
     }
+
+    thead > tr{
+        border: 1px solid #3D606E !important;
+    }
+
     tr, td{
         border: 2px solid transparent;
+    }
+    th.datepicker-switch{
+        border-left-color: #3D606E;
     }
     th.datepicker-switch:hover,
     th.next:hover,
@@ -446,11 +550,10 @@ span.month:hover{
 .card{
     border: none;
     .hover-sec{
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         border-radius: 10px;
         box-shadow: 3px 3px 9px #999;
-        // background-color: rgba(0, 63, 86, 0.1);
         color: #333;
         transition: 0.3s;
     }
@@ -481,6 +584,7 @@ span.month:hover{
         text-align: center;
     }
     p.card-text{
+        width: 100%;
         font-size: 25px;
     }
     img.card-img-top{
@@ -491,10 +595,25 @@ span.month:hover{
 }
 
 .fas.fa-stopwatch, .far.fa-question-circle{
-    font-size: 250px;
+    font-size: 150px;
     margin: 0.1em auto;
 }
 
+@media screen and (max-width: 995px){
+    .fas.fa-stopwatch, .far.fa-question-circle{
+        font-size: 50px;
+}
+    h2.card-title{
+        font-size: 20px !important;
+    }
+    p.card-text{
+        font-size: 10px !important;
+    }
+    .hover-sec{
+        border: 1px solid salmon;
+        margin: 1em 3em;
+    }
+}
 // ---------- table ----------
 
 table > tbody > tr > td > .btn-red,
@@ -513,14 +632,15 @@ small.form-text.text-muted{
 }
 
 table{
+    margin-bottom: 0 !important;
     background-color: rgba(18, 50, 69, 0.1);
     color: #333 !important;
     a{
         color: #333;
     }
-    tr{
+    tbody > tr{
         transition: 0.3s;
-        border: 2px solid #FEFDFF !important;
+        border-bottom: 2px solid #FEFDFF !important;
     }
     tr:hover{
         background-color: #123245;
@@ -541,12 +661,20 @@ table{
         background-color: #521D1F;
         color: #FEFDFF;
     }
+    thead > tr{
+        border-top-color: transparent !important;
+        border-right: 1px solid #521D1F !important;
+        border-left: 2px solid #521D1F !important;
+    }
+    tbody > tr{
+    border-right: 1px solid rgba(18, 50, 69, 0.01) !important;
+    border-left: 2px solid rgba(18, 50, 69, 0.01) !important;
+    }
 }
 
 table.table.col-lg-12.col-md-12.col-sm-12{
     th,td{
         text-align: left;
-        // border: 1px solid #ccc;
     }
 }
 
@@ -576,7 +704,8 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 // ---------- pagination ----------
 
-.pagination{
+ul.pagination{
+    height: 3em !important;
     margin-right: 5px;
     justify-content: center;
     color: #FEFDFF;
@@ -612,6 +741,15 @@ textarea#reply_to_issue_content.form-control.text.required{
         font-size: 13px;
     }
 }
+// ---------- edit salary ----------
+
+.form-control.mx-1.date.required{
+    width: 237px;
+}
+.btn.btn-md.btn-red.white-hover.remove_fields.dynamic{
+    margin-right: 0;
+}
+
 // ---------- infopage ----------
 
 .infotitle{
@@ -734,7 +872,6 @@ textarea#reply_to_issue_content.form-control.text.required{
     border-radius: 10px;
     box-shadow: 3px 3px 9px #000;
 }
-
 
 .about.d-flex.col-12{
     width: 100%;
@@ -860,8 +997,9 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 footer{
     margin-top: 100px;
-    padding: 1% 0%;
-    font-size: 1.7vmin;
+    padding: 1% 0% 2%;
+    font-size: 13px;
+    height: 8.3%;
     background-color: rgb(18, 50, 69);
     a, a:visited, a:hover{
         text-decoration: none;
@@ -881,7 +1019,9 @@ footer{
 }
 @media (max-width: 992px) {
     li.dropdown{
-        text-align: end;
+        text-align: start;
+        padding-top: 0;
+        padding-bottom: 2px;
     }
     .emailfooter{
         margin-left: 15px;
