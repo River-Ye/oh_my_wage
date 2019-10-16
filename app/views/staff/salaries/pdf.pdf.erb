@@ -26,46 +26,49 @@
     <p>Taipei City 100, Taiwan</p>
   </div>
 </div>
+<div class="pdf-wage">
+  <h1 class="pdf-h1">工讀薪資明細</h1>
 
-<h1 class="pdf-h1">工讀薪資明細</h1>
+  <table class="table table-sm pdf-table">
+    <thead>
+      <tr>
+        <th>學號</th>
+        <th>姓名</th>
+        <th>當月工時總和</th>
+        <th>當月薪資總和</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.uniq.each do |student| %>
+      <tr>
+        <td><%= student.number %></td>
+        <td><%= student.name %></td>
+        <td><%= salary_hr(student) %> 時</td>
+        <td><%= salary_sum(student) %> 元</td>
+      </tr>
+      <% end %>
+      </tbody>   
+  </table>
+</div>
 
-<table class="table table-sm pdf-table">
-  <thead>
-    <tr>
-      <th>學號</th>
-      <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
-    </tr>
-  </thead>
-   <tbody>
-    <% @students.uniq.each do |student| %>
-    <tr>
-      <td><%= student.number %></td>
-      <td><%= student.name %></td>
-      <td><%= salary_hr(student) %> 時</td>
-      <td><%= salary_sum(student) %> 元</td>
-    </tr>
-    <% end %>
-    </tbody>   
-</table>
-
+<div class="pdf-wage">
 <h1 class="sign-h1">簽核</h1>
 
 <table class="sign-table table table-sm pdf-table" >
-  <thead>
-    <tr>
-      <th><p><%=@department.name%></p></th>
-      <th><p>該處室主管</p></th>
-      <th><p>會計事務處</p></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="sign-area">
-      <td><p>簽核處</p></td>
-      <td><p>簽核處</p></td>
-      <td><p>簽核處</p></td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th><p><%=@department.name%></p></th>
+        <th><p>該處室主管</p></th>
+        <th><p>會計事務處</p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sign-area">
+        <td><p>簽核處</p></td>
+        <td><p>簽核處</p></td>
+        <td><p>簽核處</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 

@@ -59,13 +59,19 @@ body{
   width: 250px;
   height: 250px;
 }
+
 .pdf-h1{
   margin: 0.5em auto;
   padding-top: 0.5em;
   text-align: center;
-  font-size: 30pt;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 3px;
+  position: relative;
+}
+
+.pdf-wage{
+  border: 1px solid salmon;
   position: relative;
 }
 
@@ -75,7 +81,7 @@ body{
   border: #272727;
   text-align: center;
   margin-bottom: 0;
-  position: absolute;
+  position: relative;
   tr{
     border-bottom: solid;
     border-width: 3px;
@@ -108,9 +114,10 @@ body{
   margin: 0.5em auto;
   padding-top: 0.5em;
   text-align: center;
-  font-size: 30pt;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 2px;
+  position: relative;
 }
 
 .sign-table{
@@ -118,6 +125,7 @@ body{
   padding: 0.1em;
   text-align: center;
   border: 1px solid #272727;
+  position: relative;
   th, td{
     border: 1px solid #272727;
   }
@@ -126,8 +134,7 @@ body{
   }
   td > p{
     color: transparent;
-    font-size: 40px;
-    line-height: 1em;
+    font-size: 100px;
   }
 }
 
