@@ -9,9 +9,57 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,500,600,700,800,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif:400,700&display=swap" rel="stylesheet">
 </head>
 
+<div class="pdf-wage">
+  <h1 class="pdf-h1"><%=@department.name%>工讀薪資明細</h1>
+
+  <table class="table table-sm pdf-table">
+    <thead>
+      <tr>
+        <th>學號</th>
+        <th>姓名</th>
+        <th>當月工時</th>
+        <th>當月薪資</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.uniq.each do |student| %>
+      <tr>
+        <td><%= student.number %></td>
+        <td><%= student.name %></td>
+        <td><%= salary_hr(student) %> 時</td>
+        <td><%= salary_sum(student) %> 元</td>
+      </tr>
+      <% end %>
+    </tbody> 
+        
+  </table>
+</div>
+
+<p style="page-break-after:always"></p>
+
+<div class="pdf-wage">
+<h1 class="sign-h1">簽核</h1>
+
+<table class="sign-table table table-sm pdf-table" >
+    <thead>
+      <tr>
+        <th><p><%=@department.name%></p></th>
+        <th><p>處室主管</p></th>
+        <th><p>會計事務處</p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="sign-area">
+        <td><p>簽核處</p></td>
+        <td><p>簽核處</p></td>
+        <td><p>簽核處</p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div class="pdf-school">
   <div class="logo-img float-right">
-    <%= wicked_pdf_image_tag 'logo.png' %>
+    <%= wicked_pdf_image_tag 'ohmywage.png' %>
 </div>
 
 <div class="pdf-school">  
@@ -19,6 +67,7 @@
     <h3>霍格華茲學院</h3>
     <h3 class="">Hogwarts School of Witchcraft and Wizardry</h3>
   </div>
+  
   <div class="">
     <p>(02) 23315247</p>
     <p>100台北市中正區衡陽路7號</p>
@@ -26,46 +75,3 @@
     <p>Taipei City 100, Taiwan</p>
   </div>
 </div>
-
-<h1 class="pdf-h1">工讀薪資明細</h1>
-
-<table class="table table-sm pdf-table">
-  <thead>
-    <tr>
-      <th>學號</th>
-      <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
-    </tr>
-  </thead>
-   <tbody>
-    <% @students.uniq.each do |student| %>
-    <tr>
-      <td><%= student.number %></td>
-      <td><%= student.name %></td>
-      <td><%= salary_hr(student) %> 時</td>
-      <td><%= salary_sum(student) %> 元</td>
-    </tr>
-    <% end %>
-    </tbody>   
-</table>
-
-<h1 class="sign-h1">簽核</h1>
-
-<table class="sign-table table table-sm pdf-table" >
-  <thead>
-    <tr>
-      <th><p><%=@department.name%></p></th>
-      <th><p>該處室主管</p></th>
-      <th><p>會計事務處</p></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="sign-area">
-      <td><p>簽核處</p></td>
-      <td><p>簽核處</p></td>
-      <td><p>簽核處</p></td>
-    </tr>
-  </tbody>
-</table>
-
