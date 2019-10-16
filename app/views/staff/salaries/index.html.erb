@@ -1,7 +1,7 @@
 <h1 class="verticalspace">工時登錄</h1>
-
 <%= form_tag(staff_salaries_path, method: :get) do %>
-  <div class="col-lg-6 col-md-12 col-sm-12">
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
     <%= text_field_tag :search %>
     <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
       <p>
@@ -9,15 +9,15 @@
       </p>
   <% end %>
   </div>
-  <div class="col-lg-6 col-md-12 col-sm-12">
-    <%= link_to staff_users_path, class:"btn btn-green add-stu float-right w-100 mr-0 mb-1" do %>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= link_to staff_users_path, class:"btn btn-green add-stu float-right mr-0" do %>
       <p>
         <i class="fas fa-user-plus"></i>
         新增工讀生
       </p>
     <% end %>
   </div>
-  
+</div>
 <% end %>
 
 <table class="table table-sm">

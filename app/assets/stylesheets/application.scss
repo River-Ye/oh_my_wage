@@ -87,7 +87,7 @@
     margin: auto;
 }
 
-.col-md-12{
+.col-md-12, .col-md-9{
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -263,6 +263,7 @@ margin-top: 20px;
     margin-right: 0;
     
 }
+
 #search{
     margin: 8px auto;
     width: calc(85% - 5px);
@@ -287,14 +288,20 @@ margin-top: 20px;
     width: 15%;
 }
 
-@media screen and (max-width: 767){
+.btn.btn-green.add-stu.float-right.mr-0{
+    margin: 8px auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 767px){
     #search{
         width: calc(85% - 5px);
     }
     .btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
         width: 15%;
     }
-    .btn.btn-green.add-stu{
+    .btn.btn-green.add-stu.float-right.mr-0{
+        margin-top: 8px;
         width: 100%;
     }
 }
@@ -522,11 +529,10 @@ span.month:hover{
 .card{
     border: none;
     .hover-sec{
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         border-radius: 10px;
         box-shadow: 3px 3px 9px #999;
-        // background-color: rgba(0, 63, 86, 0.1);
         color: #333;
         transition: 0.3s;
     }
@@ -557,6 +563,7 @@ span.month:hover{
         text-align: center;
     }
     p.card-text{
+        width: 100%;
         font-size: 25px;
     }
     img.card-img-top{
@@ -567,10 +574,25 @@ span.month:hover{
 }
 
 .fas.fa-stopwatch, .far.fa-question-circle{
-    font-size: 250px;
+    font-size: 150px;
     margin: 0.1em auto;
 }
 
+@media screen and (max-width: 995px){
+    .fas.fa-stopwatch, .far.fa-question-circle{
+        font-size: 50px;
+}
+    h2.card-title{
+        font-size: 20px !important;
+    }
+    p.card-text{
+        font-size: 10px !important;
+    }
+    .hover-sec{
+        border: 1px solid salmon;
+        margin: 1em 3em;
+    }
+}
 // ---------- table ----------
 
 table > tbody > tr > td > .btn-red,
@@ -662,7 +684,8 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 // ---------- pagination ----------
 
-nav.pagination{
+ul.pagination{
+    height: 3em !important;
     margin-right: 5px;
     justify-content: center;
     color: #FEFDFF;
@@ -698,6 +721,15 @@ nav.pagination{
         font-size: 13px;
     }
 }
+// ---------- edit salary ----------
+
+.form-control.mx-1.date.required{
+    width: 237px;
+}
+.btn.btn-md.btn-red.white-hover.remove_fields.dynamic{
+    margin-right: 0;
+}
+
 // ---------- infopage ----------
 
 .infotitle{
