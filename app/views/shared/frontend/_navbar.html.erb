@@ -38,7 +38,7 @@
           <% end %>
         </li>
         <li class="nav-item p-2">
-          <i class="fas fa-hourglass-half"></i>
+          <%= fa_icon "bell"%>
           <span id="timecount">
             <span id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></span>
           </span>

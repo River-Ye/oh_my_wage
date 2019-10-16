@@ -10,20 +10,16 @@
                         <%= image_tag('river.png', class:'workerimg') %>
                     </div>
                 <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p>
-                        <i class="fas fa-flag"></i>
-                        葉政偉 River
+                    <p class="text-warning">
+                        葉政偉 River Ye
                     </p>
                     <p>
-                        「 你必須很努力，才能看起來毫不費力。
-                    </p>
-                    <p>
-                        看似輕鬆的背後，有著看不盡的付出。」
+                        你必須很努力，才能看起來毫不費力。<br>
+                        看似輕鬆的背後，有著看不盡的付出。
                     </p>
                     <p class="email">
                         <a href="mailto:river@riverye.com">
-                            <i class="far fa-envelope"></i>
-                            river@riverye.com
+                            <%= fa_icon "envelope", text: "river@riverye.com" %>
                         </a>
                     </p>
                 </div>
@@ -33,20 +29,16 @@
                     <%= image_tag('axel.png', class:'workerimg') %>
                 </div>
                 <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p>
-                        <i class="fas fa-user-astronaut"></i>
-                        陳宥誠 Axel
+                    <p class="text-warning">
+                        陳宥誠 Axel Chen
                     </p>
                     <p>
-                        「 從不同的觀點思考，
-                    </p>
-                    <p>
-                        用好奇心探索世界！」
+                        從不同的觀點思考，<br>
+                        用好奇心探索世界！
                     </p>
                     <p class="email">
                         <a href="mailto:axelchen0520@gmail.com">
-                        <i class="far fa-envelope"></i>
-                        axelchen0520@gmail.com
+                        <%= fa_icon "envelope", text: "axelchen0520@gmail.com" %>
                         </a>
                     </p>                    
                 </div>
@@ -59,23 +51,16 @@
                     <%= image_tag('joan.png', class:'workerimg') %>
                 </div>
                 <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p>
-                        <i class="fas fa-user-astronaut"></i>
-                        廖友渝 Joan
+                    <p class="text-warning">
+                        廖友渝 Joan Liao
                     </p>
                     <p>
-                        「 你不一定要變得很厲害，
-                    </p>
-                    <p>
-                        才能開始；
-                    </p>
-                    <p>
-                        你要開始，才能變得很厲害！」
+                        你不一定要變得很厲害，才能開始；<br>
+                        你要開始，才能變得很厲害！
                     </p>
                     <p class="email">
                         <a href="mailto:joanliao0525@joanliao.space">
-                        <i class="far fa-envelope"></i>
-                        joanliao0525@joanliao.space
+                        <%= fa_icon "envelope", text: "joanliao0525@joanliao.space" %>
                         </a>
                     </p>
                 </div>
@@ -85,40 +70,34 @@
                     <%= image_tag('patrick.png', class:'workerimg') %>
                 </div>
                 <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p>
-                        <i class="fas fa-user-astronaut"></i>
-                        劉迦豪 Patrick
+                    <p class="text-warning">
+                        劉迦豪 Patrick Liu
                     </p>
                     <p>
-                        「 渴求知識，喜歡探索，
-                    </p>
-                    <P>
-                        享受思考後發現新世界的興奮。」
+                        渴求知識，喜歡探索，<br>
+                        享受思考後發現新世界的興奮。
                     </P>
                     <p class="email">
                         <a href="mailto:kazupat0906@gmail.com">
-                            <i class="far fa-envelope"></i>
-                            kazupat0906@gmail.com
+                            <%= fa_icon "envelope", text: "kazupat0906@gmail.com" %>
                         </a>
                     </p>
                 </div>
             </div>
         </div>
-        <li>TEL：</li>
             <p>
                 <a href="tel:+886223315247">
-                (02) 2331-5247</a>
-            </p>
-        <li>Email：</li>
-            <p>
-                <a href="mailto:admin@oh-my-wage.website">
-                admin@oh-my-wage.website
+                <%= fa_icon "phone", text: "+886-2-2331-5247" %>
                 </a>
             </p>
-        <li>Address：</li>
+            <p>
+                <a href="mailto:admin@oh-my-wage.website">
+                <%= fa_icon "envelope", text: "admin@oh-my-wage.website" %>
+                </a>
+            </p>
             <p>
                 <a href="https://ubin.io/TyZN7E">
-                5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)
+                <%= fa_icon "map-marker", text: t('address') %>
                 </a>
             </p>
             <div id="map" class="center-block col-lg-12 col-md-12 col-sm-12"></div>
@@ -140,8 +119,7 @@
 <div class="center-block">
     <%= link_to '/', class: 'btn btn-gray btn-lg' do %>
         <p>
-            <i class="fas fa-home"></i>
-            回到首頁
+            <%= fa_icon "home", text: t('top_page') %>
         </p>
     <% end %>
 </div>

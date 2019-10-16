@@ -1,10 +1,10 @@
-<h1 class="verticalspace">Hi, <%= @department.name %> 的 <%= current_user.name %> 您好</h1>
+<h1 class="verticalspace"><%= t("welcome2", name: @current_user.name, apartment: @department.name) %></h1>
 <div class="container">
   <div class="row">
     <div class="card col-lg-6 col-md-12">
       <%= link_to staff_salaries_path, class:"hover-sec card-time text-decoration-none" do %>
         <div class="card-body">
-          <i class="fas fa-stopwatch"></i>
+          <%= fa_icon "hourglass-half", class: "hourglass"%>
           <h2 class="card-title">工時登錄</h2>
           <p class="card-text">Wage Settlement</p>
         </div>
@@ -13,7 +13,7 @@
     <div class="card col-lg-6 col-md-12">
       <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
         <div class="card-body">
-          <i class="far fa-question-circle"></i>
+          <%= fa_icon "question-circle", class: "question-circle"%>
           <h2 class="card-title">問題回報</h2>
           <p class="card-text">Report Issue</p>
         </div>

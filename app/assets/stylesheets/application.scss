@@ -15,8 +15,10 @@
 *= require_self
 */
 
+
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import "font-awesome";
 
 @media (max-width: 767px) {
     body{
@@ -408,7 +410,7 @@ span#timecount{
 
 .show{
     margin-bottom: 1rem;
-        .profile{
+    .profile{
             text-align: left;
     }
     p.phead{
@@ -540,7 +542,7 @@ span.month:hover{
     }
 }
 
-.fas.fa-stopwatch, .far.fa-question-circle{
+.hourglass, .question-circle{
     font-size: 250px;
     margin: 0.1em auto;
 }

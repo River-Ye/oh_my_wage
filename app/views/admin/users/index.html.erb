@@ -1,20 +1,18 @@
-<h1 class="row verticalspace">管理者 <%= current_user.name %> 您好</h1>
-
+<h1 class="verticalspace"><%= t("welcome", name: @current_user.name) %></h1>
 <h2 class="row verticalspace">使用者名單</h2>
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-6">
     <%= form_tag(admin_users_path, method: :get) do %>
       <%= text_field_tag :search %>
       <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
-        <i class="fas fa-search"></i>
+        <%= fa_icon "search" %>
       <% end %>
     <% end %>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-6">
     <%= link_to new_admin_user_path, class: 'btn btn-green btn-md white-hover verticalspace float-right mr-0' do %>
       <p>
-        <i class="fas fa-user-plus"></i>
-        新增使用者
+        <%= fa_icon "user-plus", text: t("add_user") %>
       </p>
     <% end %>
   </div>

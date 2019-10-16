@@ -6,15 +6,19 @@
       <%= text_field_tag :search %>
       <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
         <p>
-          <i class="fas fa-search"></i>
+          <%= fa_icon "search" %>
         </p>
     <% end %>
     </div>
     <div class="p-2">
+    <%= link_to staff_root_path, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <%= t("back") %>
+      </p>
+    <% end %>
       <%= link_to staff_users_path, class:"btn btn-green" do %>
         <p>
-          <i class="fas fa-user-plus"></i>
-          新增工讀生
+          <%= fa_icon "user-plus", text: t("add_stu") %>
         </p>
       <% end %>
     </div>
@@ -57,14 +61,6 @@
 </table>
 
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <%= link_to staff_root_path, class: 'btn btn-gray btn-md' do %>
-      <p>
-        <i class="fas fa-fast-backward"></i>
-        回主選單
-      </p>
-    <% end %>
-  </div>
   <div class="p-2">
     <%= paginate @students %>
   </div>

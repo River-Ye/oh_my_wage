@@ -1,47 +1,47 @@
-<h2 class="verticalspace">修改個人資料</h2>
-<h3 class="verticalspace">Hi, <%= @user.name %> 您好：</h3>
+<h2 class="verticalspace"><%= t("change_info")%></h2>
+<h3 class="verticalspace"><%= t("welcome", name: @user.name) %></h3>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
   <div class="form-inputs">
     <div class="row">
       <div class="col-lg-8 col-md-12 col-sm-12 show">
         <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :number, label: '編號：' %>
+          <%= f.input :number, label: t("user_id") %>
         <% else %>
           <div class="profile">
-            <p class="phead">編號：</p>
+            <p class="phead"><%= t("user_id") %></p>
             <p class="pbody border-secondary"><%= @user.number %></p>
           </div>
         <% end %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 show">
         <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :role, label: '權限：', collection: { "管理者": "管理者", "員工": "staff", "學生": "student" } %>
+          <%= f.input :role, label: t("permission"), collection: { "管理者": "管理者", "員工": "staff", "學生": "student" } %>
         <% else %>
           <div class="profile">
-            <p class="phead">權限：</p>
+            <p class="phead"><%= t("permission") %></p>
             <p class="pbody border-secondary"><%= @user.role %></p>
           </div>
         <% end %>
       </div>
       <div class="col-lg-8 col-sm-12 col-xs-12 fix-bot border-secondary">
-        <%= f.input :name, label: '姓名：' %>
+        <%= f.input :name, label: t("user_name") %>
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 show">
         <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :gender, label: '性別：', collection: { "男": "男", "女": "女" } %>
+          <%= f.input :gender, label: t("gender"), collection: { "男": "男", "女": "女" } %>
         <% else %>
           <div class="profile">
-            <p class="phead">性別：</p>
+            <p class="phead"><%= t("gender") %></p>
             <p class="pbody border-secondary"><%= @user.gender %></p>
           </div>
         <% end %>
       </div>
       <div class="col-lg-8 col-sm-12 col-xs-12 fix-bot border-secondary">
-        <%= f.input :email, label: '信箱：', required: true, placeholder: 'example@oh-my-wage.website' %>
+        <%= f.input :email, input_html: { autocomplete: "email" }, required: true, placeholder: 'example@oh-my-wage.website' %>
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 fix-bot border-secondary">
-        <%= f.input :phone, label: '手機：', input_html: { maxlength: 10 }, placeholder: '0987654321' %>
+        <%= f.input :phone, label: t("phone"), input_html: { maxlength: 10 }, placeholder: '0987654321' %>
       </div>
     </div>
     
@@ -50,17 +50,15 @@
     <% end %>
     <div class="row">
       <div class="col-lg-6 col-sm-12 col-xs-12">
-        <%= f.input :password,
-                    hint: "*如沒有要改密碼，可省略",
+        <%= f.input :n_password,
+                    hint: t("change_password_hint"),
                     required: false,
-                    label: '新密碼：',
                     input_html: { autocomplete: "new-password",
                     class: 'border-secondary' } %>
       </div>
       <div class="col-lg-6 col-sm-12 col-xs-12">
-        <%= f.input :password_confirmation,
+        <%= f.input :n_password_confirmation,
                     required: false,
-                    label: '確認新密碼：',
                     input_html: { autocomplete: "new-password",
                     class: 'border-secondary' } %>
       </div>
@@ -68,16 +66,14 @@
   </div>
 
   <div class="form-actions row">
-    <%= button_tag type: 'submit', class: 'btn btn-green btn-md' do %>
-      <p>
-        <i class="far fa-save"></i>
-        更新
-      </p>
-    <% end %>
     <%= link_to '/', class: 'btn btn-gray btn-md' do %>
       <p>
-        <i class="fas fa-backward"></i>
-        上一頁
+        <%= t("back") %>
+      </p>
+    <% end %>
+    <%= button_tag type: 'submit', class: 'btn btn-green btn-md' do %>
+      <p>
+        <%= fa_icon "map-marker", text: t('.update') %>
       </p>
     <% end %>
   </div>
