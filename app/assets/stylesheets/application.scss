@@ -258,10 +258,18 @@ margin-top: 20px;
     border: 1px solid #666 !important;
     color: #FEFDFF;
 }
- 
+
+.btn.btn-md.btn-red.white-hover.remove_fields.existing{
+    margin-right: 0;
+    
+}
 #search{
+    margin: 8px auto;
+    width: calc(85% - 5px);
+    float: left;
     height: 2.3em;
     padding: 0.5em;
+    margin-right: 5px;
     vertical-align: middle;
     border-radius: 5px;
     background-color: rgba(18, 50, 69, 0.1);
@@ -274,12 +282,69 @@ margin-top: 20px;
     background-color: rgba(18, 50, 69, 0.1);
 }
 
+.btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
+    margin-right: 0;
+    width: 15%;
+}
+
+@media screen and (max-width: 767){
+    #search{
+        width: calc(85% - 5px);
+    }
+    .btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
+        width: 15%;
+    }
+    .btn.btn-green.add-stu{
+        width: 100%;
+    }
+}
 // ---------- login ----------
 
-.container-fluid{
-    position: absolute;
-    left: 0;
+.overlay{
+    position:fixed;
+    background: image-url("login-bg.png");
+    opacity: 0.3;
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
+
+@-webkit-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+}
+  
+@-moz-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-o-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@-ms-keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@keyframes scroll{
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
 .loginblocksm.col-12{
     margin-top: 3em;
     padding: 1em;
@@ -293,11 +358,9 @@ margin-top: 20px;
         }
     }
 }
-.loginblock.col-lg-4{
-    width: 60%;
-    margin-top: 3em;
-    margin-bottom: 10em;
-    left: 3em;
+.loginblock.col-lg-5{
+    margin: auto;
+    width: 100%;
     padding: 1em;
     text-align: left;
     z-index: 1;
@@ -322,31 +385,13 @@ margin-top: 20px;
     } 
 }
 
-#carouselExampleSlidesOnly{
-    width: 100%;
-    right: 0;
-    z-index: 0;
-    margin-top: -1px;
-    img.d-block.w-100{
-        background-color: cover;
-    }
-}
-
 @media screen and (max-width:1027px){
-
-    #carouselExampleSlidesOnly{
-        margin-top: 3em;
-        width: 735px;
-    }
     .loginblock.col-lg-4{
         margin-top: 4em;
     }
 }
 
 @media screen and (max-width:995px){
-    #carouselExampleSlidesOnly{
-        display: none;
-    }
     .container-fluid{
         position: static;
         text-align: center;
@@ -544,6 +589,7 @@ small.form-text.text-muted{
 }
 
 table{
+    margin-bottom: 0 !important;
     background-color: rgba(18, 50, 69, 0.1);
     color: #333 !important;
     a{
@@ -616,7 +662,7 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 // ---------- pagination ----------
 
-.pagination{
+nav.pagination{
     margin-right: 5px;
     justify-content: center;
     color: #FEFDFF;
@@ -774,7 +820,6 @@ textarea#reply_to_issue_content.form-control.text.required{
     border-radius: 10px;
     box-shadow: 3px 3px 9px #000;
 }
-
 
 .about.d-flex.col-12{
     width: 100%;

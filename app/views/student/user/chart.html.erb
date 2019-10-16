@@ -1,4 +1,4 @@
-<h1 class="verticalspace">Hi, <%= current_user.name %> 您的歷史薪資</h1>
+<h1 class="verticalspace"><%= current_user.name %> 您的歷史薪資</h1>
 <h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
 
 <%= form_tag(student_chart_path, method: :get) do %>

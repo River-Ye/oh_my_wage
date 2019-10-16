@@ -1,14 +1,20 @@
 <div class="nested-fields">
-      <td>
-        <%= f.input :date, label: false, as: :date, html5: true %>
-      </td>
-      <td>
-        <%= f.input :hr, label: false, placeholder: '工時', input_html: { min: 1 } %>
-      </td>
-      <td>
-        <%= f.input :hourly_wage, label: false, placeholder: '時薪', input_html: { min: 150 } %>
-      </td>
-      <td>
-        <%= link_to_remove_association "×", f, class: 'btn btn-md btn-red white-hover' %>
-      </td>
+  <table class="table col-lg-12 col-md-12 col-sm-12">
+    <tbody>
+      <tr>
+        <td>
+          <%= f.input :date, label: false, as: :date, html5: true %>
+        </td>
+        <td>
+          <%= f.input :hr, label: false, placeholder: '工時', input_html: { min: 1 } %>
+        </td>
+        <td>
+          <%= f.input :hourly_wage, label: false, placeholder: '時薪', input_html: { min: 150 } %>
+        </td>
+        <td>
+          <%= link_to_remove_association "×", f, class: 'btn btn-md btn-red white-hover' %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

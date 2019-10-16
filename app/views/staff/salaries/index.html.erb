@@ -1,23 +1,21 @@
 <h1 class="verticalspace">工時登錄</h1>
 
 <%= form_tag(staff_salaries_path, method: :get) do %>
-  <div class="d-flex justify-content-between">
-    <div class="p-2">
-      <%= text_field_tag :search %>
-      <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
-        <p>
-          <i class="fas fa-search"></i>
-        </p>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <%= text_field_tag :search %>
+    <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
+      <p>
+        <i class="fas fa-search"></i>
+      </p>
+  <% end %>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12">
+    <%= link_to staff_users_path, class:"btn btn-green add-stu float-right w-100 mr-0 mb-1" do %>
+      <p>
+        <i class="fas fa-user-plus"></i>
+        新增工讀生
+      </p>
     <% end %>
-    </div>
-    <div class="p-2">
-      <%= link_to staff_users_path, class:"btn btn-green" do %>
-        <p>
-          <i class="fas fa-user-plus"></i>
-          新增工讀生
-        </p>
-      <% end %>
-    </div>
   </div>
   
 <% end %>
@@ -27,8 +25,8 @@
     <tr>
       <th>學號</th>
       <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
+      <th>當月工時</th>
+      <th>薪資試算</th>
       <th>編輯</th>
       <th>刪除</th>
     </tr>

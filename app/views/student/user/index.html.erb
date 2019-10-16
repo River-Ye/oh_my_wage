@@ -1,4 +1,4 @@
-<h1 class="verticalspace">Hi, <%= current_user.name %> 歡迎回來</h1>
+<h1 class="verticalspace"><%= current_user.name %> 歡迎回來</h1>
 <h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
 <table class="table col-lg-6 col-md-9 col-sm-12">
   <tr>
@@ -19,7 +19,7 @@
 <%= link_to new_problem_path, class: 'btn btn-red btn-md white-hover' do %>
   <p>
     <i class="fas fa-hands-helping"></i>
-    問題反應
+    問題反映
   </p>
 <% end %>
 <%= link_to student_chart_path, class: 'btn btn-green btn-md white-hover' do %>
