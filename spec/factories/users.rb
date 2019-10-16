@@ -3,7 +3,7 @@ FactoryBot.define do
   factory :admin, class: User do
     name { Faker::Name.name }
     sequence(:number, '001') { |n| "a000#{n}" }
-    password {'123123'}
+    password {'000000'}
     phone { ['09006', 5.times.map{rand(10)}].join }
     sequence(:email, '001') { |n| "a#{n}@oh-my-wage" }
     gender { [0, 1].sample }
