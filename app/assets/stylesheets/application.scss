@@ -36,6 +36,12 @@
         padding: 70px 0% 5%;
     }
 }
+@media (min-width: 980px) {
+    body{
+        height: 100%;
+        padding: 70px 0% 5%;
+    }
+}
 
 // ---------- flash notice message ----------
 
@@ -134,6 +140,7 @@ span#timecount{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 .my-btn{
     width: 100%;
     margin: 1em auto;
@@ -269,6 +276,7 @@ margin-top: 20px;
     width: calc(85% - 5px);
     float: left;
     height: 2.3em;
+    margin-bottom: 0;
     padding: 0.5em;
     margin-right: 5px;
     vertical-align: middle;
@@ -288,6 +296,7 @@ margin-top: 20px;
     width: 15%;
 }
 
+.btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
 .btn.btn-green.add-stu.float-right.mr-0{
     margin: 8px auto;
     width: 50%;
@@ -297,9 +306,12 @@ margin-top: 20px;
     #search{
         width: calc(85% - 5px);
     }
+    
     .btn.btn-blue.btn-md.white-hover.verticalspace.float-left{
         width: 15%;
     }
+
+    .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
     .btn.btn-green.add-stu.float-right.mr-0{
         margin-top: 8px;
         width: 100%;
@@ -481,13 +493,22 @@ margin-top: 20px;
 
 .table-condensed{
     background-color: #74B1BF;
+    border: 2px solid transparent !important;
     th{
         background-color: #3D606E;
         border-radius: 0;
-        border: 2px solid transparent;
+        border-color: #3D606E !important;
     }
+
+    thead > tr{
+        border: 1px solid #3D606E !important;
+    }
+
     tr, td{
         border: 2px solid transparent;
+    }
+    th.datepicker-switch{
+        border-left-color: #3D606E;
     }
     th.datepicker-switch:hover,
     th.next:hover,
@@ -617,9 +638,9 @@ table{
     a{
         color: #333;
     }
-    tr{
+    tbody > tr{
         transition: 0.3s;
-        border: 2px solid #FEFDFF !important;
+        border-bottom: 2px solid #FEFDFF !important;
     }
     tr:hover{
         background-color: #123245;
@@ -654,7 +675,6 @@ table{
 table.table.col-lg-12.col-md-12.col-sm-12{
     th,td{
         text-align: left;
-        // border: 1px solid #ccc;
     }
 }
 

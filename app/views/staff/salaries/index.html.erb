@@ -37,7 +37,6 @@
       <td><%= student.number %></td>
       <td><%= link_to staff_salary_path(student.slug) do %>
         <%= student.name %>
-        <i class="fas fa-arrow-alt-circle-right"></i>
       <% end %>
       </td>
       <td><%= salary_hr(student) %> 時</td>
@@ -66,7 +65,7 @@
     <% end %>
   </div>
   <div class="p-2">
-    <%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
+    <%= paginate @students %>
   </div>
   <div class="p-2">
     <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" do %>

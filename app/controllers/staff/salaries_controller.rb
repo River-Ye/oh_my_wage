@@ -9,6 +9,8 @@ class Staff::SalariesController < ApplicationController
     else
       # 原本寫法
       @students = staff_department.users.includes(:salaries).student_order.search(params[:search]).page(params[:page])
+      return @students if @students.count >= 1
+      redirect_to staff_salaries_path, notice: "無符合條件的學生"
       # KT 寫法
       # @students = User.includes(:departments).without_department(staff_department).student_order.search(params[:search]).page(params[:page])
       # student_ids = @students.map(&:id)
