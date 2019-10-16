@@ -323,13 +323,16 @@ margin-top: 20px;
 
 .overlay{
     position:fixed;
-    background: image-url("login-bg.png");
+    background: image-url("scroll.png");
+    background-size: cover;
     opacity: 0.3;
     -webkit-animation:100s scroll infinite linear;
     -moz-animation:100s scroll infinite linear;
     -o-animation:100s scroll infinite linear;
     -ms-animation:100s scroll infinite linear;
     animation:100s scroll infinite linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     top:0;
     left:0;
     width:100%;
@@ -579,6 +582,15 @@ span.month:hover{
         background-color: rgba(186, 41, 55, 0.3);
         border: 3px solid rgba(186, 41, 55, 0.6);
     }
+    .card-history{
+        background-color: rgba(64, 35, 25, 0.6);
+        border: 3px solid transparent;
+    }
+    .card-history:hover{
+        background-color: rgba(64, 35, 25, 0.6);
+        border: 3px solid rgba(64, 35, 25, 0.6);
+    }
+
     h2.card-title{
         width: 100%;
         padding-top: 0.5em;
@@ -596,13 +608,17 @@ span.month:hover{
     }
 }
 
-.fas.fa-stopwatch, .far.fa-question-circle{
+.fas.fa-stopwatch,
+.far.fa-question-circle,
+.fas.fa-history{
     font-size: 150px;
     margin: 0.1em auto;
 }
 
 @media screen and (max-width: 995px){
-    .fas.fa-stopwatch, .far.fa-question-circle{
+    .fas.fa-stopwatch,
+    .far.fa-question-circle,
+    .fas.fa-history{
         font-size: 50px;
 }
     h2.card-title{
