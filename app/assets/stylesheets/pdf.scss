@@ -66,7 +66,7 @@ body{
   font-size: 30pt;
   font-weight: 700;
   letter-spacing: 3px;
-  position: absolute;
+  position: relative;
 }
 
 .pdf-table{
@@ -75,7 +75,7 @@ body{
   border: #272727;
   text-align: center;
   margin-bottom: 0;
-  position: relative;
+  position: absolute;
   tr{
     border-bottom: solid;
     border-width: 3px;
