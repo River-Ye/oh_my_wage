@@ -6,10 +6,10 @@
 3. rails db:create
 4. rails db:migrate
 5. rails db:seed
-   (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門 關聯假資料 、 學生薪資\*300)
+   (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門 關聯假資料 、 學生薪資\*2000)
 6. rails c
 7. User.all
-8. 用 db:seed 產生的資料來登入，admin 為管理者，t 為老師， s 為學生
+8. 用 db:seed 產生的資料來登入，a 為管理者，t 為老師， s 為學生
 9. 參考下方 HEROKU 設定
 
 ## Factorybot
