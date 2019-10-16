@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   include Devise::Models::Trackable
   devise :database_authenticatable, :registerable, :trackable,
-         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 29.minutes
+         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 1.minutes
 
   paginates_per 10
 
