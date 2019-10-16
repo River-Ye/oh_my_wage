@@ -17,11 +17,7 @@
   </thead>
   <%= simple_form_for student, url: staff_salary_path do |form| %>
     <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
-    <tbody>
-      <tr>
-        <%= render 'salary_fields', f: salary_form %>
-      </tr>
-    </tbody>
+      <%= render 'salary_fields', f: salary_form %>
   <% end %>
   </table>
   <div class="links">

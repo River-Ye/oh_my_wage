@@ -2,7 +2,7 @@
 
 <h2 class="row verticalspace">使用者名單</h2>
 <div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6">
+  <div class="col-lg-6 col-md-6 col-sm-12">
     <%= form_tag(admin_users_path, method: :get) do %>
       <%= text_field_tag :search %>
       <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
@@ -10,7 +10,7 @@
       <% end %>
     <% end %>
   </div>
-  <div class="col-lg-6 col-md-6 col-sm-6">
+  <div class="col-lg-6 col-md-12 col-sm-12">
     <%= link_to new_admin_user_path, class: 'btn btn-green btn-md white-hover verticalspace float-right mr-0' do %>
       <p>
         <i class="fas fa-user-plus"></i>
