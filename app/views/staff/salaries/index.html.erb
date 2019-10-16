@@ -1,4 +1,7 @@
 <h1 class="verticalspace">工時登錄</h1>
+<h2 class="verticalspace">
+<%= Date.today.year %>年<%= Date.today.month %>月
+</h2>
 <%= form_tag(staff_salaries_path, method: :get) do %>
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-12">
@@ -25,8 +28,8 @@
     <tr>
       <th>學號</th>
       <th>姓名</th>
-      <th>當月工時</th>
-      <th>薪資試算</th>
+      <th class="wage-md">累積工時</th>
+      <th class="wage-md">薪資試算</th>
       <th>編輯</th>
       <th>刪除</th>
     </tr>
@@ -39,8 +42,8 @@
         <%= student.name %>
       <% end %>
       </td>
-      <td><%= salary_hr(student) %> 時</td>
-      <td><%= salary_sum(student) %> 元</td>
+      <td class="wage-md"><%= salary_hr(student) %> 時</td>
+      <td class="wage-md"><%= salary_sum(student) %> 元</td>
       <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' do %>
           <i class="fas fa-pencil-alt"></i>
       <% end %>

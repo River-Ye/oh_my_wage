@@ -628,7 +628,6 @@ span.month:hover{
         font-size: 10px !important;
     }
     .hover-sec{
-        border: 1px solid salmon;
         margin: 1em 3em;
     }
 }
@@ -693,6 +692,17 @@ table{
 table.table.col-lg-12.col-md-12.col-sm-12{
     th,td{
         text-align: left;
+    }
+}
+table.salary{
+    .form-control.mx-1.date.required{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .wage-md{
+        display: none;
     }
 }
 
