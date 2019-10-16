@@ -15,11 +15,11 @@
       <th scope="col">刪除</th>
     </tr>
   </thead>
+</table>
 <%= simple_form_for student, url: staff_salary_path do |form| %>
   <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
     <%= render 'salary_fields', f: salary_form %>
   <% end %>
-  </table>
   <div class="links">
     <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
@@ -30,5 +30,5 @@
       上一頁
     </p>
   <% end %>
-<%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
+  <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
 <% end %>
