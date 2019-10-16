@@ -1,28 +1,23 @@
 <h1 class="verticalspace">工時登錄</h1>
-
 <%= form_tag(staff_salaries_path, method: :get) do %>
-  <div class="d-flex justify-content-between">
-    <div class="p-2">
-      <%= text_field_tag :search %>
-      <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
-        <p>
-          <%= fa_icon "search" %>
-        </p>
-    <% end %>
-    </div>
-    <div class="p-2">
-    <%= link_to staff_root_path, class: 'btn btn-gray btn-md' do %>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= text_field_tag :search %>
+    <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
       <p>
-        <%= t("back") %>
+        <%= fa_icon "search" %>
+      </p>
+  <% end %>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= link_to staff_users_path, class:"btn btn-green add-stu float-right mr-0" do %>
+      <p>
+        <%= fa_icon "user-plus", text: t("add_stu") %>
       </p>
     <% end %>
-      <%= link_to staff_users_path, class:"btn btn-green" do %>
-        <p>
-          <%= fa_icon "user-plus", text: t("add_stu") %>
-        </p>
-      <% end %>
-    </div>
   </div>
+</div>
 <% end %>
 
 <table class="table table-sm">
@@ -30,8 +25,8 @@
     <tr>
       <th>學號</th>
       <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
+      <th>當月工時</th>
+      <th>薪資試算</th>
       <th>編輯</th>
       <th>刪除</th>
     </tr>

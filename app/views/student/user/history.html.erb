@@ -7,7 +7,6 @@
   <% end %>
 <% end %>
 
-
 <table class='table'>
   <thead>
     <th>日期</th>
@@ -33,11 +32,13 @@
   </tbody>
 </table>
 
+
 <%= area_chart @salary_chart_by_day, ytitle: 'hr' %>
+
 
 <div class="container">
   <div class="row">
-    <%= paginate @salary, theme: 'twitter-bootstrap-4' %>
+    <%= paginate @salary %>
     <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
       <p>
         <i class="fas fa-fast-backward"></i>
@@ -46,7 +47,6 @@
     <% end %>
   </div>
 </div>
-
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function(){

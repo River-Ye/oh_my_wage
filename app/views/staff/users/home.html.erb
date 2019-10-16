@@ -1,7 +1,7 @@
 <h1 class="verticalspace"><%= t("welcome2", name: @current_user.name, apartment: @department.name) %></h1>
 <div class="container">
   <div class="row">
-    <div class="card col-lg-6 col-md-12">
+    <div class="card col-lg-4 col-md-9 col-sm-12">
       <%= link_to staff_salaries_path, class:"hover-sec card-time text-decoration-none" do %>
         <div class="card-body">
           <%= fa_icon "hourglass-half", class: "hourglass"%>
@@ -10,11 +10,12 @@
         </div>
       <% end %>
     </div>
-    <div class="card col-lg-6 col-md-12">
+
+    <div class="card col-lg-4 col-md-9 col-sm-12">
       <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
         <div class="card-body">
           <%= fa_icon "question-circle", class: "question-circle"%>
-          <h2 class="card-title">問題回報</h2>
+          <h2 class="card-title">問題反映</h2>
           <p class="card-text">Report Issue</p>
         </div>
       <% end %>

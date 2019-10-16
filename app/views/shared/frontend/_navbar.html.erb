@@ -7,13 +7,22 @@
 
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item p-2 active">
-        <%= link_to t("about"), about_path, class: 'nav-link text-light list-top' %>
+        <%= link_to about_path, class: 'nav-link text-light list-top' do %>
+          <i class="fas fa-info-circle"></i>
+          <%= t("about") %>
+        <% end %>
       </li>
       <li class="nav-item p-2 active">
-        <%= link_to t("contact"), contact_path, class: 'nav-link text-light' %>
+        <%= link_to contact_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-link"></i>
+          <%= t("contact") %>
+        <% end %>
       </li>
       <li class="nav-item p-2 active">
-        <%= link_to t("faqs"), qa_path, class: 'nav-link text-light' %>
+        <%= link_to qa_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-question-circle"></i>
+          <%= t("faqs") %>
+        <% end %>
 
       </li>
     </ul>

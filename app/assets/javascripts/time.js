@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function() {console.log
   startTimer()
 };
 
@@ -18,6 +18,7 @@ function startTimer () {
     console.log('minutes', minutes)
     console.log('seconds', seconds)
     document.getElementById("timecount").innerHTML = minutes + "m " + seconds + "s "; 
+    
 
     if (seconds < 0) { 
       clearInterval(x); 
@@ -25,18 +26,5 @@ function startTimer () {
     } 
   
 }, 1000);
-    
-  //   if (minutes >=3 ) { 
-  //     document.getElementById("timecount").innerHTML = minutes + "m " + seconds + "s "; 
-  //     // $('#timecount').hide()
-  //   } else {
-  //     document.getElementById("timecount").innerHTML =  minutes + "m " + seconds + "s "; 
-  //     if (seconds < 0) { 
-  //       clearInterval(x); 
-  //       document.getElementById("timecount").innerHTML = "時間到"; 
-  //     } 
-  //   } 
-    
-  // }, 1000);
   
 }
