@@ -7,6 +7,8 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
+        n_password: "新しいパスワード"
+        n_password_confirmation: "新しいパスワードを確認"
     models:
       user: "ユーザ"
   devise:

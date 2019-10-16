@@ -1,4 +1,4 @@
-<h1 class="verticalspace"><%= current_user.name %> 歡迎回來</h1>
+<h1 class="verticalspace"><%= t("welcome", name: @current_user.name) %></h1>
 <h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
 
 <table class='table col-lg-12 col-md-12 col-sm-12'>

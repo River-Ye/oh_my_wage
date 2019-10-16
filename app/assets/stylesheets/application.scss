@@ -15,8 +15,10 @@
 *= require_self
 */
 
+
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import "font-awesome";
 
 @media (max-width: 767px) {
     body{
@@ -467,7 +469,7 @@ margin-top: 20px;
 
 .show{
     margin-bottom: 1rem;
-        .profile{
+    .profile{
             text-align: left;
     }
     p.phead{
