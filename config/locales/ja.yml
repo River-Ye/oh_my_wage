@@ -226,7 +226,7 @@ ja:
   change_password_hint: "パスワードを変更しない場合は、省略可"
   change_info: "個人情報の変更"
   welcome: "ようこそ、%{name}へ"
-  welcome2: "ようこそ、%{name}(%{apartment})"
+  welcome2: "ようこそ、%{name}へ(所属：%{apartment})"
   add_user: "ユーザーの追加"
   add_stu: "学生の追加"
   Q1: "1. どうやってアカウントを作ればいいですか？"

@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="verticalspace">問題反映</h1>
+  <h2 class="verticalspace3">問題反映</h2>
   <div class="col-lg-8 mx-auto">
     <% if @reply_to_issue.errors.any? %>
       <ul>
@@ -24,8 +24,6 @@
               上一頁
             </p>
           <% end %>
-        </div>
-        <div class="p-2">
           <%= button_tag type: 'submit', class: "btn btn-blue btn-md my-button", id: "register-button" do %>
           <p>
             <i class="fas fa-paper-plane"></i>

@@ -81,12 +81,18 @@
 
 .verticalspace{
     margin: 0.5em 0;
+    color: #101820;
 }
 
 .verticalspace2{
     margin: 2em 0;
-}
 
+}
+.verticalspace3{
+    margin: 1em 0 0.5em;
+    text-align: center;
+    color: #664238;
+}
 .white-hover:hover{
     color: #FEFDFF;
 }
@@ -600,9 +606,9 @@ span.month:hover{
 }
 
 @media screen and (max-width: 995px){
-    .fas.fa-stopwatch,
-    .far.fa-question-circle,
-    .fas.fa-history{
+    .hourglass,
+    .question-circle,
+    .history{
         font-size: 50px;
 }
     h2.card-title{
