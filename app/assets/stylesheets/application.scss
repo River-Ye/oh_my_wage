@@ -48,7 +48,6 @@
 // ---------- flash notice message ----------
 
 .alert{
-    margin-top: 0.4em;
     margin-bottom: 0px;
     color: #FEFDFF;
     background-color: rgba(23, 101, 145, 0.5);
@@ -185,6 +184,7 @@ margin-top: 20px;
     background-color: #8b0000;
     border: #8b0000;
     color: #FEFDFF;
+    font-size: 14px;
 }
 
 .btn-red:hover{
@@ -274,7 +274,7 @@ margin-top: 20px;
 
 #search{
     margin: 8px auto;
-    width: calc(85% - 5px);
+    width: 50%;
     float: left;
     height: 2.3em;
     margin-bottom: 0;
@@ -453,6 +453,21 @@ margin-top: 20px;
 
 .fix-bot{
     margin-bottom: 1rem;
+}
+
+// ---------- user file show ----------
+
+ul.user-profile{
+    margin: 3em auto;
+    li{
+        margin: 1em 0;
+    }
+    p{
+        background-color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
 }
 
 // ---------- select month ----------
@@ -688,6 +703,9 @@ table.salary{
     margin: 3em auto;
 }
 
+.btn.btn-blue.btn-md.my-button{
+    margin-top: 5px;
+}
 .reply_to_issue_title,
 .reply_to_issue_content{
     text-align: left;
@@ -840,7 +858,7 @@ ul.pagination{
             content:'';
             width: 0px;
             height: 0px;
-            position: absolute;
+            position: relative;
             border-bottom: 30px solid transparent;
             border-right: 30px solid #5082A1;
             display: block;
@@ -1048,7 +1066,7 @@ ul.pagination{
             border-bottom: 30px solid transparent;
             border-right: 30px solid #5082A1;
             display: block;
-            margin: -30px 0px 0px 10px;
+            margin: 10px 0px 0px -30px;
             top: 0px
         }
     
