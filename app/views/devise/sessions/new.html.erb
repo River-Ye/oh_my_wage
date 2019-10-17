@@ -1,5 +1,5 @@
-<div class="overlay">
-</div>
+  <div class="login-bg">
+  </div>
   <div class="row">
     <div class="loginblocksm col-12 d-md-none">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,7 +21,7 @@
       <%= render "devise/shared/links" %>
       </div>
     </div>
-    <div class="loginblock col-lg-5 col-md-12 col-sm-12 col-xs-12 d-none d-md-block position-relative mt-5">
+    <div class="loginblock col-lg-4 col-md-12 col-sm-12 col-xs-12 d-none d-md-block position-relative mt-5">
       <%= image_tag('logo_sign_in.png',  class:'rounded mx-auto d-block') %>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
