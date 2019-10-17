@@ -25,7 +25,7 @@ class Staff::SalariesController < ApplicationController
     if @salary.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
-      @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc)
+      @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc).search(search_month)
     end
   end
   
@@ -82,6 +82,14 @@ class Staff::SalariesController < ApplicationController
 
   def salary_edit_params
     params.require(:user).permit(salaries_attributes: [:id, :user_id, :date, :hr, :hourly_wage, :_destroy])
+  end
+
+  def search_month
+    return if params[:search].blank?
+    t = params[:search]
+    year = t.split(/-/)[0].to_i
+    month =  t.split(/-/)[1].to_i
+    Date.new(year, month)
   end
 
   def check_login

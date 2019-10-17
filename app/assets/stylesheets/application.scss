@@ -1106,13 +1106,12 @@ ul.pagination{
     width: 100%;
     text-align: center;
     margin: 3em auto;
-    h1{
-        color: #ff6875;
-        font-size: 50px;
-    }
     p{  
         color: #ffffff;
         font-size: 20px;
+    }
+    h2{
+        color: #d6000a;
     }
 }
 
@@ -1174,18 +1173,12 @@ ul.pagination{
 }
 
 div.shinebu > img{
-    width: 100px;
+    width: 150px;
 }
 
 div.harry > img{
     width: 150px;
-    height: 180px;
-}
-
-.oh > span,
-.my > span{
-    color: #fa0;
-    font-size: 25px;
+    height: 270px;
 }
 // ---------- Q & A ----------
 .qa{
