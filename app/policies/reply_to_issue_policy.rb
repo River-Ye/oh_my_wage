@@ -8,7 +8,7 @@ class ReplyToIssuePolicy
 
   def index?
     return false if user.nil?
-    user.role == '管理者'
+    user.admin?
   end
 
   def new?

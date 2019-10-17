@@ -35,6 +35,6 @@ class Student::UserController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == '學生'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.student?
   end
 end
