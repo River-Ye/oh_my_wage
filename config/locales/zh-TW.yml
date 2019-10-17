@@ -247,7 +247,7 @@
   change_password_hint: "如沒有要改密碼，可省略"
   change_info: "修改個人資料"
   welcome: "您好，%{name}"
-  welcome2: "您好，%{name}(%{apartment})"
+  welcome2: "您好，%{name}(部門：%{apartment})"
   Q1: "1. 我該如何註冊帳戶？"
   A1: "只要您是霍格華茲學院教職員與學生，且與校內學生工讀有關，皆可與我們聯繫申請帳號。"
   Q2: "2. 如果發現工讀時數登錄錯誤該怎麼辦？"
