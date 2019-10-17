@@ -1,27 +1,22 @@
-<table class="table col-lg-12 col-md-12 col-sm-12 verticalspace2 mx-auto">
-  <thead>
-    <tr>
-      <th>學號</th>
-      <th>姓名</th>
-      <th>手機</th>
-      <th>性別</th>
-      <th>信箱</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= @student.number %></td>
-      <td><%= @student.name %></td>
-      <td><%= @student.phone %></td>
-      <td><%= @student.gender %></td>
-      <td><%= @student.email %></td>
-    </tr>
-  </tbody>
-</table>
+<h1 class="verticalspace center-block mt-5"><%= @student.name %>的個人資料</h1>
+<ul class="user-profile col-lg-6">
+    <li>編號：</li>
+      <p><%= @student.number %></p>
+    <li>姓名：</li>
+      <p><%= @student.name %></p>
+    <li>手機：</li>
+      <p><%= @student.phone %></p>
+    <li>性別：</li>
+      <p><%= @student.gender %></p>
+    <li>信箱：</li>
+      <p><%= @student.email %></p>
+</div>
 
-<%= link_to :back, class: 'btn btn-gray btn-md' do %>
-  <p>
-    <i class="fas fa-backward"></i>
-    上一頁
-  </p>
-<% end %>
+<div class="text-center">
+  <%= link_to :back, class: 'btn btn-gray btn-md mb-5' do %>
+    <p>
+      <i class="fas fa-backward"></i>
+      上一頁
+    </p>
+  <% end %>
+</div>

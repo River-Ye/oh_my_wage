@@ -48,7 +48,6 @@
 // ---------- flash notice message ----------
 
 .alert{
-    margin-top: 0.4em;
     margin-bottom: 0px;
     color: #FEFDFF;
     background-color: rgba(23, 101, 145, 0.5);
@@ -454,6 +453,21 @@ margin-top: 20px;
 
 .fix-bot{
     margin-bottom: 1rem;
+}
+
+// ---------- user file show ----------
+
+ul.user-profile{
+    margin: 3em auto;
+    li{
+        margin: 1em 0;
+    }
+    p{
+        background-color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
 }
 
 // ---------- select month ----------

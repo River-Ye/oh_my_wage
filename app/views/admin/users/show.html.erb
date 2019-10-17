@@ -1,43 +1,21 @@
+<h1 class="verticalspace center-block mt-5"><%= @user.name %>的個人資料</h1>
 <% if @user %>
-<ul class="user-profile">
-    <li>權限</li>
+<ul class="user-profile col-lg-6">
+    <li>權限：</li>
       <p><%= @user.role %></p>
-    <li>編號</li>
+    <li>編號：</li>
       <p><%= @user.number %></p>
-    <li>姓名</li>
+    <li>姓名：</li>
       <p><%= @user.name %></p>
-    <li>工作單位</li>
+    <li>工作單位：</li>
       <p><%= user_department %></p>
-    <li>手機</li>
+    <li>手機：</li>
       <p><%= @user.phone %></p>
-    <li>性別</li>
+    <li>性別：</li>
       <p><%= @user.gender %></p>
-    <li>信箱</li>
+    <li>信箱：</li>
       <p><%= @user.email %></p>
 </div>
-
-<table class="table col-lg-12 col-md-12 col-sm-12 verticalspace2">
-  <tbody>
-    <tr>
-      <th>權限</th>
-      <th>編號</th>
-      <th>姓名</th>
-      <th>工作單位</th>
-      <th>手機</th>
-      <th>性別</th>
-      <th>信箱</th>
-    </tr>
-    <tr>
-      <td><%= @user.role %></td>
-      <td><%= @user.number %></td>
-      <td><%= @user.name %></td>
-      <td><%= user_department %></td>
-      <td><%= @user.phone %></td>
-      <td><%= @user.gender %></td>
-      <td><%= @user.email %></td>
-    </tr>
-  </tbody>
-</table>
 <% else %>
   <h1>沒有這個人</h1>
 <% end %>
