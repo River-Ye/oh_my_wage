@@ -44,12 +44,12 @@
       </td>
       <td class="wage-md"><%= salary_hr(student) %> 時</td>
       <td class="wage-md"><%= salary_sum(student) %> 元</td>
-      <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' do %>
+      <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm mt-0' do %>
           <i class="fas fa-pencil-alt"></i>
       <% end %>
       </td>
       <td>
-        <%= link_to staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name}的工讀名單 剔除嗎?" } do %>
+        <%= link_to staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover mt-0', data: { confirm: "確定要把 #{student.name} 從 #{@department.name}的工讀名單 剔除嗎?" } do %>
           <i class="fas fa-user-alt-slash"></i>
         <% end %>
       </td>
