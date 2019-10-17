@@ -36,12 +36,21 @@
   </tbody>
 </table>
 
-
-<%= link_to :back, class: 'btn btn-gray btn-md' do %>
+<%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
   <p>
     <i class="fas fa-backward"></i>
     上一頁
   </p>
 <% end %>
 
-
+<script type="text/javascript">
+  $(document).on('turbolinks:load', function(){
+    $('.datepicker').datepicker({
+      language:'zh-TW',
+      format: "yyyy-mm",
+      viewMode: 'months',
+      minViewMode: 'months',
+      autoclose: true
+    });    
+  });
+</script>
