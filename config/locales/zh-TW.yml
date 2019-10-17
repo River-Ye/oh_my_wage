@@ -152,8 +152,8 @@
       update: 更新%{model}
   views:
     pagination:
-      first: "&laquo; 第一頁"
-      last: "最後一頁 &raquo;"
+      first: "&laquo; 頁首"
+      last: "頁尾 &raquo;"
       previous: "&lsaquo; 上一頁"
       next: "下一頁 &rsaquo;"
       truncate: "&hellip;"
