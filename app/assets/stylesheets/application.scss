@@ -323,49 +323,19 @@ margin-top: 20px;
 }
 // ---------- login ----------
 
-.overlay{
-    position:fixed;
-    background: image-url("login-bg.png");
+.login-bg{
+    background-image: image-url("school2.jpg");
+    background-size: cover;
     opacity: 0.3;
-    -webkit-animation:100s scroll infinite linear;
-    -moz-animation:100s scroll infinite linear;
-    -o-animation:100s scroll infinite linear;
-    -ms-animation:100s scroll infinite linear;
-    animation:100s scroll infinite linear;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-@-webkit-keyframes scroll{
-    100%{
-      background-position:0px -3000px;
-    }
-}
-  
-@-moz-keyframes scroll{
-    100%{
-        background-position:0px -3000px;
-    }
-}
-
-@-o-keyframes scroll{
-    100%{
-        background-position:0px -3000px;
-    }
-}
-
-@-ms-keyframes scroll{
-    100%{
-        background-position:0px -3000px;
-    }
-}
-
-@keyframes scroll{
-    100%{
-        background-position:0px -3000px;
-    }
+@media screen and (max-width: 995px){
+    
 }
 
 .loginblocksm.col-12{
@@ -381,7 +351,7 @@ margin-top: 20px;
         }
     }
 }
-.loginblock.col-lg-5{
+.loginblock.col-lg-4{
     margin: auto;
     width: 100%;
     padding: 1em;
@@ -581,6 +551,15 @@ span.month:hover{
         background-color: rgba(186, 41, 55, 0.3);
         border: 3px solid rgba(186, 41, 55, 0.6);
     }
+    .card-history{
+        background-color: rgba(64, 35, 25, 0.6);
+        border: 3px solid transparent;
+    }
+    .card-history:hover{
+        background-color: rgba(64, 35, 25, 0.6);
+        border: 3px solid rgba(64, 35, 25, 0.6);
+    }
+
     h2.card-title{
         width: 100%;
         padding-top: 0.5em;
@@ -598,13 +577,17 @@ span.month:hover{
     }
 }
 
-.hourglass, .question-circle{
+.fas.fa-stopwatch,
+.far.fa-question-circle,
+.fas.fa-history{
     font-size: 150px;
     margin: 0.1em auto;
 }
 
 @media screen and (max-width: 995px){
-    .fas.fa-stopwatch, .far.fa-question-circle{
+    .fas.fa-stopwatch,
+    .far.fa-question-circle,
+    .fas.fa-history{
         font-size: 50px;
 }
     h2.card-title{
@@ -614,7 +597,6 @@ span.month:hover{
         font-size: 10px !important;
     }
     .hover-sec{
-        border: 1px solid salmon;
         margin: 1em 3em;
     }
 }
@@ -679,6 +661,17 @@ table{
 table.table.col-lg-12.col-md-12.col-sm-12{
     th,td{
         text-align: left;
+    }
+}
+table.salary{
+    .form-control.mx-1.date.required{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .wage-md{
+        display: none;
     }
 }
 
