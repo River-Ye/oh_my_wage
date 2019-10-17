@@ -846,6 +846,11 @@ ul.pagination{
         margin: 10px 0px 0px -30px;
         left: 0px
     }
+    
+    div.info > p > a{
+        color: #000000;
+    }
+
 
     @media screen and (max-width:995px){
         .worker-int{
@@ -883,6 +888,7 @@ ul.pagination{
     margin: 3em auto;
     h1{
         color: #ff6875;
+        font-size: 50px;
     }
     p{  
         color: #ffffff;
@@ -891,7 +897,7 @@ ul.pagination{
 }
 
 .ml13 {
-    font-size: 1.9em;
+    font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     font-weight: 600;
@@ -968,10 +974,14 @@ div.harry > img{
     height: 180px;
 }
 
-.ohmywage{
-  p{
-    color: #fa0;  
-  }
+.oh > span,
+.my > span{
+    color: #fa0;
+    font-size: 25px;
+}
+// ---------- Q & A ----------
+.qa{
+    color: #521D1F    
 }
 
 // ---------- Back to top button 56px ----------

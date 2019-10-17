@@ -84,6 +84,7 @@
                 </div>
             </div>
         </div>
+        <div class="info">
             <p>
                 <a href="tel:+886223315247">
                 <%= fa_icon "phone", text: "+886-2-2331-5247" %>
@@ -99,6 +100,8 @@
                 <%= fa_icon "map-marker", text: t('address') %>
                 </a>
             </p>
+        </div>
+        
             <div id="map" class="center-block col-lg-12 col-md-12 col-sm-12"></div>
             <script>
             $(document).on('turbolinks:load', function() {
