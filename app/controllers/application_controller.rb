@@ -20,9 +20,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     return stored_location_for(resource) || '/' if @user == nil
-    return stored_location_for(resource) || admin_root_path if @user.role == "管理者"
-    return stored_location_for(resource) || staff_root_path if @user.role == "職員"
-    return stored_location_for(resource) || student_root_path if @user.role == "學生"
+    return stored_location_for(resource) || admin_root_path if @user.admin?
+    return stored_location_for(resource) || staff_root_path if @user.staff?
+    return stored_location_for(resource) || student_root_path if @user.student?
   end
 
   def configure_permitted_parameters

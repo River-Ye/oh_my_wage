@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <div class="row">
       <div class="col-lg-8 col-md-12 col-sm-12 show">
-        <% if user_signed_in? && current_user.role == '管理者' %>
+        <% if user_signed_in? && current_user.admin? %>
           <%= f.input :number, label: t("user_id") %>
         <% else %>
           <div class="profile">
@@ -15,8 +15,8 @@
         <% end %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 show">
-        <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :role, label: t("permission"), collection: { "管理者": "管理者", "職員": "職員", "學生": "學生" } %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= f.input :role, label: t("permission"), collection: { "管理者": "admin", "職員": "staff", "學生": "student" } %>
         <% else %>
           <div class="profile">
             <p class="phead"><%= t("permission") %></p>
@@ -28,8 +28,8 @@
         <%= f.input :name, label: t("user_name") %>
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 show">
-        <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :gender, label: t("gender"), collection: { "男": "男", "女": "女" } %>
+        <% if user_signed_in? && current_user.admin? %>
+          <%= f.input :gender, label: t("gender"), collection: { "男": "male", "女": "female" } %>
         <% else %>
           <div class="profile">
             <p class="phead"><%= t("gender") %></p>
