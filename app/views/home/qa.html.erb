@@ -1,21 +1,23 @@
 <body class="mybgimg qa fontstyle">
     
-<h1 class="zhtitle verticalspace">常見問題</h1>
-<div class="contentinfo">
+<h1 class="zhtitle verticalspace"></h1>
+  <div class="contentinfo">
+   <div class="qa">
     <ul>
-        <li>
-            Q1：我該如何註冊帳戶？
+        <li class="q">
+            <%= t("Q1")%>
         </li>
-        <p>
-            因為帳戶權限的考量，只有魔法部的管理階層可以註冊帳號，關於霍格華茲玄願教職員和學生的帳戶會統一輸入資料庫，也就是說只要擁有該學院員工或學生資格者皆有帳號，並且本網站已登陸工時為主，並提供試算功能，所以只提供給本校教職員和工讀需求的學生使用，若是學生臨時有工讀需求，只要有獲得工讀名額，隨時都可以使用本站的功能！
-        </p>
-        <li>
-            Q2：如果發現工讀時數登記錯誤該怎麼辦？
+        <li class="a">
+            <%= t("A1")%>
         </li>
-        <p>
-            可通過網站的問題回報功能來向學校反映問題。
-        </p>
+        <li class="q">
+            <%= t("Q2")%>
+        </li>
+        <li class="a">
+            <%= t("A2")%>
+        </li>
     </ul>
+    </div>
 </div>
 <div class="center-block">
     <%= link_to '/', class: 'btn btn-gray btn-lg' do %>

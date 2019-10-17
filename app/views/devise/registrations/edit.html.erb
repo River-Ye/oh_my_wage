@@ -16,7 +16,7 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 show">
         <% if user_signed_in? && current_user.role == '管理者' %>
-          <%= f.input :role, label: t("permission"), collection: { "管理者": "管理者", "員工": "staff", "學生": "student" } %>
+          <%= f.input :role, label: t("permission"), collection: { "管理者": "管理者", "職員": "職員", "學生": "學生" } %>
         <% else %>
           <div class="profile">
             <p class="phead"><%= t("permission") %></p>
