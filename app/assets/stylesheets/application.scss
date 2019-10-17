@@ -774,7 +774,7 @@ ul.pagination{
     padding: 25px;
     border-radius: 10px;
     color: #FEFDFF;
-    background-color: rgba(5, 15, 31, 0.8);
+    // background-color: rgba(5, 15, 31, 0.8);
     ul{
         list-style-type: none;
     }
@@ -874,15 +874,26 @@ ul.pagination{
     width: 100%;
     text-align: center;
     margin: 3em auto;
-    h2{
-        font-size: 50px;
-        margin: 1em auto 0.5em;
-        color: #FFFFCA;
+    h1{
+        color: #ff6875;
     }
-    p{
+    p{  
+        color: #ffffff;
         font-size: 20px;
     }
 }
+
+.ml13 {
+    font-size: 1.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: 600;
+  }
+  
+  .ml13 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
 
 .stu, .sta{
     position: relative;
@@ -892,7 +903,7 @@ ul.pagination{
     content:'';
     width: 0px;
     height: 0px;
-    border-top: 30px solid #2B858C;
+    border-top: 30px solid #1A7EA5;
     display: block;
     border-right: 40px solid transparent;
     position: absolute;
@@ -915,7 +926,7 @@ ul.pagination{
 
 .stu-say{
     text-align: left;
-    background-color: #2B858C;
+    background-color: #1A7EA5;
     border: 1px solid #003F56;
     border-radius: 10px;
     padding-top: 20px;
@@ -939,6 +950,21 @@ ul.pagination{
     p{
         margin-right: 1em;
     }
+}
+
+div.shinebu > img{
+    width: 100px;
+}
+
+div.harry > img{
+    width: 150px;
+    height: 180px;
+}
+
+.ohmywage{
+  p{
+    color: #fa0;  
+  }
 }
 
 // ---------- Back to top button 56px ----------
