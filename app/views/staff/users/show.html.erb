@@ -1,24 +1,22 @@
-<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
-  <tr>
-    <th>學號</th>
-    <td><%= @student.number %></td>
-  </tr>
-  <tr>
-    <th>姓名</th>
-    <td><%= @student.name %></td>
-  </tr>
+<table class="table col-lg-12 col-md-12 col-sm-12 verticalspace2 mx-auto">
+  <thead>
     <tr>
-    <th>手機</th>
-    <td><%= @student.phone %></td>
-  </tr>
-  <tr>
-    <th>性別</th>
-    <td><%= @student.gender %></td>
-  </tr>
-  <tr>
-    <th>信箱</th>
-    <td><%= @student.email %></td>
-  </tr>
+      <th>學號</th>
+      <th>姓名</th>
+      <th>手機</th>
+      <th>性別</th>
+      <th>信箱</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @student.number %></td>
+      <td><%= @student.name %></td>
+      <td><%= @student.phone %></td>
+      <td><%= @student.gender %></td>
+      <td><%= @student.email %></td>
+    </tr>
+  </tbody>
 </table>
 
 <%= link_to :back, class: 'btn btn-gray btn-md' do %>
