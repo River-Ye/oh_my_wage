@@ -151,6 +151,7 @@ span#timecount{
 }
 
 .btn{
+    margin-top: 5px;
     margin-right: 5px;
     transition: 0.3s;
     height: 2.3em;
@@ -220,6 +221,7 @@ margin-top: 20px;
     background-color: #176591;
     color: #FEFDFF;
     border: 1px solid #176591;
+    margin-top: 8px;
 }
 .btn-blue:hover{
     background-color: #80C6F2;
@@ -316,7 +318,8 @@ margin-top: 20px;
     }
 
     .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
-    .btn.btn-green.add-stu.float-right.mr-0{
+    .btn.btn-green.add-stu.float-right.mr-0,
+    .btn.btn-pdf.btn-md.white-hover.float-left.mr-0{
         margin-top: 8px;
         width: 100%;
     }
@@ -416,7 +419,8 @@ margin-top: 20px;
 .form-group.tel.required.user_phone{
     width: 100%;
 }
-
+.form-control.string.tel.required,
+.tel.required,
 .form-group.tel.required.user_phone.form-group-valid,
 .form-control.is-valid.string.tel.required{
     margin-left: 0;
@@ -460,6 +464,7 @@ margin-top: 20px;
 
 .datepicker::-webkit-input-placeholder {
     color:#ccc;
+    margin-bottom: 5px;
 }
 .datepicker::after{
     border-bottom-color: #3D606E;
@@ -703,8 +708,8 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 ul.pagination{
     height: 3em !important;
-    margin-right: 5px;
-    justify-content: center;
+    margin-top: 5px;
+    justify-content: flex-end;
     color: #FEFDFF;
     li > a{
         background-color: rgba(23, 101, 145, 0.8);
@@ -734,9 +739,10 @@ ul.pagination{
 }
 
 @media screen and (max-width: 995px){
-    ul.pagication{
-        font-size: 13px;
+    ul.pagination{
+        justify-content: center;
     }
+
 }
 // ---------- edit salary ----------
 
