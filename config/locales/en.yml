@@ -54,3 +54,7 @@ en:
   welcome2: "Hi, %{name}(%{apartment})"
   add_user: "Add User"
   add_stu: "Add Student"
+  Q1: "1. How do I sign up for an account?"
+  A1: "If you are a Hogwarts School faculty member and student, and are involved in on-campus work, you can contact us to apply for an account."
+  Q2: "2. What if my working hours are incorrectly logged in?"
+  A2: "You can enter “Opinions” webpage to report your problem. We will deal with your problem as soon as possible."
