@@ -151,6 +151,7 @@ span#timecount{
 }
 
 .btn{
+    margin-top: 5px;
     margin-right: 5px;
     transition: 0.3s;
     height: 2.3em;
@@ -220,6 +221,7 @@ margin-top: 20px;
     background-color: #176591;
     color: #FEFDFF;
     border: 1px solid #176591;
+    margin-top: 8px;
 }
 .btn-blue:hover{
     background-color: #80C6F2;
@@ -243,12 +245,6 @@ margin-top: 20px;
     background-color: #74CDB6;
     border-color: #74CDB6;
     color: #333;
-}
-
-.btn-brown{
-    background-color: #402319;
-    border-color: #402319;
-    color: #FEFDFF;
 }
 
 .btn-brown:hover{
@@ -316,7 +312,8 @@ margin-top: 20px;
     }
 
     .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
-    .btn.btn-green.add-stu.float-right.mr-0{
+    .btn.btn-green.add-stu.float-right.mr-0,
+    .btn.btn-pdf.btn-md.white-hover.float-left.mr-0{
         margin-top: 8px;
         width: 100%;
     }
@@ -416,7 +413,8 @@ margin-top: 20px;
 .form-group.tel.required.user_phone{
     width: 100%;
 }
-
+.form-control.string.tel.required,
+.tel.required,
 .form-group.tel.required.user_phone.form-group-valid,
 .form-control.is-valid.string.tel.required{
     margin-left: 0;
@@ -460,6 +458,7 @@ margin-top: 20px;
 
 .datepicker::-webkit-input-placeholder {
     color:#ccc;
+    margin-bottom: 5px;
 }
 .datepicker::after{
     border-bottom-color: #3D606E;
@@ -544,19 +543,19 @@ span.month:hover{
         border: 3px solid #588c8c;
     }
     .card-q{
-        background-color: rgba(186, 41, 55, 0.6);
+        background-color: rgba(186, 41, 55, 0.5);
         border: 3px solid transparent;
     }
     .card-q:hover{
-        background-color: rgba(186, 41, 55, 0.3);
-        border: 3px solid rgba(186, 41, 55, 0.6);
+        background-color: rgba(186, 41, 55, 0.1);
+        border: 3px solid rgba(186, 41, 55, 0.5);
     }
     .card-history{
-        background-color: rgba(64, 35, 25, 0.6);
+        background-color: rgba(64, 35, 25, 0.3);
         border: 3px solid transparent;
     }
     .card-history:hover{
-        background-color: rgba(64, 35, 25, 0.6);
+        background-color: rgba(64, 35, 25, 0.1);
         border: 3px solid rgba(64, 35, 25, 0.6);
     }
 
@@ -577,10 +576,10 @@ span.month:hover{
     }
 }
 
-.fas.fa-stopwatch,
-.far.fa-question-circle,
-.fas.fa-history{
-    font-size: 150px;
+.hourglass,
+.question-circle,
+.history{
+    font-size: 100px;
     margin: 0.1em auto;
 }
 
@@ -673,6 +672,8 @@ table.salary{
     .wage-md{
         display: none;
     }
+    td.form-group.date.required.user_salaries_date.form-group-valid{
+    }
 }
 
 // ---------- problem ----------
@@ -703,8 +704,8 @@ textarea#reply_to_issue_content.form-control.text.required{
 
 ul.pagination{
     height: 3em !important;
-    margin-right: 5px;
-    justify-content: center;
+    margin-top: 5px;
+    justify-content: flex-end;
     color: #FEFDFF;
     li > a{
         background-color: rgba(23, 101, 145, 0.8);
@@ -734,9 +735,10 @@ ul.pagination{
 }
 
 @media screen and (max-width: 995px){
-    ul.pagication{
-        font-size: 13px;
+    ul.pagination{
+        justify-content: center;
     }
+
 }
 // ---------- edit salary ----------
 
@@ -934,6 +936,12 @@ ul.pagination{
             margin: 1em auto;
             box-shadow:0px 18px 20px -20px #000;
         }
+        .worker-say > p, .worker-say > a{
+            font-size: 15px;
+        }
+        p.text-warning{
+            font-size: 20px;
+        }
         .worker-say::before{
             content:'';
             width: 0px;
@@ -1041,8 +1049,8 @@ ul.pagination{
             border-bottom: 30px solid transparent;
             border-right: 30px solid #5082A1;
             display: block;
-            margin: 10px 0px 0px -30px;
-            left: 0px
+            margin: -30px 0px 0px 10px;
+            top: 0px
         }
     
         @media screen and (max-width:995px){
