@@ -576,10 +576,10 @@ span.month:hover{
     }
 }
 
-.fas.fa-stopwatch,
-.far.fa-question-circle,
-.fas.fa-history{
-    font-size: 150px;
+.hourglass,
+.question-circle,
+.history{
+    font-size: 100px;
     margin: 0.1em auto;
 }
 
@@ -671,6 +671,8 @@ table.salary{
 @media screen and (max-width: 767px){
     .wage-md{
         display: none;
+    }
+    td.form-group.date.required.user_salaries_date.form-group-valid{
     }
 }
 
@@ -843,6 +845,12 @@ ul.pagination{
     @media screen and (max-width:995px){
         .worker-int{
             flex-direction: column;
+        }
+        .worker-say > p, .worker-say > a{
+            font-size: 15px;
+        }
+        p.text-warning{
+            font-size: 20px;
         }
         .worker-say::before{
             border-right: 30px solid transparent;
