@@ -1,4 +1,21 @@
 <% if @user %>
+<ul class="user-profile">
+    <li>權限</li>
+      <p><%= @user.role %></p>
+    <li>編號</li>
+      <p><%= @user.number %></p>
+    <li>姓名</li>
+      <p><%= @user.name %></p>
+    <li>工作單位</li>
+      <p><%= user_department %></p>
+    <li>手機</li>
+      <p><%= @user.phone %></p>
+    <li>性別</li>
+      <p><%= @user.gender %></p>
+    <li>信箱</li>
+      <p><%= @user.email %></p>
+</div>
+
 <table class="table col-lg-12 col-md-12 col-sm-12 verticalspace2">
   <tbody>
     <tr>
