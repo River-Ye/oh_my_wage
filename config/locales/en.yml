@@ -50,7 +50,7 @@ en:
   my_page: "My Page"
   log_out: "Log Out"
   top_page: "Top Page"
-  user_id: "Staff ID/Student ID"
+  user_id: "ID"
   user_stu_id: "Student ID"
   permission: "Access Permission"
   mail: "Email"

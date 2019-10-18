@@ -43,7 +43,7 @@
         <% end %>
       </td>
       <td class="delete">
-        <%= link_to admin_user_path(user.slug), method: 'delete', class: 'btn btn-red btn-smwhite-hover', data: { confirm: "確定要把「#{user.name}」的資料刪除嗎???" } do %>
+        <%= link_to admin_user_path(user.slug), method: 'delete', class: 'btn btn-red btn-sm', data: { confirm: "確定要把「#{user.name}」的資料刪除嗎???" } do %>
         <i class="fas fa-user-alt-slash"></i>
         <% end %>
       </td>
