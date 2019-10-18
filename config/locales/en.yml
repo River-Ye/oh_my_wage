@@ -51,7 +51,7 @@ en:
   change_password_hint: "If you don't want to change password, please ignore this."
   change_info: "Edit Personal's Information"
   welcome: "Hi, %{name}"
-  welcome2: "Hi, %{name}(%{apartment})"
+  welcome2: "Hi, %{name}(Dept. %{apartment})"
   add_user: "Add User"
   add_stu: "Add Student"
   Q1: "1. How do I sign up for an account?"
