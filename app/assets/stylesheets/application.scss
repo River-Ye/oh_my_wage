@@ -635,6 +635,10 @@ table{
     margin-bottom: 0 !important;
     background-color: rgba(18, 50, 69, 0.1);
     color: #333 !important;
+    .btn{
+        margin-top: 0;
+        margin-right: 0;
+    }
     a{
         color: #333;
     }
@@ -748,16 +752,22 @@ table.user{
             padding-right: 3px;
         }
         th.date{
-            width: 35%;
+            width: 41%;
         }
-        th.time, th.wage{
-            width: 20%;
+        th.time{
+            width: 23%;
+        }
+        th.wage{
+            width: 22%;
         }
         th.delete{
-            width: 20%;
+            width: 14%;
         }
         td.date{
-            width: 30%;
+            width: 40%;
+        }
+        td.time, td.wage{
+            width: 22.5%;
         }
     }
 }
