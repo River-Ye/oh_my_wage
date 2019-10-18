@@ -538,6 +538,9 @@ span.month:hover{
 
 .card{
     border: none;
+    .card-body{
+        text-align: center;
+    }
     .hover-sec{
         margin-top: 1em;
         margin-bottom: 1em;
@@ -577,7 +580,6 @@ span.month:hover{
 
     h2.card-title{
         width: 100%;
-        padding-top: 0.5em;
         font-size: 40px;
         text-align: center;
     }
@@ -585,32 +587,29 @@ span.month:hover{
         width: 100%;
         font-size: 25px;
     }
-    img.card-img-top{
-        width: 200px;
-        height: 200px;
-        margin: 1.5em auto 0;
-    }
 }
 
-.hourglass,
-.question-circle,
-.history{
-    font-size: 100px;
-    margin: 0.1em auto;
+.far-hourglass,
+.fa-question-circle.big-btn,
+.fa-history{
+    font-size: 50px;
+    margin: 0.5em auto;
+}
+
+.btn.btn-gray.btn-md{
+    margin-top: 5px;
 }
 
 @media screen and (max-width: 995px){
-    .fas.fa-stopwatch,
-    .far.fa-question-circle,
-    .fas.fa-history{
-        font-size: 50px;
-}
-    h2.card-title{
-        font-size: 20px !important;
+    .far-hourglass,
+    .fa-question-circle.big-btn,
+    .fa-history{
+        font-size: 30px;
     }
-    p.card-text{
-        font-size: 10px !important;
+    .card-body > h3{
+        font-size: 20px;
     }
+
     .hover-sec{
         margin: 1em 3em;
     }

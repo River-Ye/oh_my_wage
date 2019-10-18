@@ -1,4 +1,27 @@
 <h1 class="verticalspace"><%= t("welcome", name: @current_user.name) %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="card col-lg-3 col-md-3 col-sm-3 col-xs-6">
+      <%= link_to student_history_path, class:"hover-sec card-history text-decoration-none" do %>
+        <div class="card-body">
+          <i class="fas fa-history"></i>
+          <h3 class="card-title">歷史查詢</h3>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="card col-lg-3 col-md-3 col-sm-3 col-xs-6">
+      <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
+        <div class="card-body">
+          <i class="far fa-question-circle big-btn"></i>
+          <h3 class="card-title">問題反映</h3>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
 
 <table class='table col-lg-12 col-md-12 col-sm-12'>
@@ -26,26 +49,3 @@
   </tbody>
 </table>
 
-<div class="container">
-  <div class="row">
-    <div class="card col-lg-4 col-md-9 col-sm-12">
-      <%= link_to student_history_path, class:"hover-sec card-history text-decoration-none" do %>
-        <div class="card-body">
-          <i class="fas fa-history"></i>
-          <h2 class="card-title">歷史查詢</h2>
-          <p class="card-text">Wage Settlement</p>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="card col-lg-4 col-md-9 col-sm-12">
-      <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
-        <div class="card-body">
-          <i class="far fa-question-circle"></i>
-          <h2 class="card-title">問題反映</h2>
-          <p class="card-text">Report Issue</p>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
