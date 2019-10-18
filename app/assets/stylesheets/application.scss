@@ -528,10 +528,6 @@ span.month:hover{
     background-color: #183441 !important;
 }
 
-/*.dropdown-menu{
-    background-image: linear-gradient(0deg, #74B1BF, #3D606E);
-}*/
-
 // ---------- card ----------
 
 .card{
@@ -587,8 +583,8 @@ span.month:hover{
     }
 }
 
-.far-hourglass,
-.fa-question-circle.big-btn,
+.far-hourglass,.hourglass,
+.fa-question-circle.question-circle,
 .fa-history{
     font-size: 50px;
     margin: 0.5em auto;
@@ -596,15 +592,18 @@ span.month:hover{
 
 
 @media screen and (max-width: 995px){
-    .far-hourglass,
-    .fa-question-circle.big-btn,
+    .far-hourglass,.hourglass,
+    .fa-question-circle.question-circle,
     .fa-history{
-        font-size: 30px;
+        font-size: 50px;
     }
-    .card-body > h3{
-        font-size: 20px;
+    .card-body{
+        padding: 0;
+        h3{
+            font-size: 20px;
+        }
     }
-
+    
     .hover-sec{
         margin: 1em 3em;
     }
@@ -613,9 +612,9 @@ span.month:hover{
 
 table > tbody > tr > td > .btn-red,
 .container > a.btn-red{
-        background-color: #8b0000;
-        border: #8b0000;
-        color: #FEFDFF;
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
 }
 
 .container > .container > .row{
@@ -723,6 +722,10 @@ ul.pagination{
         border: 1px solid rgba(23, 101, 145, 0.8);
         color: #FEFDFF;
         transition: 0.3s;
+        letter-spacing: -8px;
+        text-align: center;
+        margin: 0;
+        padding-right: 20px;
     }
     li > a:hover{
         background-color: rgba(18, 50, 69, 0.8);
