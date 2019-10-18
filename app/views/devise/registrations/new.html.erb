@@ -9,13 +9,13 @@
        <%= f.input :number, label: t("user_id"), required: true, autofocus: true %>
       </div>
       <div class="col-4">
-        <%= f.input :role, label: t("permission"), collection: { "管理者": "admin", "職員": "staff", "學生": "student" } %>
+        <%= f.input :role, label: t("permission") %>
       </div>
       <div class="col-8">
         <%= f.input :name, label: t("user_name"), required: true %>
       </div>
       <div class="col-4">
-        <%= f.input :gender, label: t("gender"), collection: { "男": "male", "女": "female" } %>
+        <%= f.input :gender, label: t("gender") %>
       </div>
       <div class="col-8">
         <%= f.input :email, input_html: { autocomplete: "email" }, required: true, placeholder: 'example@oh-my-wage.website' %>

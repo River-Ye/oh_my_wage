@@ -1,5 +1,5 @@
 <h2 class="verticalspace"><%= t("welcome", name: @current_user.name) %></h2>
-<h2 class="row verticalspace3">使用者名單</h2>
+<h2 class="row verticalspace3"><%= t("user_list")%></h2>
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-12">
     <%= form_tag(admin_users_path, method: :get) do %>
@@ -21,11 +21,11 @@
 <table class="table table-sm my-table" id="table">
   <thead>
     <tr>
-      <th>角色</th>
-      <th>編號</th>
-      <th>姓名</th>
-      <th>編輯</th>
-      <th>刪除</th>
+      <th><%= t("permission")%></th>
+      <th><%= t("user_id")%></th>
+      <th><%= t("user_name")%></th>
+      <th><%= t("edit")%></th>
+      <th><%= t("delete")%></th>
     </tr>
   </thead>
   <tbody>

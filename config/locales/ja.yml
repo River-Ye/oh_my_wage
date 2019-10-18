@@ -206,6 +206,15 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  enums:
+    user:
+      role:
+        admin: "管理者"
+        staff: "職員"
+        student: "学生"
+      gender:
+        male: "男"
+        female: "女"
   address: "100台湾台北市中正区衡陽路７号"
   about: "システムについて"
   contact: "お問い合わせ"
@@ -217,7 +226,10 @@ ja:
   log_out: "ログアウト"
   top_page: "トップページへ"
   user_id: "職員番号／学籍番号"
+  user_stu_id: "学籍番号"
   permission: "アクセス権"
+  mail: "メール"
+  apart: "所属"
   user_name: "氏名"
   gender: "性別"
   male: "男"
@@ -233,3 +245,16 @@ ja:
   A1: "ホグワーツ大学の教職員そのほか大学の関係者なら、アカウント作成を申し込みたいとわたしたちまでご連絡ください。"
   Q2: "2. 私の労働時間が誤って入力されていたらどうすればいいですか？"
   A2: "ウェブページ内の「Opinions」で問題を報告してください。できる限りすみやかに対応します。"
+  sinfo: "の個人情報"
+  user_list: "ユーザー一覧"
+  edit: "編集"
+  delete: "削除"
+  wage_slip: "給料明細"
+  date: "日付"
+  hour: "時間"
+  hourly_wage: "時給"
+  payment: "支給額"
+  total: "合計"
+  hour_sum: " 時間"
+  dollars: " ドル(NTD)"
+  total_hour: "延時間"
