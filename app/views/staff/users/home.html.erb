@@ -5,7 +5,7 @@
       <%= link_to staff_salaries_path, class:"hover-sec card-time text-decoration-none" do %>
         <div class="card-body">
           <%= fa_icon "hourglass-half", class: "hourglass"%>
-          <h3 class="card-title">工時登錄</h3>
+          <h4 class="card-title"><%= t("hour_log")%></h4>
         </div>
       <% end %>
     </div>
@@ -14,7 +14,7 @@
       <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
         <div class="card-body">
           <%= fa_icon "question-circle", class: "question-circle"%>
-          <h3 class="card-title">問題反映</h3>
+          <h4 class="card-title"><%= t("question")%></h4>
         </div>
       <% end %>
     </div>
