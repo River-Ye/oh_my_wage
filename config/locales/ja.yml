@@ -144,7 +144,7 @@ ja:
     submit:
       create: 登録する
       submit: 保存する
-      update: 更新する
+      update: 更新
 
   number:
     currency:
@@ -265,3 +265,10 @@ ja:
   staff_name: "職員 Sさん"
   worry: "ご心配なく！"
   worry2: "「はやい、便利、簡単」、わが社の「オ・マイ・ウェイジ・チーム」があなたに素晴らしい技術革新を提供します。まずは、「Oh My Wage Study Payroll System」をお試しください。時短を実現し、手間を減らします。"
+  hour_log: "労働時間の入力"
+  question: "問題報告"
+  add: "追加"
+  update_rec: "更新"
+  save: "保存"
+  history: "入力履歴"
+  sign_up: "新規登録"
