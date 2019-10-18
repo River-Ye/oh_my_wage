@@ -1150,6 +1150,7 @@ ul.pagination{
     border: 1px solid #003F56;
     border-radius: 10px;
     padding-top: 20px;
+    margin-right: 20%;
     p:first-child{
         margin-top: 15px;
     }
@@ -1159,11 +1160,13 @@ ul.pagination{
 }
 
 .staff-say{
+    flex-direction: row-reverse;
     text-align: right;
     background-color: #1A7EA5;
     border: 1px solid #1F4272;
     border-radius: 10px;
     padding-top: 20px;
+    margin-left: 20%;
     p:first-child{
         margin-top: 15px;
     }
@@ -1172,13 +1175,14 @@ ul.pagination{
     }
 }
 
-div.shinebu > img{
-    width: 150px;
+.shinebu > img{
+    width: 50px;
+    height: auto;
 }
 
-div.harry > img{
-    width: 150px;
-    height: 270px;
+.harry > img{
+    width: 50px;
+    height: auto;
 }
 // ---------- Q & A ----------
 .qa{

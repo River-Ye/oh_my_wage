@@ -6,7 +6,7 @@
        <%= f.input :number, label: t("user_id"), required: true, autofocus: true %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
-        <%= f.input :role, label: t("permission"), collection: { "管理者": "admin", "職員": "staff", "學生": "student" } %>
+        <%= f.input :role, label: t("permission") %>
       </div>
       <div class="col-lg-8 col-md-12 col-sm-12 ">
         <%= f.input :name, label: t("user_name"), required: true %>
