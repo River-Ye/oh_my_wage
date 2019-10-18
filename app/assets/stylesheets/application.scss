@@ -684,7 +684,7 @@ table.salary{
 }
 
 @media screen and (max-width: 767px){
-    .wage-md{
+    .hidden-md{
         display: none;
     }
     td.date{
@@ -1198,7 +1198,7 @@ div.harry > img{
     cursor: pointer;
     position:fixed;
     right: 0.5rem;
-    bottom: 6rem;
+    bottom: 4rem;
     display: none;
     z-index: 3;
 }
@@ -1224,9 +1224,9 @@ div.harry > img{
 
 .toTop-arrow:focus{outline: none;}
 
-@media screen and (max-width: 512px){
+@media screen and (max-width: 768px){
     .toTop-arrow{
-        bottom: 7rem;
+        bottom: 4rem;
     }
 }
 // ---------- footer ----------
