@@ -6,6 +6,14 @@
   姓名：<%= student.name %>
 </span>
 </h3>
+
+<%# <%= form_tag(edit_staff_salary_path, method: :get) do % >
+  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker col-lg-3", "data-provide" => "datepicker" % >
+  <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do % >
+    <i class="fas fa-search"></i>
+  <% end % >
+<% end % > %>
+
 <table class="table salary">
   <thead>
     <tr>
