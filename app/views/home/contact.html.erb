@@ -1,36 +1,30 @@
 <body class="mybgimg contactus fontstyle">
-<h1 class="zhtitle verticalspace">聯絡我們</h1>
-<div class="contentinfo">
-    <ul>
-        <li>成員</li>
-            <div class="d-flex justify-content-center worker-int flex-column">
-                <div class="p-2 d-flex worker-int">
-                    <div class="p-2 col-lg-4 col-md-12 col-sm-12">
-                        <%= image_tag('river.png', class:'workerimg') %>
-                    </div>
-                <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p class="text-warning">
-                        葉政偉 River Ye
-                    </p>
+<div class="contentinfo contcolor row">
+    <div class="col-lg-6">
+        <div class="d-flex justify-content-center worker-int flex-column">
+            <div class="p-2 d-flex worker-int">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
+                    <%= image_tag('river.png', class:'workerimg') %>
+                </div>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">葉政偉 River Ye</p>
                     <p>
                         你必須很努力，才能看起來毫不費力。<br>
                         看似輕鬆的背後，有著看不盡的付出。
                     </p>
                     <p class="email">
                         <a href="mailto:river@riverye.com">
-                            <%= fa_icon "envelope", text: "river@riverye.com" %>
+                        <%= fa_icon "envelope", text: "river@riverye.com" %>
                         </a>
                     </p>
                 </div>
             </div>
             <div class="p-2 d-flex worker-int">
-                <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
                     <%= image_tag('axel.png', class:'workerimg') %>
                 </div>
-                <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p class="text-warning">
-                        陳宥誠 Axel Chen
-                    </p>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">陳宥誠 Axel Chen</p>
                     <p>
                         從不同的觀點思考，<br>
                         用好奇心探索世界！
@@ -43,16 +37,15 @@
                 </div>
             </div>
         </div>
-
-        <div class="d-flex justify-content-center flex-column">
+    </div>
+    <div class="col-lg-6">
+        <div class="d-flex justify-content-center worker-int flex-column">
             <div class="p-2 d-flex worker-int">
-                <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
                     <%= image_tag('joan.png', class:'workerimg') %>
                 </div>
-                <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p class="text-warning">
-                        廖友渝 Joan Liao
-                    </p>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">廖友渝 Joan Liao</p>
                     <p>
                         你不一定要變得很厲害，才能開始；<br>
                         你要開始，才能變得很厲害！
@@ -65,13 +58,11 @@
                 </div>
             </div>
             <div class="p-2 d-flex worker-int">
-                <div class="p-2 col-lg-4 col-md-12 col-sm-12">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
                     <%= image_tag('patrick.png', class:'workerimg') %>
                 </div>
-                <div class="p-2 worker-say col-lg-8 col-md-12 col-sm-12">
-                    <p class="text-warning">
-                        劉迦豪 Patrick Liu
-                    </p>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">劉迦豪 Patrick Liu</p>
                     <p>
                         渴求知識，喜歡探索，<br>
                         享受思考後發現新世界的興奮。
@@ -84,43 +75,46 @@
                 </div>
             </div>
         </div>
-        <div class="info">
-          <div class="phone">
-            <p>
-                <a href="tel:+886223315247">
-                <%= fa_icon "phone", text: "+886-2-2331-5247" %>
-                </a>
-            </p>
-            <p>
-                <a href="mailto:admin@oh-my-wage.website">
-                <%= fa_icon "envelope", text: "admin@oh-my-wage.website" %>
-                </a>
-            </p>
-            <p>
-                <a href="https://ubin.io/TyZN7E">
-                <%= fa_icon "map-marker", text: t('address') %>
-                </a>
-            </p>
-          </div>    
-        </div>
-        
-            <div id="map" class="center-block col-lg-12 col-md-12 col-sm-12"></div>
-            <script>
-            $(document).on('turbolinks:load', function() {
-                var ohmywage = { lat: 25.042437, lng: 121.513723 };
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 17.2,
-                    center: ohmywage });
-
-                var marker = new google.maps.Marker({
-                    position: ohmywage,
-                    map: map
-                });
-            });
-            </script>
-    </ul>
+    </div>
 </div>
-<div class="center-block">
+<div class="d-flex row conttt">
+<div class="info col-lg-4">
+    <div class="iphone">
+        <p>
+            <a href="tel:+886223315247">
+            <%= fa_icon "phone", text: "+886-2-2331-5247" %>
+            </a>
+        </p>
+        <p>
+            <a href="mailto:admin@oh-my-wage.website">
+            <%= fa_icon "envelope", text: "admin@oh-my-wage.website" %>
+            </a>
+        </p>
+        <p>
+            <a href="https://ubin.io/TyZN7E">
+            <%= fa_icon "map-marker", text: t('address') %>
+            </a>
+        </p>
+    </div>
+</div>   
+
+<div id="map" class="center-block col-lg-6 col-md-10 col-sm-10"></div>
+
+    <script>
+    $(document).on('turbolinks:load', function() {
+        var ohmywage = { lat: 25.042437, lng: 121.513723 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17.2,
+            center: ohmywage }  
+        var marker = new google.maps.Marker({
+            position: ohmywage,
+            map: map
+        });
+    });
+    </script>
+</div>
+
+<div class="center-block cotbtn">
     <%= link_to '/', class: 'btn btn-gray btn-lg' do %>
         <p>
             <%= fa_icon "home", text: t('top_page') %>
