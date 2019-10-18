@@ -3,10 +3,10 @@
     <tbody>
       <tr>
         <td class="date"><%= f.input :date, label: false, as: :date, html5: true %></td>
-        <td><%= f.input :hr, label: false, placeholder: '工時', input_html: { min: 1 } %></td>
-        <td><%= f.input :hourly_wage, label: false, placeholder: '時薪', input_html: { min: 150 } %></td>
-        <td>
-        <%= link_to_remove_association "×", f, data: { confirm: "確定要把這筆薪資刪除嗎?" }, class: 'btn btn-md btn-red white-hover' %>
+        <td class="time"><%= f.input :hr, label: false, placeholder: '工時', input_html: { min: 1 } %></td>
+        <td class="wage"><%= f.input :hourly_wage, label: false, placeholder: '時薪', input_html: { min: 150 } %></td>
+        <td class="delete">
+        <%= link_to_remove_association "×", f, data: { confirm: "確定要把這筆薪資刪除嗎?" }, class: 'btn btn-md btn-red white-hover mt-0' %>
         </td>
       </tr>
     </tbody>
