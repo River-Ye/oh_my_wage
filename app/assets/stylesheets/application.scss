@@ -138,7 +138,7 @@
 }
 
 span#timecount{
-    padding: 8px 0;
+    padding: 5px 0;
     margin-bottom: 0;
     color: #FEFDFF;
 }
@@ -156,7 +156,7 @@ span#timecount{
 }
 
 .btn{
-    // margin-top: 5px;
+    margin-top: 5px;
     margin-right: 5px;
     transition: 0.3s;
     height: 2.3em;
@@ -227,7 +227,6 @@ margin-top: 20px;
     background-color: #176591 !important;
     color: #FEFDFF !important;
     border: 1px solid #176591 !important;
-    margin-top: 8px;
 }
 .btn-blue:hover{
     background-color: #80C6F2;
@@ -239,7 +238,6 @@ margin-top: 20px;
     background-color: #246D73;
     color: #FEFDFF;
     border: 1px solid #246D73;
-    margin-top: 8px;
     li.page-item.disabled > a.page-link{
         background-color:  rgba(51, 51, 51, 0.8);
         border: 1px solid rgba(51, 51, 51, 0.8);
@@ -264,7 +262,6 @@ margin-top: 20px;
     border: 1px solid #333 !important;
     color: #FEFDFF !important;
     transition: 0.3s;
-    margin-top: 8px;
 }
 
 .btn-gray:hover{
@@ -279,7 +276,7 @@ margin-top: 20px;
 }
 
 #search{
-    margin: 8px auto;
+    margin: 5px auto;
     width: 50%;
     float: left;
     height: 2.3em;
@@ -305,7 +302,7 @@ margin-top: 20px;
 
 .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
 .btn.btn-green.add-stu.float-right.mr-0{
-    margin: 8px auto;
+    margin: 5px auto;
     width: 50%;
 }
 
@@ -321,7 +318,6 @@ margin-top: 20px;
     .btn.btn-green.btn-md.white-hover.verticalspace.float-right.mr-0,
     .btn.btn-green.add-stu.float-right.mr-0,
     .btn.btn-pdf.btn-md.white-hover.float-left.mr-0{
-        margin-top: 8px;
         width: 100%;
     }
 }
@@ -485,7 +481,9 @@ ul.user-profile{
 .datepicker::after{
     border-bottom-color: #3D606E;
 }
-
+.datepicker.datepicker-orient-left {
+    background-image: linear-gradient(0deg, #74B1BF, #3D606E);
+}
 .table-condensed{
     background-color: #74B1BF;
     border: 2px solid transparent !important;
@@ -536,14 +534,13 @@ span.month:hover{
     background-color: #183441 !important;
 }
 
-/*.dropdown-menu{
-    background-image: linear-gradient(0deg, #74B1BF, #3D606E);
-}*/
-
 // ---------- card ----------
 
 .card{
     border: none;
+    .card-body{
+        text-align: center;
+    }
     .hover-sec{
         margin-top: 1em;
         margin-bottom: 1em;
@@ -583,7 +580,6 @@ span.month:hover{
 
     h2.card-title{
         width: 100%;
-        padding-top: 0.5em;
         font-size: 40px;
         text-align: center;
     }
@@ -591,32 +587,29 @@ span.month:hover{
         width: 100%;
         font-size: 25px;
     }
-    img.card-img-top{
-        width: 200px;
-        height: 200px;
-        margin: 1.5em auto 0;
-    }
 }
 
-.hourglass,
-.question-circle,
-.history{
-    font-size: 100px;
-    margin: 0.1em auto;
+.far-hourglass,.hourglass,
+.fa-question-circle.question-circle,
+.fa-history{
+    font-size: 50px;
+    margin: 0.5em auto;
 }
+
 
 @media screen and (max-width: 995px){
-    .hourglass,
-    .question-circle,
-    .history{
+    .far-hourglass,.hourglass,
+    .fa-question-circle.question-circle,
+    .fa-history{
         font-size: 50px;
-}
-    h2.card-title{
-        font-size: 20px !important;
     }
-    p.card-text{
-        font-size: 10px !important;
+    .card-body{
+        padding: 0;
+        h3{
+            font-size: 20px;
+        }
     }
+    
     .hover-sec{
         margin: 1em 3em;
     }
@@ -625,9 +618,9 @@ span.month:hover{
 
 table > tbody > tr > td > .btn-red,
 .container > a.btn-red{
-        background-color: #8b0000;
-        border: #8b0000;
-        color: #FEFDFF;
+    background-color: #8b0000;
+    border: #8b0000;
+    color: #FEFDFF;
 }
 
 .container > .container > .row{
@@ -691,7 +684,7 @@ table.salary{
 }
 
 @media screen and (max-width: 767px){
-    .wage-md{
+    .hidden-md{
         display: none;
     }
     td.date{
@@ -709,9 +702,6 @@ table.salary{
     margin: 3em auto;
 }
 
-.btn.btn-blue.btn-md.my-button{
-    margin-top: 5px;
-}
 .reply_to_issue_title,
 .reply_to_issue_content{
     text-align: left;
@@ -738,6 +728,10 @@ ul.pagination{
         border: 1px solid rgba(23, 101, 145, 0.8);
         color: #FEFDFF;
         transition: 0.3s;
+        letter-spacing: -8px;
+        text-align: center;
+        margin: 0;
+        padding-right: 20px;
     }
     li > a:hover{
         background-color: rgba(18, 50, 69, 0.8);
@@ -1209,7 +1203,7 @@ ul.pagination{
     cursor: pointer;
     position:fixed;
     right: 0.5rem;
-    bottom: 6rem;
+    bottom: 4rem;
     display: none;
     z-index: 3;
 }
@@ -1235,9 +1229,9 @@ ul.pagination{
 
 .toTop-arrow:focus{outline: none;}
 
-@media screen and (max-width: 512px){
+@media screen and (max-width: 768px){
     .toTop-arrow{
-        bottom: 7rem;
+        bottom: 4rem;
     }
 }
 // ---------- footer ----------

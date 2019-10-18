@@ -11,7 +11,7 @@
       <p>
         <%= fa_icon "search" %>
       </p>
-  <% end %>
+    <% end %>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12">
     <%= link_to staff_users_path, class:"btn btn-green add-stu float-right mr-0" do %>
@@ -42,8 +42,9 @@
         <%= student.name %>
       <% end %>
       </td>
-      <td class="wage-md"><%= salary_hr(student) %></td>
-      <td class="wage-md"><%= salary_sum(student) %></td>
+
+      <td class="hidden-md"><%= salary_hr(student) %></td>
+      <td class="hidden-md"><%= salary_sum(student) %></td>
       <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm mt-0' do %>
           <i class="fas fa-pencil-alt"></i>
       <% end %>
