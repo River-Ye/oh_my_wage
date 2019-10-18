@@ -9,36 +9,35 @@
      <i class="fas fa-search"></i>
    <% end %>
  <% end %>
-<table class="table table-sm">
+<table class="table table-sm detail">
   <thead>
     <tr>
-      <th><%= t("date")%></th>
-      <th><%= t("hour")%></th>
-      <th><%= t("hourly_wage")%></th>
-      <th><%= t("payment")%></th>
+      <th class="d-date"><%= t("date")%></th>
+      <th class="d-time"><%= t("hour")%></th>
+      <th class="d-wage"><%= t("hourly_wage")%></th>
+      <th class="d-pay"><%= t("payment")%></th>
     </tr>
   </thead>
   <tbody>
   <% @salary_all.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= money(salary) %></td>
+      <td class="d-date"><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td class="d-time"><%= salary.hr %></td>
+      <td class="d-wage"><%= salary.hourly_wage %></td>
+      <td class="d-pay"><%= money(salary) %></td>
     </tr>
   <% end %>
     <tr>
-      <td><%= t("total")%></td>
-      <td><%= calculate_salary_hr %><%= t("hour_sum")%></td>
-      <td></td>
-      <td><%= calculate_salary_sum %><%= t("dollars")%></td>
+      <td class="d-date"><%= t("total")%></td>
+      <td class="d-time"><%= calculate_salary_hr %><%= t("hour_sum")%></td>
+      <td class="d-wage"></td>
+      <td class="d-pay"><%= calculate_salary_sum %><%= t("dollars")%></td>
     </tr>
   </tbody>
 </table>
 
 <%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
   <p>
-    <i class="fas fa-backward"></i>
     <%= t("back")%>
   </p>
 <% end %>
