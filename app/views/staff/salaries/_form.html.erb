@@ -1,18 +1,18 @@
 <h4 class="verticalspace" >
 <span>
-  學號：<%= student.number %>
+  <%= t("user_stu_id")%>：<%= student.number %>
 </span>
 <span>
-  姓名：<%= student.name %>
+  <%= t("user_name")%>：<%= student.name %>
 </span>
 </h4>
 <table class="table salary">
   <thead>
     <tr>
-      <th class="date" scope="col">日期</th>
-      <th class="time" scope="col">工時</th>
-      <th class="wage" scope="col">時薪</th>
-      <th class="delete" scope="col">刪除</th>
+      <th class="date" scope="col"><%= t("date")%></th>
+      <th class="time" scope="col"><%= t("hour")%></th>
+      <th class="wage" scope="col"><%= t("hourly_wage")%></th>
+      <th class="delete" scope="col"><%= t("delete")%></th>
     </tr>
   </thead>
 </table>
@@ -21,14 +21,14 @@
     <%= render 'salary_fields', f: salary_form %>
   <% end %>
   <div class="links">
-    <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
+    <%= link_to_add_association t("add"), form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
   <hr>
-  <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+  <%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
     <p>
       <i class="fas fa-backward"></i>
-      上一頁
+      <%= t("back")%>
     </p>
   <% end %>
-  <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
+  <%= form.button :submit, t("save"), class: 'btn btn-green btn-md' %>
 <% end %>

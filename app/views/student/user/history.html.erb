@@ -1,4 +1,4 @@
-<h2 class="verticalspace3">歷史資料</h2>
+<h2 class="verticalspace3"><%= t("history")%></h2>
 
 <%= form_tag(student_history_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker col-lg-3", "data-provide" => "datepicker" %>
@@ -9,25 +9,25 @@
 
 <table class='table'>
   <thead>
-    <th>日期</th>
-    <th>工時</th>
-    <th>時薪</th>
-    <th>試算</th>
+    <th><%= t("date")%></th>
+    <th><%= t("hour")%></th>
+    <th><%= t("hourly_wage")%></th>
+    <th><%= t("payment")%></th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>
     <tr>
       <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 時</td>
-      <td><%= salary.hourly_wage %> 元</td>
-      <td><%= money(salary) %> 元</td>
+      <td><%= salary.hr %></td>
+      <td><%= salary.hourly_wage %></td>
+      <td><%= money(salary) %></td>
     </tr>
     <% end %>
     <tr>
-      <td>總計</td>
-      <td><%= calculate_student_salary_hr %> 時</td>
+      <td><%= t("total")%></td>
+      <td><%= calculate_student_salary_hr %><%= t("hour_sum")%></td>
       <td></td>
-      <td><%= calculate_studen_salary_sum %> 元</td>
+      <td><%= calculate_studen_salary_sum %><%= t("dollars")%></td>
     </tr>
   </tbody>
 </table>
@@ -39,7 +39,7 @@
     <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
       <p>
         <i class="fas fa-fast-backward"></i>
-        回主選單
+        <%= t("back")%>
       </p>
     <% end %>
 
