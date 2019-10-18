@@ -682,7 +682,7 @@ table.table.col-lg-12.col-md-12.col-sm-12{
     }
 }
 
-table.salary{
+table.table.salary{
     .form-control.mx-1.date.required{
         padding-right: 0;
         padding-left: 0;
@@ -756,16 +756,20 @@ table.history{
         width: 25%;
     }
 }
+table.stu-index{
+    th, td{
+        padding-left: 0;
+        padding-right: 0;
+        width: 25%;
+    }
+}
 
 @media screen and (max-width: 767px){
     .hidden-md{
         display: none;
     }
-    table.table.salary{
-        th.date, td.date,
-        th.time, td.time,
-        th.wage, td.wage,
-        th.delete, td.delete{
+    table.salary{
+        th, td{
             padding-left: 3px;
             padding-right: 3px;
         }
