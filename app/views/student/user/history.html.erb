@@ -7,7 +7,7 @@
   <% end %>
 <% end %>
 
-<table class='table'>
+<table class='table history'>
   <thead>
     <th><%= t("date")%></th>
     <th><%= t("hour")%></th>
@@ -17,10 +17,10 @@
   <tbody>
     <% @salary.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= money(salary) %></td>
+      <td class="date"><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td class="time"><%= salary.hr %></td>
+      <td class="wage"><%= salary.hourly_wage %></td>
+      <td class="pay"><%= money(salary) %></td>
     </tr>
     <% end %>
     <tr>

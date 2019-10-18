@@ -24,20 +24,20 @@
 
 <h2 class="verticalspace"><%= Date.today.year %> / <%= Date.today.month %>  <%= t("wage_slip")%></h2>
 
-<table class='table col-lg-12 col-md-12 col-sm-12'>
+<table class='table col-lg-12 col-md-12 col-sm-12 stu-index'>
   <thead>
-    <th><%= t("date")%></th>
-    <th><%= t("hour")%></th>
-    <th><%= t("hourly_wage")%></th>
-    <th><%= t("payment")%></th>
+    <th class="date"><%= t("date")%></th>
+    <th class="time"><%= t("hour")%></th>
+    <th class="wage"><%= t("hourly_wage")%></th>
+    <th class="pay"><%= t("payment")%></th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%m/%d") %></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= money(salary) %></td>
+      <td class="date"><%= salary.date.strftime("%m/%d") %></td>
+      <td class="time"><%= salary.hr %></td>
+      <td class="wage"><%= salary.hourly_wage %></td>
+      <td class="pay"><%= money(salary) %></td>
     </tr>
     <% end %>
     <tr>

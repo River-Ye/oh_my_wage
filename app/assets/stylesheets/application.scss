@@ -629,6 +629,10 @@ table{
     margin-bottom: 0 !important;
     background-color: rgba(18, 50, 69, 0.1);
     color: #333 !important;
+    .btn{
+        margin-top: 0;
+        margin-right: 0;
+    }
     a{
         color: #333;
     }
@@ -672,7 +676,7 @@ table.table.col-lg-12.col-md-12.col-sm-12{
     }
 }
 
-table.salary{
+table.table.salary{
     .form-control.mx-1.date.required{
         padding-right: 0;
         padding-left: 0;
@@ -728,30 +732,58 @@ table.user{
         margin-right: 0;
     }
 }
+table.history{
+    th, td{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .date{
+        width: 35%;
+    }
+    .time{
+        width: 20%;
+    }
+    .wage{
+        width: 20%;
+    }
+    .pay{
+        width: 25%;
+    }
+}
+table.stu-index{
+    th, td{
+        padding-left: 0;
+        padding-right: 0;
+        width: 25%;
+    }
+}
 
 @media screen and (max-width: 767px){
     .hidden-md{
         display: none;
     }
-    table.table.salary{
-        th.date, td.date,
-        th.time, td.time,
-        th.wage, td.wage,
-        th.delete, td.delete{
+    table.salary{
+        th, td{
             padding-left: 3px;
             padding-right: 3px;
         }
         th.date{
-            width: 45%;
+            width: 41%;
         }
-        th.time, th.wage{
-            width: 20%;
+        th.time{
+            width: 23%;
+        }
+        th.wage{
+            width: 22%;
         }
         th.delete{
-            width: 15%;
+            width: 14%;
         }
         td.date{
-            width: 30%;
+            width: 40%;
+        }
+        td.time, td.wage{
+            width: 22.5%;
         }
     }
 }
@@ -1383,21 +1415,23 @@ footer{
         white-space: nowrap;
     }
 }
+
 .tel{
     margin-right: 15px;
 }
+
 @media (max-width: 992px) {
-    li.dropdown{
-        flex-direction: row-reverse;
-        text-align: left;
+    li.dropdown.col-4.col-md-3.col-lg-2{
         padding-top: 0;
         padding-bottom: 2px;
+        list-style: none;
+        position: absolute;
+        right: 0;
     }
     .emailfooter{
         margin-left: 15px;
     }
 }
-
 
 @media (min-width: 993px) {
     li.dropdown{
