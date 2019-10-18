@@ -1,4 +1,4 @@
-<h1 class="text-center mt-5"><%= @student.name %>的個人資料</h1>
+<h1 class="text-center mt-5"><%= @student.name %><%= t("sinfo")%></h1>
 <ul class="user-profile col-lg-6">
     <li>編號：</li>
       <p><%= @student.number %></p>
@@ -13,10 +13,10 @@
 </div>
 
 <div class="text-center">
-  <%= link_to :back, class: 'btn btn-gray btn-md mb-5' do %>
+  <%= link_to '/', class: 'btn btn-gray btn-md mb-5' do %>
     <p>
       <i class="fas fa-backward"></i>
-      上一頁
+      <%= t("back")%>
     </p>
   <% end %>
 </div>

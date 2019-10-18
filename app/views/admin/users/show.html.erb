@@ -1,29 +1,29 @@
-<h1 class="verticalspace center-block mt-5"><%= @user.name %>的個人資料</h1>
+<h2 class="verticalspace3 center-block mt-5"><%= @user.name %><%= t("sinfo")%> </h2>
 <% if @user %>
 <ul class="user-profile col-lg-6">
-    <li>權限：</li>
-      <p><%= @user.role %></p>
-    <li>編號：</li>
+    <li><%= t("permission")%></li>
+      <p><%= @user.role_i18n %></p>
+    <li><%= t("user_id")%></li>
       <p><%= @user.number %></p>
-    <li>姓名：</li>
+    <li><%= t("user_name")%></li>
       <p><%= @user.name %></p>
-    <li>工作單位：</li>
+    <li><%= t("apart")%></li>
       <p><%= user_department %></p>
-    <li>手機：</li>
+    <li><%= t("phone")%></li>
       <p><%= @user.phone %></p>
-    <li>性別：</li>
+    <li><%= t("gender")%></li>
       <p><%= @user.gender %></p>
-    <li>信箱：</li>
+    <li><%= t("mail")%></li>
       <p><%= @user.email %></p>
 </div>
 <% else %>
   <h1>沒有這個人</h1>
 <% end %>
 <div class="center-block">
-  <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+  <%= link_to '/', class: 'btn btn-gray btn-md' do %>
     <p>
       <i class="fas fa-backward"></i>
-      上一頁
+      <%= t("back")%>
     </p>
   <% end %>
 </div>

@@ -12,19 +12,11 @@
 <table class="table table-sm">
   <thead>
     <tr>
-<<<<<<< Updated upstream
-      <th>學號</th>
-      <th>姓名</th>
-      <th class="hidden-md">電話</th>
-      <th class="hidden-md">信箱</th>
-      <th>加入</th>
-=======
       <th><%= t("user_stu_id")%></th>
       <th><%= t("user_name")%></th>
       <th class="hidden-md"><%= t("phone")%></th>
       <th class="hidden-md"><%= t("mail")%></th>
       <th><%= t("add")%></th>
->>>>>>> Stashed changes
     </tr>
   </thead>
   <tbody>
@@ -47,7 +39,7 @@
   <div class="p-2">
     <%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
       <p>
-        回工時登錄
+        <%= t("back")%>
       </p>
     <% end %>
   </div>

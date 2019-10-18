@@ -16,11 +16,11 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 show">
         <% if user_signed_in? && current_user.admin? %>
-          <%= f.input :role, label: t("permission"), collection: { "管理者": "admin", "職員": "staff", "學生": "student" } %>
+          <%= f.input :role, label: t("permission") %>
         <% else %>
           <div class="profile">
             <p class="phead"><%= t("permission") %></p>
-            <p class="pbody border-secondary"><%= @user.role %></p>
+            <p class="pbody border-secondary"><%= @user.role_i18n %></p>
           </div>
         <% end %>
       </div>
@@ -29,11 +29,11 @@
       </div>
       <div class="col-lg-4 col-sm-12 col-xs-12 show">
         <% if user_signed_in? && current_user.admin? %>
-          <%= f.input :gender, label: t("gender"), collection: { "男": "male", "女": "female" } %>
+          <%= f.input :gender, label: t("gender") %>
         <% else %>
           <div class="profile">
             <p class="phead"><%= t("gender") %></p>
-            <p class="pbody border-secondary"><%= @user.gender %></p>
+            <p class="pbody border-secondary"><%= @user.gender_i18n %></p>
           </div>
         <% end %>
       </div>
