@@ -738,6 +738,24 @@ table.user{
         margin-right: 0;
     }
 }
+table.history{
+    th, td{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .date{
+        width: 35%;
+    }
+    .time{
+        width: 20%;
+    }
+    .wage{
+        width: 20%;
+    }
+    .pay{
+        width: 25%;
+    }
+}
 
 @media screen and (max-width: 767px){
     .hidden-md{

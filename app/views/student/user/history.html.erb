@@ -7,20 +7,20 @@
   <% end %>
 <% end %>
 
-<table class='table'>
+<table class='table history'>
   <thead>
-    <th>日期</th>
-    <th>工時</th>
-    <th>時薪</th>
-    <th>試算</th>
+    <th class="date">日期</th>
+    <th class="time">工時</th>
+    <th class="wage">時薪</th>
+    <th class="pay">試算</th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 時</td>
-      <td><%= salary.hourly_wage %> 元</td>
-      <td><%= money(salary) %> 元</td>
+      <td class="date"><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td class="time"><%= salary.hr %> 時</td>
+      <td class="wage"><%= salary.hourly_wage %> 元</td>
+      <td class="pay"><%= money(salary) %> 元</td>
     </tr>
     <% end %>
     <tr>
