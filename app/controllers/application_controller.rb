@@ -1,4 +1,15 @@
 class ApplicationController < ActionController::Base
+  before_action :set_locale
+
+  def set_locale
+    # 可以將 ["en", "zh-TW"] 設定為 VALID_LANG 放到 config/environment.rb 中
+    if params[:locale] && I18n.available_locales.include?( params[:locale].to_sym )
+      session[:locale] = params[:locale]
+    end
+  
+    I18n.locale = session[:locale] || I18n.default_locale
+  end
+  
   include Pundit
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -9,9 +20,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     return stored_location_for(resource) || '/' if @user == nil
-    return stored_location_for(resource) || admin_root_path if @user.role == "admin"
-    return stored_location_for(resource) || staff_root_path if @user.role == "staff"
-    return stored_location_for(resource) || student_root_path if @user.role == "student"
+    return stored_location_for(resource) || admin_root_path if @user.admin?
+    return stored_location_for(resource) || staff_root_path if @user.staff?
+    return stored_location_for(resource) || student_root_path if @user.student?
   end
 
   def configure_permitted_parameters

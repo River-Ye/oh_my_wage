@@ -1,33 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-dark navitem">
+<nav class="navbar navbar-expand-lg navbar-dark navitem fixed-top">
   <%= link_to image_tag('nav_logo.png', size: "146x50", alt: "Edit Entry"), '/', class: 'navbar-brand text-light' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "關於我們", about_path, class: 'nav-link text-light' %>
+
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item p-2 active">
+        <%= link_to about_path, class: 'nav-link text-light list-top' do %>
+          <i class="fas fa-info-circle"></i>
+          <%= t("about") %>
+        <% end %>
       </li>
-      <li class="nav-item active">
-        <%= link_to "聯絡我們", contact_path, class: 'nav-link text-light' %>
+      <li class="nav-item p-2 active">
+        <%= link_to contact_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-link"></i>
+          <%= t("contact") %>
+        <% end %>
       </li>
-      <li class="nav-item active">
-        <%= link_to "Q & A", qa_path, class: 'nav-link text-light' %>
+      <li class="nav-item p-2 active">
+        <%= link_to qa_path, class: 'nav-link text-light' do %>
+          <i class="fas fa-question-circle"></i>
+          <%= t("faqs") %>
+        <% end %>
+
       </li>
     </ul>
       
-    <ul class="navbar-nav">
+    <ul class="navbar-nav d-flex align-items-center">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <p id="timecount"></p> 
-          <div id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></div>
+        <li class="nav-item p-2">
+          <%= link_to edit_user_registration_path, class: 'nav-link  text-light' do %>
+            <span>
+              <i class="fas fa-user-edit"></i>
+              <%= t('my_page') %>
+            </span>
+          <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to "個人資料", edit_user_registration_path, class: 'nav-link  text-light' %>
+
+        <li class="nav-item p-2">
+          <%= link_to destroy_user_session_path, class: 'nav-link', method: 'delete' do %>
+            <span>
+              <i class="fas fa-sign-out-alt"></i>
+              <%= t('log_out') %>     
+            </span>
+          <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to "登出", destroy_user_session_path, class: 'nav-link', method: 'delete' %>
+        <li class="nav-item p-2">
+          <%= fa_icon "bell"%>
+          <span id="timecount">
+            <span id='logout-timestamp' data-logout-time="<%= current_user.current_sign_in_at + 30.minutes %>"></span>
+          </span>
         </li>
       <% end %>
     </ul>

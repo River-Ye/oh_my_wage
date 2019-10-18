@@ -1,41 +1,29 @@
+<h2 class="verticalspace3 center-block mt-5"><%= @user.name %><%= t("sinfo")%> </h2>
 <% if @user %>
-<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
-  <tbody>
-    <tr>
-      <th>權限</th>
-      <td><%= @user.role %></td>
-    </tr>
-    <tr>
-      <th>編號</th>
-      <td><%= @user.number %></td>
-    </tr>
-    <tr>
-      <th>姓名</th>
-      <td><%= @user.name %></td>
-    </tr>
-    <tr>
-      <th>工作單位</th>
-      <td>
-        <%= user_department %>
-      </td>
-    </tr>
-    <tr>
-      <th>手機</th>
-      <td><%= @user.phone %></td>
-    </tr>
-    <tr>
-      <th>性別</th>
-      <td><%= @user.gender %></td>
-    </tr>
-    <tr>
-      <th>信箱</th>
-      <td><%= @user.email %></td>
-    </tr>
-  </tbody>
-</table>
+<ul class="user-profile col-lg-6">
+    <li><%= t("permission")%></li>
+      <p><%= @user.role_i18n %></p>
+    <li><%= t("user_id")%></li>
+      <p><%= @user.number %></p>
+    <li><%= t("user_name")%></li>
+      <p><%= @user.name %></p>
+    <li><%= t("apart")%></li>
+      <p><%= user_department %></p>
+    <li><%= t("phone")%></li>
+      <p><%= @user.phone %></p>
+    <li><%= t("gender")%></li>
+      <p><%= @user.gender %></p>
+    <li><%= t("mail")%></li>
+      <p><%= @user.email %></p>
+</div>
 <% else %>
   <h1>沒有這個人</h1>
 <% end %>
 <div class="center-block">
-  <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+  <%= link_to '/', class: 'btn btn-gray btn-md' do %>
+    <p>
+      <i class="fas fa-backward"></i>
+      <%= t("back")%>
+    </p>
+  <% end %>
 </div>

@@ -7,6 +7,11 @@ class Student::UserController < ApplicationController
   end
 
   def history
+    if search_month.blank?
+      @salary_chart_by_day = Salary.search(search_month).where(user_id: current_user).group_by_month(:date).sum(:hr)
+    else
+      @salary_chart_by_day = Salary.search(search_month).where(user_id: current_user).group_by_day(:date).sum(:hr)
+    end
   end
 
   private
@@ -18,7 +23,7 @@ class Student::UserController < ApplicationController
   end
 
   def find_student_salaries
-    @salary = current_user.salaries.search(search_month).order(date: :desc).page(params[:page])
+    @salary = current_user.salaries.search(search_month).page(params[:page])
   end
 
   def search_month
@@ -30,6 +35,6 @@ class Student::UserController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'student'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.student?
   end
 end

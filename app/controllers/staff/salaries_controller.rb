@@ -1,7 +1,7 @@
 class Staff::SalariesController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show, :edit, :update, :destroy]
-  before_action :find_when_monthly_salary, only: [:index]
+  before_action :find_when_monthly_salary, only: [:index, :pdf]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
@@ -9,10 +9,10 @@ class Staff::SalariesController < ApplicationController
     else
       # 原本寫法
       @students = staff_department.users.includes(:salaries).student_order.search(params[:search]).page(params[:page])
-
+      return @students if @students.count >= 1
+      redirect_to staff_salaries_path, notice: "無符合條件的學生"
       # KT 寫法
       # @students = User.includes(:departments).without_department(staff_department).student_order.search(params[:search]).page(params[:page])
-      # byebug
       # student_ids = @students.map(&:id)
       # @salaries_this_month = Salary.this_month.where(user_id: student_ids).group(:user_id).pluck(:user_id, 'SUM(hr)', 'SUM(hourly_wage * hr)').reduce({}) do |rs, salary|
       #   rs.merge!(salary[0].to_i => { hr: salary[1], wage: salary[2] })
@@ -25,12 +25,7 @@ class Staff::SalariesController < ApplicationController
     if @salary.nil?
       redirect_to staff_salaries_path, notice: "目前沒有資料"
     else
-      @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc)
-      respond_to do |format|
-        format.html
-        format.json
-        format.pdf{ render template:'staff/salaries/pdf',pdf:'pdf',:encoding => "UTF-8" }
-      end
+      @salary_all = Salary.where(user_id: @salary.user_id).order(date: :desc).search(search_month)
     end
   end
   
@@ -50,6 +45,19 @@ class Staff::SalariesController < ApplicationController
     out = DepartmentWithUser.where(department_id: staff_department, user_id: @student)
     DepartmentWithUser.delete(out)
     redirect_to staff_salaries_path, notice: "#{@student.name} 已從 #{staff_department.name} 剔除!!"
+  end
+
+  def pdf
+    @students = staff_department.users.includes(:salaries).student_order.search(params[:search])
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf{ 
+        render template:'staff/salaries/pdf',
+        pdf:'pdf',
+        # orientation: 'Landscape',
+        :encoding => "UTF-8" }
+    end
   end
 
   private
@@ -76,7 +84,15 @@ class Staff::SalariesController < ApplicationController
     params.require(:user).permit(salaries_attributes: [:id, :user_id, :date, :hr, :hourly_wage, :_destroy])
   end
 
+  def search_month
+    return if params[:search].blank?
+    t = params[:search]
+    year = t.split(/-/)[0].to_i
+    month =  t.split(/-/)[1].to_i
+    Date.new(year, month)
+  end
+
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.staff?
   end
 end

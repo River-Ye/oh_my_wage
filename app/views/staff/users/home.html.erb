@@ -1,32 +1,20 @@
-<h1 class="verticalspace">Hi, <%= current_user.name %> 您好</h1>
+<h4 class="verticalspace"><%= without_department %></h4>
 <div class="container">
   <div class="row">
-    <div class="card col-lg-4 col-md-12">
+    <div class="card col-lg-4 col-md-9 col-sm-12">
       <%= link_to staff_salaries_path, class:"hover-sec card-time text-decoration-none" do %>
-        <%= image_tag("time_icon.png", alt: "Report Issue", class:"card-img-top") %>
         <div class="card-body">
-          <h2 class="cart-title">工時登錄</h2>
-          <p class="card-text">Wage Settlement</p>
+          <%= fa_icon "hourglass-half", class: "hourglass"%>
+          <h3 class="card-title">工時登錄</h3>
         </div>
       <% end %>
     </div>
 
-    <div class="card col-lg-4 col-md-12">
-      <%= link_to staff_users_path, class:"hover-sec card-list text-decoration-none" do %>
-        <%= image_tag("list_icon.png", alt: "Report Issue", class:"card-img-top") %>
-        <div class="card-body">
-          <h2 class="cart-title">其他學生</h2>
-          <p class="card-text">Other Students</p>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="card col-lg-4 col-md-12">
+    <div class="card col-lg-4 col-md-9 col-sm-12">
       <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
-        <%= image_tag("q_icon.png", alt: "Report Issue", class:"card-img-top") %>
         <div class="card-body">
-          <h2 class="cart-title">問題回報</h2>
-          <p class="card-text">Report Issue</p>
+          <%= fa_icon "question-circle", class: "question-circle"%>
+          <h3 class="card-title">問題反映</h3>
         </div>
       <% end %>
     </div>

@@ -1,12 +1,15 @@
 class Staff::UsersController < ApplicationController
   before_action :check_login
   before_action :find_student, only: [:show, :update]
+  before_action :staff_department, only: [:home]
 
   def index
     if DepartmentWithUser.find_by(user_id: current_user.id).nil?
       redirect_to '/', notice: "不隸屬任何部門喔，請向管理者反映!!"
     else
       @students = User.where(id: user_section).student_order.search(params[:search]).page(params[:page])
+      return @students if @students.count >= 1
+      redirect_to staff_users_path, notice: "無符合條件的學生"
     end
   end
 
@@ -36,7 +39,7 @@ class Staff::UsersController < ApplicationController
   end
 
   def staff_department
-    current_user.departments[0]
+    @department = current_user.departments[0]
   end
 
   def user_section
@@ -44,6 +47,6 @@ class Staff::UsersController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'staff'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.staff?
   end
 end

@@ -1,4 +1,4 @@
-<h1>修改資料</h1>
+<h1 class="verticalspace">修改資料</h1>
 <%= simple_form_for(@user, url: admin_user_path) do |f| %>
   <div class="form-inputs">
     <div class="row">
@@ -6,13 +6,13 @@
        <%= f.input :number, label: '學號：' %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
-        <%= f.input :role, label: '權限：', collection: { "管理者": "admin", "員工": "staff", "學生": "student" } %>
+        <%= f.input :role, label: '權限：' %>
       </div>
       <div class="col-lg-8 col-md-12 col-sm-12">
         <%= f.input :name, label: '姓名：' %>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
-        <%= f.input :gender, label: '性別：', collection: { "男": "Male", "女": "Female" } %>
+        <%= f.input :gender, label: '性別：' %>
       </div>
       <div class="col-lg-8 col-md-12 col-sm-12">
         <%= f.input :email, label: '信箱：', required: true, placeholder: 'example@school.com' %>
@@ -23,7 +23,17 @@
     </div>
   </div>
   <div class="form-actions">
-    <%= f.button :submit, "更新", class: 'btn btn-green btn-md' %>
-    <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+    <%= button_tag type: 'submit', class: 'btn btn-green btn-md' do %>
+      <p>
+        <i class="far fa-save"></i>
+        更新
+      </p>
+    <% end %>
+    <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-backward"></i>
+        上一頁
+      </p>
+    <% end %>
   </div>
 <% end %>

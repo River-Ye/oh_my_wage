@@ -1,16 +1,18 @@
-<h1 class="verticalspace">歷史資料</h1>
+<h2 class="verticalspace3">歷史資料</h2>
 
 <%= form_tag(student_history_path, method: :get) do %>
-  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
+  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker col-lg-3", "data-provide" => "datepicker" %>
+  <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace mb-0" do %>
+    <i class="fas fa-search"></i>
+  <% end %>
 <% end %>
-<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
+
 <table class='table'>
   <thead>
     <th>日期</th>
     <th>工時</th>
     <th>時薪</th>
-    <th>小計</th>
+    <th>試算</th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>
@@ -29,9 +31,20 @@
     </tr>
   </tbody>
 </table>
+
+
+<%= area_chart @salary_chart_by_day, ytitle: 'hr' %>
+
+
 <div class="container">
   <div class="row">
-    <%= link_to "回主選單", student_root_path, class: 'btn btn-dark btn-md' %>
+    <%= paginate @salary %>
+    <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-fast-backward"></i>
+        回主選單
+      </p>
+    <% end %>
   </div>
 </div>
 

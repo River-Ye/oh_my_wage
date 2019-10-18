@@ -1,34 +1,74 @@
-<h1 class="verticalspace">Wage Settlement</h1>
-
+<h2 class="verticalspace3">工時登錄</h2>
+<h3 class="verticalspace">
+<%= Date.today.year %> / <%= Date.today.month %>
+</h3>
 <%= form_tag(staff_salaries_path, method: :get) do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md white-hover verticalspace"%>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= text_field_tag :search %>
+    <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace float-left" do %>
+      <p>
+        <%= fa_icon "search" %>
+      </p>
+    <% end %>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= link_to staff_users_path, class:"btn btn-green add-stu float-right mr-0" do %>
+      <p>
+        <%= fa_icon "user-plus", text: t("add_stu") %>
+      </p>
+    <% end %>
+  </div>
+</div>
 <% end %>
 
 <table class="table table-sm">
   <thead>
     <tr>
-      <th>學號</th>
-      <th>姓名</th>
-      <th>當月工時總和</th>
-      <th>當月薪資總和</th>
-      <th>編輯</th>
-      <th>刪除</th>
+      <th><%= t("user_stu_id")%></th>
+      <th><%= t("user_name")%></th>
+      <th class="wage-md"><%= t("total_hour")%></th>
+      <th class="wage-md"><%= t("payment")%>(NTD)</th>
+      <th><%= t("edit")%></th>
+      <th><%= t("delete")%></th>
     </tr>
   </thead>
   <tbody>
-  <% @students.each do |student| %>
+  <% @students.uniq.each do |student| %>
     <tr>
       <td><%= student.number %></td>
-      <td><%= link_to student.name, staff_salary_path(student.slug) %></td>
-      <td><%= salary_hr(student) %> 時</td>
-      <td><%= salary_sum(student) %> 元</td>
-      <td><%= link_to "編輯", edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm' %></td>
-      <td><%= link_to "刪除", staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover', data: { confirm: "確定要把 #{student.name} 從 #{@department.name} 剔除嗎?" } %></td>
+      <td><%= link_to staff_salary_path(student.slug) do %>
+        <%= student.name %>
+      <% end %>
+      </td>
+
+      <td class="hidden-md"><%= salary_hr(student) %></td>
+      <td class="hidden-md"><%= salary_sum(student) %></td>
+      <td><%= link_to edit_staff_salary_path(student.slug), class: 'btn btn-org btn-sm mt-0' do %>
+          <i class="fas fa-pencil-alt"></i>
+      <% end %>
+      </td>
+      <td>
+        <%= link_to staff_salary_path(student.slug), method: 'delete', class: 'btn btn-red btn-sm white-hover mt-0', data: { confirm: "確定要把 #{student.name} 從 #{@department.name}的工讀名單 剔除嗎?" } do %>
+          <i class="fas fa-user-alt-slash"></i>
+        <% end %>
+      </td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<%= paginate @students, theme: 'twitter-bootstrap-4', class:"my-page" %>
-<%= link_to "回主選單", staff_root_path, class: 'btn btn-dark btn-md' %>
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover float-left mr-0',:form => {"data-type" => "pdf" }, target: "_blank" do %>
+      <p>
+        <i class="far fa-file-pdf"></i>
+        PDF
+      </p>
+    <% end %>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <%= paginate @students %>
+  </div>
+</div>

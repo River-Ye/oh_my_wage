@@ -1,6 +1,5 @@
-<h1>問題總覽</h1>
-<%= paginate @problems, theme: 'twitter-bootstrap-4' %>
-<table class="table table-hover table-sm">
+<h1 class="verticalspace">問題總覽</h1>
+<table class="table table-sm">
   <thead>
     <tr>
       <th>標題</th>
@@ -21,4 +20,11 @@
   </tbody>
 </table>
 
-<%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+<%= paginate @problems %>
+
+<%= link_to :back, class: 'btn btn-gray btn-md' do %>
+  <p>
+    <i class="fas fa-backward"></i>
+    上一頁
+  </p>
+<% end %>
