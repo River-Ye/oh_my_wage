@@ -1,15 +1,13 @@
 
 <body class="mybgimg aboutus fontstyle">
 <div class="container">
-<div class="row">
-<div class="contentinfo col-12 col-lg-6">
+<div class="row systemrow">
+<div class="system col-12 col-lg-7">
     <div class="about">
         <div class="stu">
             <div class="stu-say p-2">
-                <p>「 唉～</p>
-                <p>這個⽉⼯讀薪資何時下來呢？</p>
-                <p>學校那邊有確實登錄好我今天工讀時數嗎？」</p>
-                <p>BY 學生 哈利Ｘ特</p>
+                <p><%= t("stu_say")%></p>
+                <p>By <%= t("stu_name")%></p>
             </div>
         </div>
     </div>
@@ -19,11 +17,8 @@
     <div class="about">
         <div class="sta">
             <div class="staff-say p-2">
-                <p>「 工作忙翻了！</p>
-                <p>電腦⼜遠！</p>
-                <p>即時登錄⼯讀學⽣時數好麻煩啊！</p>
-                <p>新工讀學⽣⼀個⼀個 key 好累啊！」</p>
-                <p>BY 教職員 石Ｘ卜</p>
+                <p><%= t("staff_say")%></p>
+                <p>By <%= t("staff_name")%></p>
             </div>
         </div>
     </div>
@@ -32,12 +27,11 @@
     </div>
     </div>
 
-   <div class="col-12 col-lg-6 about">
-        <h2>不用再煩惱了！</h2>
-            <p>Oh My Wage 團隊的</p>
-            <p>霍格華茲學院工讀薪資系統，</p>
-            <p>給您「即時、方便 、簡單」的科技體驗，</p>
-            <p>享受資訊往來就在彈指之間！</p>
+   <div class="col-12 col-lg-4 system2">
+     <div class="system3">
+     <p class="worry"><%= t("worry")%></p>
+     <p><%= t("worry2")%></p>
+     </div>
     </div>
 </div>
 </div>
