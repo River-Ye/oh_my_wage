@@ -99,20 +99,20 @@
 </div>   
 
 <div id="map" class="center-block col-lg-6 col-md-10 col-sm-10"></div>
-
+</div>
     <script>
     $(document).on('turbolinks:load', function() {
         var ohmywage = { lat: 25.042437, lng: 121.513723 };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 17.2,
-            center: ohmywage }  
+            center: ohmywage }
         var marker = new google.maps.Marker({
             position: ohmywage,
             map: map
         });
     });
     </script>
-</div>
+
 
 <div class="center-block cotbtn">
     <%= link_to '/', class: 'btn btn-gray btn-lg' do %>
