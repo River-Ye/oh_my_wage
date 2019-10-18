@@ -151,7 +151,7 @@ figaro heroku:set -e production
 [**Trello (票)**](https://trello.com/oh_my_wage)
 
 
-## Authors
+# Authors
 [River Yeh](https://github.com/River-Ye)
 [Axel Chen](https://github.com/ZarekChung)
 [Joan Liao](https://github.com/joanliao0525)
