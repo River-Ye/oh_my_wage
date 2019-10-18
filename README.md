@@ -1,12 +1,59 @@
-# README
+# Oh My Wage
+## 霍格華茲薪資計算系統
+<p>你是否在學校打工有薪資計算的麻煩？</p>
+<p>傳統的Excel登錄讓你覺得困擾？</p>
+<p>別擔心使用霍格華茲薪資計算系統</p>
+<p>全部一次解決！</p>
+
+# 目錄
+   * [專案目的](#專案目的)
+   * [產品故事](#產品故事)
+   * [UserStory](#UserStory)
+   * [專案初始化](#專案初始化)
+   * [Authors](#Authors)
+
+# 專案目的
+<p>解決學生在校內打工薪資計算問題，</p>
+<p>提供老師與學生計算薪資與查詢薪資的平台。</p>
+<p>傳統Excel、打卡薪資計算的不便性，</p>
+<p>透過Oh My Ｗage 就能達到即時登錄及查詢薪資。</p>
+
+# 產品故事
+<p>有天鄧不利Ｘ校長，拜託我們Oh My Wage團隊，</p>
+<p>設計開發一套，符合霍格華茲學院的薪資系統，</p>
+<p>希望我們這套薪資系統，來解決霍格華茲學院的薪資計算問題！</p>
+
+# User Story
+
+## 使用者相關
+   目前僅提供霍格華茲學院職員、學生使用。
+   主要分為三種使用者：系統管理者、職員、學生。
+   
+### 系統管理者(Admin)
+    管理者為最高權限，可以編輯、刪除現有的管理者、職員及學生資料，另外也可以新增職員及學生的基本資料，並建立個人基本資料。
+    
+### 職員(Staff) 
+    職員為次高權限，可以新增、刪除、查詢學生薪資工時紀錄及資料，也可以將學生剔除或新增在部門內打工，最後將學生薪資工時紀錄匯出PDF列印。
+    如有任何問題，可以在問題反映提出問題回報。
+
+### 學生(Student)
+    學生為最低權限，僅提供查詢當月薪資，及歷史薪資資料查詢，提供折線圖使學生快速了解自己的當月工時，如有任何問題可以在問題回報提出，反應給教職員。
+
+### 帳號(Account)
+    目前僅提供管理者150名帳號、教職員150名帳號、學生150名帳號，帳號後面 _____＠oh-my-wage。
+    1. 管理者帳號：a001~a150 ＋ ＠oh-my-wage。
+    2. 職員帳號：  t001~t150 ＋ ＠oh-my-wage。
+    3. 學生帳號：  s001~S150 ＋ ＠oh-my-wage。
+
+# 專案初始化
 
 1. bundle
 2. rails db:drop
-   (換 postgresql 後若 rails db:drop 會噴錯誤訊息，請到 psql 介面 下手動刪除，方法如下方所寫)
+   (換 postgresql 後若 rails db:drop 會噴錯誤訊息，請到 [Postgresql](#Postgresql)介面 下手動刪除，方法如下方所寫)
 3. rails db:create
 4. rails db:migrate
 5. rails db:seed
-   (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門 關聯假資料 、 學生薪資\*2000)
+   (一次產生 admin\*150 、 staff\*150 、 student\*150 、 各部門 關聯假資料 、 學生薪資\*300)
 6. rails c
 7. User.all
 8. 用 db:seed 產生的資料來登入，a 為管理者，t 為老師， s 為學生
@@ -16,7 +63,7 @@
 
     * 使用 rails c >> User.admin / User.staff / User.student 即可看到不同 role 的帳戶資料。
 
-## postgresql
+## Postgresql
 
 ```sql
 終端機指令
@@ -102,3 +149,11 @@ figaro heroku:set -e production
 [**Wireframe**](https://whimsical.com/JgPoSu5DBGz4kNfxC9S99L)
 
 [**Trello (票)**](https://trello.com/oh_my_wage)
+
+
+## Authors
+[River Yeh](https://github.com/River-Ye)
+[Axel Chen](https://github.com/ZarekChung)
+[Joan Liao](https://github.com/joanliao0525)
+[Patrick Liu](https://github.com/Patrick0906)
+
