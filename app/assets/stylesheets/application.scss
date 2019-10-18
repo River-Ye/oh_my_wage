@@ -670,6 +670,23 @@ table{
     border-right: 1px solid rgba(18, 50, 69, 0.01) !important;
     border-left: 2px solid rgba(18, 50, 69, 0.01) !important;
     }
+}
+
+table.table.col-lg-12.col-md-12.col-sm-12{
+    th,td{
+        text-align: left;
+    }
+}
+
+table.salary{
+    .form-control.mx-1.date.required{
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0 !important;
+    }
+    .btn-red{
+        font-size: 16px;
+    }
     th.date, td.date{
         width: 40%;
     }
@@ -681,20 +698,40 @@ table{
         width: 15%;
     }
 }
-
-table.table.col-lg-12.col-md-12.col-sm-12{
-    th,td{
-        text-align: left;
+table.detail{
+    th.d-date, td.d-date{
+        width: 40%;
+    }
+    th.d-time, td.d-time{
+        width: 20%;
+    }
+    th.d-wage, td.d-wage{
+        width: 20%;
+    }
+    th.d-pay, td.d-pay{
+        width: 20%;
     }
 }
-table.salary{
-    .form-control.mx-1.date.required{
-        padding-right: 0;
-        padding-left: 0;
-        margin: 0 !important;
+
+table.user{
+    th.role, td.role{
+        width: 20%;
     }
-    .btn-red{
-        font-size: 16px;
+    th.id, td.id{
+        width: 25%;
+    }
+    th.name, th.name{
+        width: 30%;
+    }
+    th.edit, th.edit{
+        width: 15%;
+    }
+    th.delete, th.delete{
+        width: 10%;
+    }
+    .btn{
+        margin-top: 0;
+        margin-right: 0;
     }
 }
 
