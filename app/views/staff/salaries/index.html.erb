@@ -59,12 +59,11 @@
   </tbody>
 </table>
 
-<div class="row">
-  <div class="col-lg-12">
+  <div class="">
     <%= paginate @students %>
   </div>
-  <div class="col-lg-12">
-    <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover float-left mr-0',:form => {"data-type" => "pdf" }, target: "_blank" do %>
+  <div class="">
+    <%= link_to pdf_staff_salaries_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover mr-0',:form => {"data-type" => "pdf" }, target: "_blank" do %>
       <p>
         <i class="far fa-file-pdf"></i>
         PDF
@@ -72,4 +71,3 @@
     <% end %>
   </div>
   
-</div>

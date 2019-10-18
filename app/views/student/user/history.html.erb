@@ -35,9 +35,6 @@
 
 <%= area_chart @salary_chart_by_day, ytitle: 'hr' %>
 
-
-<div class="container">
-  <div class="row">
     <%= paginate @salary %>
     <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
       <p>
@@ -45,8 +42,6 @@
         回主選單
       </p>
     <% end %>
-  </div>
-</div>
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function(){
