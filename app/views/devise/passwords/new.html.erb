@@ -1,5 +1,5 @@
 <div class="pwletter col-sm-12 col-md-10 col-lg-8">
-  <h4><%= t(".send_me_reset_password_instructions") %></h4>
+  <h4 class="verticalspace3"><%= t(".send_me_reset_password_instructions") %></h4>
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: {     method: :post }) do |f| %>
       <%= f.error_notification %>
 
