@@ -670,6 +670,16 @@ table{
     border-right: 1px solid rgba(18, 50, 69, 0.01) !important;
     border-left: 2px solid rgba(18, 50, 69, 0.01) !important;
     }
+    th.date, td.date{
+        width: 40%;
+    }
+    th.time, td.time,
+    th.wage, td.wage{
+        width: 25%;
+    }
+    th.delete, td.delete{
+        width: 15%;
+    }
 }
 
 table.table.col-lg-12.col-md-12.col-sm-12{
@@ -679,7 +689,12 @@ table.table.col-lg-12.col-md-12.col-sm-12{
 }
 table.salary{
     .form-control.mx-1.date.required{
-        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0 !important;
+    }
+    .btn-red{
+        font-size: 16px;
     }
 }
 
@@ -687,8 +702,26 @@ table.salary{
     .hidden-md{
         display: none;
     }
-    td.date{
-        width: 25%;
+    table.table.salary{
+        th.date, td.date,
+        th.time, td.time,
+        th.wage, td.wage,
+        th.delete, td.delete{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        th.date{
+            width: 45%;
+        }
+        th.time, th.wage{
+            width: 20%;
+        }
+        th.delete{
+            width: 15%;
+        }
+        td.date{
+            width: 30%;
+        }
     }
 }
 
@@ -721,17 +754,15 @@ textarea#reply_to_issue_content.form-control.text.required{
 ul.pagination{
     height: 3em !important;
     margin-top: 5px;
-    justify-content: flex-end;
+    justify-content: center;
     color: #FEFDFF;
     li > a{
         background-color: rgba(23, 101, 145, 0.8);
         border: 1px solid rgba(23, 101, 145, 0.8);
         color: #FEFDFF;
         transition: 0.3s;
-        letter-spacing: -8px;
         text-align: center;
         margin: 0;
-        padding-right: 20px;
     }
     li > a:hover{
         background-color: rgba(18, 50, 69, 0.8);
@@ -753,7 +784,6 @@ ul.pagination{
         color: #FEFDFF 
     }
 }
-
 @media screen and (max-width: 995px){
     ul.pagination{
         justify-content: center;
