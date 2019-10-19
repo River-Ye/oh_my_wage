@@ -9,6 +9,8 @@ class Admin::UsersController < ApplicationController
       format.json
       format.pdf {render template: 'users/pdf',pdf:'pdf'}   
     end
+    return @users if @users.count >= 1
+    redirect_to admin_users_path, notice: "無符合條件的學生"
   end
 
   def new
