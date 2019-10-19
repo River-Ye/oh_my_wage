@@ -9,6 +9,11 @@ ja:
         remember_me: "ログインを記憶"
         n_password: "新しいパスワード"
         n_password_confirmation: "新しいパスワードを確認"
+  simple_form:
+    labels:
+      defaults:
+        title: "タイトル"
+        content: "ご質問・ご意見・ご要望"
     models:
       user: "ユーザ"
   devise:

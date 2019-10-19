@@ -9,6 +9,11 @@ zh-TW:
         remember_me: "記住我"
         n_password: "新密碼"
         n_password_confirmation: "再次確認新密碼"
+  simple_form:
+    labels:
+      defaults:
+        title: "標題"
+        content: "問題或意見"
     models:
       user: "用戶"
   devise:

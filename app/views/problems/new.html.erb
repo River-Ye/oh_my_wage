@@ -12,10 +12,10 @@
   <div class="card col-lg-8 col-md-12 col-sm-12 center-block">
     <%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
     <div class="card-title">
-      <%= form.input :title, label: t("title") %>
+      <%= form.input :title %>
     </div>
     <div class="card-text">
-      <%= form.input :content, label: t("text"), as: :text %>
+      <%= form.input :content, as: :text %>
       <div class="d-flex justify-content-center">
         <div class="p-2">
           <%= link_to '/', class: 'btn btn-gray btn-md' do %>
