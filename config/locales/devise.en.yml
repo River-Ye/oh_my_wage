@@ -6,6 +6,11 @@ en:
       user:
         n_password: "New Password"
         n_password_confirmation: "Confirm New Password"
+  simple_form:
+    labels:
+      defaults:
+        title: "Title"
+        content: "Questions or Opinions"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
