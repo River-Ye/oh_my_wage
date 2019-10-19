@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="verticalspace3">問題反映</h2>
+  <h2 class="verticalspace3"><%= t("question")%></h2>
   <div class="col-lg-8 mx-auto">
     <% if @reply_to_issue.errors.any? %>
       <ul>
@@ -12,22 +12,21 @@
   <div class="card col-lg-8 col-md-12 col-sm-12 center-block">
     <%= simple_form_for :reply_to_issue, url: problems_path do |form| %>
     <div class="card-title">
-      <%= form.input :title, label: '標題：' %>
+      <%= form.input :title, label: t("title") %>
     </div>
     <div class="card-text">
-      <%= form.input :content, label: '內容：', as: :text %>
+      <%= form.input :content, label: t("text"), as: :text %>
       <div class="d-flex justify-content-center">
         <div class="p-2">
-          <%= link_to :back, class: 'btn btn-gray btn-md' do %>
+          <%= link_to '/', class: 'btn btn-gray btn-md' do %>
             <p>
-              <i class="fas fa-backward"></i>
-              上一頁
+              <%= t("back")%>
             </p>
           <% end %>
           <%= button_tag type: 'submit', class: "btn btn-blue btn-md my-button", id: "register-button" do %>
           <p>
             <i class="fas fa-paper-plane"></i>
-            送出
+            <%= t("send")%>
           </p>
         <% end %>
         </div>

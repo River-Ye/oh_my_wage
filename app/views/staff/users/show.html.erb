@@ -1,21 +1,20 @@
 <h1 class="text-center mt-5"><%= @student.name %><%= t("sinfo")%></h1>
 <ul class="user-profile col-lg-6">
-    <li>編號：</li>
+    <li><%= t("user_stu_id")%></li>
       <p><%= @student.number %></p>
-    <li>姓名：</li>
+    <li><%= t("user_name")%></li>
       <p><%= @student.name %></p>
-    <li>手機：</li>
+    <li><%= t("phone")%></li>
       <p><%= @student.phone %></p>
-    <li>性別：</li>
+    <li><%= t("gender")%></li>
       <p><%= @student.gender %></p>
-    <li>信箱：</li>
+    <li><%= t("mail")%></li>
       <p><%= @student.email %></p>
 </div>
 
 <div class="text-center">
-  <%= link_to '/', class: 'btn btn-gray btn-md mb-5' do %>
+  <%= link_to staff_users_path, class: 'btn btn-gray btn-md mb-5' do %>
     <p>
-      <i class="fas fa-backward"></i>
       <%= t("back")%>
     </p>
   <% end %>

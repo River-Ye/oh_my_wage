@@ -1,5 +1,5 @@
 <h1 class="verticalspace"><%= current_user.name %> 您的歷史薪資</h1>
-<h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
+<h2 class="verticalspace3"><%= Date.today.month %> 月時數與薪資試算</h2>
 
 <%= form_tag(student_chart_path, method: :get) do %>
   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
@@ -8,11 +8,11 @@
 
 <table class="table col-lg-6 col-md-9 col-sm-12">
   <tr>
-    <th>總工時</th>
+    <th><%= t("hour_sum")%></th>
     <td><%= calculate_student_salary_hr %> 小時</td>
   </tr>
   <tr>
-    <th>試算</th>
+    <th><%= t("payment")%></th>
     <td><%= calculate_studen_salary_sum %> 元</td>
   </tr>
 </table>
