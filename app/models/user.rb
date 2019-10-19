@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   include Devise::Models::Trackable
   devise :database_authenticatable, :registerable, :trackable,
-         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 30.minutes
+         :recoverable, :rememberable, :validatable, :timeoutable, :timeout_in => 25.minutes
 
   paginates_per 10
 
@@ -19,8 +19,8 @@ class User < ApplicationRecord
   validates :number, uniqueness: true
   validates :phone, length: { is: 10 }
   
-  enum role: { admin: 0, staff: 1, student: 2 }
-  enum gender: { Male: 0, Female: 1 }
+  enum role: { 'admin': 0, 'staff': 1, 'student': 2 }
+  enum gender: { 'male': 0, 'female': 1 }
 
   scope :admin_order, -> { order(role: :asc).order(number: :asc) }
   scope :student_order, -> { where(role: 2).order(number: :asc) }
@@ -31,7 +31,7 @@ class User < ApplicationRecord
   def self.search(search)
     return all if search.blank?
     if search
-      where(['name || email || number || role || phone || gender LIKE ?', "%#{search}%"])
+      where(['name || email || number || phone LIKE ?', "%#{search}%"])
     else
       all
     end

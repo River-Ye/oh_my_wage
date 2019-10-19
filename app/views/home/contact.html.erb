@@ -1,42 +1,153 @@
 <body class="mybgimg contactus fontstyle">
-<img src="<%= asset_path('contactus.png') %>", class="infotitle">
-<h1 class="zhtitle">聯絡我們</h1>
-<div class="contentinfo">
-    <ul>
-        <li>TEL：</li>
-            <a href="tel:+886223315247">
-            <p>(02) 2331-5247</p>
-            </a>
-        <li>Email：</li>
-            <a href="mailto:admin@oh-my-wage.website">
-            <p>admin@oh-my-wage.website</p>
-            </a>
-        <li>Address：</li>
-            <a href="https://ubin.io/TyZN7E">
-            <p>5F., No. 7, Hengyang Rd., Zhongzheng Dist., Taipei City 100, Taiwan (R.O.C.)</p>
-            </a>
-            <div id="map" class="center-block"></div>
-            <script>
-            $(document).on('turbolinks:load', function() {
-                var ohmywage = { lat: 25.042437, lng: 121.513723 };
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 17.2,
-                    center: ohmywage });
-
-                var marker = new google.maps.Marker({
-                    position: ohmywage,
-                    map: map
-                });
-            });
-            </script>
-        <li>Traffic：</li>
-        <p>
-            首先搭乘「霍格華茲特快列車」，從倫敦的國王十字車站中隱藏的9¾月台乘車，火車將於夜幕降臨後一段時間抵達霍格華茲附近的車站。
-            後乘坐小船至對岸。上岸後再乘坐乘坐由生物 — 「騎士墜鬼馬」拉動的馬車進入城堡。
-        </p>
-    </ul>
+<div class="contentinfo contcolor row">
+    <div class="col-lg-6">
+        <div class="d-flex justify-content-center worker-int flex-column">
+            <div class="p-2 d-flex worker-int">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
+                    <%= image_tag('river.png', class:'workerimg') %>
+                </div>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">葉政偉 River Ye</p>
+                    <p>
+                        你必須很努力，才能看起來毫不費力。<br>
+                        看似輕鬆的背後，有著看不盡的付出。
+                    </p>
+                    <p class="email">
+                        <a href="mailto:river@riverye.com">
+                        <%= fa_icon "envelope", text: "river@riverye.com" %>
+                        </a>
+                    </p>
+                    <p class="git">
+                        <i class="fab fa-github-alt"></i>
+                        GitHub: 
+                        <a href="https://github.com/River-Ye">
+                        River-Ye
+                        </a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="p-2 d-flex worker-int">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
+                    <%= image_tag('axel.png', class:'workerimg') %>
+                </div>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">陳宥誠 Axel Chen</p>
+                    <p>
+                        從不同的觀點思考，<br>
+                        用好奇心探索世界！
+                    </p>
+                    <p class="email">
+                        <a href="mailto:axelchen0520@gmail.com">
+                        <%= fa_icon "envelope", text: "axelchen0520@gmail.com" %>
+                        </a>
+                    </p>
+                    <p class="git">
+                        <i class="fab fa-github-alt"></i>
+                        GitHub: 
+                        <a href="https://github.com/axelchen">
+                        axelchen
+                        </a>
+                    </p>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="d-flex justify-content-center worker-int flex-column">
+            <div class="p-2 d-flex worker-int">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
+                    <%= image_tag('joan.png', class:'workerimg') %>
+                </div>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">廖友渝 Joan Liao</p>
+                    <p>
+                        你不一定要變得很厲害，才能開始；<br>
+                        你要開始，才能變得很厲害！
+                    </p>
+                    <p class="email">
+                        <a href="mailto:joanliao0525@joanliao.space">
+                        <%= fa_icon "envelope", text: "joanliao0525@joanliao.space" %>
+                        </a>
+                    </p>
+                    <p class="git">
+                        <i class="fab fa-github-alt"></i>
+                        GitHub: 
+                        <a href="https://github.com/joanliao0525">
+                        joanliao0525
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="p-2 d-flex worker-int">
+                <div class="p-2 col-lg-5 col-md-12 col-sm-12">
+                    <%= image_tag('patrick.png', class:'workerimg') %>
+                </div>
+                <div class="p-2 worker-say col-lg-7 col-md-12 col-sm-12">
+                    <p class="text-warning name">劉迦豪 Patrick Liu</p>
+                    <p>
+                        渴求知識，喜歡探索，<br>
+                        享受思考後發現新世界的興奮。
+                    </P>
+                    <p class="email">
+                        <a href="mailto:kazupat0906@gmail.com">
+                            <%= fa_icon "envelope", text: "kazupat0906@gmail.com" %>
+                        </a>
+                    </p>
+                    <p class="git">
+                        <i class="fab fa-github-alt"></i>
+                        GitHub: 
+                        <a href="https://github.com/Patrick0906">
+                        Patrick0906
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="center-block">
-<%= link_to "回到首頁", '/', class: 'btn btn-dark btn-lg' %>
+<div class="d-flex row conttt">
+<div class="info col-lg-4">
+    <div class="iphone">
+        <p>
+            <a href="tel:+886223315247">
+            <%= fa_icon "phone", text: "+886-2-2331-5247" %>
+            </a>
+        </p>
+        <p>
+            <a href="mailto:admin@oh-my-wage.website">
+            <%= fa_icon "envelope", text: "admin@oh-my-wage.website" %>
+            </a>
+        </p>
+        <p>
+            <a href="https://ubin.io/TyZN7E">
+            <%= fa_icon "map-marker", text: t('address') %>
+            </a>
+        </p>
+    </div>
+</div>   
+
+<div id="map" class="center-block col-lg-6 col-md-10 col-sm-10"></div>
+</div>
+    <script>
+    $(document).on('turbolinks:load', function() {
+        var ohmywage = { lat: 25.042437, lng: 121.513723 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17.2,
+            center: ohmywage });
+        var marker = new google.maps.Marker({
+            position: ohmywage,
+            map: map
+        });
+    });
+    </script>
+
+
+<div class="center-block cotbtn">
+    <%= link_to '/', class: 'btn btn-gray btn-lg' do %>
+        <p>
+            <%= fa_icon "home", text: t('top_page') %>
+        </p>
+    <% end %>
 </div>
 </body>

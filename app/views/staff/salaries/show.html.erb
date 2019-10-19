@@ -1,38 +1,55 @@
-<h1 class="verticalspace">個人薪資明細</h1>
+<h2 class="verticalspace3"><%= t("wage_slip")%></h2>
 
-<meta charset='utf-8' />
+<meta charset='utf-8'/>
 <%= wicked_pdf_stylesheet_link_tag "pdf" %>
-<h2>Wage Settlement</h2>
 
-<h4><%= @salary.user.name %> 同學</h4>
-<table class="table table-sm">
+<h4 class="verticalspace"><%= t("user_name")%>：<%= @salary.user.name %></h4><%= form_tag(staff_salary_path, method: :get) do %>
+   <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker col-lg-3", "data-provide" => "datepicker" %>
+   <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace" do %>
+     <i class="fas fa-search"></i>
+   <% end %>
+ <% end %>
+<table class="table table-sm detail">
   <thead>
     <tr>
-      <th>日期</th>
-      <th>工時</th>
-      <th>時薪</th>
-      <th>小計</th>
+      <th class="d-date"><%= t("date")%></th>
+      <th class="d-time"><%= t("hour")%></th>
+      <th class="d-wage"><%= t("hourly_wage")%></th>
+      <th class="d-pay"><%= t("payment")%></th>
     </tr>
   </thead>
   <tbody>
   <% @salary_all.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %></td>
-      <td><%= salary.hourly_wage %></td>
-      <td><%= money(salary) %></td>
+      <td class="d-date"><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td class="d-time"><%= salary.hr %></td>
+      <td class="d-wage"><%= salary.hourly_wage %></td>
+      <td class="d-pay"><%= money(salary) %></td>
     </tr>
   <% end %>
     <tr>
-      <td>總計</td>
-      <td><%= calculate_salary_hr %> 時</td>
-      <td></td>
-      <td><%= calculate_salary_sum %> 元</td>
+      <td class="d-date"><%= t("total")%></td>
+      <td class="d-time"><%= calculate_salary_hr %><%= t("hour_sum")%></td>
+      <td class="d-wage"></td>
+      <td class="d-pay"><%= calculate_salary_sum %><%= t("dollars")%></td>
     </tr>
   </tbody>
 </table>
 
+<%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
+  <p>
+    <%= t("back")%>
+  </p>
+<% end %>
 
-<%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
-<%= link_to "列印", staff_salary_path(format: :pdf), class: 'btn btn-pdf btn-md white-hover',:form => {"data-type" => "pdf" }, target: "_blank" %>
-
+<script type="text/javascript">
+  $(document).on('turbolinks:load', function(){
+    $('.datepicker').datepicker({
+      language:'zh-TW',
+      format: "yyyy-mm",
+      viewMode: 'months',
+      minViewMode: 'months',
+      autoclose: true
+    });    
+  });
+</script>

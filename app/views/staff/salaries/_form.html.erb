@@ -1,12 +1,34 @@
-<h3><%= student.name %>的工時</h3>
+<h4 class="verticalspace" >
+  <p>
+    <%= t("user_stu_id")%>：<%= student.number %>
+  </p>
+  <p>
+    <%= t("user_name")%>：<%= student.name %>
+  </p>
+</h4>
+<table class="table salary">
+  <thead>
+    <tr>
+      <th class="date" scope="col"><%= t("date")%></th>
+      <th class="time" scope="col"><%= t("hour")%></th>
+      <th class="wage" scope="col"><%= t("hourly_wage")%></th>
+      <th class="delete" scope="col"><%= t("delete")%></th>
+    </tr>
+  </thead>
+</table>
 <%= simple_form_for student, url: staff_salary_path do |form| %>
   <%= form.simple_fields_for :salaries, url: staff_salary_path do |salary_form| %>
     <%= render 'salary_fields', f: salary_form %>
   <% end %>
   <div class="links">
-    <%= link_to_add_association "新增紀錄", form, :salaries, class: 'btn btn-md btn-green' %>
+    <%= link_to_add_association t("add"), form, :salaries, class: 'btn btn-md btn-green' %>
   </div>
   <hr>
-  <%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
-  <%= form.button :submit, '儲存',class: 'btn btn-green btn-md' %>
+  <%= link_to staff_salaries_path, class: 'btn btn-gray btn-md' do %>
+    <p>
+      <i class="fas fa-backward"></i>
+      <%= t("back")%>
+    </p>
+  <% end %>
+  <%= form.button :submit, t("save"), class: 'btn btn-green btn-md' %>
 <% end %>

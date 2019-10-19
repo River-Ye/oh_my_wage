@@ -1,39 +1,47 @@
-<h1 class="verticalspace">歷史資料</h1>
+<h2 class="verticalspace3"><%= t("history")%></h2>
 
 <%= form_tag(student_history_path, method: :get) do %>
-  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker", "data-provide" => "datepicker" %>
-  <%= submit_tag "查詢", class: "btn btn-blue btn-md verticalspace"%>
+  <%= text_field_tag :search, "", placeholder: '請選擇月份', class: "datepicker col-lg-3", "data-provide" => "datepicker" %>
+  <%= button_tag type: 'submit', class: "btn btn-blue btn-md white-hover verticalspace mb-0" do %>
+    <i class="fas fa-search"></i>
+  <% end %>
 <% end %>
-<%= paginate @salary, theme: 'twitter-bootstrap-4' %>
-<table class='table'>
+
+<table class='table history'>
   <thead>
-    <th>日期</th>
-    <th>工時</th>
-    <th>時薪</th>
-    <th>小計</th>
+    <th><%= t("date")%></th>
+    <th><%= t("hour")%></th>
+    <th><%= t("hourly_wage")%></th>
+    <th><%= t("payment")%></th>
   </thead>
   <tbody>
     <% @salary.each do |salary| %>
     <tr>
-      <td><%= salary.date.strftime("%Y-%m-%d") %></td>
-      <td><%= salary.hr %> 時</td>
-      <td><%= salary.hourly_wage %> 元</td>
-      <td><%= money(salary) %> 元</td>
+      <td class="date"><%= salary.date.strftime("%Y-%m-%d") %></td>
+      <td class="time"><%= salary.hr %></td>
+      <td class="wage"><%= salary.hourly_wage %></td>
+      <td class="pay"><%= money(salary) %></td>
     </tr>
     <% end %>
     <tr>
-      <td>總計</td>
-      <td><%= calculate_student_salary_hr %> 時</td>
+      <td><%= t("total")%></td>
+      <td><%= calculate_student_salary_hr %><%= t("hour_sum")%></td>
       <td></td>
-      <td><%= calculate_studen_salary_sum %> 元</td>
+      <td><%= calculate_studen_salary_sum %><%= t("dollars")%></td>
     </tr>
   </tbody>
 </table>
-<div class="container">
-  <div class="row">
-    <%= link_to "回主選單", student_root_path, class: 'btn btn-dark btn-md' %>
-  </div>
-</div>
+
+
+<%= area_chart @salary_chart_by_day, ytitle: 'hr' %>
+
+    <%= paginate @salary %>
+    <%= link_to student_root_path, class: 'btn btn-gray btn-md' do %>
+      <p>
+        <i class="fas fa-fast-backward"></i>
+        <%= t("back")%>
+      </p>
+    <% end %>
 
 <script type="text/javascript">
   $(document).on('turbolinks:load', function(){

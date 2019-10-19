@@ -1,24 +1,21 @@
-<table class="table col-lg-6 col-md-12 col-sm-12 verticalspace2 mx-auto">
-  <tr>
-    <th>學號</th>
-    <td><%= @student.number %></td>
-  </tr>
-  <tr>
-    <th>姓名</th>
-    <td><%= @student.name %></td>
-  </tr>
-    <tr>
-    <th>手機</th>
-    <td><%= @student.phone %></td>
-  </tr>
-  <tr>
-    <th>性別</th>
-    <td><%= @student.gender %></td>
-  </tr>
-  <tr>
-    <th>信箱</th>
-    <td><%= @student.email %></td>
-  </tr>
-</table>
+<h1 class="text-center mt-5"><%= @student.name %><%= t("sinfo")%></h1>
+<ul class="user-profile col-lg-6">
+    <li><%= t("user_stu_id")%></li>
+      <p><%= @student.number %></p>
+    <li><%= t("user_name")%></li>
+      <p><%= @student.name %></p>
+    <li><%= t("phone")%></li>
+      <p><%= @student.phone %></p>
+    <li><%= t("gender")%></li>
+      <p><%= @student.gender_i18n %></p>
+    <li><%= t("mail")%></li>
+      <p><%= @student.email %></p>
+</div>
 
-<%= link_to "上一頁", :back, class: 'btn btn-dark btn-md' %>
+<div class="text-center">
+  <%= link_to staff_users_path, class: 'btn btn-gray btn-md mb-5' do %>
+    <p>
+      <%= t("back")%>
+    </p>
+  <% end %>
+</div>

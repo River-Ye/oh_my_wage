@@ -1,0 +1,274 @@
+---
+ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'バリデーションに失敗しました: %{errors}'
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+  date:
+    abbr_day_names:
+    - 日
+    - 月
+    - 火
+    - 水
+    - 木
+    - 金
+    - 土
+    abbr_month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - 日曜日
+    - 月曜日
+    - 火曜日
+    - 水曜日
+    - 木曜日
+    - 金曜日
+    - 土曜日
+    formats:
+      default: "%Y/%m/%d"
+      long: "%Y年%m月%d日(%a)"
+      short: "%m/%d"
+    month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 約1時間
+        other: 約%{count}時間
+      about_x_months:
+        one: 約1ヶ月
+        other: 約%{count}ヶ月
+      about_x_years:
+        one: 約1年
+        other: 約%{count}年
+      almost_x_years:
+        one: 1年弱
+        other: "%{count}年弱"
+      half_a_minute: 30秒前後
+      less_than_x_seconds:
+        one: 1秒以内
+        other: "%{count}秒未満"
+      less_than_x_minutes:
+        one: 1分以内
+        other: "%{count}分未満"
+      over_x_years:
+        one: 1年以上
+        other: "%{count}年以上"
+      x_seconds:
+        one: 1秒
+        other: "%{count}秒"
+      x_minutes:
+        one: 1分
+        other: "%{count}分"
+      x_days:
+        one: 1日
+        other: "%{count}日"
+      x_months:
+        one: 1ヶ月
+        other: "%{count}ヶ月"
+      x_years:
+        one: 1年
+        other: "%{count}年"
+    prompts:
+      second: 秒
+      minute: 分
+      hour: 時
+      day: 日
+      month: 月
+      year: 年
+  errors:
+    format: "%{attribute}%{message}"
+    messages:
+      accepted: を受諾してください
+      blank: を入力してください
+      confirmation: と%{attribute}の入力が一致しません
+      empty: を入力してください
+      equal_to: は%{count}にしてください
+      even: は偶数にしてください
+      exclusion: は予約されています
+      greater_than: は%{count}より大きい値にしてください
+      greater_than_or_equal_to: は%{count}以上の値にしてください
+      inclusion: は一覧にありません
+      invalid: は不正な値です
+      less_than: は%{count}より小さい値にしてください
+      less_than_or_equal_to: は%{count}以下の値にしてください
+      model_invalid: 'バリデーションに失敗しました: %{errors}'
+      not_a_number: は数値で入力してください
+      not_an_integer: は整数で入力してください
+      odd: は奇数にしてください
+      other_than: は%{count}以外の値にしてください
+      present: は入力しないでください
+      required: を入力してください
+      taken: はすでに存在します
+      too_long: は%{count}文字以内で入力してください
+      too_short: は%{count}文字以上で入力してください
+      wrong_length: は%{count}文字で入力してください
+    template:
+      body: 次の項目を確認してください
+      header:
+        one: "%{model}にエラーが発生しました"
+        other: "%{model}に%{count}個のエラーが発生しました"
+  helpers:
+    select:
+      prompt: 選択してください
+    submit:
+      create: 登録する
+      submit: 保存する
+      update: 更新
+
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%n%u"
+        precision: 0
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: 円
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: 十億
+          million: 百万
+          quadrillion: 千兆
+          thousand: 千
+          trillion: 兆
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n%u"
+        units:
+          byte: バイト
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: "、"
+      two_words_connector: "、"
+      words_connector: "、"
+  time:
+    am: 午前
+    formats:
+      default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
+      long: "%Y/%m/%d %H:%M"
+      short: "%m/%d %H:%M"
+    pm: 午後
+  enums:
+    user:
+      role:
+        admin: "管理者"
+        staff: "職員"
+        student: "学生"
+      gender:
+        male: "男"
+        female: "女"
+  address: "100台湾台北市中正区衡陽路７号"
+  about: "システムについて"
+  contact: "お問い合わせ"
+  faqs: "よくある質問"
+  fgpw: "パスワードを忘れた場合はこちら"
+  send: "送信"
+  back: "戻る"
+  my_page: "マイページ"
+  log_out: "ログアウト"
+  top_page: "トップページへ"
+  user_id: "番号"
+  user_stu_id: "学籍番号"
+  permission: "身分"
+  mail: "メール"
+  apart: "所属"
+  user_name: "氏名"
+  gender: "性別"
+  male: "男"
+  female: "女"
+  phone: "携帯電話"
+  change_password_hint: "パスワードを変更しない場合は、省略可"
+  change_info: "個人情報の変更"
+  welcome: "ようこそ、%{name}へ"
+  welcome2: "ようこそ、%{name}へ(所属：%{apartment})"
+  add_user: "ユーザの追加"
+  add_stu: "学生の追加"
+  Q1: "1. どうやってアカウントを作ればいいですか？"
+  A1: "ホグワーツ大学の教職員そのほか大学の関係者なら、アカウント作成を申し込みたいとわたしたちまでご連絡ください。"
+  Q2: "2. 私の労働時間が誤って入力されていたらどうすればいいですか？"
+  A2: "ウェブページ内の「問題報告」で問題を報告してください。できる限りすみやかに対応します。"
+  sinfo: "の個人情報"
+  user_list: "ユーザ一覧"
+  user_stu_list: "学生一覧"
+  edit: "編集"
+  delete: "削除"
+  wage_slip: "給与明細"
+  date: "日付"
+  hour: "時間"
+  hourly_wage: "時給"
+  payment: "支給額"
+  total: "合計"
+  hour_sum: " 時間"
+  dollars: " ドル(NTD)"
+  total_hour: "延時間"
+  stu_say: "すみません、私の今月の給料はいつ支払われますか？私の労働時間は誤って登録されていませんか？"
+  stu_name: "学生 H君"
+  staff_say: "今、立て込んでおり、外出中です。そのため、すぐにあなたの労働時間を入力できません。学生情報の登録作業はとても大変です。"
+  staff_name: "職員 Sさん"
+  worry: "ご心配なく！"
+  worry2: "「はやい、便利、簡単」、わが社の「オ・マイ・ウェイジ・チーム」があなたに素晴らしい技術革新を提供します。まずは、「Oh My Wage Study Payroll System」をお試しください。時短を実現し、手間を減らします。"
+  hour_log: "労働時間の入力"
+  question: "問題報告"
+  add: "追加"
+  update_rec: "更新"
+  save: "保存"
+  history: "入力履歴"
+  sign_up: "新規登録"

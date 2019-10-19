@@ -9,6 +9,8 @@ class Admin::UsersController < ApplicationController
       format.json
       format.pdf {render template: 'users/pdf',pdf:'pdf'}   
     end
+    return @users if @users.count >= 1
+    redirect_to admin_users_path, notice: "無符合條件的學生"
   end
 
   def new
@@ -55,6 +57,6 @@ class Admin::UsersController < ApplicationController
   end
 
   def check_login
-    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.role == 'admin'
+    redirect_to '/', notice: "權限不足!!" unless user_signed_in? && current_user.admin?
   end
 end

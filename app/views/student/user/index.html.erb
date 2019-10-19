@@ -1,14 +1,51 @@
-<h1 class="verticalspace">Hi, <%= current_user.name %> 歡迎回來</h1>
-<h2 class="verticalspace"><%= Date.today.month %> 月時數與薪資試算</h2>
-<table class="table col-lg-6 col-md-9 col-sm-12">
-  <tr>
-    <th>總工時</th>
-    <td><%= calculate_student_salary_hr %> 小時</td>
-  </tr>
-  <tr>
-    <th>合計</th>
-    <td><%= calculate_studen_salary_sum %> 元</td>
-  </tr>
+<h4 class="verticalspace"><%= t("welcome", name: @current_user.name) %></h4>
+
+<div class="container">
+  <div class="row">
+    <div class="card col-lg-3 col-md-3 col-sm-3 col-xs-6">
+      <%= link_to student_history_path, class:"hover-sec card-history text-decoration-none" do %>
+        <div class="card-body">
+          <i class="fas fa-history"></i>
+          <h4 class="card-title"><%= t("history")%></h4>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="card col-lg-3 col-md-3 col-sm-3 col-xs-6">
+      <%= link_to new_problem_path, class:"hover-sec card-q text-decoration-none" do %>
+        <div class="card-body">
+          <%= fa_icon "question-circle", class: "question-circle"%>
+          <h4 class="card-title"><%= t("question")%> </h4>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<h2 class="verticalspace"><%= Date.today.year %> / <%= Date.today.month %>  <%= t("wage_slip")%></h2>
+
+<table class='table col-lg-12 col-md-12 col-sm-12 stu-index'>
+  <thead>
+    <th class="date"><%= t("date")%></th>
+    <th class="time"><%= t("hour")%></th>
+    <th class="wage"><%= t("hourly_wage")%></th>
+    <th class="pay"><%= t("payment")%></th>
+  </thead>
+  <tbody>
+    <% @salary.each do |salary| %>
+    <tr>
+      <td class="date"><%= salary.date.strftime("%m/%d") %></td>
+      <td class="time"><%= salary.hr %></td>
+      <td class="wage"><%= salary.hourly_wage %></td>
+      <td class="pay"><%= money(salary) %></td>
+    </tr>
+    <% end %>
+    <tr>
+      <td><%= t("total")%></td>
+      <td><%= calculate_student_salary_hr %><%= t("hour_sum")%></td>
+      <td></td>
+      <td><%= calculate_studen_salary_sum %><%= t("dollars")%></td>
+    </tr>
+  </tbody>
 </table>
-<%= link_to "歷史薪資查詢", student_history_path, class: 'btn btn-blue btn-md white-hover' %>
-<%= link_to "問題反應", new_problem_path, class: 'btn btn-red btn-md white-hover' %>
+
