@@ -1358,6 +1358,10 @@ footer{
     }
 }
 
+li.dropdown.col-4.col-md-3.col-lg-2{
+    list-style: none;
+}
+
 .tel{
     margin-right: 15px;
 }
@@ -1366,7 +1370,6 @@ footer{
     li.dropdown.col-4.col-md-3.col-lg-2{
         padding-top: 0;
         padding-bottom: 2px;
-        list-style: none;
         position: absolute;
         right: 0;
     }
@@ -1377,8 +1380,8 @@ footer{
 
 @media (min-width: 993px) {
     li.dropdown{
-        text-align: start;
-        margin-left: 0px;
+        // text-align: end;
+        // margin-left: 0px;
     }
 }
 
