@@ -153,7 +153,7 @@ figaro heroku:set -e production
 
 # Authors
 [River Yeh](https://github.com/River-Ye)
-[Axel Chen](https://github.com/ZarekChung)
+[Axel Chen](https://github.com/Axelchen)
 [Joan Liao](https://github.com/joanliao0525)
 [Patrick Liu](https://github.com/Patrick0906)
 
