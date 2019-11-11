@@ -14,6 +14,8 @@
 - [使用者相關](#使用者相關)
 - [測試帳號](#測試帳號)
 - [專案初始化](#專案初始化)
+- [Tool](#Tool)
+- [開發環境](#開發環境)
 - [Authors](#Authors)
 
 ---
@@ -168,6 +170,11 @@ figaro heroku:set -e production
 [**Wireframe**](https://whimsical.com/JgPoSu5DBGz4kNfxC9S99L)
 
 [**Trello (票)**](https://trello.com/oh_my_wage)
+
+## 開發環境
+- Ruby 2.6.3
+- Rails 5.2.3
+- PostgreSQL 11.5
 
 ## Authors
 
