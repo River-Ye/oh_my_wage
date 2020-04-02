@@ -49,6 +49,7 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (9.7.5)
       execjs
+    awesome_print (1.8.0)
     bcrypt (3.1.13)
     bcrypt (3.1.13-java)
     bindex (0.8.1)
@@ -340,6 +341,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  awesome_print (~> 1.8)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3, >= 4.3.1)
   bootstrap-datepicker-rails (~> 1.8, >= 1.8.0.1)

@@ -63,6 +63,8 @@ gem 'devise-i18n-views'
 gem 'font-awesome-rails'
 gem 'enum_help'
 gem 'pry-rails'
+# 讓 rails c 變好看，也能使用 ap method
+gem 'awesome_print', '~> 1.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
