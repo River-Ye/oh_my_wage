@@ -75,7 +75,11 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+<<<<<<< HEAD
     chartkick (3.3.1)
+=======
+    chartkick (3.3.0)
+>>>>>>> 4efe5c969ab14d04cd86c3daab12d1dab2a0bcdf
     childprocess (3.0.0)
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
@@ -174,6 +178,7 @@ GEM
     msgpack (1.3.3-x64-mingw32)
     msgpack (1.3.3-x86-mingw32)
     nio4r (2.5.2)
+<<<<<<< HEAD
     nio4r (2.5.2-java)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
@@ -202,6 +207,18 @@ GEM
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.2)
+=======
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
+    pg (1.1.4)
+    popper_js (1.14.5)
+    public_suffix (4.0.1)
+    puma (3.12.4)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
+    rack (2.0.8)
+>>>>>>> 4efe5c969ab14d04cd86c3daab12d1dab2a0bcdf
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.2)
@@ -370,8 +387,12 @@ DEPENDENCIES
   kaminari (~> 1.1, >= 1.1.1)
   listen (>= 3.0.5, < 3.2)
   pg (~> 1.1, >= 1.1.4)
+<<<<<<< HEAD
   pry-rails
   puma (~> 3.11)
+=======
+  puma (~> 3.12)
+>>>>>>> 4efe5c969ab14d04cd86c3daab12d1dab2a0bcdf
   pundit (~> 2.1)
   rails (~> 5.2.3)
   rails-i18n
