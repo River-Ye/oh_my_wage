@@ -4,7 +4,7 @@
 
 你是否在學校打工有薪資計算的麻煩？  
 傳統的 Excel 登錄讓你覺得困擾？  
-別擔心使用[霍格華茲薪資計算系統](https://oh-my-wage.website)  
+別擔心使用[霍格華茲薪資計算系統](https://oh-my-wage.herokuapp.com/)  
 全部一次解決！
 
 # 目錄
@@ -64,7 +64,7 @@
 
     ex: Email： s059@oh-my-wage | Password：123123
 
-demo URL： [https://oh-my-wage.website](https://oh-my-wage.website)
+demo URL： [https://oh-my-wage.herokuapp.com/](https://oh-my-wage.herokuapp.com/)
 
 ---
 
@@ -159,7 +159,7 @@ figaro heroku:set -e production
 
 ## Tool
 
-[**Oh My Wage**](https://oh-my-wage.website/)
+[**Oh My Wage**](https://oh-my-wage.herokuapp.com/)
 
 [**GitHub**](https://github.com/River-Ye/oh_my_wage/)
 
